@@ -1,5 +1,5 @@
 {
-	"name": "app-next",
+	"name": "eneryetu",
 	"version": "0.1.0",
 	"private": true,
 	"type": "module",
@@ -9,6 +9,7 @@
 		"start": "next start",
 		"lint": "eslint .",
 		"lint:check": "eslint .",
+		"pretypecheck": "next typegen",
 		"typecheck": "tsc --noEmit",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
