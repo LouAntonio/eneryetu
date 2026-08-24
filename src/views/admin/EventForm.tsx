@@ -37,12 +37,9 @@ const emptyForm = {
 	displayDate: '',
 	status: 'RASCUNHO' as Status,
 	featured: false,
-	country: 'AGO',
 	countryName: '',
 	city: '',
 	venue: '',
-	latitude: '',
-	longitude: '',
 	eventTypeId: '',
 	metaTitle: '',
 	metaDescription: '',
@@ -60,12 +57,9 @@ function toForm(event: Event): typeof emptyForm {
 		displayDate: event.displayDate,
 		status: event.status,
 		featured: event.featured,
-		country: event.country,
 		countryName: event.countryName,
 		city: event.city ?? '',
 		venue: event.venue ?? '',
-		latitude: event.latitude != null ? String(event.latitude) : '',
-		longitude: event.longitude != null ? String(event.longitude) : '',
 		eventTypeId: event.eventTypeId,
 		metaTitle: event.metaTitle ?? '',
 		metaDescription: event.metaDescription ?? '',
@@ -100,8 +94,6 @@ function EventFormInner({ event, editing, id, eventTypes }: EventFormInnerProps)
 				endDate: form.endDate || null,
 				city: form.city || null,
 				venue: form.venue || null,
-				latitude: form.latitude ? Number(form.latitude) : null,
-				longitude: form.longitude ? Number(form.longitude) : null,
 				metaTitle: form.metaTitle || null,
 				metaDescription: form.metaDescription || null,
 				coverImage: event?.coverImage ?? null,
@@ -364,35 +356,18 @@ function EventFormInner({ event, editing, id, eventTypes }: EventFormInnerProps)
 				</div>
 			</div>
 
-			<div className="grid gap-6 lg:grid-cols-2">
-				<div>
-					<label htmlFor="event-country" className={labelClass}>
-						{t('admin.events.countryCode')}
-					</label>
-					<input
-						id="event-country"
-						type="text"
-						required
-						maxLength={3}
-						placeholder="AGO"
-						value={form.country}
-						onChange={(event) => set('country')(event.target.value.toUpperCase())}
-						className={inputClass}
-					/>
-				</div>
-				<div>
-					<label htmlFor="event-country-name" className={labelClass}>
-						{t('admin.events.countryName')}
-					</label>
-					<input
-						id="event-country-name"
-						type="text"
-						required
-						value={form.countryName}
-						onChange={(event) => set('countryName')(event.target.value)}
-						className={inputClass}
-					/>
-				</div>
+			<div>
+				<label htmlFor="event-country-name" className={labelClass}>
+					{t('admin.events.countryName')}
+				</label>
+				<input
+					id="event-country-name"
+					type="text"
+					required
+					value={form.countryName}
+					onChange={(event) => set('countryName')(event.target.value)}
+					className={inputClass}
+				/>
 			</div>
 
 			<div className="grid gap-6 lg:grid-cols-2">
@@ -417,35 +392,6 @@ function EventFormInner({ event, editing, id, eventTypes }: EventFormInnerProps)
 						type="text"
 						value={form.venue}
 						onChange={(event) => set('venue')(event.target.value)}
-						className={inputClass}
-					/>
-				</div>
-			</div>
-
-			<div className="grid gap-6 lg:grid-cols-2">
-				<div>
-					<label htmlFor="event-lat" className={labelClass}>
-						{t('admin.events.latitude')}
-					</label>
-					<input
-						id="event-lat"
-						type="number"
-						step="any"
-						value={form.latitude}
-						onChange={(event) => set('latitude')(event.target.value)}
-						className={inputClass}
-					/>
-				</div>
-				<div>
-					<label htmlFor="event-lng" className={labelClass}>
-						{t('admin.events.longitude')}
-					</label>
-					<input
-						id="event-lng"
-						type="number"
-						step="any"
-						value={form.longitude}
-						onChange={(event) => set('longitude')(event.target.value)}
 						className={inputClass}
 					/>
 				</div>

@@ -87,12 +87,9 @@ model Event {
 	featured Boolean @default(false)
 
 	// Localização
-	country     String  @db.VarChar(3) // ISO (AO, PT, etc)
 	countryName String  @db.VarChar(64)
 	city        String? @db.VarChar(128)
 	venue       String? @db.VarChar(256)
-	latitude    Float?
-	longitude   Float?
 
 	// Mídia
 	coverImage          String? @db.VarChar(512)

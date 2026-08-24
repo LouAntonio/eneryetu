@@ -67,12 +67,9 @@ export interface Event {
 	displayDate: string;
 	status: Status;
 	featured: boolean;
-	country: string;
 	countryName: string;
 	city?: string | null;
 	venue?: string | null;
-	latitude?: number | null;
-	longitude?: number | null;
 	coverImage?: string | null;
 	coverImagePublicId?: string | null;
 	gallery?: CloudinaryAsset[] | null;
