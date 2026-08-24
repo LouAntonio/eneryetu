@@ -1,0 +1,508 @@
+{
+	"brand": "EnerYetu",
+	"tagline": "A nossa energia, o nosso futuro",
+	"navigation": {
+		"home": "Início",
+		"about": "Sobre",
+		"sectors": "Setores",
+		"services": "Serviços",
+		"training": "Formações",
+		"media": "Mídia",
+		"blog": "Blog",
+		"news": "Notícias",
+		"events": "Eventos",
+		"gallery": "Galeria",
+		"careers": "Carreiras",
+		"contact": "Contactos"
+	},
+	"ticker": {
+		"hours": "Seg–Sex 07:00–16:30 · Sáb 07:00–12:30 · Dom fechado",
+		"phones": "+244 923 734 199 · +244 938 626 639",
+		"email": "geral@eneryetu.com"
+	},
+	"common": {
+		"menuOpen": "Abrir menu",
+		"menuClose": "Fechar menu",
+		"requestQuote": "Solicite um orçamento",
+		"exploreServices": "Explorar serviços",
+		"learnMore": "Saber mais",
+		"discoverMore": "Descobrir mais",
+		"readMore": "Ler mais",
+		"apply": "Candidatar-se",
+		"backHome": "Voltar ao início",
+		"copy": "Copiar"
+	},
+	"hero": {
+		"eyebrow": "Serviços para Petróleo & Gás e Mineração · Luanda",
+		"title": "Fornecimento estratégico e conteúdo local.",
+		"lede": "A EnerYetu cria e facilita oportunidades de negócio para empresas nacionais e internacionais — sourcing de peças, materiais e equipamentos, consultoria, mão-de-obra qualificada, logística e serviços técnicos em Angola.",
+		"ctaPrimary": "Solicite um orçamento",
+		"ctaSecondary": "Explorar serviços"
+	},
+	"stats": {
+		"eyebrow": "Registo de campo",
+		"title": "Números que podemos garantir",
+		"rows": [
+			{ "value": "25", "label": "Anos em solo angolano" },
+			{ "value": "8", "label": "Linhas de serviço sob o mesmo tecto" },
+			{ "value": "A–Z", "label": "Fornecimento, instalação e manutenção num só contrato" },
+			{ "value": "1", "label": "Um único ponto de contacto local" }
+		]
+	},
+	"intro": {
+		"eyebrow": "Quem somos",
+		"title": "Empresa angolana de serviços para Petróleo & Gás e Mineração.",
+		"body": "Totalmente de capital angolano, fomos fundados por profissionais com mais de 15 anos de experiência em Gestão de Projetos no setor de Petróleo & Gás. Atuamos com foco em ESG e na transição energética, criando valor para investidores, colaboradores e comunidades locais.",
+		"points": [
+			"100% capital angolano",
+			"+15 anos em Gestão de Projetos O&G",
+			"Foco em ESG e transição energética",
+			"Conhecimento do mercado petrolífero angolano"
+		],
+		"cta": "Conheça-nos melhor"
+	},
+	"services": {
+		"eyebrow": "Serviços",
+		"title": "Doze linhas de serviço, um único parceiro.",
+		"body": "Soluções integradas de acesso ao mercado e desenvolvimento de negócios — do sourcing à manutenção, num só contrato.",
+		"items": [
+			{
+				"title": "Sourcing estratégico",
+				"blurb": "Ligamos clientes africanos a fornecedores internacionais de peças, materiais e equipamentos, com gestão de contratos de ponta a ponta.",
+				"spec": "Ponta a ponta"
+			},
+			{
+				"title": "Consultoria e acesso ao mercado",
+				"blurb": "Representação comercial de empresas internacionais em Angola e apoio em processos regulatórios e de licenciamento.",
+				"spec": "Representação · licenciamento"
+			},
+			{
+				"title": "Recursos humanos",
+				"blurb": "Fornecimento de mão-de-obra qualificada e formação profissional em Gestão de Projetos, Primavera P6, Soldadura e Inspeção NDT.",
+				"spec": "Manpower · formação"
+			},
+			{
+				"title": "Logística e cadeia de suprimentos",
+				"blurb": "Gestão de contratos logísticos, movimentação e transferência de carga dentro e fora de Angola.",
+				"spec": "Nacional · internacional"
+			},
+			{
+				"title": "Fornecimento de materiais",
+				"blurb": "Sobressalentes, equipamentos certificados, produtos químicos, lubrificantes e consumíveis industriais.",
+				"spec": "Equipamento certificado"
+			},
+			{
+				"title": "Manutenção e reparação",
+				"blurb": "Sistemas hidráulicos, pneumáticos e elétricos; geradores e compressores; calibração e certificação de equipamentos.",
+				"spec": "Campo & oficina"
+			},
+			{
+				"title": "Tratamento de água",
+				"blurb": "Instalação e manutenção de sistemas de purificação de água industriais e residenciais.",
+				"spec": "Industrial · residencial"
+			},
+			{
+				"title": "Engenharia e construção",
+				"blurb": "Apoio a contratos EPC: engenharia, construção e reparação de plataformas, tanques e tubagens.",
+				"spec": "EPC"
+			},
+			{
+				"title": "Gestão de integridade",
+				"blurb": "Inspeção estrutural e ensaios não destrutivos de soldas em conformidade com as normas ISO e ASNT.",
+				"spec": "NDT · ISO · ASNT"
+			},
+			{
+				"title": "Tratamento de superfícies",
+				"blurb": "Proteção contra corrosão, pintura industrial e limpeza de alta pressão.",
+				"spec": "Anticorrosão"
+			},
+			{
+				"title": "Energias renováveis",
+				"blurb": "Gestão de projetos, instalação e manutenção de estruturas de energia renovável.",
+				"spec": "Transição energética"
+			},
+			{
+				"title": "Gestão de resíduos",
+				"blurb": "Transporte, tratamento, reciclagem e eliminação de resíduos químicos.",
+				"spec": "Químicos · reciclagem"
+			}
+		],
+		"beyond": {
+			"eyebrow": "Para além do contrato",
+			"title": "Valor partilhado, práticas sustentáveis",
+			"body": "Buscamos parcerias estratégicas que gerem valor para investidores, colaboradores e comunidades locais, com compromisso ativo com os princípios ESG.",
+			"items": [
+				{
+					"title": "ESG",
+					"blurb": "Compromisso com práticas ambientais, sociais e de governança sustentáveis."
+				},
+				{
+					"title": "Conteúdo local",
+					"blurb": "Posicionamos Angola como hub competitivo nas cadeias de suprimentos industriais globais."
+				},
+				{
+					"title": "Parcerias estratégicas",
+					"blurb": "Alianças nacionais e internacionais que geram valor partilhado e desenvolvimento local."
+				}
+			]
+		}
+	},
+	"sectors": {
+		"eyebrow": "Setores",
+		"title": "Onde trabalhamos",
+		"body": "Atuamos nos setores que movem a economia angolana, com conhecimento do equipamento, das normas e das exigências de cada indústria.",
+		"items": [
+			{
+				"title": "Petróleo & Gás",
+				"blurb": "Sourcing, manutenção, integridade e serviços de apoio para operações a montante e a jusante."
+			},
+			{
+				"title": "Mineração extrativa",
+				"blurb": "Fornecimento de materiais, mão-de-obra qualificada e serviços técnicos para operações mineiras."
+			},
+			{
+				"title": "Energias renováveis",
+				"blurb": "Gestão de projetos, instalação e manutenção de estruturas de energia renovável."
+			},
+			{
+				"title": "Economia azul",
+				"blurb": "Serviços e equipamento para as indústrias marítimas e costeiras."
+			},
+			{
+				"title": "Logística & Transporte",
+				"blurb": "Movimentação e transferência de carga dentro e fora de Angola, com gestão de contratos ponta a ponta."
+			},
+			{
+				"title": "Construção civil",
+				"blurb": "Apoio a contratos de engenharia e construção de estruturas industriais e civis."
+			},
+			{
+				"title": "Tratamento de águas",
+				"blurb": "Instalação e manutenção de sistemas de purificação industriais e residenciais."
+			},
+			{
+				"title": "Gestão de resíduos",
+				"blurb": "Transporte, tratamento, reciclagem e eliminação de resíduos, incluindo resíduos químicos."
+			}
+		]
+	},
+	"training": {
+		"eyebrow": "Formações",
+		"title": "Competências que ficam no local.",
+		"body": "Formação profissional para equipas nacionais e internacionais — para que quem opera e mantém a sua instalação a domine de verdade.",
+		"features": ["Gestão de Projetos", "Primavera P6", "Soldadura", "Inspeção NDT"],
+		"cta": "Ver a formação"
+	},
+	"partners": {
+		"eyebrow": "Parceiros",
+		"title": "Uma rede de parceiros estratégicos",
+		"body": "Trabalhamos com parceiros nacionais e internacionais para entregar soluções completas aos nossos clientes.",
+		"items": [
+			"Elite Flow Control",
+			"Elite Project Engineering",
+			"Rico Organizações",
+			"Synergy Projects Consulting",
+			"Risaku Energy Services Company",
+			"Bué Fine Consultoria Empresarial LDA"
+		]
+	},
+	"cta": {
+		"title": "Precisa de fornecimento, serviços ou parceiros em Angola?",
+		"body": "Diga-nos o que precisa — tratamos do sourcing, da logística, das pessoas e dos serviços técnicos.",
+		"cta": "Marque um encontro",
+		"phone": "Ligue-nos agora"
+	},
+	"about": {
+		"eyebrow": "Sobre nós",
+		"title": "O parceiro angolano de fornecimento estratégico e conteúdo local.",
+		"lead": "A ENERYETU – COMÉRCIO & SERVIÇOS LDA é uma empresa prestadora de serviços que atua nas indústrias de Petróleo & Gás e Mineração.",
+		"body1": "Totalmente de capital angolano, foi fundada por profissionais angolanos com mais de 15 anos de experiência em Gestão de Projetos no setor de Petróleo & Gás — com profundo conhecimento do mercado petrolífero nacional.",
+		"body2": "Comprometida com os princípios ESG, promove práticas sustentáveis e a transição energética, buscando parcerias estratégicas que gerem valor para investidores, colaboradores e comunidades locais.",
+		"visionTitle": "Visão",
+		"vision": "Ser uma plataforma líder em África para Fornecimento Estratégico e Conteúdo Local, posicionando Angola como um hub competitivo para cadeias de suprimentos industriais globais.",
+		"missionTitle": "Missão",
+		"mission": "Criar e facilitar oportunidades de negócios para empresas nacionais e internacionais através de soluções integradas de acesso ao mercado e desenvolvimento de negócios.",
+		"valuesTitle": "Valores",
+		"values": [
+			{ "title": "Segurança", "blurb": "A vida humana em primeiro lugar, sempre." },
+			{ "title": "Integridade", "blurb": "Agir com retidão em todas as relações." },
+			{
+				"title": "Respeito",
+				"blurb": "Pelas pessoas, pelas comunidades e pelo ambiente."
+			},
+			{
+				"title": "Responsabilidade",
+				"blurb": "Pelo nosso trabalho, pelos resultados e pelo impacto."
+			},
+			{
+				"title": "Dignidade Humana",
+				"blurb": "Tratamento justo e digno para todos."
+			}
+		],
+		"principlesTitle": "Princípios",
+		"principles": [
+			{
+				"title": "Legalidade",
+				"blurb": "Conformidade com as leis nacionais e internacionais."
+			},
+			{
+				"title": "Justiça e Equidade",
+				"blurb": "Igualdade de condições em todas as decisões."
+			},
+			{
+				"title": "Transparência",
+				"blurb": "Clareza e honestidade na relação com clientes e parceiros."
+			},
+			{ "title": "Solidariedade", "blurb": "Compromisso com as comunidades onde atuamos." }
+		],
+		"rows": [
+			{ "value": "25", "label": "Anos em solo angolano" },
+			{ "value": "8", "label": "Linhas de serviço sob o mesmo tecto" },
+			{ "value": "Luanda", "label": "Sede, bairro Nova Vida" },
+			{ "value": "Nacional", "label": "Equipas de campo em todo o país" }
+		]
+	},
+	"careers": {
+		"eyebrow": "Carreiras",
+		"title": "Construa o futuro angolano connosco.",
+		"body": "Contratamos profissionais que querem crescer com os setores de Petróleo & Gás e Mineração em Angola. Se é o seu caso, fale connosco.",
+		"applyLabel": "Interessado? Envie o seu CV para",
+		"applyHint": "Mencione a área de interesse no assunto do email.",
+		"form": {
+			"title": "Candidatura espontânea",
+			"subtitle": "Deixe-nos os seus dados e um resumo do percurso — analisamos o seu perfil e respondemos caso haja encaixe.",
+			"name": "O seu nome",
+			"email": "Email",
+			"phone": "Telefone",
+			"area": "Área de interesse",
+			"areaPlaceholder": "Ex.: Gestão de Projetos, Soldadura, Logística…",
+			"message": "Conte-nos um pouco do seu percurso",
+			"messagePlaceholder": "Experiência, formação, disponibilidade…",
+			"cv": "Curriculum Vitae",
+			"cvHint": "PDF, DOC ou DOCX",
+			"cvRequired": "Anexe o seu CV.",
+			"submit": "Enviar candidatura",
+			"nameRequired": "Diga-nos o seu nome.",
+			"emailInvalid": "Introduza um email válido.",
+			"successTitle": "Candidatura recebida.",
+			"successBody": "Obrigado — analisamos o seu perfil e respondemos caso haja encaixe."
+		}
+	},
+	"media": {
+		"eyebrow": "Mídia",
+		"title": "Notícias, eventos e o trabalho por trás dos painéis.",
+		"body": "Notas de campo dos nossos engenheiros, eventos públicos que organizamos e fotografias do trabalho.",
+		"blog": {
+			"title": "Blog",
+			"emptyTitle": "As notas de campo estão a ser redigidas.",
+			"emptyBody": "Os nossos engenheiros estão a escrever sobre falhas, correcções e lições reais. A primeira publicação chega aqui em breve — siga-nos no LinkedIn para não perder."
+		},
+		"news": {
+			"title": "Notícias",
+			"emptyTitle": "Ainda não há notícias.",
+			"emptyBody": "Publicamos aqui as notícias da empresa e do sector — de novos projectos a marcos no terreno."
+		},
+		"events": {
+			"title": "Eventos",
+			"emptyTitle": "O próximo evento está em preparação.",
+			"emptyBody": "Publicamos aqui dias de formação abertos e encontros do sector. Diga-nos a que gostaria de assistir e damos prioridade.",
+			"venue": "Local",
+			"cta": "Falar connosco",
+			"spec": {
+				"title": "Ficha técnica",
+				"date": "Data",
+				"type": "Tipo",
+				"country": "País",
+				"city": "Cidade",
+				"venue": "Local"
+			}
+		},
+		"gallery": {
+			"title": "Galeria",
+			"emptyTitle": "Fotografias novas a caminho.",
+			"emptyBody": "Estamos a preparar fotografias de instalações concluídas, oficinas e equipas de campo."
+		},
+		"loading": "A carregar…",
+		"readingTime": "min de leitura",
+		"byline": "por {{name}}",
+		"latest": "Mais do campo",
+		"specTitle": "Ficha do post",
+		"spec": {
+			"category": "Categoria",
+			"date": "Data",
+			"author": "Autor",
+			"reading": "Leitura"
+		},
+		"ctaContact": "Falar connosco"
+	},
+	"contact": {
+		"eyebrow": "Contactos",
+		"title": "Fale connosco.",
+		"body": "Diga-nos o que precisa — sourcing, serviços, logística ou parcerias — e voltaremos com uma resposta, normalmente num dia útil.",
+		"detailsTitle": "Sede",
+		"address": "Apartamento 5, 1º andar, edifício E152, Rua 70, bairro Nova Vida, Luanda, Angola",
+		"phone": "+244 923 734 199 / +244 938 626 639",
+		"email": "geral@eneryetu.com",
+		"hoursTitle": "Horários",
+		"hours": {
+			"week": { "day": "Segunda – Sexta", "time": "07:00 – 16:30" },
+			"saturday": { "day": "Sábado", "time": "07:00 – 12:30" },
+			"sunday": { "day": "Domingo", "time": "Fechado" }
+		},
+		"form": {
+			"title": "Envie um pedido",
+			"name": "O seu nome",
+			"company": "Empresa",
+			"email": "Email",
+			"message": "Como podemos ajudar?",
+			"messagePlaceholder": "Serviço ou material pretendido, descrição do projeto, prazos…",
+			"submit": "Enviar pedido",
+			"nameRequired": "Diga-nos o seu nome.",
+			"emailInvalid": "Introduza um email válido.",
+			"messageRequired": "Descreva brevemente a necessidade.",
+			"successTitle": "Pedido enviado.",
+			"successBody": "Obrigado — respondemos num dia útil."
+		}
+	},
+	"footer": {
+		"about": "A EnerYetu é uma empresa angolana de serviços para as indústrias de Petróleo & Gás e Mineração — fornecimento estratégico, consultoria, mão-de-obra qualificada e serviços técnicos.",
+		"quickLinksTitle": "Links rápidos",
+		"mediaLinksTitle": "Mídia",
+		"contactTitle": "Contactos",
+		"rights": "Todos os direitos reservados."
+	},
+	"admin": {
+		"logout": "Sair",
+		"backToSite": "Voltar ao site",
+		"edit": "Editar",
+		"delete": "Eliminar",
+		"deleteConfirm": "Eliminar este registo? Não pode ser desfeito.",
+		"save": "Guardar",
+		"cancel": "Cancelar",
+		"back": "Voltar",
+		"you": "(você)",
+		"upload": "Carregar",
+		"errors": {
+			"generic": "Algo correu mal. Tente novamente."
+		},
+		"nav": {
+			"dashboard": "Painel",
+			"users": "Utilizadores",
+			"posts": "Publicações",
+			"events": "Eventos",
+			"categories": "Categorias",
+			"eventTypes": "Tipos de evento"
+		},
+		"status": {
+			"draft": "Rascunho",
+			"published": "Publicado",
+			"archived": "Arquivado"
+		},
+		"login": {
+			"invalid": "Credenciais inválidas.",
+			"eyebrow": "Acesso restrito",
+			"title": "Sala de controlo",
+			"email": "Email",
+			"password": "Senha",
+			"submit": "Entrar"
+		},
+		"dashboard": {
+			"eyebrow": "Visão geral",
+			"title": "Sala de controlo",
+			"users": "Utilizadores",
+			"posts": "Publicações",
+			"events": "Eventos",
+			"note": "Nota de campo",
+			"noteBody": "O conteúdo editado aqui é publicado no site público de imediato. Os rascunhos ficam ocultos até os definir como Publicado."
+		},
+		"users": {
+			"eyebrow": "Acesso",
+			"title": "Utilizadores",
+			"add": "Adicionar utilizador",
+			"name": "Nome",
+			"surname": "Apelido",
+			"email": "Email",
+			"password": "Senha",
+			"role": "Função",
+			"deleteConfirm": "Eliminar este utilizador?"
+		},
+		"categories": {
+			"eyebrow": "Taxonomia",
+			"title": "Categorias",
+			"add": "Adicionar categoria",
+			"name": "Nome",
+			"slug": "Slug",
+			"posts": "Publicações"
+		},
+		"eventTypes": {
+			"eyebrow": "Taxonomia",
+			"title": "Tipos de evento",
+			"add": "Adicionar tipo",
+			"name": "Nome",
+			"slug": "Slug",
+			"events": "Eventos"
+		},
+		"posts": {
+			"eyebrow": "Conteúdo",
+			"title": "Publicações",
+			"add": "Nova publicação",
+			"editTitle": "Editar publicação",
+			"newTitle": "Nova publicação",
+			"titleField": "Título",
+			"slug": "Slug",
+			"type": "Tipo",
+			"typeNoticia": "Notícia",
+			"typeBlog": "Blog",
+			"status": "Estado",
+			"category": "Categoria",
+			"noCategory": "Sem categoria",
+			"excerpt": "Resumo",
+			"excerptHint": "Resumo curto mostrado nas listagens…",
+			"content": "Conteúdo",
+			"coverImage": "URL da imagem de capa",
+			"metaTitle": "Meta título",
+			"metaDescription": "Meta descrição",
+			"featured": "Destaque"
+		},
+		"events": {
+			"eyebrow": "Agenda",
+			"title": "Eventos",
+			"add": "Novo evento",
+			"editTitle": "Editar evento",
+			"newTitle": "Novo evento",
+			"titleField": "Título",
+			"slug": "Slug",
+			"subtitle": "Subtítulo",
+			"description": "Descrição curta",
+			"fullDescription": "Descrição completa",
+			"startDate": "Data de início",
+			"endDate": "Data de fim",
+			"displayDate": "Data de exibição",
+			"eventType": "Tipo de evento",
+			"chooseType": "Escolha um tipo…",
+			"status": "Estado",
+			"featured": "Destaque",
+			"countryCode": "Código do país",
+			"countryName": "País",
+			"city": "Cidade",
+			"venue": "Local",
+			"latitude": "Latitude",
+			"longitude": "Longitude",
+			"metaTitle": "Meta título",
+			"metaDescription": "Meta descrição",
+			"saveAndNext": "Guardar & adicionar ficheiros",
+			"assets": "Ficheiros",
+			"coverImage": "Imagem de capa",
+			"noCover": "Sem capa ainda — carregue após o primeiro save.",
+			"gallery": "Galeria",
+			"noGallery": "Ainda sem imagens.",
+			"documents": "Documentos",
+			"noDocuments": "Ainda sem documentos."
+		}
+	},
+	"notFound": {
+		"title": "Está fora da rede.",
+		"body": "A página que procura não está nesta rede. Pode ter mudado — ou nunca ter existido.",
+		"cta": "Voltar ao início"
+	}
+}

@@ -1,0 +1,500 @@
+{
+	"brand": "EnerYetu",
+	"tagline": "Our energy, our future",
+	"navigation": {
+		"home": "Home",
+		"about": "About",
+		"sectors": "Sectors",
+		"services": "Services",
+		"training": "Training",
+		"media": "Media",
+		"blog": "Blog",
+		"news": "News",
+		"events": "Events",
+		"gallery": "Gallery",
+		"careers": "Careers",
+		"contact": "Contact"
+	},
+	"ticker": {
+		"hours": "Mon–Fri 07:00–16:30 · Sat 07:00–12:30 · Sun closed",
+		"phones": "+244 923 734 199 · +244 938 626 639",
+		"email": "geral@eneryetu.com"
+	},
+	"common": {
+		"menuOpen": "Open menu",
+		"menuClose": "Close menu",
+		"requestQuote": "Request a quote",
+		"exploreServices": "Explore services",
+		"learnMore": "Learn more",
+		"discoverMore": "Discover more",
+		"readMore": "Read more",
+		"apply": "Apply",
+		"backHome": "Back to home",
+		"copy": "Copy"
+	},
+	"hero": {
+		"eyebrow": "Services for Oil & Gas and Mining · Luanda",
+		"title": "Strategic sourcing and local content.",
+		"lede": "EnerYetu creates and facilitates business opportunities for national and international companies — sourcing of parts, materials and equipment, consulting, skilled manpower, logistics and technical services in Angola.",
+		"ctaPrimary": "Request a quote",
+		"ctaSecondary": "Explore services"
+	},
+	"stats": {
+		"eyebrow": "Field record",
+		"title": "Numbers we can stand behind",
+		"rows": [
+			{ "value": "25", "label": "Years on Angolan ground" },
+			{ "value": "8", "label": "Service lines under one roof" },
+			{ "value": "A–Z", "label": "Supply, install and maintain in one contract" },
+			{ "value": "1", "label": "Dedicated local point of contact" }
+		]
+	},
+	"intro": {
+		"eyebrow": "Who we are",
+		"title": "An Angolan services company for Oil & Gas and Mining.",
+		"body": "Fully Angolan-owned, we were founded by professionals with over 15 years of experience in Project Management in the Oil & Gas industry. We work with an ESG focus and the energy transition in mind, creating value for investors, employees and local communities.",
+		"points": [
+			"100% Angolan-owned",
+			"+15 years in O&G project management",
+			"ESG and energy-transition focus",
+			"Deep knowledge of the Angolan oil market"
+		],
+		"cta": "Learn more about us"
+	},
+	"services": {
+		"eyebrow": "Services",
+		"title": "Twelve service lines, one partner.",
+		"body": "Integrated market-access and business-development solutions — from sourcing to maintenance, under a single contract.",
+		"items": [
+			{
+				"title": "Strategic sourcing",
+				"blurb": "We connect African clients with international suppliers of parts, materials and equipment, managing contracts end to end.",
+				"spec": "End to end"
+			},
+			{
+				"title": "Consulting & market access",
+				"blurb": "Commercial representation of international companies in Angola and support with regulatory and licensing processes.",
+				"spec": "Representation · licensing"
+			},
+			{
+				"title": "Human resources",
+				"blurb": "Skilled manpower supply and professional training in Project Management, Primavera P6, Welding and NDT Inspection.",
+				"spec": "Manpower · training"
+			},
+			{
+				"title": "Logistics & supply chain",
+				"blurb": "Logistics contract management, cargo handling and transfer within and beyond Angola.",
+				"spec": "Domestic · international"
+			},
+			{
+				"title": "Materials supply",
+				"blurb": "Spare parts, certified equipment, chemical products, lubricants and industrial consumables.",
+				"spec": "Certified equipment"
+			},
+			{
+				"title": "Maintenance & repair",
+				"blurb": "Hydraulic, pneumatic and electrical systems; generators and compressors; calibration and certification of equipment.",
+				"spec": "Field & workshop"
+			},
+			{
+				"title": "Water treatment",
+				"blurb": "Installation and maintenance of industrial and residential water purification systems.",
+				"spec": "Industrial · residential"
+			},
+			{
+				"title": "Engineering & construction",
+				"blurb": "Support for EPC contracts: engineering, construction and repair of platforms, tanks and pipelines.",
+				"spec": "EPC"
+			},
+			{
+				"title": "Integrity management",
+				"blurb": "Structural inspection and non-destructive testing of welds in compliance with ISO and ASNT standards.",
+				"spec": "NDT · ISO · ASNT"
+			},
+			{
+				"title": "Surface treatment",
+				"blurb": "Corrosion protection, industrial painting and high-pressure cleaning.",
+				"spec": "Anti-corrosion"
+			},
+			{
+				"title": "Renewable energy",
+				"blurb": "Project management, installation and maintenance of renewable energy structures.",
+				"spec": "Energy transition"
+			},
+			{
+				"title": "Waste management",
+				"blurb": "Transport, treatment, recycling and disposal of waste, including chemical waste.",
+				"spec": "Chemical · recycling"
+			}
+		],
+		"beyond": {
+			"eyebrow": "Beyond the contract",
+			"title": "Shared value, sustainable practices",
+			"body": "We pursue strategic partnerships that generate value for investors, employees and local communities, with an active commitment to ESG principles.",
+			"items": [
+				{
+					"title": "ESG",
+					"blurb": "Commitment to sustainable environmental, social and governance practices."
+				},
+				{
+					"title": "Local content",
+					"blurb": "Positioning Angola as a competitive hub in global industrial supply chains."
+				},
+				{
+					"title": "Strategic partnerships",
+					"blurb": "Domestic and international alliances that generate shared value and local development."
+				}
+			]
+		}
+	},
+	"sectors": {
+		"eyebrow": "Sectors",
+		"title": "Where we work",
+		"body": "Energy needs differ by industry. We know the equipment, the standards and the uptime each one demands.",
+		"items": [
+			{
+				"title": "Oil & gas",
+				"blurb": "Power and equipment for onshore operations and support facilities."
+			},
+			{
+				"title": "Mining & resources",
+				"blurb": "Plant power, standby systems and parts supply for site crews."
+			},
+			{
+				"title": "Telecom",
+				"blurb": "Rural site power and backup for towers, exchanges and data shelters."
+			},
+			{
+				"title": "Agribusiness",
+				"blurb": "Cold-chain and irrigation power for farms, processors and storage."
+			},
+			{
+				"title": "Public infrastructure",
+				"blurb": "Electrification for health, education and public buildings."
+			},
+			{
+				"title": "Industrial & commercial",
+				"blurb": "Solar, storage and maintenance for factories and commercial buildings."
+			}
+		]
+	},
+	"training": {
+		"eyebrow": "Training",
+		"title": "Skills that stay on site.",
+		"body": "Professional training for national and international teams — so the people who run and maintain your facility truly master it.",
+		"features": ["Project Management", "Primavera P6", "Welding", "NDT Inspection"],
+		"cta": "See our training"
+	},
+	"partners": {
+		"eyebrow": "Partners",
+		"title": "A network of strategic partners",
+		"body": "We work with domestic and international partners to deliver complete solutions to our clients.",
+		"items": [
+			"Elite Flow Control",
+			"Elite Project Engineering",
+			"Rico Organizações",
+			"Synergy Projects Consulting",
+			"Risaku Energy Services Company",
+			"Bué Fine Consultoria Empresarial LDA"
+		]
+	},
+	"cta": {
+		"title": "Need sourcing, services or partners in Angola?",
+		"body": "Tell us what you need — we handle the sourcing, the logistics, the people and the technical services.",
+		"cta": "Make an appointment",
+		"phone": "Call us now"
+	},
+	"about": {
+		"eyebrow": "About us",
+		"title": "The Angolan partner for strategic sourcing and local content.",
+		"lead": "ENERYETU – COMÉRCIO & SERVIÇOS LDA is a services company operating in the Oil & Gas and Mining industries.",
+		"body1": "Fully Angolan-owned, it was founded by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas industry — with deep knowledge of the national oil market.",
+		"body2": "Committed to ESG principles, it promotes sustainable practices and the energy transition, pursuing strategic partnerships that generate value for investors, employees and local communities.",
+		"visionTitle": "Vision",
+		"vision": "To be Africa's leading platform for Strategic Sourcing and Local Content, positioning Angola as a competitive hub for global industrial supply chains.",
+		"missionTitle": "Mission",
+		"mission": "To create and facilitate business opportunities for national and international companies through integrated market-access and business-development solutions.",
+		"valuesTitle": "Values",
+		"values": [
+			{ "title": "Safety", "blurb": "Human life first, always." },
+			{ "title": "Integrity", "blurb": "Acting with rectitude in every relationship." },
+			{
+				"title": "Respect",
+				"blurb": "For people, for communities and for the environment."
+			},
+			{
+				"title": "Responsibility",
+				"blurb": "For our work, our results and our impact."
+			},
+			{
+				"title": "Human Dignity",
+				"blurb": "Fair and dignified treatment for all."
+			}
+		],
+		"principlesTitle": "Principles",
+		"principles": [
+			{
+				"title": "Legality",
+				"blurb": "Compliance with national and international laws."
+			},
+			{
+				"title": "Justice & Fairness",
+				"blurb": "Equal conditions in every decision."
+			},
+			{
+				"title": "Transparency",
+				"blurb": "Clarity and honesty with clients and partners."
+			},
+			{ "title": "Solidarity", "blurb": "Commitment to the communities where we operate." }
+		],
+		"rows": [
+			{ "value": "25", "label": "Years on Angolan ground" },
+			{ "value": "8", "label": "Service lines under one roof" },
+			{ "value": "Luanda", "label": "Head office, Nova Vida district" },
+			{ "value": "Nationwide", "label": "Field teams across Angola" }
+		]
+	},
+	"careers": {
+		"eyebrow": "Careers",
+		"title": "Build Angola's future with us.",
+		"body": "We hire professionals who want to grow with Angola's Oil & Gas and Mining industries. If that is you, tell us.",
+		"applyLabel": "Interested? Send your CV to",
+		"applyHint": "Mention your area of interest in the subject line.",
+		"form": {
+			"title": "Spontaneous application",
+			"subtitle": "Leave us your details and a short summary of your background — we review your profile and reply if there is a match.",
+			"name": "Your name",
+			"email": "Email",
+			"phone": "Phone",
+			"area": "Area of interest",
+			"areaPlaceholder": "E.g.: Project Management, Welding, Logistics…",
+			"message": "Tell us a little about your background",
+			"messagePlaceholder": "Experience, training, availability…",
+			"cv": "Curriculum Vitae",
+			"cvHint": "PDF, DOC or DOCX",
+			"cvRequired": "Attach your CV.",
+			"submit": "Send application",
+			"nameRequired": "Tell us your name.",
+			"emailInvalid": "Enter a valid email address.",
+			"successTitle": "Application received.",
+			"successBody": "Thank you — we review your profile and reply if there is a match."
+		}
+	},
+	"media": {
+		"eyebrow": "Media",
+		"title": "News, events and the work behind the panels.",
+		"body": "Field notes from our engineers, public events we host, and photographs of the work.",
+		"blog": {
+			"title": "Blog",
+			"emptyTitle": "Field notes are being drafted.",
+			"emptyBody": "Our engineers are writing up real failures, fixes and lessons. First post lands here soon — follow us on LinkedIn so you do not miss it."
+		},
+		"news": {
+			"title": "News",
+			"emptyTitle": "No news yet.",
+			"emptyBody": "We will publish company and sector news here — from new projects to milestones in the field."
+		},
+		"events": {
+			"title": "Events",
+			"emptyTitle": "Next event is being planned.",
+			"emptyBody": "We publish open training days and industry meetups here. Tell us what you would like to attend and we will prioritise it.",
+			"venue": "Venue",
+			"cta": "Contact us",
+			"spec": {
+				"title": "Spec sheet",
+				"date": "Date",
+				"type": "Type",
+				"country": "Country",
+				"city": "City",
+				"venue": "Venue"
+			}
+		},
+		"gallery": {
+			"title": "Gallery",
+			"emptyTitle": "Fresh photographs coming.",
+			"emptyBody": "We are preparing photographs of completed installations, workshops and field teams."
+		},
+		"loading": "Loading…",
+		"readingTime": "min read",
+		"byline": "by {{name}}",
+		"latest": "More from the field",
+		"specTitle": "Post sheet",
+		"spec": {
+			"category": "Category",
+			"date": "Date",
+			"author": "Author",
+			"reading": "Reading"
+		},
+		"ctaContact": "Contact us"
+	},
+	"contact": {
+		"eyebrow": "Contact",
+		"title": "Talk to us.",
+		"body": "Tell us what you need — sourcing, services, logistics or partnerships — and we will come back with an answer, usually within one business day.",
+		"detailsTitle": "Head office",
+		"address": "Apartment 5, 1st floor, building E152, Rua 70, Nova Vida district, Luanda, Angola",
+		"phone": "+244 923 734 199 / +244 938 626 639",
+		"email": "geral@eneryetu.com",
+		"hoursTitle": "Working hours",
+		"hours": {
+			"week": { "day": "Monday – Friday", "time": "07:00 – 16:30" },
+			"saturday": { "day": "Saturday", "time": "07:00 – 12:30" },
+			"sunday": { "day": "Sunday", "time": "Closed" }
+		},
+		"form": {
+			"title": "Send an enquiry",
+			"name": "Your name",
+			"company": "Company",
+			"email": "Email",
+			"message": "How can we help?",
+			"messagePlaceholder": "Required service or material, project description, timeline…",
+			"submit": "Send enquiry",
+			"nameRequired": "Tell us your name.",
+			"emailInvalid": "Enter a valid email address.",
+			"messageRequired": "Describe the requirement briefly.",
+			"successTitle": "Enquiry sent.",
+			"successBody": "Thank you — we reply within one business day."
+		}
+	},
+	"footer": {
+		"about": "EnerYetu is an Angolan services company for the Oil & Gas and Mining industries — strategic sourcing, consulting, skilled manpower and technical services.",
+		"quickLinksTitle": "Quick links",
+		"mediaLinksTitle": "Media",
+		"contactTitle": "Contact",
+		"rights": "All rights reserved."
+	},
+	"admin": {
+		"logout": "Log out",
+		"backToSite": "Back to site",
+		"edit": "Edit",
+		"delete": "Delete",
+		"deleteConfirm": "Delete this record? This cannot be undone.",
+		"save": "Save",
+		"cancel": "Cancel",
+		"back": "Back",
+		"you": "(you)",
+		"upload": "Upload",
+		"errors": {
+			"generic": "Something went wrong. Try again."
+		},
+		"nav": {
+			"dashboard": "Dashboard",
+			"users": "Users",
+			"posts": "Posts",
+			"events": "Events",
+			"categories": "Categories",
+			"eventTypes": "Event types"
+		},
+		"status": {
+			"draft": "Draft",
+			"published": "Published",
+			"archived": "Archived"
+		},
+		"login": {
+			"invalid": "Invalid credentials.",
+			"eyebrow": "Restricted access",
+			"title": "Control room",
+			"email": "Email",
+			"password": "Password",
+			"submit": "Enter"
+		},
+		"dashboard": {
+			"eyebrow": "Overview",
+			"title": "Control room",
+			"users": "Users",
+			"posts": "Posts",
+			"events": "Events",
+			"note": "Field note",
+			"noteBody": "Content edited here is published to the public site immediately. Drafts stay hidden until you set them to Published."
+		},
+		"users": {
+			"eyebrow": "Access",
+			"title": "Users",
+			"add": "Add user",
+			"name": "Name",
+			"surname": "Surname",
+			"email": "Email",
+			"password": "Password",
+			"role": "Role",
+			"deleteConfirm": "Delete this user?"
+		},
+		"categories": {
+			"eyebrow": "Taxonomy",
+			"title": "Categories",
+			"add": "Add category",
+			"name": "Name",
+			"slug": "Slug",
+			"posts": "Posts"
+		},
+		"eventTypes": {
+			"eyebrow": "Taxonomy",
+			"title": "Event types",
+			"add": "Add event type",
+			"name": "Name",
+			"slug": "Slug",
+			"events": "Events"
+		},
+		"posts": {
+			"eyebrow": "Content",
+			"title": "Posts",
+			"add": "New post",
+			"editTitle": "Edit post",
+			"newTitle": "New post",
+			"titleField": "Title",
+			"slug": "Slug",
+			"type": "Type",
+			"typeNoticia": "News",
+			"typeBlog": "Blog",
+			"status": "Status",
+			"category": "Category",
+			"noCategory": "No category",
+			"excerpt": "Excerpt",
+			"excerptHint": "Short summary shown on the listings…",
+			"content": "Content",
+			"coverImage": "Cover image URL",
+			"metaTitle": "Meta title",
+			"metaDescription": "Meta description",
+			"featured": "Featured"
+		},
+		"events": {
+			"eyebrow": "Agenda",
+			"title": "Events",
+			"add": "New event",
+			"editTitle": "Edit event",
+			"newTitle": "New event",
+			"titleField": "Title",
+			"slug": "Slug",
+			"subtitle": "Subtitle",
+			"description": "Short description",
+			"fullDescription": "Full description",
+			"startDate": "Start date",
+			"endDate": "End date",
+			"displayDate": "Display date",
+			"eventType": "Event type",
+			"chooseType": "Choose a type…",
+			"status": "Status",
+			"featured": "Featured",
+			"countryCode": "Country code",
+			"countryName": "Country",
+			"city": "City",
+			"venue": "Venue",
+			"latitude": "Latitude",
+			"longitude": "Longitude",
+			"metaTitle": "Meta title",
+			"metaDescription": "Meta description",
+			"saveAndNext": "Save & add assets",
+			"assets": "Assets",
+			"coverImage": "Cover image",
+			"noCover": "No cover yet — upload after first save.",
+			"gallery": "Gallery",
+			"noGallery": "No images yet.",
+			"documents": "Documents",
+			"noDocuments": "No documents yet."
+		}
+	},
+	"notFound": {
+		"title": "You are off the grid.",
+		"body": "The page you are looking for is not on this network. It may have moved — or never existed.",
+		"cta": "Back to home"
+	}
+}

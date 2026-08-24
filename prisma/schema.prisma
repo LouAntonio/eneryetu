@@ -1,0 +1,146 @@
+generator client {
+	provider = "prisma-client-js"
+}
+
+datasource db {
+	provider = "postgresql"
+}
+
+// --- ENUMS ---
+
+enum Role {
+	ADMIN
+	EDITOR
+}
+
+enum Status {
+	RASCUNHO
+	PUBLICADO
+	ARQUIVADO
+}
+
+enum PostType {
+	NOTICIA
+	BLOG
+}
+
+// --- UTILIZADORES E AUTENTICAÇÃO ---
+
+model User {
+	id        String   @id @default(uuid()) @db.VarChar(36)
+	name      String   @db.VarChar(32)
+	surname   String   @db.VarChar(32)
+	email     String   @unique @db.VarChar(64)
+	password  String   @db.VarChar(255)
+	role      Role     @default(ADMIN)
+	lastLogin DateTime @default(now())
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+
+	// Relacionamentos
+	events        Event[]
+	posts         Post[]
+	refreshTokens RefreshToken[]
+}
+
+model RefreshToken {
+	id        String   @id @default(uuid()) @db.VarChar(36)
+	token     String   @unique @db.VarChar(512)
+	userId    String   @db.VarChar(36)
+	user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+	expiresAt DateTime
+	createdAt DateTime @default(now())
+}
+
+// --- TAXONOMIA (Substitui os Enums fixos) ---
+
+model EventType {
+	id     String  @id @default(uuid()) @db.VarChar(36)
+	name   String  @unique @db.VarChar(64) // Ex: "Cimeira de Negócios"
+	slug   String  @unique @db.VarChar(80)
+	events Event[]
+}
+
+model Category {
+	id    String @id @default(uuid()) @db.VarChar(36)
+	name  String @db.VarChar(64)
+	slug  String @unique @db.VarChar(80)
+	posts Post[]
+}
+
+// --- CONTEÚDO: EVENTOS ---
+
+model Event {
+	id       String  @id @default(uuid()) @db.VarChar(36)
+	title    String  @db.VarChar(128)
+	subtitle String? @db.VarChar(256)
+	slug     String  @unique @db.VarChar(160)
+
+	description     String  @db.VarChar(255) // Resumo curto
+	fullDescription String? @db.Text // Conteúdo rico/HTML
+
+	startDate   DateTime  @db.Date
+	endDate     DateTime? @db.Date
+	displayDate String    @db.VarChar(64) // Ex: "Outubro 2024"
+
+	status   Status  @default(RASCUNHO)
+	featured Boolean @default(false)
+
+	// Localização
+	country     String  @db.VarChar(3) // ISO (AO, PT, etc)
+	countryName String  @db.VarChar(64)
+	city        String? @db.VarChar(128)
+	venue       String? @db.VarChar(256)
+	latitude    Float?
+	longitude   Float?
+
+	// Mídia
+	coverImage String? @db.VarChar(512)
+	gallery    Json? // Lista de URLs de imagens
+	documents  Json? // PDFs, Brochuras
+
+	// SEO
+	metaTitle       String? @db.VarChar(70)
+	metaDescription String? @db.VarChar(160)
+
+	// Relacionamentos
+	eventTypeId String    @db.VarChar(36)
+	eventType   EventType @relation(fields: [eventTypeId], references: [id])
+
+	createdBy String? @db.VarChar(36)
+	creator   User?   @relation(fields: [createdBy], references: [id])
+
+	createdAt   DateTime  @default(now())
+	updatedAt   DateTime  @updatedAt
+	publishedAt DateTime?
+}
+
+// --- CONTEÚDO: NOTÍCIAS E BLOG ---
+
+model Post {
+	id      String   @id @default(uuid()) @db.VarChar(36)
+	type    PostType @default(NOTICIA)
+	title   String   @db.VarChar(150)
+	slug    String   @unique @db.VarChar(180)
+	excerpt String?  @db.VarChar(255)
+	content String   @db.Text
+
+	coverImage String? @db.VarChar(512)
+	status     Status  @default(RASCUNHO)
+	featured   Boolean @default(false)
+
+	// SEO
+	metaTitle       String? @db.VarChar(70)
+	metaDescription String? @db.VarChar(160)
+
+	// Relacionamentos
+	authorId String @db.VarChar(36)
+	author   User   @relation(fields: [authorId], references: [id])
+
+	categoryId String?   @db.VarChar(36)
+	category   Category? @relation(fields: [categoryId], references: [id])
+
+	createdAt   DateTime  @default(now())
+	updatedAt   DateTime  @updatedAt
+	publishedAt DateTime?
+}
