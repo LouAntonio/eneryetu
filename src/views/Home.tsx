@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Link } from '../lib/routing';
 import { useTranslation } from 'react-i18next';
 
@@ -9,8 +10,12 @@ import { SectionHeading } from '../components/SectionHeading';
 import { ServiceCard } from '../components/ServiceCard';
 import { StatRow } from '../components/StatRow';
 
-const HERO_IMAGE =
-	'https://images.unsplash.com/photo-1592263904934-b00851dc93eb?q=80&w=2400&auto=format&fit=crop';
+const HERO_IMAGES = [
+	'https://images.unsplash.com/photo-1592263904934-b00851dc93eb?q=80&w=2400&auto=format&fit=crop',
+	'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2400&auto=format&fit=crop',
+	'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2400&auto=format&fit=crop',
+	'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2400&auto=format&fit=crop',
+];
 
 export function Home() {
 	const { t } = useTranslation();
@@ -20,18 +25,33 @@ export function Home() {
 	const points = t('intro.points', { returnObjects: true });
 	const trainingFeatures = t('training.features', { returnObjects: true });
 	const partners = t('partners.items', { returnObjects: true });
+	const [currentImage, setCurrentImage] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentImage((prev) => (prev + 1) % HERO_IMAGES.length);
+		}, 5000);
+		return () => clearInterval(interval);
+	}, []);
 
 	return (
 		<>
-			{/* HERO — full-bleed image behind a translucent header */}
+			{/* HERO — full-bleed rotating images behind a translucent header */}
 			<section id="hero" className="relative isolate overflow-hidden bg-ink-deep text-paper">
-				<img
-					src={HERO_IMAGE}
-					alt=""
-					aria-hidden
-					className="absolute inset-0 -z-20 h-full w-full object-cover"
-					loading="eager"
-				/>
+				<div className="absolute inset-0 -z-20">
+					{HERO_IMAGES.map((src, index) => (
+						<img
+							key={src}
+							src={src}
+							alt=""
+							aria-hidden
+							className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+								index === currentImage ? 'opacity-100' : 'opacity-0'
+							}`}
+							loading={index === 0 ? 'eager' : 'lazy'}
+						/>
+					))}
+				</div>
 				<div aria-hidden className="absolute inset-0 -z-10 bg-ink/70" />
 				<div aria-hidden className="absolute inset-0 -z-10 grid-dark opacity-70" />
 

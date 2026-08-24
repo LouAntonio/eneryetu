@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { ContactForm } from '../components/ContactForm';
-import { PageHeader } from '../components/PageHeader';
+import { PageHero } from '../components/PageHero';
 
 const HOUR_KEYS = ['week', 'saturday', 'sunday'] as const;
 
@@ -12,10 +12,11 @@ export function Contact() {
 
 	return (
 		<>
-			<PageHeader
+			<PageHero
 				eyebrow={t('contact.eyebrow')}
 				title={t('contact.title')}
 				body={t('contact.body')}
+				image={t('contact.heroImage')}
 			/>
 
 			<section>

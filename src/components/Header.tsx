@@ -11,6 +11,7 @@ const NAV_KEYS = [
 	'about',
 	'sectors',
 	'services',
+	'products',
 	'training',
 	'media',
 	'careers',
@@ -26,6 +27,7 @@ const ROUTES: Record<Exclude<NavKey, 'media'> | 'media', string> = {
 	about: '/about',
 	sectors: '/sectors',
 	services: '/services',
+	products: '/products',
 	training: '/training',
 	media: '/media',
 	careers: '/careers',
@@ -93,6 +95,7 @@ export function Header() {
 		about: t('navigation.about'),
 		sectors: t('navigation.sectors'),
 		services: t('navigation.services'),
+		products: t('navigation.products'),
 		training: t('navigation.training'),
 		media: t('navigation.media'),
 		careers: t('navigation.careers'),
@@ -126,7 +129,7 @@ export function Header() {
 		>
 			<div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-3">
 				<Link to="/" className="flex items-center" aria-label={t('brand')}>
-					<img src="/logo.png" alt={t('brand')} className="h-14 w-14 object-contain" />
+					<img src="/logo.png" alt={t('brand')} className="h-16 w-16 object-contain" />
 				</Link>
 
 				<nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
@@ -253,7 +256,7 @@ export function Header() {
 							<img
 								src="/logo.png"
 								alt={t('brand')}
-								className="h-12 w-12 object-contain"
+								className="h-14 w-14 object-contain"
 								// eslint-disable-next-line @next/next/no-img-element
 							/>
 							<button

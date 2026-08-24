@@ -21,21 +21,29 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 
 	return (
 		<>
-			<header className="border-b border-line-warm bg-bone">
-				<div className="mx-auto flex w-full max-w-6xl items-end justify-between gap-8 px-6 pb-14 pt-28">
+			<header className="relative isolate overflow-hidden border-b border-line-warm bg-bone text-paper">
+				<img
+					src={t('media.heroImage')}
+					alt=""
+					aria-hidden
+					className="absolute inset-0 -z-20 h-full w-full object-cover"
+					loading="eager"
+				/>
+				<div aria-hidden className="absolute inset-0 -z-10 bg-ink/70" />
+				<div aria-hidden className="absolute inset-0 -z-10 grid-dark opacity-70" />
+
+				<div className="relative mx-auto flex w-full max-w-6xl items-end justify-between gap-8 px-6 pb-14 pt-28">
 					<div className="max-w-2xl">
-						<span className="text-sm font-semibold tracking-wide text-amber">
-							{t('media.eyebrow')}
-						</span>
-						<h1 className="mt-4 font-editorial text-5xl font-semibold leading-[1.02] text-warm-ink sm:text-6xl">
+						<span className="ui-label text-paper/70">{t('media.eyebrow')}</span>
+						<h1 className="mt-5 max-w-3xl font-display text-6xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-7xl">
 							{t('media.title')}
 						</h1>
-						<p className="mt-5 max-w-xl text-lg leading-relaxed text-sand">
-							{t('media.body')}
-						</p>
+						<p className="mt-5 max-w-xl text-lg leading-relaxed text-paper/75">{t('media.body')}</p>
 					</div>
 					<Postmark place="LUANDA" className="hidden shrink-0 lg:inline-flex" />
 				</div>
+
+				<div aria-hidden className="relative z-10 h-1 w-full bg-volt" />
 			</header>
 
 			<nav aria-label={t('navigation.media')} className="border-b border-line-warm bg-bone">
@@ -49,8 +57,7 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 									isActive
 										? 'bg-warm-ink text-bone'
 										: 'text-sand hover:bg-card hover:text-warm-ink'
-								}`
-							}
+								}`}
 						>
 							{labels[key]}
 						</NavLink>

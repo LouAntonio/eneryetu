@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { PageHeader } from '../components/PageHeader';
+import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
 import { ServiceCard } from '../components/ServiceCard';
 
@@ -13,10 +13,11 @@ export function Services() {
 
 	return (
 		<>
-			<PageHeader
+			<PageHero
 				eyebrow={t('services.eyebrow')}
 				title={t('services.title')}
 				body={t('services.body')}
+				image={t('services.heroImage')}
 			/>
 
 			<section className="border-b border-line">

@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { ApplicationForm } from '../components/ApplicationForm';
-import { PageHeader } from '../components/PageHeader';
+import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
 
 export function Careers() {
@@ -11,10 +11,11 @@ export function Careers() {
 
 	return (
 		<>
-			<PageHeader
+			<PageHero
 				eyebrow={t('careers.eyebrow')}
 				title={t('careers.title')}
 				body={t('careers.body')}
+				image={t('careers.heroImage')}
 			/>
 
 			<section>

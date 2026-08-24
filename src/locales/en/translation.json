@@ -6,6 +6,7 @@
 		"about": "About",
 		"sectors": "Sectors",
 		"services": "Services",
+		"products": "Products",
 		"training": "Training",
 		"media": "Media",
 		"blog": "Blog",
@@ -16,7 +17,7 @@
 		"contact": "Contact"
 	},
 	"ticker": {
-		"hours": "Mon–Fri 07:00–16:30 · Sat 07:00–12:30 · Sun closed",
+		"hours": "Mon–Fri 08:00–17:00 · Sat 08:00–12:00",
 		"phones": "+244 923 734 199 · +244 938 626 639",
 		"email": "geral@eneryetu.com"
 	},
@@ -65,6 +66,7 @@
 		"eyebrow": "Services",
 		"title": "Twelve service lines, one partner.",
 		"body": "Integrated market-access and business-development solutions — from sourcing to maintenance, under a single contract.",
+		"heroImage": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2400&auto=format&fit=crop",
 		"items": [
 			{
 				"title": "Strategic sourcing",
@@ -77,7 +79,7 @@
 				"spec": "Representation · licensing"
 			},
 			{
-				"title": "Human resources",
+				"title": "Manpower",
 				"blurb": "Skilled manpower supply and professional training in Project Management, Primavera P6, Welding and NDT Inspection.",
 				"spec": "Manpower · training"
 			},
@@ -151,30 +153,37 @@
 		"eyebrow": "Sectors",
 		"title": "Where we work",
 		"body": "Energy needs differ by industry. We know the equipment, the standards and the uptime each one demands.",
+		"heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2400&auto=format&fit=crop",
 		"items": [
 			{
 				"title": "Oil & gas",
-				"blurb": "Power and equipment for onshore operations and support facilities."
+				"blurb": "Power and equipment for onshore operations and support facilities.",
+				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Mining & resources",
-				"blurb": "Plant power, standby systems and parts supply for site crews."
+				"blurb": "Plant power, standby systems and parts supply for site crews.",
+				"image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Telecom",
-				"blurb": "Rural site power and backup for towers, exchanges and data shelters."
+				"blurb": "Rural site power and backup for towers, exchanges and data shelters.",
+				"image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Agribusiness",
-				"blurb": "Cold-chain and irrigation power for farms, processors and storage."
+				"blurb": "Cold-chain and irrigation power for farms, processors and storage.",
+				"image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Public infrastructure",
-				"blurb": "Electrification for health, education and public buildings."
+				"blurb": "Electrification for health, education and public buildings.",
+				"image": "https://images.unsplash.com/photo-1566576912321-d58dd7a73409?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Industrial & commercial",
-				"blurb": "Solar, storage and maintenance for factories and commercial buildings."
+				"blurb": "Solar, storage and maintenance for factories and commercial buildings.",
+				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
 			}
 		]
 	},
@@ -182,8 +191,47 @@
 		"eyebrow": "Training",
 		"title": "Skills that stay on site.",
 		"body": "Professional training for national and international teams — so the people who run and maintain your facility truly master it.",
+		"heroImage": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2400&auto=format&fit=crop",
 		"features": ["Project Management", "Primavera P6", "Welding", "NDT Inspection"],
 		"cta": "See our training"
+	},
+	"products": {
+		"eyebrow": "Products",
+		"title": "Certified products and equipment",
+		"body": "We supply a wide range of certified industrial products for the Oil & Gas, Mining and Energy sectors.",
+		"heroImage": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2400&auto=format&fit=crop",
+		"categories": [
+			{
+				"title": "Drilling equipment",
+				"blurb": "Bits, tricones, PDC and accessories for onshore and offshore drilling.",
+				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Valves and fittings",
+				"blurb": "Ball, gate, globe, check valves and forged fittings API 6A/6D.",
+				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Pumps and compressors",
+				"blurb": "Centrifugal, reciprocating, diaphragm pumps and air/gas compressors.",
+				"image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Instrumentation and control",
+				"blurb": "Pressure, temperature, level, flow transmitters and SCADA systems.",
+				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Materials and consumables",
+				"blurb": "Pipes, flanges, gaskets, bolts, lubricants, chemicals and PPE.",
+				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Safety equipment",
+				"blurb": "Gas detection, fire suppression, PPE and signage systems.",
+				"image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+			}
+		]
 	},
 	"partners": {
 		"eyebrow": "Partners",
@@ -210,6 +258,7 @@
 		"lead": "ENERYETU – COMÉRCIO & SERVIÇOS LDA is a services company operating in the Oil & Gas and Mining industries.",
 		"body1": "Fully Angolan-owned, it was founded by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas industry — with deep knowledge of the national oil market.",
 		"body2": "Committed to ESG principles, it promotes sustainable practices and the energy transition, pursuing strategic partnerships that generate value for investors, employees and local communities.",
+		"heroImage": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2400&auto=format&fit=crop",
 		"visionTitle": "Vision",
 		"vision": "To be Africa's leading platform for Strategic Sourcing and Local Content, positioning Angola as a competitive hub for global industrial supply chains.",
 		"missionTitle": "Mission",
@@ -258,6 +307,7 @@
 		"eyebrow": "Careers",
 		"title": "Build Angola's future with us.",
 		"body": "We hire professionals who want to grow with Angola's Oil & Gas and Mining industries. If that is you, tell us.",
+		"heroImage": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2400&auto=format&fit=crop",
 		"applyLabel": "Interested? Send your CV to",
 		"applyHint": "Mention your area of interest in the subject line.",
 		"form": {
@@ -284,6 +334,7 @@
 		"eyebrow": "Media",
 		"title": "News, events and the work behind the panels.",
 		"body": "Field notes from our engineers, public events we host, and photographs of the work.",
+		"heroImage": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=2400&auto=format&fit=crop",
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "Field notes are being drafted.",
@@ -331,14 +382,15 @@
 		"eyebrow": "Contact",
 		"title": "Talk to us.",
 		"body": "Tell us what you need — sourcing, services, logistics or partnerships — and we will come back with an answer, usually within one business day.",
+		"heroImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop",
 		"detailsTitle": "Head office",
 		"address": "Apartment 5, 1st floor, building E152, Rua 70, Nova Vida district, Luanda, Angola",
 		"phone": "+244 923 734 199 / +244 938 626 639",
 		"email": "geral@eneryetu.com",
 		"hoursTitle": "Working hours",
 		"hours": {
-			"week": { "day": "Monday – Friday", "time": "07:00 – 16:30" },
-			"saturday": { "day": "Saturday", "time": "07:00 – 12:30" },
+			"week": { "day": "Monday – Friday", "time": "08:00 – 17:00" },
+			"saturday": { "day": "Saturday", "time": "08:00 – 12:00" },
 			"sunday": { "day": "Sunday", "time": "Closed" }
 		},
 		"form": {

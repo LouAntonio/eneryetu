@@ -6,6 +6,7 @@
 		"about": "Sobre",
 		"sectors": "Setores",
 		"services": "Serviços",
+		"products": "Produtos",
 		"training": "Formações",
 		"media": "Mídia",
 		"blog": "Blog",
@@ -16,7 +17,7 @@
 		"contact": "Contactos"
 	},
 	"ticker": {
-		"hours": "Seg–Sex 07:00–16:30 · Sáb 07:00–12:30 · Dom fechado",
+		"hours": "Seg–Sex 08:00–17:00 · Sáb 08:00–12:00",
 		"phones": "+244 923 734 199 · +244 938 626 639",
 		"email": "geral@eneryetu.com"
 	},
@@ -65,6 +66,7 @@
 		"eyebrow": "Serviços",
 		"title": "Doze linhas de serviço, um único parceiro.",
 		"body": "Soluções integradas de acesso ao mercado e desenvolvimento de negócios — do sourcing à manutenção, num só contrato.",
+		"heroImage": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2400&auto=format&fit=crop",
 		"items": [
 			{
 				"title": "Sourcing estratégico",
@@ -77,7 +79,7 @@
 				"spec": "Representação · licenciamento"
 			},
 			{
-				"title": "Recursos humanos",
+				"title": "Manpower",
 				"blurb": "Fornecimento de mão-de-obra qualificada e formação profissional em Gestão de Projetos, Primavera P6, Soldadura e Inspeção NDT.",
 				"spec": "Manpower · formação"
 			},
@@ -151,38 +153,47 @@
 		"eyebrow": "Setores",
 		"title": "Onde trabalhamos",
 		"body": "Atuamos nos setores que movem a economia angolana, com conhecimento do equipamento, das normas e das exigências de cada indústria.",
+		"heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2400&auto=format&fit=crop",
 		"items": [
 			{
 				"title": "Petróleo & Gás",
-				"blurb": "Sourcing, manutenção, integridade e serviços de apoio para operações a montante e a jusante."
+				"blurb": "Sourcing, manutenção, integridade e serviços de apoio para operações a montante e a jusante.",
+				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Mineração extrativa",
-				"blurb": "Fornecimento de materiais, mão-de-obra qualificada e serviços técnicos para operações mineiras."
+				"blurb": "Fornecimento de materiais, mão-de-obra qualificada e serviços técnicos para operações mineiras.",
+				"image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Energias renováveis",
-				"blurb": "Gestão de projetos, instalação e manutenção de estruturas de energia renovável."
+				"blurb": "Gestão de projetos, instalação e manutenção de estruturas de energia renovável.",
+				"image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Economia azul",
-				"blurb": "Serviços e equipamento para as indústrias marítimas e costeiras."
+				"blurb": "Serviços e equipamento para as indústrias marítimas e costeiras.",
+				"image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Logística & Transporte",
-				"blurb": "Movimentação e transferência de carga dentro e fora de Angola, com gestão de contratos ponta a ponta."
+				"blurb": "Movimentação e transferência de carga dentro e fora de Angola, com gestão de contratos ponta a ponta.",
+				"image": "https://images.unsplash.com/photo-1566576912321-d58dd7a73409?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Construção civil",
-				"blurb": "Apoio a contratos de engenharia e construção de estruturas industriais e civis."
+				"blurb": "Apoio a contratos de engenharia e construção de estruturas industriais e civis.",
+				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Tratamento de águas",
-				"blurb": "Instalação e manutenção de sistemas de purificação industriais e residenciais."
+				"blurb": "Instalação e manutenção de sistemas de purificação industriais e residenciais.",
+				"image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Gestão de resíduos",
-				"blurb": "Transporte, tratamento, reciclagem e eliminação de resíduos, incluindo resíduos químicos."
+				"blurb": "Transporte, tratamento, reciclagem e eliminação de resíduos, incluindo resíduos químicos.",
+				"image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b0b9?q=80&w=800&auto=format&fit=crop"
 			}
 		]
 	},
@@ -190,8 +201,47 @@
 		"eyebrow": "Formações",
 		"title": "Competências que ficam no local.",
 		"body": "Formação profissional para equipas nacionais e internacionais — para que quem opera e mantém a sua instalação a domine de verdade.",
+		"heroImage": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2400&auto=format&fit=crop",
 		"features": ["Gestão de Projetos", "Primavera P6", "Soldadura", "Inspeção NDT"],
 		"cta": "Ver a formação"
+	},
+	"products": {
+		"eyebrow": "Produtos",
+		"title": "Produtos e equipamentos certificados",
+		"body": "Fornecemos uma ampla gama de produtos industriais certificados para os setores de Petróleo & Gás, Mineração e Energia.",
+		"heroImage": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2400&auto=format&fit=crop",
+		"categories": [
+			{
+				"title": "Equipamentos de perfuração",
+				"blurb": "Brocas, tricones, PDC e acessórios para perfuração onshore e offshore.",
+				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Válvulas e conexões",
+				"blurb": "Válvulas de esfera, gaveta, globo, retenção e conexões forjadas API 6A/6D.",
+				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Bombas e compressores",
+				"blurb": "Bombas centrífugas, alternativas, de diafragma e compressores de ar/gás.",
+				"image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Instrumentação e controle",
+				"blurb": "Transmissores de pressão, temperatura, nível, vazão e sistemas SCADA.",
+				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Materiais e consumíveis",
+				"blurb": "Tubos, flanges, juntas, parafusos, lubrificantes, químicos e EPIs.",
+				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Equipamentos de segurança",
+				"blurb": "Sistemas de detecção de gás, supressão de incêndio, EPR e sinalização.",
+				"image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+			}
+		]
 	},
 	"partners": {
 		"eyebrow": "Parceiros",
@@ -218,6 +268,7 @@
 		"lead": "A ENERYETU – COMÉRCIO & SERVIÇOS LDA é uma empresa prestadora de serviços que atua nas indústrias de Petróleo & Gás e Mineração.",
 		"body1": "Totalmente de capital angolano, foi fundada por profissionais angolanos com mais de 15 anos de experiência em Gestão de Projetos no setor de Petróleo & Gás — com profundo conhecimento do mercado petrolífero nacional.",
 		"body2": "Comprometida com os princípios ESG, promove práticas sustentáveis e a transição energética, buscando parcerias estratégicas que gerem valor para investidores, colaboradores e comunidades locais.",
+		"heroImage": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2400&auto=format&fit=crop",
 		"visionTitle": "Visão",
 		"vision": "Ser uma plataforma líder em África para Fornecimento Estratégico e Conteúdo Local, posicionando Angola como um hub competitivo para cadeias de suprimentos industriais globais.",
 		"missionTitle": "Missão",
@@ -266,6 +317,7 @@
 		"eyebrow": "Carreiras",
 		"title": "Construa o futuro angolano connosco.",
 		"body": "Contratamos profissionais que querem crescer com os setores de Petróleo & Gás e Mineração em Angola. Se é o seu caso, fale connosco.",
+		"heroImage": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2400&auto=format&fit=crop",
 		"applyLabel": "Interessado? Envie o seu CV para",
 		"applyHint": "Mencione a área de interesse no assunto do email.",
 		"form": {
@@ -292,6 +344,7 @@
 		"eyebrow": "Mídia",
 		"title": "Notícias, eventos e o trabalho por trás dos painéis.",
 		"body": "Notas de campo dos nossos engenheiros, eventos públicos que organizamos e fotografias do trabalho.",
+		"heroImage": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=2400&auto=format&fit=crop",
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "As notas de campo estão a ser redigidas.",
@@ -339,14 +392,15 @@
 		"eyebrow": "Contactos",
 		"title": "Fale connosco.",
 		"body": "Diga-nos o que precisa — sourcing, serviços, logística ou parcerias — e voltaremos com uma resposta, normalmente num dia útil.",
+		"heroImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop",
 		"detailsTitle": "Sede",
 		"address": "Apartamento 5, 1º andar, edifício E152, Rua 70, bairro Nova Vida, Luanda, Angola",
 		"phone": "+244 923 734 199 / +244 938 626 639",
 		"email": "geral@eneryetu.com",
 		"hoursTitle": "Horários",
 		"hours": {
-			"week": { "day": "Segunda – Sexta", "time": "07:00 – 16:30" },
-			"saturday": { "day": "Sábado", "time": "07:00 – 12:30" },
+			"week": { "day": "Segunda – Sexta", "time": "08:00 – 17:00" },
+			"saturday": { "day": "Sábado", "time": "08:00 – 12:00" },
 			"sunday": { "day": "Domingo", "time": "Fechado" }
 		},
 		"form": {

@@ -4,7 +4,7 @@ import { Link } from '../lib/routing';
 import { useTranslation } from 'react-i18next';
 
 import { Chip } from '../components/Chip';
-import { PageHeader } from '../components/PageHeader';
+import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
 
 export function Training() {
@@ -13,10 +13,11 @@ export function Training() {
 
 	return (
 		<>
-			<PageHeader
+			<PageHero
 				eyebrow={t('training.eyebrow')}
 				title={t('training.title')}
 				body={t('training.body')}
+				image={t('training.heroImage')}
 			/>
 
 			<section className="border-b border-line">
