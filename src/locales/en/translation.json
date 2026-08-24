@@ -16,8 +16,8 @@
 		"contact": "Contact"
 	},
 	"ticker": {
-		"hours": "Mon–Fri 07:00–16:30 · Sat 07:00–12:30 · Sun closed",
-		"phones": "+244 923 734 199 · +244 938 626 639",
+		"hours": "Monâ€“Fri 07:00â€“16:30 Â· Sat 07:00â€“12:30 Â· Sun closed",
+		"phones": "+244 923 734 199 Â· +244 938 626 639",
 		"email": "geral@eneryetu.com"
 	},
 	"common": {
@@ -33,9 +33,9 @@
 		"copy": "Copy"
 	},
 	"hero": {
-		"eyebrow": "Services for Oil & Gas and Mining · Luanda",
+		"eyebrow": "Services for Oil & Gas and Mining Â· Luanda",
 		"title": "Strategic sourcing and local content.",
-		"lede": "EnerYetu creates and facilitates business opportunities for national and international companies — sourcing of parts, materials and equipment, consulting, skilled manpower, logistics and technical services in Angola.",
+		"lede": "EnerYetu creates and facilitates business opportunities for national and international companies â€” sourcing of parts, materials and equipment, consulting, skilled manpower, logistics and technical services in Angola.",
 		"ctaPrimary": "Request a quote",
 		"ctaSecondary": "Explore services"
 	},
@@ -45,7 +45,7 @@
 		"rows": [
 			{ "value": "25", "label": "Years on Angolan ground" },
 			{ "value": "8", "label": "Service lines under one roof" },
-			{ "value": "A–Z", "label": "Supply, install and maintain in one contract" },
+			{ "value": "Aâ€“Z", "label": "Supply, install and maintain in one contract" },
 			{ "value": "1", "label": "Dedicated local point of contact" }
 		]
 	},
@@ -64,7 +64,7 @@
 	"services": {
 		"eyebrow": "Services",
 		"title": "Twelve service lines, one partner.",
-		"body": "Integrated market-access and business-development solutions — from sourcing to maintenance, under a single contract.",
+		"body": "Integrated market-access and business-development solutions â€” from sourcing to maintenance, under a single contract.",
 		"items": [
 			{
 				"title": "Strategic sourcing",
@@ -74,17 +74,17 @@
 			{
 				"title": "Consulting & market access",
 				"blurb": "Commercial representation of international companies in Angola and support with regulatory and licensing processes.",
-				"spec": "Representation · licensing"
+				"spec": "Representation Â· licensing"
 			},
 			{
 				"title": "Human resources",
 				"blurb": "Skilled manpower supply and professional training in Project Management, Primavera P6, Welding and NDT Inspection.",
-				"spec": "Manpower · training"
+				"spec": "Manpower Â· training"
 			},
 			{
 				"title": "Logistics & supply chain",
 				"blurb": "Logistics contract management, cargo handling and transfer within and beyond Angola.",
-				"spec": "Domestic · international"
+				"spec": "Domestic Â· international"
 			},
 			{
 				"title": "Materials supply",
@@ -99,7 +99,7 @@
 			{
 				"title": "Water treatment",
 				"blurb": "Installation and maintenance of industrial and residential water purification systems.",
-				"spec": "Industrial · residential"
+				"spec": "Industrial Â· residential"
 			},
 			{
 				"title": "Engineering & construction",
@@ -109,7 +109,7 @@
 			{
 				"title": "Integrity management",
 				"blurb": "Structural inspection and non-destructive testing of welds in compliance with ISO and ASNT standards.",
-				"spec": "NDT · ISO · ASNT"
+				"spec": "NDT Â· ISO Â· ASNT"
 			},
 			{
 				"title": "Surface treatment",
@@ -124,7 +124,7 @@
 			{
 				"title": "Waste management",
 				"blurb": "Transport, treatment, recycling and disposal of waste, including chemical waste.",
-				"spec": "Chemical · recycling"
+				"spec": "Chemical Â· recycling"
 			}
 		],
 		"beyond": {
@@ -181,7 +181,7 @@
 	"training": {
 		"eyebrow": "Training",
 		"title": "Skills that stay on site.",
-		"body": "Professional training for national and international teams — so the people who run and maintain your facility truly master it.",
+		"body": "Professional training for national and international teams â€” so the people who run and maintain your facility truly master it.",
 		"features": ["Project Management", "Primavera P6", "Welding", "NDT Inspection"],
 		"cta": "See our training"
 	},
@@ -192,23 +192,23 @@
 		"items": [
 			"Elite Flow Control",
 			"Elite Project Engineering",
-			"Rico Organizações",
+			"Rico OrganizaÃ§Ãµes",
 			"Synergy Projects Consulting",
 			"Risaku Energy Services Company",
-			"Bué Fine Consultoria Empresarial LDA"
+			"BuÃ© Fine Consultoria Empresarial LDA"
 		]
 	},
 	"cta": {
 		"title": "Need sourcing, services or partners in Angola?",
-		"body": "Tell us what you need — we handle the sourcing, the logistics, the people and the technical services.",
+		"body": "Tell us what you need â€” we handle the sourcing, the logistics, the people and the technical services.",
 		"cta": "Make an appointment",
 		"phone": "Call us now"
 	},
 	"about": {
 		"eyebrow": "About us",
 		"title": "The Angolan partner for strategic sourcing and local content.",
-		"lead": "ENERYETU – COMÉRCIO & SERVIÇOS LDA is a services company operating in the Oil & Gas and Mining industries.",
-		"body1": "Fully Angolan-owned, it was founded by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas industry — with deep knowledge of the national oil market.",
+		"lead": "ENERYETU â€“ COMÃ‰RCIO & SERVIÃ‡OS LDA is a services company operating in the Oil & Gas and Mining industries.",
+		"body1": "Fully Angolan-owned, it was founded by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas industry â€” with deep knowledge of the national oil market.",
 		"body2": "Committed to ESG principles, it promotes sustainable practices and the energy transition, pursuing strategic partnerships that generate value for investors, employees and local communities.",
 		"visionTitle": "Vision",
 		"vision": "To be Africa's leading platform for Strategic Sourcing and Local Content, positioning Angola as a competitive hub for global industrial supply chains.",
@@ -262,14 +262,14 @@
 		"applyHint": "Mention your area of interest in the subject line.",
 		"form": {
 			"title": "Spontaneous application",
-			"subtitle": "Leave us your details and a short summary of your background — we review your profile and reply if there is a match.",
+			"subtitle": "Leave us your details and a short summary of your background â€” we review your profile and reply if there is a match.",
 			"name": "Your name",
 			"email": "Email",
 			"phone": "Phone",
 			"area": "Area of interest",
-			"areaPlaceholder": "E.g.: Project Management, Welding, Logistics…",
+			"areaPlaceholder": "E.g.: Project Management, Welding, Logisticsâ€¦",
 			"message": "Tell us a little about your background",
-			"messagePlaceholder": "Experience, training, availability…",
+			"messagePlaceholder": "Experience, training, availabilityâ€¦",
 			"cv": "Curriculum Vitae",
 			"cvHint": "PDF, DOC or DOCX",
 			"cvRequired": "Attach your CV.",
@@ -277,7 +277,7 @@
 			"nameRequired": "Tell us your name.",
 			"emailInvalid": "Enter a valid email address.",
 			"successTitle": "Application received.",
-			"successBody": "Thank you — we review your profile and reply if there is a match."
+			"successBody": "Thank you â€” we review your profile and reply if there is a match."
 		}
 	},
 	"media": {
@@ -287,12 +287,12 @@
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "Field notes are being drafted.",
-			"emptyBody": "Our engineers are writing up real failures, fixes and lessons. First post lands here soon — follow us on LinkedIn so you do not miss it."
+			"emptyBody": "Our engineers are writing up real failures, fixes and lessons. First post lands here soon â€” follow us on LinkedIn so you do not miss it."
 		},
 		"news": {
 			"title": "News",
 			"emptyTitle": "No news yet.",
-			"emptyBody": "We will publish company and sector news here — from new projects to milestones in the field."
+			"emptyBody": "We will publish company and sector news here â€” from new projects to milestones in the field."
 		},
 		"events": {
 			"title": "Events",
@@ -314,7 +314,7 @@
 			"emptyTitle": "Fresh photographs coming.",
 			"emptyBody": "We are preparing photographs of completed installations, workshops and field teams."
 		},
-		"loading": "Loading…",
+		"loading": "Loadingâ€¦",
 		"readingTime": "min read",
 		"byline": "by {{name}}",
 		"latest": "More from the field",
@@ -330,15 +330,15 @@
 	"contact": {
 		"eyebrow": "Contact",
 		"title": "Talk to us.",
-		"body": "Tell us what you need — sourcing, services, logistics or partnerships — and we will come back with an answer, usually within one business day.",
+		"body": "Tell us what you need â€” sourcing, services, logistics or partnerships â€” and we will come back with an answer, usually within one business day.",
 		"detailsTitle": "Head office",
 		"address": "Apartment 5, 1st floor, building E152, Rua 70, Nova Vida district, Luanda, Angola",
 		"phone": "+244 923 734 199 / +244 938 626 639",
 		"email": "geral@eneryetu.com",
 		"hoursTitle": "Working hours",
 		"hours": {
-			"week": { "day": "Monday – Friday", "time": "07:00 – 16:30" },
-			"saturday": { "day": "Saturday", "time": "07:00 – 12:30" },
+			"week": { "day": "Monday â€“ Friday", "time": "07:00 â€“ 16:30" },
+			"saturday": { "day": "Saturday", "time": "07:00 â€“ 12:30" },
 			"sunday": { "day": "Sunday", "time": "Closed" }
 		},
 		"form": {
@@ -347,17 +347,17 @@
 			"company": "Company",
 			"email": "Email",
 			"message": "How can we help?",
-			"messagePlaceholder": "Required service or material, project description, timeline…",
+			"messagePlaceholder": "Required service or material, project description, timelineâ€¦",
 			"submit": "Send enquiry",
 			"nameRequired": "Tell us your name.",
 			"emailInvalid": "Enter a valid email address.",
 			"messageRequired": "Describe the requirement briefly.",
 			"successTitle": "Enquiry sent.",
-			"successBody": "Thank you — we reply within one business day."
+			"successBody": "Thank you â€” we reply within one business day."
 		}
 	},
 	"footer": {
-		"about": "EnerYetu is an Angolan services company for the Oil & Gas and Mining industries — strategic sourcing, consulting, skilled manpower and technical services.",
+		"about": "EnerYetu is an Angolan services company for the Oil & Gas and Mining industries â€” strategic sourcing, consulting, skilled manpower and technical services.",
 		"quickLinksTitle": "Quick links",
 		"mediaLinksTitle": "Media",
 		"contactTitle": "Contact",
@@ -449,9 +449,11 @@
 			"category": "Category",
 			"noCategory": "No category",
 			"excerpt": "Excerpt",
-			"excerptHint": "Short summary shown on the listings…",
+			"excerptHint": "Short summary shown on the listingsâ€¦",
 			"content": "Content",
-			"coverImage": "Cover image URL",
+			"coverImage": "Cover image",
+			"coverHint": "Save the post to upload a cover image.",
+			"removeCover": "Remove cover",
 			"metaTitle": "Meta title",
 			"metaDescription": "Meta description",
 			"featured": "Featured"
@@ -471,7 +473,7 @@
 			"endDate": "End date",
 			"displayDate": "Display date",
 			"eventType": "Event type",
-			"chooseType": "Choose a type…",
+			"chooseType": "Choose a typeâ€¦",
 			"status": "Status",
 			"featured": "Featured",
 			"countryCode": "Country code",
@@ -485,7 +487,7 @@
 			"saveAndNext": "Save & add assets",
 			"assets": "Assets",
 			"coverImage": "Cover image",
-			"noCover": "No cover yet — upload after first save.",
+			"noCover": "No cover yet â€” upload after first save.",
 			"gallery": "Gallery",
 			"noGallery": "No images yet.",
 			"documents": "Documents",
@@ -494,7 +496,7 @@
 	},
 	"notFound": {
 		"title": "You are off the grid.",
-		"body": "The page you are looking for is not on this network. It may have moved — or never existed.",
+		"body": "The page you are looking for is not on this network. It may have moved â€” or never existed.",
 		"cta": "Back to home"
 	}
 }

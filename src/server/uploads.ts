@@ -14,6 +14,13 @@ import {
 const MAX_IMAGE_SIZE = parseInt(process.env.MAX_FILE_SIZE ?? '', 10) || 10 * 1024 * 1024;
 const MAX_DOCUMENT_SIZE = MAX_IMAGE_SIZE * 2;
 
+export interface GalleryItem {
+	url?: string;
+	publicId?: string;
+	name?: string;
+	size?: number;
+}
+
 export async function getEventFile(
 	req: NextRequest,
 	field: string,
@@ -44,7 +51,25 @@ export async function getEventFile(
 	return file;
 }
 
-export async function loadEvent(id: string) {
+function resourceTypeOf(publicId?: string): 'image' | 'raw' {
+	return publicId?.includes('/documents') ? 'raw' : 'image';
+}
+
+async function destroyStored(publicId?: string, url?: string) {
+	const id = publicId ?? publicIdFromUrl(url ?? '');
+	if (!id) return;
+	try {
+		await destroyAsset(id, resourceTypeOf(id));
+	} catch {
+		try {
+			await destroyAsset(id, resourceTypeOf(id) === 'raw' ? 'image' : 'raw');
+		} catch {
+			/* asset pode já não existir */
+		}
+	}
+}
+
+async function loadEvent(id: string) {
 	const event = await prisma.event.findUnique({ where: { id } });
 	if (!event) {
 		throw new HttpError(404, 'Evento não encontrado');
@@ -52,10 +77,12 @@ export async function loadEvent(id: string) {
 	return event;
 }
 
-interface GalleryItem {
-	url?: string;
-	name?: string;
-	size?: number;
+async function loadPost(id: string) {
+	const post = await prisma.post.findUnique({ where: { id } });
+	if (!post) {
+		throw new HttpError(404, 'Post não encontrado');
+	}
+	return post;
 }
 
 function galleryOf(event: { gallery: unknown }): GalleryItem[] {
@@ -66,30 +93,19 @@ function documentsOf(event: { documents: unknown }): GalleryItem[] {
 	return Array.isArray(event.documents) ? [...(event.documents as GalleryItem[])] : [];
 }
 
-async function removeStoredAsset(url: string | undefined) {
-	if (!url) return;
-	const publicId = publicIdFromUrl(url);
-	if (!publicId) return;
-	try {
-		await destroyAsset(publicId, url.includes('/raw/upload/') ? 'raw' : 'image');
-	} catch {
-		/* asset pode já não existir */
-	}
-}
-
 export async function handleUploadCover(req: NextRequest, id: string) {
 	await requireAdmin(req);
 	const event = await loadEvent(id);
 	const file = await getEventFile(req, 'file', IMAGE_EXTENSIONS, MAX_IMAGE_SIZE);
 
-	await removeStoredAsset(event.coverImage ?? undefined);
+	await destroyStored(event.coverImagePublicId ?? undefined, event.coverImage ?? undefined);
 
 	const buffer = Buffer.from(await file.arrayBuffer());
 	const result = await uploadToCloudinary(buffer, id, 'cover', false);
 
 	await prisma.event.update({
 		where: { id },
-		data: { coverImage: result.secure_url },
+		data: { coverImage: result.secure_url, coverImagePublicId: result.public_id },
 	});
 
 	return result.secure_url;
@@ -104,7 +120,7 @@ export async function handleUploadGallery(req: NextRequest, id: string) {
 	const result = await uploadToCloudinary(buffer, id, 'gallery', false);
 
 	const gallery = galleryOf(event);
-	gallery.push({ url: result.secure_url });
+	gallery.push({ url: result.secure_url, publicId: result.public_id });
 
 	await prisma.event.update({
 		where: { id },
@@ -124,7 +140,8 @@ export async function handleDeleteGalleryImage(req: NextRequest, id: string, raw
 		throw new HttpError(400, 'Índice inválido');
 	}
 
-	await removeStoredAsset(gallery[index]?.url);
+	const item = gallery[index];
+	await destroyStored(item?.publicId, item?.url);
 	gallery.splice(index, 1);
 
 	await prisma.event.update({
@@ -142,7 +159,12 @@ export async function handleUploadDocument(req: NextRequest, id: string) {
 	const result = await uploadToCloudinary(buffer, id, 'documents', true);
 
 	const documents = documentsOf(event);
-	documents.push({ url: result.secure_url, name: file.name, size: file.size });
+	documents.push({
+		url: result.secure_url,
+		publicId: result.public_id,
+		name: file.name,
+		size: file.size,
+	});
 
 	await prisma.event.update({
 		where: { id },
@@ -162,7 +184,8 @@ export async function handleDeleteDocument(req: NextRequest, id: string, rawInde
 		throw new HttpError(400, 'Índice inválido');
 	}
 
-	await removeStoredAsset(documents[index]?.url);
+	const item = documents[index];
+	await destroyStored(item?.publicId, item?.url);
 	documents.splice(index, 1);
 
 	await prisma.event.update({
@@ -177,3 +200,36 @@ export async function handleDeleteEventAssets(req: NextRequest, id: string) {
 	await destroyEventAssets(id).catch(() => undefined);
 }
 
+export async function handleUploadPostCover(req: NextRequest, id: string) {
+	await requireAdmin(req);
+	const post = await loadPost(id);
+	const file = await getEventFile(req, 'file', IMAGE_EXTENSIONS, MAX_IMAGE_SIZE);
+
+	await destroyStored(post.coverImagePublicId ?? undefined, post.coverImage ?? undefined);
+
+	const buffer = Buffer.from(await file.arrayBuffer());
+	const result = await uploadToCloudinary(buffer, id, 'cover', false);
+
+	await prisma.post.update({
+		where: { id },
+		data: { coverImage: result.secure_url, coverImagePublicId: result.public_id },
+	});
+
+	return result.secure_url;
+}
+
+export async function handleDeletePostCover(req: NextRequest, id: string) {
+	await requireAdmin(req);
+	const post = await loadPost(id);
+
+	if (!post.coverImage && !post.coverImagePublicId) {
+		throw new HttpError(400, 'O post não tem imagem de capa');
+	}
+
+	await destroyStored(post.coverImagePublicId ?? undefined, post.coverImage ?? undefined);
+
+	await prisma.post.update({
+		where: { id },
+		data: { coverImage: null, coverImagePublicId: null },
+	});
+}

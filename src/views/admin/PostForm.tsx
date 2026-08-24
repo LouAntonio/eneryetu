@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useRef, useState, type FormEvent } from 'react';
 import { Link, useNavigate, useParams } from '../../lib/routing';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { api } from '../../services/api';
+import { assetUrl } from '../../lib/assets';
 import type { Category, Post, PostType, Status } from '../../types';
 import { AdminPage } from '../../components/admin/AdminPage';
 import { RichTextEditor } from '../../components/admin/RichTextEditor';
@@ -65,10 +66,19 @@ interface PostFormInnerProps {
 function PostFormInner({ initial, editing, id, categories }: PostFormInnerProps) {
 	const { t } = useTranslation();
 	const navigate = useNavigate();
+	const queryClient = useQueryClient();
 
 	const [form, setForm] = useState(() => (initial ? toForm(initial) : emptyForm));
 	const [slugTouched, setSlugTouched] = useState(false);
 	const [error, setError] = useState('');
+	const coverInput = useRef<HTMLInputElement>(null);
+
+	const { data: freshPost } = useQuery({
+		queryKey: ['post', id],
+		enabled: Boolean(id),
+		queryFn: async () => (await api.get<{ data: Post }>(`/posts/${id}`)).data,
+	});
+	const cover = freshPost?.coverImage ?? '';
 
 	const save = useMutation({
 		mutationFn: async () => {
@@ -76,7 +86,7 @@ function PostFormInner({ initial, editing, id, categories }: PostFormInnerProps)
 				...form,
 				categoryId: form.categoryId || null,
 				excerpt: form.excerpt || null,
-				coverImage: form.coverImage || null,
+				coverImage: cover || null,
 				metaTitle: form.metaTitle || null,
 				metaDescription: form.metaDescription || null,
 			};
@@ -115,6 +125,25 @@ function PostFormInner({ initial, editing, id, categories }: PostFormInnerProps)
 			title: value,
 			slug: slugTouched ? prev.slug : slugify(value),
 		}));
+	};
+
+	const uploadCover = useMutation({
+		mutationFn: async (file: File) => {
+			const fd = new FormData();
+			fd.append('file', file);
+			return api.post(`/upload/posts/${id}/cover`, fd);
+		},
+		onSuccess: () => void queryClient.invalidateQueries({ queryKey: ['post', id] }),
+	});
+
+	const removeCover = useMutation({
+		mutationFn: async () => api.delete(`/upload/posts/${id}/cover`),
+		onSuccess: () => void queryClient.invalidateQueries({ queryKey: ['post', id] }),
+	});
+
+	const onCoverPick = () => {
+		const file = coverInput.current?.files?.[0];
+		if (file) uploadCover.mutate(file);
 	};
 
 	return (
@@ -227,19 +256,46 @@ function PostFormInner({ initial, editing, id, categories }: PostFormInnerProps)
 				onChange={(value) => set('content')(value)}
 			/>
 
-			<div>
-				<label htmlFor="post-cover" className={labelClass}>
-					{t('admin.posts.coverImage')}
-				</label>
-				<input
-					id="post-cover"
-					type="url"
-					value={form.coverImage}
-					onChange={(event) => set('coverImage')(event.target.value)}
-					placeholder="https://…"
-					className={inputClass}
-				/>
-			</div>
+			{id ? (
+				<div className="border border-line bg-white p-5">
+					<div className="flex flex-wrap items-end justify-between gap-4">
+						<div>
+							<span className={labelClass}>{t('admin.posts.coverImage')}</span>
+							<p className="mt-1 font-mono text-xs text-slate">
+								{cover ? cover : t('admin.events.noCover')}
+							</p>
+						</div>
+						<div className="flex items-center gap-2">
+							{cover ? (
+								<button
+									type="button"
+									onClick={() => removeCover.mutate()}
+									className="btn btn-mono px-4 py-2 text-xs"
+								>
+									{t('admin.posts.removeCover')}
+								</button>
+							) : null}
+							<label className="btn btn-mono cursor-pointer px-4 py-2 text-xs">
+								{t('admin.upload')}
+								<input
+									ref={coverInput}
+									type="file"
+									accept="image/*"
+									className="hidden"
+									onChange={onCoverPick}
+								/>
+							</label>
+						</div>
+					</div>
+					{cover ? (
+						<img src={assetUrl(cover) ?? ''} alt="" className="mt-4 h-40 w-full object-cover" />
+					) : null}
+				</div>
+			) : (
+				<p className="border border-line bg-white px-5 py-4 font-mono text-xs text-slate">
+					{t('admin.posts.coverHint')}
+				</p>
+			)}
 
 			<div className="grid gap-6 lg:grid-cols-2">
 				<div>

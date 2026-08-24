@@ -35,7 +35,20 @@ export async function PUT(req: NextRequest, ctx: { params: Promise<{ id: string 
 			return fail(404, 'Evento não encontrado');
 		}
 
+		const { destroyAsset } = await import('@/server/cloudinary');
+		if (
+			typeof body.coverImage === 'string' &&
+			body.coverImage !== existing.coverImage &&
+			existing.coverImagePublicId
+		) {
+			await destroyAsset(existing.coverImagePublicId).catch(() => undefined);
+		}
+
 		const data = { ...body };
+		if (typeof data.coverImage === 'string') {
+			data.coverImagePublicId =
+				data.coverImage && data.coverImage !== existing.coverImage ? null : undefined;
+		}
 		if (data.startDate) data.startDate = new Date(data.startDate as string);
 		if (data.endDate) data.endDate = new Date(data.endDate as string);
 

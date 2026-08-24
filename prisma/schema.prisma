@@ -95,7 +95,8 @@ model Event {
 	longitude   Float?
 
 	// Mídia
-	coverImage String? @db.VarChar(512)
+	coverImage          String? @db.VarChar(512)
+	coverImagePublicId  String? @db.VarChar(255) // public_id na Cloudinary
 	gallery    Json? // Lista de URLs de imagens
 	documents  Json? // PDFs, Brochuras
 
@@ -125,7 +126,8 @@ model Post {
 	excerpt String?  @db.VarChar(255)
 	content String   @db.Text
 
-	coverImage String? @db.VarChar(512)
+	coverImage          String? @db.VarChar(512)
+	coverImagePublicId  String? @db.VarChar(255) // public_id na Cloudinary
 	status     Status  @default(RASCUNHO)
 	featured   Boolean @default(false)
 

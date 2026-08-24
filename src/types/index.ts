@@ -26,6 +26,13 @@ export interface EventType {
 	_count?: { events: number };
 }
 
+export interface CloudinaryAsset {
+	url?: string;
+	publicId?: string;
+	name?: string;
+	size?: number;
+}
+
 export interface Post {
 	id: string;
 	type: PostType;
@@ -34,6 +41,7 @@ export interface Post {
 	excerpt?: string | null;
 	content: string;
 	coverImage?: string | null;
+	coverImagePublicId?: string | null;
 	status: Status;
 	featured: boolean;
 	metaTitle?: string | null;
@@ -66,8 +74,9 @@ export interface Event {
 	latitude?: number | null;
 	longitude?: number | null;
 	coverImage?: string | null;
-	gallery?: unknown[] | null;
-	documents?: unknown[] | null;
+	coverImagePublicId?: string | null;
+	gallery?: CloudinaryAsset[] | null;
+	documents?: CloudinaryAsset[] | null;
 	metaTitle?: string | null;
 	metaDescription?: string | null;
 	eventTypeId: string;
