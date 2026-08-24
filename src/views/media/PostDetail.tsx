@@ -95,6 +95,7 @@ export function MediaPostDetail() {
 									src={cover}
 									alt=""
 									className="absolute inset-0 h-full w-full object-cover"
+									// eslint-disable-next-line @next/next/no-img-element
 								/>
 							) : (
 								<div className="absolute inset-0 grid place-items-center">

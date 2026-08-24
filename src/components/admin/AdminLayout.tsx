@@ -27,9 +27,7 @@ export function AdminLayout({ children }: { children: ReactNode }) {
 	return (
 		<div className="min-h-screen bg-paper">
 			<Sidebar />
-			<div className="min-h-screen lg:pl-60">
-				{children}
-			</div>
+			<div className="min-h-screen lg:pl-60">{children}</div>
 		</div>
 	);
 }

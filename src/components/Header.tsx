@@ -43,6 +43,7 @@ export function Header() {
 		() => location.pathname === '/' && window.scrollY < 10,
 	);
 	const [charge, setCharge] = useState(0);
+	// eslint-disable-next-line @next/next/no-img-element
 
 	useEffect(() => {
 		const update = () => {
@@ -253,6 +254,7 @@ export function Header() {
 								src="/logo.png"
 								alt={t('brand')}
 								className="h-12 w-12 object-contain"
+								// eslint-disable-next-line @next/next/no-img-element
 							/>
 							<button
 								type="button"

@@ -73,7 +73,8 @@ export function MediaEventDetail() {
 								alt=""
 								className="mb-10 aspect-[16/9] w-full rounded-2xl object-cover"
 							/>
-						) : null}
+						) : // eslint-disable-next-line @next/next/no-img-element
+						null}
 						{event.description ? (
 							<p className="font-editorial text-xl leading-relaxed text-warm-ink">
 								{event.description}

@@ -32,11 +32,9 @@ export function generateAccessToken(user: { id: string; email: string; role: Aut
 }
 
 export function generateRefreshToken(user: { id: string }) {
-	return jwt.sign(
-		{ sub: user.id, type: 'refresh' },
-		getSecret(),
-		{ expiresIn: '7d' as jwt.SignOptions['expiresIn'] },
-	);
+	return jwt.sign({ sub: user.id, type: 'refresh' }, getSecret(), {
+		expiresIn: '7d' as jwt.SignOptions['expiresIn'],
+	});
 }
 
 export function verifyAccessToken(token: string): AccessPayload {

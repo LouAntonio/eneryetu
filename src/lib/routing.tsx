@@ -1,15 +1,17 @@
 'use client';
 
 import LinkNext from 'next/link';
-import { usePathname as useNextPathname, useRouter, useParams as useNextParams } from 'next/navigation';
+import {
+	usePathname as useNextPathname,
+	useRouter,
+	useParams as useNextParams,
+} from 'next/navigation';
 import { useEffect, type AnchorHTMLAttributes, type ReactNode } from 'react';
 
 const REDIRECT_KEY = 'eneryetu-login-redirect';
 
 type ClassNameArg =
-	| string
-	| ((args: { isActive: boolean; isPending: boolean }) => string)
-	| undefined;
+	string | ((args: { isActive: boolean; isPending: boolean }) => string) | undefined;
 
 function resolveClassName(className: ClassNameArg, isActive: boolean) {
 	if (typeof className === 'function') return className({ isActive, isPending: false });
@@ -25,10 +27,7 @@ export function Link({
 	to,
 	children,
 	...rest
-}: { to: string; children?: ReactNode } & Omit<
-	AnchorHTMLAttributes<HTMLAnchorElement>,
-	'href'
->) {
+}: { to: string; children?: ReactNode } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>) {
 	return (
 		<LinkNext href={to} {...rest}>
 			{children}
@@ -52,7 +51,9 @@ export function NavLink({
 	const active = is_active(pathname, to, end);
 	return (
 		<LinkNext href={to} className={resolveClassName(className, active)} {...rest}>
-			{typeof children === 'function' ? children({ isActive: active, isPending: false }) : children}
+			{typeof children === 'function'
+				? children({ isActive: active, isPending: false })
+				: children}
 		</LinkNext>
 	);
 }
@@ -75,10 +76,7 @@ export function useParams<T extends Record<string, string | undefined>>() {
 
 export function useNavigate() {
 	const router = useRouter();
-	return (
-		to: string,
-		options?: { replace?: boolean },
-	) => {
+	return (to: string, options?: { replace?: boolean }) => {
 		sessionStorage.removeItem(REDIRECT_KEY);
 		if (options?.replace) router.replace(to);
 		else router.push(to);

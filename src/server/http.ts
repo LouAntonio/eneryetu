@@ -46,10 +46,7 @@ export interface RouteContextWithId {
 	params: Promise<{ id: string }>;
 }
 
-export type Handler = (
-	req: NextRequest,
-	ctx?: RouteContextWithId,
-) => Promise<Response> | Response;
+export type Handler = (req: NextRequest, ctx?: RouteContextWithId) => Promise<Response> | Response;
 
 export function withUser(
 	handler: (user: AuthUser, req: NextRequest, ctx?: RouteContextWithId) => Promise<Response>,

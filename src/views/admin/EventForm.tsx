@@ -475,7 +475,8 @@ function EventFormInner({ event, editing, id, eventTypes }: EventFormInnerProps)
 								alt=""
 								className="mt-4 h-40 w-full object-cover"
 							/>
-						) : null}
+						) : // eslint-disable-next-line @next/next/no-img-element
+						null}
 					</div>
 
 					<div className="border border-line bg-white p-5">

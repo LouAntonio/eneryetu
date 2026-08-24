@@ -288,8 +288,13 @@ function PostFormInner({ initial, editing, id, categories }: PostFormInnerProps)
 						</div>
 					</div>
 					{cover ? (
-						<img src={assetUrl(cover) ?? ''} alt="" className="mt-4 h-40 w-full object-cover" />
-					) : null}
+						<img
+							src={assetUrl(cover) ?? ''}
+							alt=""
+							className="mt-4 h-40 w-full object-cover"
+						/>
+					) : // eslint-disable-next-line @next/next/no-img-element
+					null}
 				</div>
 			) : (
 				<p className="border border-line bg-white px-5 py-4 font-mono text-xs text-slate">

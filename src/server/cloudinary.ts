@@ -23,11 +23,14 @@ export async function uploadToCloudinary(
 	subfolder: string,
 	rawResourceType: boolean,
 ) {
-	const result = await cloudinary.uploader.upload(`data:application/octet-stream;base64,${buffer.toString('base64')}`, {
-		folder: `${BASE_FOLDER}/${eventId}/${subfolder}`,
-		public_id: `${Date.now()}`,
-		resource_type: rawResourceType ? 'raw' : 'image',
-	});
+	const result = await cloudinary.uploader.upload(
+		`data:application/octet-stream;base64,${buffer.toString('base64')}`,
+		{
+			folder: `${BASE_FOLDER}/${eventId}/${subfolder}`,
+			public_id: `${Date.now()}`,
+			resource_type: rawResourceType ? 'raw' : 'image',
+		},
+	);
 	return result;
 }
 

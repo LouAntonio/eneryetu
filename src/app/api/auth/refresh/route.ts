@@ -6,7 +6,8 @@ import { ok, fail, readJson } from '@/server/http';
 export async function POST(req: NextRequest) {
 	try {
 		const body = await readJson(req);
-		const token = (body.refreshToken as string | undefined) || req.cookies.get('refreshToken')?.value;
+		const token =
+			(body.refreshToken as string | undefined) || req.cookies.get('refreshToken')?.value;
 
 		if (!token) {
 			return fail(401, 'Refresh token não fornecido');

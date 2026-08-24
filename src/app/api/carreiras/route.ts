@@ -19,7 +19,10 @@ export async function POST(req: NextRequest) {
 		const mensagem = get('mensagem');
 
 		if (!nome || !email || !telefone || !area || !mensagem) {
-			return fail(400, 'Nome, email, telefone, área de interesse e mensagem são obrigatórios');
+			return fail(
+				400,
+				'Nome, email, telefone, área de interesse e mensagem são obrigatórios',
+			);
 		}
 
 		let cvName: string | null = null;

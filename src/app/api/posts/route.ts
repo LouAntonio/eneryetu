@@ -53,7 +53,11 @@ export async function POST(req: NextRequest) {
 		const user = await requireAdmin(req);
 		const body = await readJson(req);
 
-		const data = { id: uuidv7(), authorId: user.id, ...body } as Prisma.PostUncheckedCreateInput;
+		const data = {
+			id: uuidv7(),
+			authorId: user.id,
+			...body,
+		} as Prisma.PostUncheckedCreateInput;
 		const post = await prisma.post.create({ data });
 
 		return ok(post, 201);
