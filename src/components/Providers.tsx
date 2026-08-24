@@ -1,20 +1,23 @@
 'use client';
 
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '../lib/queryClient';
 import { AuthProvider } from '../contexts/AuthContext';
-import { initI18n } from '../i18n/config';
+import { initI18n, default as i18n } from '../i18n/config';
+
+const emptySubscribe = () => () => {};
+const getServerSnapshot = () => false;
+const getClientSnapshot = () => true;
 
 export function Providers({ children }: { children: ReactNode }) {
-	const [ready, setReady] = useState(false);
-
 	useEffect(() => {
 		initI18n();
-		setReady(true);
 	}, []);
 
-	if (!ready) return null;
+	const hydrated = useSyncExternalStore(emptySubscribe, getClientSnapshot, getServerSnapshot);
+
+	if (!hydrated || !i18n.isInitialized) return null;
 
 	return (
 		<QueryClientProvider client={queryClient}>
