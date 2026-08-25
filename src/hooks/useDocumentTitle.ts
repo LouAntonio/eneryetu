@@ -1,26 +1,29 @@
 'use client';
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
 
-const TITLES: Record<string, string> = {
-	'/': 'EnerYetu',
-	'/about': 'About | EnerYetu',
-	'/sectors': 'Sectors | EnerYetu',
-	'/services': 'Services | EnerYetu',
-	'/products': 'Products | EnerYetu',
-	'/training': 'Training | EnerYetu',
-	'/careers': 'Careers | EnerYetu',
-	'/contact': 'Contact | EnerYetu',
-	'/media': 'Media | EnerYetu',
-	'/media/blog': 'Blog | EnerYetu',
-	'/media/news': 'News | EnerYetu',
-	'/media/events': 'Events | EnerYetu',
-	'/media/gallery': 'Gallery | EnerYetu',
+const TITLE_KEYS: Record<string, string> = {
+	'/': 'brand',
+	'/about': 'navigation.about',
+	'/sectors': 'navigation.sectors',
+	'/services': 'navigation.services',
+	'/products': 'navigation.products',
+	'/training': 'navigation.training',
+	'/careers': 'navigation.careers',
+	'/contact': 'navigation.contact',
+	'/media': 'navigation.media',
+	'/media/blog': 'navigation.blog',
+	'/media/news': 'navigation.news',
+	'/media/events': 'navigation.events',
+	'/media/gallery': 'navigation.gallery',
 };
 
 export function useDocumentTitle() {
 	const pathname = usePathname();
+	const { t, i18n } = useTranslation();
 	useEffect(() => {
-		document.title = TITLES[pathname] ?? 'EnerYetu';
-	}, [pathname]);
+		const key = TITLE_KEYS[pathname];
+		document.title = key ? `${t(key)} | EnerYetu` : 'EnerYetu';
+	}, [pathname, i18n.language, t]);
 }
