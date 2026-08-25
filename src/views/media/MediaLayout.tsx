@@ -21,7 +21,7 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 
 	return (
 		<>
-			<header className="relative isolate overflow-hidden border-b border-line-warm bg-bone text-paper">
+			<header className="relative isolate min-h-screen overflow-hidden border-b border-line-warm bg-bone text-paper">
 				<img
 					src={t('media.heroImage')}
 					alt=""

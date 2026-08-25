@@ -66,67 +66,79 @@
 		"eyebrow": "Services",
 		"title": "Twelve service lines, one partner.",
 		"body": "Integrated market-access and business-development solutions — from sourcing to maintenance, under a single contract.",
-		"heroImage": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=2400&auto=format&fit=crop",
 		"items": [
 			{
 				"title": "Strategic sourcing",
 				"blurb": "We connect African clients with international suppliers of parts, materials and equipment, managing contracts end to end.",
-				"spec": "End to end"
+				"spec": "End to end",
+				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Consulting & market access",
 				"blurb": "Commercial representation of international companies in Angola and support with regulatory and licensing processes.",
-				"spec": "Representation · licensing"
+				"spec": "Representation · licensing",
+				"image": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Manpower",
 				"blurb": "Skilled manpower supply and professional training in Project Management, Primavera P6, Welding and NDT Inspection.",
-				"spec": "Manpower · training"
+				"spec": "Manpower · training",
+				"image": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Logistics & supply chain",
 				"blurb": "Logistics contract management, cargo handling and transfer within and beyond Angola.",
-				"spec": "Domestic · international"
+				"spec": "Domestic · international",
+				"image": "https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Materials supply",
 				"blurb": "Spare parts, certified equipment, chemical products, lubricants and industrial consumables.",
-				"spec": "Certified equipment"
+				"spec": "Certified equipment",
+				"image": "https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Maintenance & repair",
 				"blurb": "Hydraulic, pneumatic and electrical systems; generators and compressors; calibration and certification of equipment.",
-				"spec": "Field & workshop"
+				"spec": "Field & workshop",
+				"image": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Water treatment",
 				"blurb": "Installation and maintenance of industrial and residential water purification systems.",
-				"spec": "Industrial · residential"
+				"spec": "Industrial · residential",
+				"image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Engineering & construction",
 				"blurb": "Support for EPC contracts: engineering, construction and repair of platforms, tanks and pipelines.",
-				"spec": "EPC"
+				"spec": "EPC",
+				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Integrity management",
 				"blurb": "Structural inspection and non-destructive testing of welds in compliance with ISO and ASNT standards.",
-				"spec": "NDT · ISO · ASNT"
+				"spec": "NDT · ISO · ASNT",
+				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Surface treatment",
 				"blurb": "Corrosion protection, industrial painting and high-pressure cleaning.",
-				"spec": "Anti-corrosion"
+				"spec": "Anti-corrosion",
+				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Renewable energy",
 				"blurb": "Project management, installation and maintenance of renewable energy structures.",
-				"spec": "Energy transition"
+				"spec": "Energy transition",
+				"image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Waste management",
 				"blurb": "Transport, treatment, recycling and disposal of waste, including chemical waste.",
-				"spec": "Chemical · recycling"
+				"spec": "Chemical · recycling",
+				"image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b0b9?q=80&w=800&auto=format&fit=crop"
 			}
 		],
 		"beyond": {
@@ -153,12 +165,12 @@
 		"eyebrow": "Sectors",
 		"title": "Where we work",
 		"body": "Energy needs differ by industry. We know the equipment, the standards and the uptime each one demands.",
-		"heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=2400&auto=format&fit=crop",
 		"items": [
 			{
 				"title": "Oil & gas",
 				"blurb": "Power and equipment for onshore operations and support facilities.",
-				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Mining & resources",
@@ -191,7 +203,7 @@
 		"eyebrow": "Training",
 		"title": "Skills that stay on site.",
 		"body": "Professional training for national and international teams — so the people who run and maintain your facility truly master it.",
-		"heroImage": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=2400&auto=format&fit=crop",
 		"features": ["Project Management", "Primavera P6", "Welding", "NDT Inspection"],
 		"cta": "See our training"
 	},
@@ -199,12 +211,12 @@
 		"eyebrow": "Products",
 		"title": "Certified products and equipment",
 		"body": "We supply a wide range of certified industrial products for the Oil & Gas, Mining and Energy sectors.",
-		"heroImage": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=2400&auto=format&fit=crop",
 		"categories": [
 			{
 				"title": "Drilling equipment",
 				"blurb": "Bits, tricones, PDC and accessories for onshore and offshore drilling.",
-				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+				"image": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Valves and fittings",
@@ -214,22 +226,22 @@
 			{
 				"title": "Pumps and compressors",
 				"blurb": "Centrifugal, reciprocating, diaphragm pumps and air/gas compressors.",
-				"image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Instrumentation and control",
 				"blurb": "Pressure, temperature, level, flow transmitters and SCADA systems.",
-				"image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+				"image": "https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Materials and consumables",
 				"blurb": "Pipes, flanges, gaskets, bolts, lubricants, chemicals and PPE.",
-				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+				"image": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=800&auto=format&fit=crop"
 			},
 			{
 				"title": "Safety equipment",
 				"blurb": "Gas detection, fire suppression, PPE and signage systems.",
-				"image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+				"image": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=800&auto=format&fit=crop"
 			}
 		]
 	},
@@ -258,7 +270,7 @@
 		"lead": "ENERYETU – COMÉRCIO & SERVIÇOS LDA is a services company operating in the Oil & Gas and Mining industries.",
 		"body1": "Fully Angolan-owned, it was founded by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas industry — with deep knowledge of the national oil market.",
 		"body2": "Committed to ESG principles, it promotes sustainable practices and the energy transition, pursuing strategic partnerships that generate value for investors, employees and local communities.",
-		"heroImage": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=2400&auto=format&fit=crop",
 		"visionTitle": "Vision",
 		"vision": "To be Africa's leading platform for Strategic Sourcing and Local Content, positioning Angola as a competitive hub for global industrial supply chains.",
 		"missionTitle": "Mission",
@@ -307,7 +319,7 @@
 		"eyebrow": "Careers",
 		"title": "Build Angola's future with us.",
 		"body": "We hire professionals who want to grow with Angola's Oil & Gas and Mining industries. If that is you, tell us.",
-		"heroImage": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=2400&auto=format&fit=crop",
 		"applyLabel": "Interested? Send your CV to",
 		"applyHint": "Mention your area of interest in the subject line.",
 		"form": {
@@ -334,7 +346,7 @@
 		"eyebrow": "Media",
 		"title": "News, events and the work behind the panels.",
 		"body": "Field notes from our engineers, public events we host, and photographs of the work.",
-		"heroImage": "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=2400&auto=format&fit=crop",
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "Field notes are being drafted.",
@@ -382,7 +394,7 @@
 		"eyebrow": "Contact",
 		"title": "Talk to us.",
 		"body": "Tell us what you need — sourcing, services, logistics or partnerships — and we will come back with an answer, usually within one business day.",
-		"heroImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=2400&auto=format&fit=crop",
 		"detailsTitle": "Head office",
 		"address": "Apartment 5, 1st floor, building E152, Rua 70, Nova Vida district, Luanda, Angola",
 		"phone": "+244 923 734 199 / +244 938 626 639",

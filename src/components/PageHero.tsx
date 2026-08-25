@@ -9,7 +9,7 @@ interface PageHeroProps {
 
 export function PageHero({ eyebrow, title, body, image }: PageHeroProps) {
 	return (
-		<section className="relative isolate overflow-hidden border-b border-line text-paper">
+		<section className="relative isolate min-h-screen overflow-hidden border-b border-line text-paper">
 			<img
 				src={image}
 				alt=""

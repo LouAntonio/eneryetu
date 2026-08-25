@@ -11,10 +11,10 @@ import { ServiceCard } from '../components/ServiceCard';
 import { StatRow } from '../components/StatRow';
 
 const HERO_IMAGES = [
-	'https://images.unsplash.com/photo-1592263904934-b00851dc93eb?q=80&w=2400&auto=format&fit=crop',
-	'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=2400&auto=format&fit=crop',
-	'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2400&auto=format&fit=crop',
-	'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2400&auto=format&fit=crop',
+	'https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=2400&auto=format&fit=crop',
+	'https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=2400&auto=format&fit=crop',
+	'https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=2400&auto=format&fit=crop',
+	'https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=2400&auto=format&fit=crop',
 ];
 
 export function Home() {
@@ -37,7 +37,7 @@ export function Home() {
 	return (
 		<>
 			{/* HERO — full-bleed rotating images behind a translucent header */}
-			<section id="hero" className="relative isolate overflow-hidden bg-ink-deep text-paper">
+			<section id="hero" className="relative isolate min-h-screen overflow-hidden bg-ink-deep text-paper">
 				<div className="absolute inset-0 -z-20">
 					{HERO_IMAGES.map((src, index) => (
 						<img
@@ -147,7 +147,7 @@ export function Home() {
 								index={index + 1}
 								title={service.title}
 								blurb={service.blurb}
-								spec={service.spec}
+								image={service.image}
 							/>
 						))}
 					</div>

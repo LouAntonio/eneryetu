@@ -29,7 +29,7 @@ export function Services() {
 								index={index + 1}
 								title={service.title}
 								blurb={service.blurb}
-								spec={service.spec}
+								image={service.image}
 							/>
 						))}
 					</div>
