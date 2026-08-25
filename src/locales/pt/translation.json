@@ -260,12 +260,11 @@
 		"title": "Uma rede de parceiros estratégicos",
 		"body": "Trabalhamos com parceiros nacionais e internacionais para entregar soluções completas aos nossos clientes.",
 		"items": [
-			{ "name": "Elite Flow Control", "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='48'%3E%3Crect width='200' height='48' fill='%23e5e7eb'/%3E%3Ctext x='100' y='30' text-anchor='middle' font-family='sans-serif' font-size='14' font-weight='bold' fill='%236b7280'%3EEFC%3C/text%3E%3C/svg%3E" },
-			{ "name": "Elite Project Engineering", "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='48'%3E%3Crect width='200' height='48' fill='%23e5e7eb'/%3E%3Ctext x='100' y='30' text-anchor='middle' font-family='sans-serif' font-size='14' font-weight='bold' fill='%236b7280'%3EEPE%3C/text%3E%3C/svg%3E" },
-			{ "name": "Rico Organizações", "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='48'%3E%3Crect width='200' height='48' fill='%23e5e7eb'/%3E%3Ctext x='100' y='30' text-anchor='middle' font-family='sans-serif' font-size='14' font-weight='bold' fill='%236b7280'%3ERO%3C/text%3E%3C/svg%3E" },
-			{ "name": "Synergy Projects Consulting", "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='48'%3E%3Crect width='200' height='48' fill='%23e5e7eb'/%3E%3Ctext x='100' y='30' text-anchor='middle' font-family='sans-serif' font-size='14' font-weight='bold' fill='%236b7280'%3ESPC%3C/text%3E%3C/svg%3E" },
-			{ "name": "Risaku Energy Services Company", "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='48'%3E%3Crect width='200' height='48' fill='%23e5e7eb'/%3E%3Ctext x='100' y='30' text-anchor='middle' font-family='sans-serif' font-size='14' font-weight='bold' fill='%236b7280'%3ERESC%3C/text%3E%3C/svg%3E" },
-			{ "name": "Bué Fine Consultoria Empresarial LDA", "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='48'%3E%3Crect width='200' height='48' fill='%23e5e7eb'/%3E%3Ctext x='100' y='30' text-anchor='middle' font-family='sans-serif' font-size='14' font-weight='bold' fill='%236b7280'%3EBFC%3C/text%3E%3C/svg%3E" }
+			{ "name": "Elite Flow Control", "logo": "/images/parceiros/elite.png" },
+			{ "name": "Elite Project Engineering", "logo": "/images/parceiros/elite.png" },
+			{ "name": "Rico Organizações", "logo": "/images/parceiros/rico.png" },
+			{ "name": "Synergy Projects Consulting", "logo": "/images/parceiros/synergy.png" },
+			{ "name": "Risaku Energy Services Company", "logo": "/images/parceiros/risaku.png" }
 		]
 	},
 	"cta": {

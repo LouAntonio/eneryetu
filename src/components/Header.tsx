@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from '../lib/routing';
 import { useTranslation } from 'react-i18next';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 import { LanguageSwitcher } from './LanguageSwitcher';
 
@@ -39,12 +40,21 @@ const CHARGE_BAR_HEIGHT = 72;
 export function Header() {
 	const { t } = useTranslation();
 	const location = useLocation();
-	const [prevPath, setPrevPath] = useState(location.pathname);
 	const [open, setOpen] = useState(false);
 	const [overHero, setOverHero] = useState(
 		() => window.scrollY < 10,
 	);
 	const [charge, setCharge] = useState(0);
+	useDocumentTitle();
+
+	const prevPathRef = useRef(location.pathname);
+	useEffect(() => {
+		if (prevPathRef.current !== location.pathname) {
+			prevPathRef.current = location.pathname;
+			setOpen(false);
+			setOverHero(window.scrollY < 10);
+		}
+	});
 	// eslint-disable-next-line @next/next/no-img-element
 
 	useEffect(() => {
@@ -66,21 +76,22 @@ export function Header() {
 	}, []);
 
 	useEffect(() => {
-		const hero = document.getElementById('hero');
-		if (!hero) return;
-		const observer = new IntersectionObserver(
-			(entries) => setOverHero(entries[0]?.isIntersecting ?? false),
-			{ rootMargin: `-${CHARGE_BAR_HEIGHT}px 0px 0px 0px`, threshold: 0 },
-		);
-		observer.observe(hero);
-		return () => observer.disconnect();
+		let observer: IntersectionObserver | null = null;
+		const setup = () => {
+			const hero = document.getElementById('hero');
+			if (!hero) return;
+			observer = new IntersectionObserver(
+				(entries) => setOverHero(entries[0]?.isIntersecting ?? false),
+				{ rootMargin: `-${CHARGE_BAR_HEIGHT}px 0px 0px 0px`, threshold: 0 },
+			);
+			observer.observe(hero);
+		};
+		const raf = requestAnimationFrame(setup);
+		return () => {
+			cancelAnimationFrame(raf);
+			observer?.disconnect();
+		};
 	}, [location.pathname]);
-
-	if (prevPath !== location.pathname) {
-		setPrevPath(location.pathname);
-		setOpen(false);
-		setOverHero(window.scrollY < 10);
-	}
 
 	useEffect(() => {
 		const onKey = (event: KeyboardEvent) => {
@@ -129,7 +140,7 @@ export function Header() {
 		>
 			<div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-3">
 				<Link to="/" className="flex items-center" aria-label={t('brand')}>
-					<img src="/logo.png" alt={t('brand')} className="h-16 w-16 object-contain" />
+					<img src="/icon.png" alt={t('brand')} className="h-12 w-12 object-contain" />
 				</Link>
 
 				<nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
