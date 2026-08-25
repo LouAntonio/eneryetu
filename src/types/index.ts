@@ -93,3 +93,76 @@ export interface Paginated<T> {
 		totalPages: number;
 	};
 }
+
+export interface GalleryCategory {
+	id: string;
+	name: string;
+	slug: string;
+	sortOrder: number;
+	_count?: { photos: number };
+	createdAt?: string;
+	updatedAt?: string;
+}
+
+export interface GalleryPhoto {
+	id: string;
+	title?: string | null;
+	imageUrl: string;
+	publicId?: string | null;
+	categoryId: string;
+	category?: GalleryCategory;
+	sortOrder: number;
+	createdAt?: string;
+	updatedAt?: string;
+}
+
+export interface Training {
+	id: string;
+	title: string;
+	slug: string;
+	description?: string | null;
+	coverImage?: string | null;
+	coverImagePubId?: string | null;
+	durationDays?: number | null;
+	dayPattern?: string | null;
+	dailyStartTime?: string | null;
+	dailyEndTime?: string | null;
+	deliveryMode: string;
+	price?: number | null;
+	currency: string;
+	includesCert: boolean;
+	includesExam: boolean;
+	learningOutcomes?: string | null;
+	modules?: string | null;
+	prerequisites?: string | null;
+	pduCredits?: number | null;
+	ceuCredits?: number | null;
+	pmiProgramNumber?: string | null;
+	status: Status;
+	featured: boolean;
+	sortOrder: number;
+	metaTitle?: string | null;
+	metaDescription?: string | null;
+	createdBy?: string | null;
+	createdAt?: string;
+	updatedAt?: string;
+	publishedAt?: string | null;
+}
+
+export interface JobListing {
+	id: string;
+	title: string;
+	slug: string;
+	description: string;
+	department?: string | null;
+	location?: string | null;
+	jobType: string;
+	status: Status;
+	featured: boolean;
+	metaTitle?: string | null;
+	metaDescription?: string | null;
+	createdBy?: string | null;
+	createdAt?: string;
+	updatedAt?: string;
+	publishedAt?: string | null;
+}

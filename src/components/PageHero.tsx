@@ -10,7 +10,10 @@ interface PageHeroProps {
 
 export function PageHero({ id, eyebrow, title, body, image }: PageHeroProps) {
 	return (
-		<section id={id} className="relative isolate min-h-screen overflow-hidden border-b border-line text-paper">
+		<section
+			id={id}
+			className="relative isolate min-h-screen overflow-hidden border-b border-line text-paper"
+		>
 			<img
 				src={image}
 				alt=""

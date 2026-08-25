@@ -24,6 +24,7 @@ export function useDocumentTitle() {
 	const { t, i18n } = useTranslation();
 	useEffect(() => {
 		const key = TITLE_KEYS[pathname];
-		document.title = key ? `${t(key)} | EnerYetu` : 'EnerYetu';
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		document.title = key ? `${t(key as any)} | EnerYetu` : 'EnerYetu';
 	}, [pathname, i18n.language, t]);
 }

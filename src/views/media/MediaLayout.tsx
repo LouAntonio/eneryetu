@@ -21,7 +21,10 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 
 	return (
 		<>
-			<header id="hero" className="relative isolate min-h-screen overflow-hidden border-b border-line-warm bg-bone text-paper">
+			<header
+				id="hero"
+				className="relative isolate min-h-screen overflow-hidden border-b border-line-warm bg-bone text-paper"
+			>
 				<img
 					src={t('media.heroImage')}
 					alt=""
@@ -38,7 +41,9 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 						<h1 className="mt-5 max-w-3xl font-display text-6xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-7xl">
 							{t('media.title')}
 						</h1>
-						<p className="mt-5 max-w-xl text-lg leading-relaxed text-paper/75">{t('media.body')}</p>
+						<p className="mt-5 max-w-xl text-lg leading-relaxed text-paper/75">
+							{t('media.body')}
+						</p>
 					</div>
 					<Postmark place="LUANDA" className="hidden shrink-0 lg:inline-flex" />
 				</div>
@@ -57,7 +62,8 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 									isActive
 										? 'bg-warm-ink text-bone'
 										: 'text-sand hover:bg-card hover:text-warm-ink'
-								}`}
+								}`
+							}
 						>
 							{labels[key]}
 						</NavLink>

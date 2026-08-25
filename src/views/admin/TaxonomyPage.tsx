@@ -10,7 +10,7 @@ import { DataTable } from '../../components/admin/DataTable';
 import { FormModal } from '../../components/admin/FormModal';
 
 interface TaxonomyPageProps {
-	kind: 'category' | 'eventType';
+	kind: 'category' | 'eventType' | 'galleryCategory';
 	eyebrow: string;
 	title: string;
 	addLabel: string;
@@ -19,7 +19,8 @@ interface TaxonomyPageProps {
 	countLabel: string;
 }
 
-type Row = Category | EventType;
+type Row =
+	Category | EventType | { id: string; name: string; slug: string; _count?: { photos: number } };
 
 const inputClass =
 	'mt-2 w-full border border-line bg-white px-3 py-2.5 font-mono text-sm text-ink placeholder:text-slate/60 focus:border-blue focus:outline-none';
@@ -39,8 +40,18 @@ export function TaxonomyPage({
 	const [form, setForm] = useState({ name: '', slug: '' });
 	const [editing, setEditing] = useState<Row | null>(null);
 
-	const base = kind === 'category' ? '/categories' : '/event-types';
-	const plural = kind === 'category' ? 'categories' : 'eventTypes';
+	const base =
+		kind === 'category'
+			? '/categories'
+			: kind === 'eventType'
+				? '/event-types'
+				: '/gallery/categories';
+	const plural =
+		kind === 'category'
+			? 'categories'
+			: kind === 'eventType'
+				? 'eventTypes'
+				: 'galleryCategories';
 
 	const { data, isLoading } = useQuery({
 		queryKey: [plural],
@@ -122,10 +133,14 @@ export function TaxonomyPage({
 						key: 'count',
 						label: countLabel,
 						render: (row) => {
-							const count =
-								kind === 'category'
-									? (row as Category)._count?.posts
-									: (row as EventType)._count?.events;
+							let count: number | undefined;
+							if (kind === 'category') {
+								count = (row as Category)._count?.posts;
+							} else if (kind === 'eventType') {
+								count = (row as EventType)._count?.events;
+							} else {
+								count = (row as { _count?: { photos?: number } })._count?.photos;
+							}
 							return (
 								<span className="font-mono text-sm tabular-nums text-blue group-hover:text-paper/60">
 									{count ?? 0}

@@ -13,8 +13,7 @@ export function PartnerMarquee({ partners }: { partners: Partner[] }) {
 	const lastTime = useRef(0);
 	const rafId = useRef(0);
 
-	const onPointerDown = useCallback(
-	(e: React.PointerEvent) => {
+	const onPointerDown = useCallback((e: React.PointerEvent) => {
 		if (!trackRef.current) return;
 		dragging.current = true;
 		startX.current = e.clientX;
@@ -23,9 +22,7 @@ export function PartnerMarquee({ partners }: { partners: Partner[] }) {
 		lastTime.current = Date.now();
 		trackRef.current.setPointerCapture(e.pointerId);
 		trackRef.current.classList.add('dragging');
-	},
-	[],
-	);
+	}, []);
 
 	const onPointerMove = useCallback((e: React.PointerEvent) => {
 		if (!dragging.current || !trackRef.current) return;
@@ -45,11 +42,18 @@ export function PartnerMarquee({ partners }: { partners: Partner[] }) {
 
 		const v = velocity.current;
 		const deceleration = v * 80;
-		const target = parseFloat(trackRef.current.style.transform.replace('translateX(', '').replace('px)', '') || '0') + deceleration;
+		const target =
+			parseFloat(
+				trackRef.current.style.transform.replace('translateX(', '').replace('px)', '') ||
+					'0',
+			) + deceleration;
 
 		const animate = () => {
 			if (!trackRef.current) return;
-			const current = parseFloat(trackRef.current.style.transform.replace('translateX(', '').replace('px)', '') || '0');
+			const current = parseFloat(
+				trackRef.current.style.transform.replace('translateX(', '').replace('px)', '') ||
+					'0',
+			);
 			const next = current + (target - current) * 0.15;
 			if (Math.abs(target - next) < 0.5) {
 				trackRef.current.style.transform = '';
@@ -81,7 +85,10 @@ export function PartnerMarquee({ partners }: { partners: Partner[] }) {
 				onPointerCancel={onPointerUp}
 			>
 				{items.map((partner, i) => (
-					<div key={`${partner.name}-${i}`} className="flex shrink-0 items-center justify-center px-10">
+					<div
+						key={`${partner.name}-${i}`}
+						className="flex shrink-0 items-center justify-center px-10"
+					>
 						<img
 							src={partner.logo}
 							alt={partner.name}

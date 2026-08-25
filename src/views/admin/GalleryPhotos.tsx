@@ -1,0 +1,109 @@
+'use client';
+
+import { Link } from '../../lib/routing';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
+import { api } from '../../services/api';
+import type { GalleryPhoto, Paginated } from '../../types';
+import { AdminPage } from '../../components/admin/AdminPage';
+import { DataTable } from '../../components/admin/DataTable';
+import { assetUrl } from '../../lib/assets';
+
+export function GalleryPhotos() {
+	const { t } = useTranslation();
+	const queryClient = useQueryClient();
+
+	const { data, isLoading } = useQuery({
+		queryKey: ['gallery-photos'],
+		queryFn: async () =>
+			(await api.get<Paginated<GalleryPhoto>>('/gallery/photos', { params: { limit: 100 } }))
+				.data,
+	});
+
+	const remove = useMutation({
+		mutationFn: async (id: string) => api.delete(`/gallery/photos/${id}`),
+		onSuccess: () => void queryClient.invalidateQueries({ queryKey: ['gallery-photos'] }),
+	});
+
+	return (
+		<AdminPage
+			eyebrow={t('admin.gallery.eyebrow')}
+			title={t('admin.gallery.title')}
+			actions={
+				<Link to="/eneryetu/gallery/new" className="btn btn-sun px-5 py-2.5">
+					{t('admin.gallery.add')}
+				</Link>
+			}
+		>
+			<DataTable<GalleryPhoto>
+				loading={isLoading}
+				rows={data ?? []}
+				rowKey={(row) => row.id}
+				columns={[
+					{
+						key: 'image',
+						label: t('admin.gallery.image'),
+						render: (row) => (
+							<img
+								src={assetUrl(row.imageUrl) ?? ''}
+								alt=""
+								className="h-12 w-12 border border-line object-cover"
+							/>
+						),
+					},
+					{
+						key: 'title',
+						label: t('admin.gallery.title'),
+						render: (row) => (
+							<span className="font-mono text-sm font-semibold text-ink group-hover:text-paper">
+								{row.title ?? '—'}
+							</span>
+						),
+					},
+					{
+						key: 'category',
+						label: t('admin.gallery.category'),
+						render: (row) => (
+							<span className="font-mono text-xs text-slate group-hover:text-paper/70">
+								{row.category?.name ?? '—'}
+							</span>
+						),
+					},
+					{
+						key: 'sortOrder',
+						label: t('admin.gallery.sortOrder'),
+						render: (row) => (
+							<span className="font-mono text-xs text-slate group-hover:text-paper/70">
+								{row.sortOrder}
+							</span>
+						),
+					},
+					{
+						key: 'actions',
+						label: '',
+						render: (row) => (
+							<div className="flex items-center gap-4">
+								<Link
+									to={`/eneryetu/gallery/${row.id}`}
+									className="font-mono text-xs uppercase tracking-[0.16em] text-slate underline decoration-line underline-offset-4 transition-colors hover:text-volt group-hover:text-paper"
+								>
+									{t('admin.edit')}
+								</Link>
+								<button
+									type="button"
+									onClick={() => {
+										if (window.confirm(t('admin.deleteConfirm')))
+											remove.mutate(row.id);
+									}}
+									className="font-mono text-xs uppercase tracking-[0.16em] text-slate underline decoration-line underline-offset-4 transition-colors hover:text-volt group-hover:text-paper"
+								>
+									{t('admin.delete')}
+								</button>
+							</div>
+						),
+					},
+				]}
+			/>
+		</AdminPage>
+	);
+}

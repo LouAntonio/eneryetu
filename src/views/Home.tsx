@@ -38,7 +38,10 @@ export function Home() {
 	return (
 		<>
 			{/* HERO — full-bleed rotating images behind a translucent header */}
-			<section id="hero" className="relative isolate min-h-screen overflow-hidden bg-ink-deep text-paper">
+			<section
+				id="hero"
+				className="relative isolate min-h-screen overflow-hidden bg-ink-deep text-paper"
+			>
 				<div className="absolute inset-0 -z-20">
 					{HERO_IMAGES.map((src, index) => (
 						<img

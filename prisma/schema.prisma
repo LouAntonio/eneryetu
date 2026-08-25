@@ -143,3 +143,90 @@ model Post {
 	updatedAt   DateTime  @updatedAt
 	publishedAt DateTime?
 }
+
+// --- CONTEÚDO: GALERIA ---
+
+model GalleryCategory {
+	id        String         @id @default(uuid()) @db.VarChar(36)
+	name      String         @unique @db.VarChar(64)
+	slug      String         @unique @db.VarChar(80)
+	sortOrder Int            @default(0)
+	photos    GalleryPhoto[]
+	createdAt DateTime       @default(now())
+	updatedAt DateTime       @updatedAt
+}
+
+model GalleryPhoto {
+	id         String          @id @default(uuid()) @db.VarChar(36)
+	title      String?         @db.VarChar(255)
+	imageUrl   String          @db.VarChar(500)
+	publicId   String?         @db.VarChar(255)
+	categoryId String          @db.VarChar(36)
+	category   GalleryCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+	sortOrder  Int             @default(0)
+	createdAt  DateTime        @default(now())
+	updatedAt  DateTime        @updatedAt
+
+	@@index([categoryId])
+}
+
+// --- CONTEÚDO: TREINAMENTOS ---
+
+model Training {
+	id               String   @id @default(uuid()) @db.VarChar(36)
+	title            String   @db.VarChar(255)
+	slug             String   @unique @db.VarChar(120)
+	description      String?  @db.Text
+	coverImage       String?  @db.VarChar(500)
+	coverImagePubId  String?  @db.VarChar(255)
+	durationDays     Int?
+	dayPattern       String?  @db.VarChar(100)
+	dailyStartTime   String?  @db.VarChar(20)
+	dailyEndTime     String?  @db.VarChar(20)
+	deliveryMode     String   @default("presencial") @db.VarChar(32)
+	price            Decimal? @db.Decimal(10,2)
+	currency         String   @default("USD") @db.VarChar(10)
+	includesCert     Boolean  @default(false)
+	includesExam     Boolean  @default(false)
+	learningOutcomes String?  @db.Text
+	modules          String?  @db.Text
+	prerequisites    String?  @db.VarChar(255)
+	pduCredits       Decimal? @db.Decimal(5,1)
+	ceuCredits       Decimal? @db.Decimal(5,1)
+	pmiProgramNumber String?  @db.VarChar(20)
+	status           Status   @default(RASCUNHO)
+	featured         Boolean  @default(false)
+	sortOrder        Int      @default(0)
+	metaTitle        String?  @db.VarChar(160)
+	metaDescription  String?  @db.VarChar(320)
+	createdBy        String?  @db.VarChar(36)
+	createdAt        DateTime @default(now())
+	updatedAt        DateTime @updatedAt
+	publishedAt      DateTime?
+
+	@@index([slug])
+	@@index([status])
+}
+
+// --- CONTEÚDO: VAGAS ---
+
+model JobListing {
+	id             String   @id @default(uuid()) @db.VarChar(36)
+	title          String   @db.VarChar(255)
+	slug           String   @unique @db.VarChar(120)
+	description    String   @db.Text
+	department     String?  @db.VarChar(100)
+	location       String?  @db.VarChar(100)
+	jobType        String   @default("fulltime") @db.VarChar(32)
+	status         Status   @default(RASCUNHO)
+	featured       Boolean  @default(false)
+	metaTitle      String?  @db.VarChar(160)
+	metaDescription String? @db.VarChar(320)
+	createdBy      String?  @db.VarChar(36)
+	createdAt      DateTime @default(now())
+	updatedAt      DateTime @updatedAt
+	publishedAt    DateTime?
+
+	@@index([slug])
+	@@index([status])
+}

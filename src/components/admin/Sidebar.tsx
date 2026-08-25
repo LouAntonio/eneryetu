@@ -10,6 +10,9 @@ const NAV = [
 	{ to: '/eneryetu/events', labelKey: 'admin.nav.events', end: false },
 	{ to: '/eneryetu/categories', labelKey: 'admin.nav.categories', end: false },
 	{ to: '/eneryetu/event-types', labelKey: 'admin.nav.eventTypes', end: false },
+	{ to: '/eneryetu/gallery', labelKey: 'admin.nav.gallery', end: false },
+	{ to: '/eneryetu/trainings', labelKey: 'admin.nav.trainings', end: false },
+	{ to: '/eneryetu/jobs', labelKey: 'admin.nav.jobs', end: false },
 ] as const;
 
 export function Sidebar() {

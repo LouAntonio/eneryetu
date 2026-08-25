@@ -233,3 +233,81 @@ export async function handleDeletePostCover(req: NextRequest, id: string) {
 		data: { coverImage: null, coverImagePublicId: null },
 	});
 }
+
+export async function handleUploadGalleryPhoto(
+	req: NextRequest,
+	id: string | null,
+	formDataFields?: { title?: string; categoryId?: string; sortOrder?: number },
+) {
+	await requireAdmin(req);
+	const file = await getEventFile(req, 'file', IMAGE_EXTENSIONS, MAX_IMAGE_SIZE);
+
+	const buffer = Buffer.from(await file.arrayBuffer());
+	const result = await uploadToCloudinary(buffer, id ?? 'gallery', 'photo', false);
+
+	const photo = await prisma.galleryPhoto.create({
+		data: {
+			title: formDataFields?.title ?? null,
+			imageUrl: result.secure_url,
+			publicId: result.public_id,
+			categoryId: formDataFields?.categoryId ?? '',
+			sortOrder: formDataFields?.sortOrder ?? 0,
+		},
+		include: { category: true },
+	});
+
+	return photo;
+}
+
+export async function handleDeleteGalleryPhoto(req: NextRequest, id: string) {
+	await requireAdmin(req);
+
+	const photo = await prisma.galleryPhoto.findUnique({ where: { id } });
+	if (!photo) {
+		throw new HttpError(404, 'Foto não encontrada');
+	}
+
+	await destroyStored(photo.publicId ?? undefined, photo.imageUrl ?? undefined);
+	await prisma.galleryPhoto.delete({ where: { id } });
+}
+
+export async function handleUploadTrainingCover(req: NextRequest, id: string) {
+	await requireAdmin(req);
+	const training = await prisma.training.findUnique({ where: { id } });
+	if (!training) {
+		throw new HttpError(404, 'Formação não encontrada');
+	}
+
+	const file = await getEventFile(req, 'file', IMAGE_EXTENSIONS, MAX_IMAGE_SIZE);
+
+	await destroyStored(training.coverImagePubId ?? undefined, training.coverImage ?? undefined);
+
+	const buffer = Buffer.from(await file.arrayBuffer());
+	const result = await uploadToCloudinary(buffer, id, 'cover', false);
+
+	await prisma.training.update({
+		where: { id },
+		data: { coverImage: result.secure_url, coverImagePubId: result.public_id },
+	});
+
+	return result.secure_url;
+}
+
+export async function handleDeleteTrainingCover(req: NextRequest, id: string) {
+	await requireAdmin(req);
+	const training = await prisma.training.findUnique({ where: { id } });
+	if (!training) {
+		throw new HttpError(404, 'Formação não encontrada');
+	}
+
+	if (!training.coverImage && !training.coverImagePubId) {
+		throw new HttpError(400, 'A formação não tem imagem de capa');
+	}
+
+	await destroyStored(training.coverImagePubId ?? undefined, training.coverImage ?? undefined);
+
+	await prisma.training.update({
+		where: { id },
+		data: { coverImage: null, coverImagePubId: null },
+	});
+}

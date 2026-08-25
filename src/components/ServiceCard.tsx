@@ -13,10 +13,7 @@ export function ServiceCard({ title, blurb, image, index }: ServiceCardProps) {
 	const { ref, revealed } = useReveal<HTMLDivElement>();
 
 	return (
-		<article
-			ref={ref}
-			className="group flex flex-col bg-white transition-colors hover:bg-ink"
-		>
+		<article ref={ref} className="group flex flex-col bg-white transition-colors hover:bg-ink">
 			{image ? (
 				<div className="relative h-48 w-full overflow-hidden">
 					<img

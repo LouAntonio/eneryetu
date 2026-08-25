@@ -41,9 +41,7 @@ export function Header() {
 	const { t } = useTranslation();
 	const location = useLocation();
 	const [open, setOpen] = useState(false);
-	const [overHero, setOverHero] = useState(
-		() => window.scrollY < 10,
-	);
+	const [overHero, setOverHero] = useState(() => window.scrollY < 10);
 	const [charge, setCharge] = useState(0);
 	useDocumentTitle();
 
