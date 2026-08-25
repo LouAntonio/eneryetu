@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Chip } from '../components/Chip';
 import { CtaBand } from '../components/CtaBand';
+import { PartnerMarquee } from '../components/PartnerMarquee';
 import { SectionHeading } from '../components/SectionHeading';
 import { ServiceCard } from '../components/ServiceCard';
 import { StatRow } from '../components/StatRow';
@@ -224,20 +225,7 @@ export function Home() {
 					<p className="mx-auto mt-4 max-w-2xl text-slate">{t('partners.body')}</p>
 				</div>
 				{Array.isArray(partners) && partners.length > 0 && (
-					<div className="overflow-hidden border-t border-line">
-						<div className="marquee-track py-8">
-							{[...partners, ...partners].map((partner, i) => (
-								<div key={`${partner.name}-${i}`} className="flex shrink-0 items-center justify-center px-10">
-									<img
-										src={partner.logo}
-										alt={partner.name}
-										className="h-12 w-auto object-contain opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0"
-										loading="lazy"
-									/>
-								</div>
-							))}
-						</div>
-					</div>
+					<PartnerMarquee partners={partners} />
 				)}
 			</section>
 

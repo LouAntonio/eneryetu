@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-import { useLocation } from '../lib/routing';
+import { usePathname } from 'next/navigation';
 
 const TITLES: Record<string, string> = {
 	'/': 'EnerYetu',
@@ -19,7 +19,7 @@ const TITLES: Record<string, string> = {
 };
 
 export function useDocumentTitle() {
-	const { pathname } = useLocation();
+	const pathname = usePathname();
 	useEffect(() => {
 		document.title = TITLES[pathname] ?? 'EnerYetu';
 	}, [pathname]);

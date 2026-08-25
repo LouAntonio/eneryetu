@@ -302,6 +302,10 @@ body {
 	animation-play-state: paused;
 }
 
+.marquee-track.dragging {
+	animation-play-state: paused !important;
+}
+
 /* ------------------------------------------------------------------ *
  * Reduced motion
  * ------------------------------------------------------------------ */

@@ -54,7 +54,7 @@ export function Header() {
 			setOpen(false);
 			setOverHero(window.scrollY < 10);
 		}
-	});
+	}, [location.pathname]);
 	// eslint-disable-next-line @next/next/no-img-element
 
 	useEffect(() => {
