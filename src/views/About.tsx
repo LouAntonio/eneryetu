@@ -15,6 +15,7 @@ export function About() {
 	return (
 		<>
 			<PageHero
+				id="hero"
 				eyebrow={t('about.eyebrow')}
 				title={t('about.title')}
 				body={t('about.lead')}

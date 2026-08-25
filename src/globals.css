@@ -281,6 +281,28 @@ body {
 }
 
 /* ------------------------------------------------------------------ *
+ * Marquee — infinite horizontal logo scroll
+ * ------------------------------------------------------------------ */
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.marquee-track {
+	display: flex;
+	width: max-content;
+	animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+	animation-play-state: paused;
+}
+
+/* ------------------------------------------------------------------ *
  * Reduced motion
  * ------------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
@@ -289,7 +311,8 @@ body {
 	}
 
 	.pulse-path,
-	.node-live {
+	.node-live,
+	.marquee-track {
 		animation: none;
 	}
 

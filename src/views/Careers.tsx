@@ -12,6 +12,7 @@ export function Careers() {
 	return (
 		<>
 			<PageHero
+				id="hero"
 				eyebrow={t('careers.eyebrow')}
 				title={t('careers.title')}
 				body={t('careers.body')}

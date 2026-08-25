@@ -14,6 +14,7 @@ export function Training() {
 	return (
 		<>
 			<PageHero
+				id="hero"
 				eyebrow={t('training.eyebrow')}
 				title={t('training.title')}
 				body={t('training.body')}

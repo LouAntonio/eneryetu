@@ -11,6 +11,7 @@ export function Sectors() {
 	return (
 		<>
 			<PageHero
+				id="hero"
 				eyebrow={t('sectors.eyebrow')}
 				title={t('sectors.title')}
 				body={t('sectors.body')}

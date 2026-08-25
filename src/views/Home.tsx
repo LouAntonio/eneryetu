@@ -141,7 +141,7 @@ export function Home() {
 						</Link>
 					</div>
 					<div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-						{services.map((service, index) => (
+						{services.slice(0, 4).map((service, index) => (
 							<ServiceCard
 								key={service.title}
 								index={index + 1}
@@ -150,6 +150,11 @@ export function Home() {
 								image={service.image}
 							/>
 						))}
+					</div>
+					<div className="mt-8 flex justify-center">
+						<Link to="/services" className="btn btn-mono px-6 py-3">
+							{t('common.exploreServices')}
+						</Link>
 					</div>
 				</div>
 			</section>
@@ -217,18 +222,23 @@ export function Home() {
 						{t('partners.title')}
 					</h2>
 					<p className="mx-auto mt-4 max-w-2xl text-slate">{t('partners.body')}</p>
-					{Array.isArray(partners) && partners.length > 0 && (
-						<div className="mx-auto mt-10 grid max-w-4xl gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-							{partners.map((name) => (
-								<div key={name} className="bg-white p-5">
-									<p className="font-display text-sm font-bold uppercase tracking-tight text-ink">
-										{name}
-									</p>
+				</div>
+				{Array.isArray(partners) && partners.length > 0 && (
+					<div className="overflow-hidden border-t border-line">
+						<div className="marquee-track py-8">
+							{[...partners, ...partners].map((partner, i) => (
+								<div key={`${partner.name}-${i}`} className="flex shrink-0 items-center justify-center px-10">
+									<img
+										src={partner.logo}
+										alt={partner.name}
+										className="h-12 w-auto object-contain opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+										loading="lazy"
+									/>
 								</div>
 							))}
 						</div>
-					)}
-				</div>
+					</div>
+				)}
 			</section>
 
 			<CtaBand />

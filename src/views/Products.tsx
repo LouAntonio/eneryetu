@@ -11,6 +11,7 @@ export function Products() {
 	return (
 		<>
 			<PageHero
+				id="hero"
 				eyebrow={t('products.eyebrow')}
 				title={t('products.title')}
 				body={t('products.body')}

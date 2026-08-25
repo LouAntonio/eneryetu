@@ -42,7 +42,7 @@ export function Header() {
 	const [prevPath, setPrevPath] = useState(location.pathname);
 	const [open, setOpen] = useState(false);
 	const [overHero, setOverHero] = useState(
-		() => location.pathname === '/' && window.scrollY < 10,
+		() => window.scrollY < 10,
 	);
 	const [charge, setCharge] = useState(0);
 	// eslint-disable-next-line @next/next/no-img-element
@@ -67,7 +67,7 @@ export function Header() {
 
 	useEffect(() => {
 		const hero = document.getElementById('hero');
-		if (location.pathname !== '/' || !hero) return;
+		if (!hero) return;
 		const observer = new IntersectionObserver(
 			(entries) => setOverHero(entries[0]?.isIntersecting ?? false),
 			{ rootMargin: `-${CHARGE_BAR_HEIGHT}px 0px 0px 0px`, threshold: 0 },
@@ -79,7 +79,7 @@ export function Header() {
 	if (prevPath !== location.pathname) {
 		setPrevPath(location.pathname);
 		setOpen(false);
-		setOverHero(location.pathname === '/' && window.scrollY < 10);
+		setOverHero(window.scrollY < 10);
 	}
 
 	useEffect(() => {

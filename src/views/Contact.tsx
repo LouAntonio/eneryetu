@@ -13,6 +13,7 @@ export function Contact() {
 	return (
 		<>
 			<PageHero
+				id="hero"
 				eyebrow={t('contact.eyebrow')}
 				title={t('contact.title')}
 				body={t('contact.body')}

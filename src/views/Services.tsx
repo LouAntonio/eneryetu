@@ -14,6 +14,7 @@ export function Services() {
 	return (
 		<>
 			<PageHero
+				id="hero"
 				eyebrow={t('services.eyebrow')}
 				title={t('services.title')}
 				body={t('services.body')}

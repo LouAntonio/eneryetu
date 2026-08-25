@@ -21,7 +21,7 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 
 	return (
 		<>
-			<header className="relative isolate min-h-screen overflow-hidden border-b border-line-warm bg-bone text-paper">
+			<header id="hero" className="relative isolate min-h-screen overflow-hidden border-b border-line-warm bg-bone text-paper">
 				<img
 					src={t('media.heroImage')}
 					alt=""
@@ -43,7 +43,7 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 					<Postmark place="LUANDA" className="hidden shrink-0 lg:inline-flex" />
 				</div>
 
-				<div aria-hidden className="relative z-10 h-1 w-full bg-volt" />
+				<div aria-hidden className="absolute bottom-0 inset-x-0 z-10 h-1 w-full bg-volt" />
 			</header>
 
 			<nav aria-label={t('navigation.media')} className="border-b border-line-warm bg-bone">
