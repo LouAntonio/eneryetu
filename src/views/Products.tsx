@@ -33,59 +33,94 @@ function ProductModal({
 			ref={dialogRef}
 			open
 			onClick={onDialogClick}
-			className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4 backdrop-blur-sm"
+			className="fixed inset-0 z-50 flex items-center justify-center bg-warm-ink/50 p-4 backdrop-blur-sm"
 		>
-			<div className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-line-warm bg-card shadow-xl">
-				{product.coverImage ? (
-					<img
-						src={assetUrl(product.coverImage) ?? product.coverImage}
-						alt={product.title}
-						className="h-64 w-full object-cover"
-					/>
-				) : (
-					<div className="h-64 w-full bg-gradient-to-br from-blue/10 to-sand/10" />
-				)}
+			<div className="animate-modal-in relative flex w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-line-warm bg-card shadow-2xl max-lg:max-w-lg lg:flex-row lg:max-h-[85vh]">
+				{/* Top accent bar */}
+				<div className="absolute inset-x-0 top-0 h-[3px] bg-amber" />
 
+				{/* Close button */}
 				<button
 					type="button"
 					onClick={onClose}
-					className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-ink/60 text-paper transition-colors hover:bg-ink"
+					aria-label={t('common.close')}
+					className="absolute right-3 top-5 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-warm-ink/10 text-warm-ink transition-colors hover:bg-warm-ink hover:text-paper"
 				>
-					×
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="14"
+						height="14"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						strokeWidth="2.5"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+					>
+						<path d="M18 6 6 18" />
+						<path d="m6 6 12 12" />
+					</svg>
 				</button>
 
-				<div className="p-6 sm:p-8">
-					<h2 className="font-editorial text-2xl font-semibold text-warm-ink">
+				{/* Image — left column (desktop) / top (mobile) */}
+				<div className="relative w-full shrink-0 lg:w-[55%]">
+					{product.coverImage ? (
+						<img
+							src={assetUrl(product.coverImage) ?? product.coverImage}
+							alt={product.title}
+							className="h-56 w-full object-cover sm:h-64 lg:h-full lg:rounded-l-2xl"
+						/>
+					) : (
+						<div className="h-56 w-full bg-gradient-to-br from-amber/10 to-bone sm:h-64 lg:h-full lg:rounded-l-2xl" />
+					)}
+				</div>
+
+				{/* Content — right column (desktop) / bottom (mobile) */}
+				<div className="flex flex-1 flex-col p-6 sm:p-8 lg:overflow-y-auto">
+					<p className="font-mono text-[0.65rem] font-medium uppercase tracking-[0.16em] text-amber">
+						{t('products.eyebrow')}
+					</p>
+
+					<div className="mt-3 h-[3px] w-8 bg-amber" />
+
+					<h2 className="mt-4 font-editorial text-2xl font-semibold leading-[1.15] text-warm-ink">
 						{product.title}
 					</h2>
 
 					{product.blurb ? (
-						<p className="mt-3 text-sm font-semibold uppercase tracking-wide text-blue">
+						<p className="mt-3 text-sm font-medium leading-relaxed text-sand">
 							{product.blurb}
 						</p>
 					) : null}
 
 					{product.description ? (
 						<div
-							className="prose prose-sm mt-4 max-w-none text-sand"
+							className="prose prose-sm mt-5 max-w-none text-sand/90"
 							dangerouslySetInnerHTML={{ __html: product.description }}
 						/>
 					) : null}
 
-					<div className="mt-6 flex flex-wrap gap-3">
+					<div className="mt-8">
 						<a
 							href="/contact"
-							className="inline-flex items-center gap-2 rounded-full bg-sun px-6 py-3 font-editorial text-sm font-semibold text-warm-ink transition-colors hover:bg-amber"
+							className="flex w-full items-center justify-center gap-2 rounded-full bg-sun px-6 py-3 font-editorial text-sm font-semibold text-warm-ink transition-colors hover:bg-amber"
 						>
-							{t('common.requestQuote')} →
+							{t('common.requestQuote')}
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+							>
+								<path d="M5 12h14" />
+								<path d="m12 5 7 7-7 7" />
+							</svg>
 						</a>
-						<button
-							type="button"
-							onClick={onClose}
-							className="inline-flex items-center gap-2 rounded-full border border-line-warm px-6 py-3 font-editorial text-sm font-semibold text-warm-ink transition-colors hover:bg-bone"
-						>
-							{t('common.close')}
-						</button>
 					</div>
 				</div>
 			</div>
