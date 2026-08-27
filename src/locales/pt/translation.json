@@ -63,19 +63,19 @@
 				"title": "Sourcing estratégico",
 				"blurb": "Ligamos clientes africanos a fornecedores internacionais de peças, materiais e equipamentos, com gestão de contratos de ponta a ponta.",
 				"spec": "Ponta a ponta",
-				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/FPSO1.png"
 			},
 			{
 				"title": "Consultoria e intermediação",
 				"blurb": "Representação comercial de empresas internacionais em Angola e apoio em processos regulatórios e de licenciamento.",
 				"spec": "Representação · licenciamento",
-				"image": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Prancheta 2.jpg"
 			},
 			{
 				"title": "Manpower",
 				"blurb": "Fornecimento de mão-de-obra qualificada e formação profissional em Gestão de Projetos, Primavera P6, Soldadura e Inspeção NDT.",
 				"spec": "Manpower · formação",
-				"image": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/FPSO2.png"
 			},
 			{
 				"title": "Logística e cadeia de suprimentos",
@@ -129,25 +129,25 @@
 				"title": "Gestão de resíduos",
 				"blurb": "Transporte, tratamento, reciclagem e eliminação de resíduos químicos.",
 				"spec": "Químicos · reciclagem",
-				"image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b0b9?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Waste management.jpeg"
 			},
 			{
 				"title": "Limpeza industrial / limpeza de tanques",
 				"blurb": "Limpeza de alta pressão e industrial para tanques, tubagens, vasos e instalações industriais.",
 				"spec": "Alta pressão · industrial",
-				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Industrial cleaning tank cleaning.jpeg"
 			},
 			{
 				"title": "Fabrico e construção de estruturas",
 				"blurb": "Projeto, fabrico e construção no local de estruturas de aço, skids e módulos industriais.",
 				"spec": "Aço · construção no local",
-				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Fabrication & construction of structures.jpeg"
 			},
 			{
 				"title": "Assistência técnica (soluções onshore e offshore)",
 				"blurb": "Assistência técnica especializada para operações onshore e offshore — apoio em campo, comissionamento e resolução de problemas.",
 				"spec": "Onshore · offshore",
-				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Technicalassistance.jpeg"
 			},
 			{
 				"title": "Mecânica / elétrica / instrumentação",

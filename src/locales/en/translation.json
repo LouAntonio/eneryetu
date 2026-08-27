@@ -63,19 +63,19 @@
 				"title": "Strategic sourcing",
 				"blurb": "We connect African clients with international suppliers of parts, materials and equipment, managing contracts end to end.",
 				"spec": "End to end",
-				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/FPSO1.png"
 			},
 			{
 				"title": "Consulting & intermediation",
 				"blurb": "Commercial representation of international companies in Angola and support with regulatory and licensing processes.",
 				"spec": "Representation · licensing",
-				"image": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Prancheta 2.jpg"
 			},
 			{
 				"title": "Manpower",
 				"blurb": "Skilled manpower supply and professional training in Project Management, Primavera P6, Welding and NDT Inspection.",
 				"spec": "Manpower · training",
-				"image": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/FPSO2.png"
 			},
 			{
 				"title": "Logistics & supply chain",
@@ -129,25 +129,25 @@
 				"title": "Waste management",
 				"blurb": "Transport, treatment, recycling and disposal of waste, including chemical waste.",
 				"spec": "Chemical · recycling",
-				"image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b0b9?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Waste management.jpeg"
 			},
 			{
 				"title": "Industrial cleaning / tank cleaning",
 				"blurb": "High-pressure and industrial cleaning for tanks, pipes, vessels and industrial facilities.",
 				"spec": "High-pressure · industrial",
-				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Industrial cleaning tank cleaning.jpeg"
 			},
 			{
 				"title": "Fabrication & construction of structures",
 				"blurb": "Design, fabrication and on-site construction of steel structures, skids and industrial modules.",
 				"spec": "Steel · on-site",
-				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Fabrication & construction of structures.jpeg"
 			},
 			{
 				"title": "Technical assistance (onshore and offshore solutions)",
 				"blurb": "Specialist technical assistance for onshore and offshore operations — field support, commissioning and troubleshooting.",
 				"spec": "Onshore · offshore",
-				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Technicalassistance.jpeg"
 			},
 			{
 				"title": "Mechanical / electrical / instrumentation",
