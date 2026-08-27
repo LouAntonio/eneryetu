@@ -67,7 +67,7 @@
 		"eyebrow": "Serviços",
 		"title": "Doze linhas de serviço, um único parceiro.",
 		"body": "Soluções integradas de acesso ao mercado e desenvolvimento de negócios — do sourcing à manutenção, num só contrato.",
-		"heroImage": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f1.jpg",
 		"items": [
 			{
 				"title": "Sourcing estratégico",
@@ -190,7 +190,7 @@
 		"eyebrow": "Setores",
 		"title": "Onde trabalhamos",
 		"body": "Atuamos nos setores que movem a economia angolana, com conhecimento do equipamento, das normas e das exigências de cada indústria.",
-		"heroImage": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f2.jpg",
 		"items": [
 			{
 				"title": "Petróleo & Gás",
@@ -238,7 +238,7 @@
 		"eyebrow": "Formações",
 		"title": "Competências que ficam no local.",
 		"body": "Formação profissional para equipas nacionais e internacionais — para que quem opera e mantém a sua instalação a domine de verdade.",
-		"heroImage": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f3.jpg",
 		"features": ["Gestão de Projetos", "Primavera P6", "Soldadura", "Inspeção NDT"],
 		"cta": "Ver a formação",
 		"all": "Todos",
@@ -267,7 +267,7 @@
 		"eyebrow": "Produtos",
 		"title": "Produtos e equipamentos certificados",
 		"body": "Fornecemos uma ampla gama de produtos industriais certificados para os setores de Petróleo & Gás, Mineração e Energia.",
-		"heroImage": "https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f4.jpg",
 		"categories": [
 			{
 				"title": "Equipamentos de perfuração",
@@ -325,7 +325,7 @@
 		"lead": "A ENERYETU – COMÉRCIO & SERVIÇOS LDA é uma empresa prestadora de serviços que atua nas indústrias de Petróleo & Gás e Mineração.",
 		"body1": "Totalmente de capital angolano, foi fundada por profissionais angolanos com mais de 15 anos de experiência em Gestão de Projetos no setor de Petróleo & Gás — com profundo conhecimento do mercado petrolífero nacional.",
 		"body2": "Comprometida com os princípios ESG, promove práticas sustentáveis e a transição energética, buscando parcerias estratégicas que gerem valor para investidores, colaboradores e comunidades locais.",
-		"heroImage": "https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f5.jpg",
 		"visionTitle": "Visão",
 		"vision": "Ser uma plataforma líder em África para Fornecimento Estratégico e Conteúdo Local, posicionando Angola como um hub competitivo para cadeias de suprimentos industriais globais.",
 		"missionTitle": "Missão",
@@ -374,7 +374,7 @@
 		"eyebrow": "Carreiras",
 		"title": "Construa o futuro angolano connosco.",
 		"body": "Contratamos profissionais que querem crescer com os setores de Petróleo & Gás e Mineração em Angola. Se é o seu caso, fale connosco.",
-		"heroImage": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f6.jpg",
 		"applyLabel": "Interessado? Envie o seu CV para",
 		"applyHint": "Mencione a área de interesse no assunto do email.",
 		"openPositions": "Vagas Abertas",
@@ -411,7 +411,7 @@
 		"eyebrow": "Mídia",
 		"title": "Notícias, eventos e o trabalho por trás dos painéis.",
 		"body": "Notas de campo dos nossos engenheiros, eventos públicos que organizamos e fotografias do trabalho.",
-		"heroImage": "https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f7.jpg",
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "As notas de campo estão a ser redigidas.",

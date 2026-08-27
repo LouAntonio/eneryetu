@@ -65,6 +65,22 @@ function ArrowIcon({ className = '' }: { className?: string }) {
 	);
 }
 
+function PinIcon({ className = '' }: { className?: string }) {
+	return (
+		<svg
+			viewBox="0 0 16 16"
+			fill="none"
+			className={`h-4 w-4 shrink-0 ${className}`}
+			aria-hidden
+		>
+			<path
+				d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 6.75c-1.38 0-2.5-1.12-2.5-2.5S6.62 2.75 8 2.75 10.5 3.87 10.5 5.25 9.38 7.75 8 7.75z"
+				fill="currentColor"
+			/>
+		</svg>
+	);
+}
+
 export function Footer() {
 	const { t } = useTranslation();
 	const year = new Date().getFullYear();
@@ -139,7 +155,10 @@ export function Footer() {
 					<div>
 						<h3 className="ui-label text-volt">{t('footer.contactTitle')}</h3>
 						<ul className="mt-5 space-y-3 font-mono text-sm leading-relaxed text-paper/75">
-							<li>{t('contact.address')}</li>
+							<li className="flex items-start gap-2">
+								<PinIcon className="mt-0.5" />
+								<span>{t('contact.address')}</span>
+							</li>
 							<li className="flex items-start gap-2">
 								<PhoneIcon className="mt-0.5" />
 								<span className="flex flex-col gap-1">
@@ -194,7 +213,7 @@ export function Footer() {
 							rel="noreferrer noopener"
 							className="text-paper/70 underline decoration-paper/30 underline-offset-2 transition-colors hover:text-volt hover:decoration-volt"
 						>
-							Caxinda
+							Caxinda divulga
 						</a>
 					</p>
 				</div>
