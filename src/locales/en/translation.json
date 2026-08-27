@@ -1,5 +1,5 @@
 {
-	"brand": "EnerYetu",
+	"brand": "ENERYETU",
 	"tagline": "Our energy, our future",
 	"navigation": {
 		"home": "Home",
@@ -18,7 +18,7 @@
 	},
 	"ticker": {
 		"hours": "Mon–Fri 08:00–17:00 · Sat 08:00–12:00",
-		"phones": "+244 923 734 199 · +244 938 626 639",
+		"phones": "+244 923 734 199 · +244 945 459 270",
 		"email": "geral@eneryetu.com"
 	},
 	"common": {
@@ -31,10 +31,11 @@
 		"readMore": "Read more",
 		"apply": "Apply",
 		"backHome": "Back to home",
-		"copy": "Copy"
+		"copy": "Copy",
+		"close": "Close"
 	},
 	"hero": {
-		"eyebrow": "Services for Oil & Gas and Mining · Luanda",
+		"eyebrow": "Services for Oil & Gas and Mining · Luanda — Oil & Gas | Energy | Mining | Manpower",
 		"title": "Strategic sourcing and local content.",
 		"lede": "EnerYetu creates and facilitates business opportunities for national and international companies — sourcing of parts, materials and equipment, consulting, skilled manpower, logistics and technical services in Angola.",
 		"ctaPrimary": "Request a quote",
@@ -75,7 +76,7 @@
 				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Consulting & market access",
+				"title": "Consulting & intermediation",
 				"blurb": "Commercial representation of international companies in Angola and support with regulatory and licensing processes.",
 				"spec": "Representation · licensing",
 				"image": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=800&auto=format&fit=crop"
@@ -123,7 +124,7 @@
 				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Surface treatment",
+				"title": "Fabric maintenance & painting",
 				"blurb": "Corrosion protection, industrial painting and high-pressure cleaning.",
 				"spec": "Anti-corrosion",
 				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
@@ -139,6 +140,30 @@
 				"blurb": "Transport, treatment, recycling and disposal of waste, including chemical waste.",
 				"spec": "Chemical · recycling",
 				"image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b0b9?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Industrial cleaning / tank cleaning",
+				"blurb": "High-pressure and industrial cleaning for tanks, pipes, vessels and industrial facilities.",
+				"spec": "High-pressure · industrial",
+				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Fabrication & construction of structures",
+				"blurb": "Design, fabrication and on-site construction of steel structures, skids and industrial modules.",
+				"spec": "Steel · on-site",
+				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Technical assistance (onshore and offshore solutions)",
+				"blurb": "Specialist technical assistance for onshore and offshore operations — field support, commissioning and troubleshooting.",
+				"spec": "Onshore · offshore",
+				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Mechanical / electrical / instrumentation",
+				"blurb": "Preventive and corrective maintenance of mechanical, electrical and instrumentation systems.",
+				"spec": "M&E · instrumentation",
+				"image": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=800&auto=format&fit=crop"
 			}
 		],
 		"beyond": {
@@ -428,7 +453,7 @@
 		"heroImage": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=2400&auto=format&fit=crop",
 		"detailsTitle": "Head office",
 		"address": "Apartment 5, 1st floor, building E152, Rua 70, Nova Vida district, Luanda, Angola",
-		"phone": "+244 923 734 199 / +244 938 626 639",
+		"phone": "+244 923 734 199 / +244 945 459 270",
 		"email": "geral@eneryetu.com",
 		"hoursTitle": "Working hours",
 		"hours": {

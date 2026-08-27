@@ -3,9 +3,9 @@ import '../globals.css';
 import { Providers } from '@/components/Providers';
 
 export const metadata: Metadata = {
-	title: 'EnerYetu',
+	title: 'ENERYETU',
 	description:
-		'EnerYetu is the Angolan energy partner bridging international suppliers, equipment, machinery and skilled manpower to local projects — and installing solar, wind, storage and off-grid systems.',
+		'ENERYETU is the Angolan energy partner bridging international suppliers, equipment, machinery and skilled manpower to local projects — and installing solar, wind, storage and off-grid systems.',
 	icons: { icon: '/icon.png' },
 };
 

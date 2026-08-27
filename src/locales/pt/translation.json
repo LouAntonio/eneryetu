@@ -1,5 +1,5 @@
 {
-	"brand": "EnerYetu",
+	"brand": "ENERYETU",
 	"tagline": "A nossa energia, o nosso futuro",
 	"navigation": {
 		"home": "Início",
@@ -18,7 +18,7 @@
 	},
 	"ticker": {
 		"hours": "Seg–Sex 08:00–17:00 · Sáb 08:00–12:00",
-		"phones": "+244 923 734 199 · +244 938 626 639",
+		"phones": "+244 923 734 199 · +244 945 459 270",
 		"email": "geral@eneryetu.com"
 	},
 	"common": {
@@ -31,10 +31,11 @@
 		"readMore": "Ler mais",
 		"apply": "Candidatar-se",
 		"backHome": "Voltar ao início",
-		"copy": "Copiar"
+		"copy": "Copiar",
+		"close": "Fechar"
 	},
 	"hero": {
-		"eyebrow": "Serviços para Petróleo & Gás e Mineração · Luanda",
+		"eyebrow": "Serviços para Petróleo & Gás e Mineração · Luanda — Oil & Gas | Energy | Mining | Manpower",
 		"title": "Fornecimento estratégico e conteúdo local.",
 		"lede": "A EnerYetu cria e facilita oportunidades de negócio para empresas nacionais e internacionais — sourcing de peças, materiais e equipamentos, consultoria, mão-de-obra qualificada, logística e serviços técnicos em Angola.",
 		"ctaPrimary": "Solicite um orçamento",
@@ -75,7 +76,7 @@
 				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Consultoria e acesso ao mercado",
+				"title": "Consultoria e intermediação",
 				"blurb": "Representação comercial de empresas internacionais em Angola e apoio em processos regulatórios e de licenciamento.",
 				"spec": "Representação · licenciamento",
 				"image": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=800&auto=format&fit=crop"
@@ -123,7 +124,7 @@
 				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Tratamento de superfícies",
+				"title": "Manutenção de fabricação e pintura",
 				"blurb": "Proteção contra corrosão, pintura industrial e limpeza de alta pressão.",
 				"spec": "Anticorrosão",
 				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
@@ -139,6 +140,30 @@
 				"blurb": "Transporte, tratamento, reciclagem e eliminação de resíduos químicos.",
 				"spec": "Químicos · reciclagem",
 				"image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b0b9?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Limpeza industrial / limpeza de tanques",
+				"blurb": "Limpeza de alta pressão e industrial para tanques, tubagens, vasos e instalações industriais.",
+				"spec": "Alta pressão · industrial",
+				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Fabrico e construção de estruturas",
+				"blurb": "Projeto, fabrico e construção no local de estruturas de aço, skids e módulos industriais.",
+				"spec": "Aço · construção no local",
+				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Assistência técnica (soluções onshore e offshore)",
+				"blurb": "Assistência técnica especializada para operações onshore e offshore — apoio em campo, comissionamento e resolução de problemas.",
+				"spec": "Onshore · offshore",
+				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
+			},
+			{
+				"title": "Mecânica / elétrica / instrumentação",
+				"blurb": "Manutenção preventiva e corretiva de sistemas mecânicos, elétricos e de instrumentação.",
+				"spec": "M&E · instrumentação",
+				"image": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=800&auto=format&fit=crop"
 			}
 		],
 		"beyond": {
@@ -438,7 +463,7 @@
 		"heroImage": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=2400&auto=format&fit=crop",
 		"detailsTitle": "Sede",
 		"address": "Apartamento 5, 1º andar, edifício E152, Rua 70, bairro Nova Vida, Luanda, Angola",
-		"phone": "+244 923 734 199 / +244 938 626 639",
+		"phone": "+244 923 734 199 / +244 945 459 270",
 		"email": "geral@eneryetu.com",
 		"hoursTitle": "Horários",
 		"hours": {

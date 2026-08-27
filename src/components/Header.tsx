@@ -119,12 +119,12 @@ export function Header() {
 
 	const linkTone = (isActive: boolean) =>
 		overHero
-			? `border-b-2 py-1 font-mono text-[0.68rem] font-medium uppercase tracking-[0.18em] transition-colors ${
+			? `border-b-2 py-1 font-mono text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors ${
 					isActive
 						? 'border-volt text-volt'
 						: 'border-transparent text-paper/70 hover:text-paper'
 				}`
-			: `border-b-2 py-1 font-mono text-[0.68rem] font-medium uppercase tracking-[0.18em] transition-colors ${
+			: `border-b-2 py-1 font-mono text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors ${
 					isActive
 						? 'border-volt text-ink'
 						: 'border-transparent text-slate hover:text-ink'
@@ -138,7 +138,7 @@ export function Header() {
 		>
 			<div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-3">
 				<Link to="/" className="flex items-center" aria-label={t('brand')}>
-					<img src="/icon.png" alt={t('brand')} className="h-12 w-12 object-contain" />
+					<img src="/logo.png" alt={t('brand')} className="h-18 w-18 object-contain" />
 				</Link>
 
 				<nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
@@ -175,7 +175,7 @@ export function Header() {
 											key={child}
 											to={`${ROUTES.media}/${child}`}
 											className={({ isActive }) =>
-												`flex items-center gap-2 px-4 py-2 font-mono text-[0.68rem] font-medium uppercase tracking-[0.18em] transition-colors ${
+												`flex items-center gap-2 px-4 py-2 font-mono text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors ${
 													isActive
 														? 'text-volt'
 														: overHero

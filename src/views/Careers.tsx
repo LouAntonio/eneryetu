@@ -12,13 +12,14 @@ import { SectionHeading } from '../components/SectionHeading';
 import { LoadingBoard } from './media/shared';
 
 const JOB_TYPE_LABELS: Record<string, string> = {
-	FULLTIME: 'Full-time',
-	PARTTIME: 'Part-time',
-	ESTAGIO: 'Estágio',
-	CONTRATO: 'Contrato',
-};
+	FULLTIME: 'careers.fulltime',
+	PARTTIME: 'careers.parttime',
+	ESTAGIO: 'careers.estagio',
+	CONTRATO: 'careers.contrato',
+} as const;
 
 function JobCard({ job }: { job: JobListing }) {
+	const { t } = useTranslation();
 	const [expanded, setExpanded] = useState(false);
 
 	return (
@@ -35,7 +36,7 @@ function JobCard({ job }: { job: JobListing }) {
 					</div>
 				</div>
 				<span className="shrink-0 inline-flex items-center rounded-full bg-blue/10 px-3 py-1 text-xs font-semibold text-blue">
-					{JOB_TYPE_LABELS[job.jobType] ?? job.jobType}
+					{t(JOB_TYPE_LABELS[job.jobType] ?? job.jobType, { defaultValue: job.jobType })}
 				</span>
 			</div>
 			<button
@@ -43,7 +44,7 @@ function JobCard({ job }: { job: JobListing }) {
 				onClick={() => setExpanded(!expanded)}
 				className="mt-4 inline-flex items-center gap-2 font-editorial text-sm font-semibold text-warm-ink transition-colors hover:text-amber"
 			>
-				{expanded ? 'Fechar' : 'Ver detalhes'}
+				{expanded ? t('common.close') : t('careers.viewDetails')}
 				<span
 					aria-hidden
 					className={`transition-transform duration-200 ${expanded ? 'rotate-90' : ''}`}
@@ -86,14 +87,14 @@ export function Careers() {
 				<div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
 					<SectionHeading
 						eyebrow={t('careers.eyebrow')}
-						title="Vagas Abertas"
+						title={t('careers.openPositions')}
 						tone="blue"
 					/>
 
 					{isLoading ? (
 						<LoadingBoard label={t('media.loading')} />
 					) : !jobs || jobs.length === 0 ? (
-						<p className="mt-6 text-sand">De momento não há vagas abertas.</p>
+						<p className="mt-6 text-sand">{t('careers.noPositions')}</p>
 					) : (
 						<div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 							{jobs.map((job) => (
