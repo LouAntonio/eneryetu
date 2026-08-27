@@ -93,13 +93,13 @@
 				"title": "Maintenance & repair",
 				"blurb": "Hydraulic, pneumatic and electrical systems; generators and compressors; calibration and certification of equipment.",
 				"spec": "Field & workshop",
-				"image": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Maintenance & Repair.jpg"
 			},
 			{
 				"title": "Water treatment",
 				"blurb": "Installation and maintenance of industrial and residential water purification systems.",
 				"spec": "Industrial · residential",
-				"image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Tratamento de água.jpg"
 			},
 			{
 				"title": "Engineering & construction",
@@ -117,7 +117,7 @@
 				"title": "Fabric maintenance & painting",
 				"blurb": "Corrosion protection, industrial painting and high-pressure cleaning.",
 				"spec": "Anti-corrosion",
-				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Fabric maintenance & painting.jpg"
 			},
 			{
 				"title": "Renewable energy",

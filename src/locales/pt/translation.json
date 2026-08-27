@@ -93,13 +93,13 @@
 				"title": "Manutenção e reparação",
 				"blurb": "Sistemas hidráulicos, pneumáticos e elétricos; geradores e compressores; calibração e certificação de equipamentos.",
 				"spec": "Campo & oficina",
-				"image": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Maintenance & Repair.jpg"
 			},
 			{
 				"title": "Tratamento de água",
 				"blurb": "Instalação e manutenção de sistemas de purificação de água industriais e residenciais.",
 				"spec": "Industrial · residencial",
-				"image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Tratamento de água.jpg"
 			},
 			{
 				"title": "Engenharia e construção",
@@ -117,7 +117,7 @@
 				"title": "Manutenção de fabricação e pintura",
 				"blurb": "Proteção contra corrosão, pintura industrial e limpeza de alta pressão.",
 				"spec": "Anticorrosão",
-				"image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Fabric maintenance & painting.jpg"
 			},
 			{
 				"title": "Energias renováveis",
