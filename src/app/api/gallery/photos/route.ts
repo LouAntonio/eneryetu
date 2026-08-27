@@ -57,7 +57,12 @@ export async function POST(req: NextRequest) {
 		await requireAdmin(req);
 		const body = await readJson(req);
 
-		const data = { id: uuidv7(), ...body } as Prisma.GalleryPhotoUncheckedCreateInput;
+		const data = {
+			id: uuidv7(),
+			...body,
+			imageUrl: body.imageUrl ?? '',
+			publicId: body.publicId ?? null,
+		} as Prisma.GalleryPhotoUncheckedCreateInput;
 
 		const photo = await prisma.galleryPhoto.create({
 			data,

@@ -48,33 +48,43 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 
 	const save = useMutation({
 		mutationFn: async () => {
-			const body = {
+			if (editing) {
+				if (selectedFile && id) {
+					const fd = new FormData();
+					fd.append('file', selectedFile);
+					fd.append('title', form.title);
+					fd.append('categoryId', form.categoryId);
+					fd.append('sortOrder', String(form.sortOrder));
+					await api.post(`/upload/gallery/photos/${id}`, fd);
+				}
+				return api.put(`/gallery/photos/${id}`, {
+					title: form.title || null,
+					categoryId: form.categoryId,
+					sortOrder: form.sortOrder,
+				});
+			}
+
+			if (!selectedFile) {
+				throw new Error(t('admin.gallery.imageRequired'));
+			}
+
+			const fd = new FormData();
+			fd.append('file', selectedFile);
+			const uploadResp = (await api.post<{ data: { url: string; publicId: string } }>(
+				'/upload/gallery/photos',
+				fd,
+			)).data;
+
+			return api.post('/gallery/photos', {
 				title: form.title || null,
 				categoryId: form.categoryId,
-				sortOrder: editing ? form.sortOrder : 0,
-			};
-			if (editing) {
-				return api.put(`/gallery/photos/${id}`, body);
-			}
-			return api.post('/gallery/photos', body);
+				sortOrder: 0,
+				imageUrl: uploadResp.url,
+				publicId: uploadResp.publicId,
+			});
 		},
-		onSuccess: async (resp) => {
-			const saved = (resp as { data?: GalleryPhoto }).data;
-
-			if (selectedFile && saved?.id) {
-				const fd = new FormData();
-				fd.append('file', selectedFile);
-				fd.append('title', form.title);
-				fd.append('categoryId', form.categoryId);
-				fd.append('sortOrder', String(editing ? form.sortOrder : 0));
-				try {
-					await api.post(`/upload/gallery/photos/${saved.id}`, fd);
-					await queryClient.invalidateQueries({ queryKey: ['gallery-photos'] });
-				} catch {
-					// upload failed but record was created
-				}
-			}
-
+		onSuccess: () => {
+			void queryClient.invalidateQueries({ queryKey: ['gallery-photos'] });
 			navigate('/eneryetu/gallery');
 		},
 		onError: (err: unknown) => {
@@ -85,18 +95,6 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 					: t('admin.errors.generic');
 			setError(msg);
 		},
-	});
-
-	const upload = useMutation({
-		mutationFn: async (file: File) => {
-			const fd = new FormData();
-			fd.append('file', file);
-			fd.append('title', form.title);
-			fd.append('categoryId', form.categoryId);
-			fd.append('sortOrder', String(form.sortOrder));
-			return api.post(`/upload/gallery/photos/${id}`, fd);
-		},
-		onSuccess: () => void queryClient.invalidateQueries({ queryKey: ['gallery-photos'] }),
 	});
 
 	const onSubmit = (event: FormEvent) => {
@@ -112,11 +110,6 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 		setPreviewUrl(URL.createObjectURL(file));
 	};
 
-	const onUploadExisting = () => {
-		const file = fileInput.current?.files?.[0];
-		if (file) upload.mutate(file);
-	};
-
 	const set =
 		<K extends keyof typeof form>(key: K) =>
 		(value: (typeof form)[K]) =>
@@ -130,7 +123,6 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 				</p>
 			) : null}
 
-			{/* Upload — visível em criar e editar */}
 			<div>
 				<label className={labelClass}>{t('admin.gallery.image')}</label>
 				<div className="mt-2 border border-dashed border-line bg-white p-6 text-center">
@@ -159,16 +151,6 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 							onChange={onFilePick}
 						/>
 					</label>
-					{editing && photo?.imageUrl && !previewUrl && (
-						<button
-							type="button"
-							onClick={onUploadExisting}
-							disabled={upload.isPending}
-							className="btn btn-sun ml-3 mt-4 px-4 py-2 text-xs"
-						>
-							{upload.isPending ? '…' : t('admin.save')}
-						</button>
-					)}
 				</div>
 			</div>
 

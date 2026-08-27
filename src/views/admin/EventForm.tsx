@@ -9,17 +9,7 @@ import type { Event, EventType, Status } from '../../types';
 import { AdminPage } from '../../components/admin/AdminPage';
 import { RichTextEditor } from '../../components/admin/RichTextEditor';
 import { assetUrl } from '../../lib/assets';
-
-function slugify(text: string) {
-	return text
-		.normalize('NFD')
-		.replace(/[\u0300-\u036f]/g, '')
-		.toLowerCase()
-		.replace(/[^\w\s-]/g, '')
-		.replace(/\s+/g, '-')
-		.replace(/-+/g, '-')
-		.trim();
-}
+import { slugify } from '../../lib/slugify';
 
 const inputClass =
 	'mt-2 w-full border border-line bg-white px-3 py-2.5 font-mono text-sm text-ink placeholder:text-slate/60 focus:border-blue focus:outline-none';

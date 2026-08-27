@@ -259,6 +259,16 @@ export async function handleUploadGalleryPhoto(
 	return photo;
 }
 
+export async function handleUploadGalleryPhotoOnly(req: NextRequest) {
+	await requireAdmin(req);
+	const file = await getEventFile(req, 'file', IMAGE_EXTENSIONS, MAX_IMAGE_SIZE);
+
+	const buffer = Buffer.from(await file.arrayBuffer());
+	const result = await uploadToCloudinary(buffer, 'gallery', 'photo', false);
+
+	return { url: result.secure_url, publicId: result.public_id };
+}
+
 export async function handleDeleteGalleryPhoto(req: NextRequest, id: string) {
 	await requireAdmin(req);
 

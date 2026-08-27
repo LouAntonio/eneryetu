@@ -638,7 +638,8 @@
 			"chooseCategory": "Escolha uma categoria…",
 			"sortOrder": "Ordem",
 			"image": "Imagem",
-			"noImage": "Ainda sem imagem — carregue após guardar."
+			"noImage": "Selecione uma imagem para carregar.",
+			"imageRequired": "Selecione uma imagem antes de guardar."
 		},
 		"galleryCategories": {
 			"eyebrow": "Taxonomia",

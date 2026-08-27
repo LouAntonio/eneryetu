@@ -4,6 +4,7 @@ import { useState, type FormEvent } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { api } from '../../services/api';
+import { slugify } from '../../lib/slugify';
 import type { Category, EventType } from '../../types';
 import { AdminPage } from '../../components/admin/AdminPage';
 import { DataTable } from '../../components/admin/DataTable';
@@ -38,6 +39,7 @@ export function TaxonomyPage({
 	const queryClient = useQueryClient();
 	const [showForm, setShowForm] = useState(false);
 	const [form, setForm] = useState({ name: '', slug: '' });
+	const [slugTouched, setSlugTouched] = useState(false);
 	const [editing, setEditing] = useState<Row | null>(null);
 
 	const base =
@@ -87,12 +89,14 @@ export function TaxonomyPage({
 	const openCreate = () => {
 		setEditing(null);
 		setForm({ name: '', slug: '' });
+		setSlugTouched(false);
 		setShowForm(true);
 	};
 
 	const openEdit = (row: Row) => {
 		setEditing(row);
 		setForm({ name: row.name, slug: row.slug });
+		setSlugTouched(true);
 		setShowForm(true);
 	};
 
@@ -191,9 +195,13 @@ export function TaxonomyPage({
 								type="text"
 								required
 								value={form.name}
-								onChange={(event) =>
-									setForm((prev) => ({ ...prev, name: event.target.value }))
-								}
+								onChange={(event) => {
+									const value = event.target.value;
+									setForm((prev) => ({
+										name: value,
+										slug: slugTouched ? prev.slug : slugify(value),
+									}));
+								}}
 								className={inputClass}
 							/>
 						</div>
@@ -206,9 +214,10 @@ export function TaxonomyPage({
 								type="text"
 								required
 								value={form.slug}
-								onChange={(event) =>
-									setForm((prev) => ({ ...prev, slug: event.target.value }))
-								}
+								onChange={(event) => {
+									setSlugTouched(true);
+									setForm((prev) => ({ ...prev, slug: event.target.value }));
+								}}
 								className={inputClass}
 							/>
 						</div>

@@ -8,17 +8,7 @@ import { api } from '../../services/api';
 import type { JobListing, Status } from '../../types';
 import { AdminPage } from '../../components/admin/AdminPage';
 import { RichTextEditor } from '../../components/admin/RichTextEditor';
-
-function slugify(text: string) {
-	return text
-		.normalize('NFD')
-		.replace(/[\u0300-\u036f]/g, '')
-		.toLowerCase()
-		.replace(/[^\w\s-]/g, '')
-		.replace(/\s+/g, '-')
-		.replace(/-+/g, '-')
-		.trim();
-}
+import { slugify } from '../../lib/slugify';
 
 const inputClass =
 	'mt-2 w-full border border-line bg-white px-3 py-2.5 font-mono text-sm text-ink placeholder:text-slate/60 focus:border-blue focus:outline-none';

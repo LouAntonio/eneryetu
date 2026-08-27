@@ -628,7 +628,8 @@
 			"chooseCategory": "Choose a category…",
 			"sortOrder": "Sort order",
 			"image": "Image",
-			"noImage": "No image yet — upload after first save."
+			"noImage": "Select an image to upload.",
+			"imageRequired": "Please select an image before saving."
 		},
 		"galleryCategories": {
 			"eyebrow": "Taxonomy",
