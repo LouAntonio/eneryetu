@@ -4,13 +4,11 @@ import { useTranslation } from 'react-i18next';
 
 import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
-import { StatRow } from '../components/StatRow';
 
 export function About() {
 	const { t } = useTranslation();
 	const values = t('about.values', { returnObjects: true });
 	const principles = t('about.principles', { returnObjects: true });
-	const rows = t('about.rows', { returnObjects: true });
 
 	return (
 		<>
@@ -93,21 +91,6 @@ export function About() {
 									{principle.blurb}
 								</p>
 							</div>
-						))}
-					</div>
-				</div>
-			</section>
-
-			<section className="border-b border-line">
-				<div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
-					<SectionHeading
-						eyebrow={t('stats.eyebrow')}
-						title={t('stats.title')}
-						tone="blue"
-					/>
-					<div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-						{rows.map((row) => (
-							<StatRow key={row.label} value={row.value} label={row.label} />
 						))}
 					</div>
 				</div>

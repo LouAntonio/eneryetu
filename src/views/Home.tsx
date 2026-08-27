@@ -9,7 +9,6 @@ import { CtaBand } from '../components/CtaBand';
 import { PartnerMarquee } from '../components/PartnerMarquee';
 import { SectionHeading } from '../components/SectionHeading';
 import { ServiceCard } from '../components/ServiceCard';
-import { StatRow } from '../components/StatRow';
 
 const HERO_IMAGES = [
 	'/images/others/Prancheta 2.jpg',
@@ -20,7 +19,6 @@ const HERO_IMAGES = [
 
 export function Home() {
 	const { t } = useTranslation();
-	const stats = t('stats.rows', { returnObjects: true });
 	const services = t('services.items', { returnObjects: true });
 	const sectors = t('sectors.items', { returnObjects: true });
 	const points = t('intro.points', { returnObjects: true });
@@ -78,22 +76,6 @@ export function Home() {
 				</div>
 
 				<div aria-hidden className="relative z-10 h-1 w-full bg-volt" />
-			</section>
-
-			{/* STATS — equipment nameplates */}
-			<section className="border-b border-line">
-				<div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
-					<SectionHeading
-						eyebrow={t('stats.eyebrow')}
-						title={t('stats.title')}
-						tone="sun"
-					/>
-					<div className="mt-10 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-						{stats.map((row) => (
-							<StatRow key={row.label} value={row.value} label={row.label} />
-						))}
-					</div>
-				</div>
 			</section>
 
 			{/* WHO WE ARE */}
@@ -169,28 +151,36 @@ export function Home() {
 					<SectionHeading
 						eyebrow={t('sectors.eyebrow')}
 						title={t('sectors.title')}
-						body={t('sectors.body')}
 						tone="sun"
 					/>
-					<div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-						{sectors.map((sector) => (
+					<div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+						{sectors.slice(0, 4).map((sector) => (
 							<Link
 								key={sector.title}
 								to="/sectors"
-								className="group block bg-white p-5 transition-colors hover:bg-ink"
+								className="group relative aspect-[4/5] overflow-hidden rounded-lg bg-ink"
 							>
-								<div>
-									<h3 className="font-display text-lg font-bold uppercase tracking-tight text-ink transition-colors group-hover:text-paper">
+								{sector.image ? (
+									<img
+										src={sector.image}
+										alt={sector.title}
+										className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+										loading="lazy"
+									/>
+								) : null}
+								<div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
+								<div className="absolute inset-x-0 bottom-0 p-4">
+									<h3 className="font-display text-sm font-bold uppercase leading-tight tracking-tight text-paper sm:text-base lg:text-lg">
 										{sector.title}
 									</h3>
-									{sector.blurb ? (
-										<p className="mt-1 text-sm leading-relaxed text-slate transition-colors group-hover:text-paper/70">
-											{sector.blurb}
-										</p>
-									) : null}
 								</div>
 							</Link>
 						))}
+					</div>
+					<div className="mt-8 flex justify-center">
+						<Link to="/sectors" className="btn btn-mono px-6 py-3">
+							{t('common.learnMore')}
+						</Link>
 					</div>
 				</div>
 			</section>

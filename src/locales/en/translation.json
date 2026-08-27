@@ -41,16 +41,6 @@
 		"ctaPrimary": "Request a quote",
 		"ctaSecondary": "Explore services"
 	},
-	"stats": {
-		"eyebrow": "Field record",
-		"title": "Numbers we can stand behind",
-		"rows": [
-			{ "value": "25", "label": "Years on Angolan ground" },
-			{ "value": "8", "label": "Service lines under one roof" },
-			{ "value": "A–Z", "label": "Supply, install and maintain in one contract" },
-			{ "value": "1", "label": "Dedicated local point of contact" }
-		]
-	},
 	"intro": {
 		"eyebrow": "Who we are",
 		"title": "An Angolan services company for Oil & Gas and Mining.",
@@ -193,28 +183,36 @@
 		"heroImage": "/images/hero/f5.jpg",
 		"items": [
 			{
-				"title": "Oil & Gas"
+				"title": "Oil & Gas",
+				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Mining"
+				"title": "Mining",
+				"image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Renewable Energy"
+				"title": "Renewable Energy",
+				"image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Blue Economy"
+				"title": "Blue Economy",
+				"image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Transport"
+				"title": "Transport",
+				"image": "https://images.unsplash.com/photo-1566576912321-d58dd7a73409?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Civil Construction"
+				"title": "Civil Construction",
+				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Water Treatment"
+				"title": "Water Treatment",
+				"image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop"
 			},
 			{
-				"title": "Waste Management"
+				"title": "Waste Management",
+				"image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b0b9?q=80&w=800&auto=format&fit=crop"
 			}
 		]
 	},
@@ -346,12 +344,6 @@
 				"blurb": "We maintain clear, honest and accessible management and communication with all stakeholders, reinforcing institutional trust."
 			},
 			{ "title": "Solidarity", "blurb": "We value people and support community development, respecting human and cultural rights." }
-		],
-		"rows": [
-			{ "value": "25", "label": "Years on Angolan ground" },
-			{ "value": "8", "label": "Service lines under one roof" },
-			{ "value": "Luanda", "label": "Head office, Nova Vida district" },
-			{ "value": "Nationwide", "label": "Field teams across Angola" }
 		]
 	},
 	"careers": {
