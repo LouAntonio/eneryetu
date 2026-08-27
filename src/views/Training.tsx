@@ -41,7 +41,10 @@ function TrainingCard({ training }: { training: TrainingType }) {
 						{training.deliveryMode}
 					</span>
 					{training.durationDays ? (
-						<span className="text-xs text-sand">{training.durationDays} {t('training.days', { count: training.durationDays })}</span>
+						<span className="text-xs text-sand">
+							{training.durationDays}{' '}
+							{t('training.days', { count: training.durationDays })}
+						</span>
 					) : null}
 				</div>
 				<h3 className="mt-4 font-editorial text-xl font-semibold leading-[1.15] text-warm-ink">

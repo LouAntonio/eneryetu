@@ -279,9 +279,7 @@ function ProductFormInner({ product, editing, id }: ProductFormInnerProps) {
 					<div className="border border-line bg-white p-5">
 						<div className="flex flex-wrap items-end justify-between gap-4">
 							<div>
-								<span className={labelClass}>
-									{t('admin.products.coverImage')}
-								</span>
+								<span className={labelClass}>{t('admin.products.coverImage')}</span>
 								<p className="mt-1 font-mono text-xs text-slate">
 									{product.coverImage
 										? product.coverImage

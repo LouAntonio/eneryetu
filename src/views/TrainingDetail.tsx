@@ -50,9 +50,7 @@ export function TrainingDetail() {
 						<h1 className="font-editorial text-3xl font-semibold text-warm-ink">
 							{t('training.detail.notFound')}
 						</h1>
-						<p className="mt-4 text-sand">
-							{t('training.detail.notFoundBody')}
-						</p>
+						<p className="mt-4 text-sand">{t('training.detail.notFoundBody')}</p>
 						<Link to="/training" className="btn btn-sun mt-6 px-6 py-3">
 							← {t('training.detail.back')}
 						</Link>
@@ -88,7 +86,10 @@ export function TrainingDetail() {
 							{training.deliveryMode}
 						</span>
 						{training.durationDays ? (
-							<span className="text-sm text-sand">{training.durationDays} {t('training.days', { count: training.durationDays })}</span>
+							<span className="text-sm text-sand">
+								{training.durationDays}{' '}
+								{t('training.days', { count: training.durationDays })}
+							</span>
 						) : null}
 					</div>
 
@@ -177,7 +178,10 @@ export function TrainingDetail() {
 								{t('training.detail.specSheet')}
 							</span>
 							<dl className="mt-3 divide-y divide-line-warm border-t border-line-warm">
-								<SpecRow label={t('training.detail.modality')} value={training.deliveryMode} />
+								<SpecRow
+									label={t('training.detail.modality')}
+									value={training.deliveryMode}
+								/>
 								<SpecRow
 									label={t('training.detail.duration')}
 									value={

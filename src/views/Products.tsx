@@ -10,14 +10,9 @@ import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
 import { LoadingBoard } from './media/shared';
 import { assetUrl } from '../lib/assets';
+import { Link } from '@/lib/routing';
 
-function ProductModal({
-	product,
-	onClose,
-}: {
-	product: Product;
-	onClose: () => void;
-}) {
+function ProductModal({ product, onClose }: { product: Product; onClose: () => void }) {
 	const { t } = useTranslation();
 	const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -33,23 +28,20 @@ function ProductModal({
 			ref={dialogRef}
 			open
 			onClick={onDialogClick}
-			className="fixed inset-0 z-50 flex items-center justify-center bg-warm-ink/50 p-4 backdrop-blur-sm"
+			className="fixed inset-0 z-50 h-full w-full bg-warm-ink/60 p-0 backdrop-blur-sm"
 		>
-			<div className="animate-modal-in relative flex w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-line-warm bg-card shadow-2xl max-lg:max-w-lg lg:flex-row lg:max-h-[85vh]">
-				{/* Top accent bar */}
-				<div className="absolute inset-x-0 top-0 h-[3px] bg-amber" />
-
+			<div className="animate-modal-in relative flex h-full w-full flex-col overflow-hidden bg-card lg:flex-row">
 				{/* Close button */}
 				<button
 					type="button"
 					onClick={onClose}
 					aria-label={t('common.close')}
-					className="absolute right-3 top-5 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-warm-ink/10 text-warm-ink transition-colors hover:bg-warm-ink hover:text-paper"
+					className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-paper/80 text-warm-ink backdrop-blur-sm transition-colors hover:bg-paper"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="14"
-						height="14"
+						width="16"
+						height="16"
 						viewBox="0 0 24 24"
 						fill="none"
 						stroke="currentColor"
@@ -62,48 +54,48 @@ function ProductModal({
 					</svg>
 				</button>
 
-				{/* Image — left column (desktop) / top (mobile) */}
-				<div className="relative w-full shrink-0 lg:w-[55%]">
+				{/* Image — left half (desktop) / top 40% (mobile) */}
+				<div className="relative h-[40vh] w-full shrink-0 lg:h-full lg:w-1/2">
 					{product.coverImage ? (
 						<img
 							src={assetUrl(product.coverImage) ?? product.coverImage}
 							alt={product.title}
-							className="h-56 w-full object-cover sm:h-64 lg:h-full lg:rounded-l-2xl"
+							className="h-full w-full object-cover"
 						/>
 					) : (
-						<div className="h-56 w-full bg-gradient-to-br from-amber/10 to-bone sm:h-64 lg:h-full lg:rounded-l-2xl" />
+						<div className="h-full w-full bg-gradient-to-br from-amber/10 to-bone" />
 					)}
 				</div>
 
-				{/* Content — right column (desktop) / bottom (mobile) */}
-				<div className="flex flex-1 flex-col p-6 sm:p-8 lg:overflow-y-auto">
+				{/* Content — right half (desktop) / bottom 60% (mobile) */}
+				<div className="flex flex-1 flex-col overflow-y-auto px-6 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
 					<p className="font-mono text-[0.65rem] font-medium uppercase tracking-[0.16em] text-amber">
 						{t('products.eyebrow')}
 					</p>
 
 					<div className="mt-3 h-[3px] w-8 bg-amber" />
 
-					<h2 className="mt-4 font-editorial text-2xl font-semibold leading-[1.15] text-warm-ink">
+					<h2 className="mt-4 max-w-lg font-editorial text-3xl font-semibold leading-[1.1] text-warm-ink sm:text-4xl">
 						{product.title}
 					</h2>
 
 					{product.blurb ? (
-						<p className="mt-3 text-sm font-medium leading-relaxed text-sand">
+						<p className="mt-4 max-w-lg text-sm font-medium leading-relaxed text-sand">
 							{product.blurb}
 						</p>
 					) : null}
 
 					{product.description ? (
 						<div
-							className="prose prose-sm mt-5 max-w-none text-sand/90"
+							className="prose prose-sm mt-6 max-w-lg text-sand/90"
 							dangerouslySetInnerHTML={{ __html: product.description }}
 						/>
 					) : null}
 
-					<div className="mt-8">
-						<a
-							href="/contact"
-							className="flex w-full items-center justify-center gap-2 rounded-full bg-sun px-6 py-3 font-editorial text-sm font-semibold text-warm-ink transition-colors hover:bg-amber"
+					<div className="mt-auto pt-8">
+						<Link
+							to="/contact"
+							className="inline-flex items-center gap-2 rounded-full bg-sun px-7 py-3 font-editorial text-sm font-semibold text-warm-ink transition-colors hover:bg-amber"
 						>
 							{t('common.requestQuote')}
 							<svg
@@ -120,7 +112,7 @@ function ProductModal({
 								<path d="M5 12h14" />
 								<path d="m12 5 7 7-7 7" />
 							</svg>
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -170,9 +162,7 @@ export function Products() {
 							<p className="font-editorial text-xl italic text-sand">
 								{t('products.emptyTitle')}
 							</p>
-							<p className="mt-2 text-sm text-sand">
-								{t('products.emptyBody')}
-							</p>
+							<p className="mt-2 text-sm text-sand">{t('products.emptyBody')}</p>
 						</div>
 					) : (
 						<div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -227,10 +217,7 @@ export function Products() {
 			</section>
 
 			{selectedProduct ? (
-				<ProductModal
-					product={selectedProduct}
-					onClose={() => setSelectedProduct(null)}
-				/>
+				<ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
 			) : null}
 		</>
 	);
