@@ -12,16 +12,15 @@ import { ServiceCard } from '../components/ServiceCard';
 
 const HERO_IMAGES = [
 	'/images/others/Prancheta 2.jpg',
-	'/images/others/Prancheta 4.jpg',
+	'/images/others/FPSO1.png',
 	'/images/others/Prancheta 5.jpg',
-	'/images/others/Prancheta 7.jpg',
+	'/images/others/FPSO2.png',
 ];
 
 export function Home() {
 	const { t } = useTranslation();
 	const services = t('services.items', { returnObjects: true });
 	const sectors = t('sectors.items', { returnObjects: true });
-	const points = t('intro.points', { returnObjects: true });
 	const trainingFeatures = t('training.features', { returnObjects: true });
 	const partners = t('partners.items', { returnObjects: true });
 	const [currentImage, setCurrentImage] = useState(0);
@@ -82,26 +81,14 @@ export function Home() {
 			<section className="border-b border-line">
 				<div className="mx-auto grid w-full max-w-6xl gap-12 px-6 py-16 lg:grid-cols-2 lg:py-20">
 					<SectionHeading
-						eyebrow={t('intro.eyebrow')}
-						title={t('intro.title')}
-						body={t('intro.body')}
+						eyebrow={t('about.eyebrow')}
+						title={t('about.title')}
+						body={t('about.body1')}
 					/>
 					<div className="flex flex-col justify-end">
-						<ul className="divide-y divide-line border-y border-line">
-							{points.map((point, index) => (
-								<li
-									key={point}
-									className="flex items-center gap-4 bg-white py-4 pl-4 pr-6"
-								>
-									<span className="font-mono text-xs text-slate">
-										{String(index + 1).padStart(2, '0')}
-									</span>
-									<span className="font-display text-lg font-semibold uppercase tracking-tight text-ink">
-										{point}
-									</span>
-								</li>
-							))}
-						</ul>
+						<p className="text-lg leading-relaxed text-slate">
+							{t('about.body2')}
+						</p>
 						<Link
 							to="/about"
 							className="btn btn-mono mt-6 justify-self-start px-5 py-2.5"

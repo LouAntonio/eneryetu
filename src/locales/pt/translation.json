@@ -81,7 +81,7 @@
 				"title": "Logística e cadeia de suprimentos",
 				"blurb": "Gestão de contratos logísticos, movimentação e transferência de carga dentro e fora de Angola.",
 				"spec": "Nacional · internacional",
-				"image": "https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/logistica e suply chain.jpeg"
 			},
 			{
 				"title": "Fornecimento de materiais",
@@ -180,7 +180,7 @@
 		"eyebrow": "Sectores",
 		"title": "Sectores onde operamos",
 		"body": "",
-		"heroImage": "/images/hero/f5.jpg",
+		"heroImage": "/images/hero/f9.png",
 		"items": [
 			{
 				"title": "Petróleo & Gás",
