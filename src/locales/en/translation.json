@@ -454,7 +454,11 @@
 		"detailsTitle": "Head office",
 		"address": "Apartment 5, 1st floor, building E152, Rua 70, Nova Vida district, Luanda, Angola",
 		"phone": "+244 923 734 199 / +244 945 459 270",
+		"phoneLabel": "Phone",
 		"email": "geral@eneryetu.com",
+		"emailLabel": "Email",
+		"linkedinLabel": "LinkedIn",
+		"addressLabel": "Address",
 		"hoursTitle": "Working hours",
 		"hours": {
 			"week": { "day": "Monday – Friday", "time": "08:00 – 17:00" },
