@@ -76,7 +76,7 @@ export function MediaGallery() {
 											: 'border-line bg-white text-sand hover:border-amber/50'
 									}`}
 								>
-									Todos
+									{t('media.gallery.all')}
 								</button>
 								{categories?.map((cat) => (
 									<button

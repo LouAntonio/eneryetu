@@ -67,7 +67,7 @@ export function ApplicationForm() {
 			await api.post('/carreiras', formData);
 			setSent(true);
 		} catch (err: unknown) {
-			const msg = err instanceof Error ? err.message : 'Erro ao enviar candidatura';
+			const msg = err instanceof Error ? err.message : t('common.errorSendingApplication');
 			setServerError(msg);
 		} finally {
 			setLoading(false);

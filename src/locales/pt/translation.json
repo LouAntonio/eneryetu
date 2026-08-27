@@ -32,7 +32,9 @@
 		"apply": "Candidatar-se",
 		"backHome": "Voltar ao início",
 		"copy": "Copiar",
-		"close": "Fechar"
+		"close": "Fechar",
+		"errorSendingMessage": "Erro ao enviar mensagem",
+		"errorSendingApplication": "Erro ao enviar candidatura"
 	},
 	"hero": {
 		"eyebrow": "òleo & Gás | Energia | Mineração | Mão-de-Obra",
@@ -232,6 +234,7 @@
 		"viewDetails": "Ver detalhes",
 		"emptyTitle": "Ainda não há formações disponíveis.",
 		"emptyBody": "Estamos a preparar o nosso catálogo de formações.",
+		"emptyNotFound": "Nenhuma formação encontrada.",
 		"detail": {
 			"outcomes": "Objetivos de Aprendizagem",
 			"modules": "Módulos",
@@ -242,7 +245,14 @@
 			"pmi": "Programa PMI",
 			"enroll": "Contacte-nos",
 			"back": "Voltar a formações",
-			"notFound": "Formação não encontrada."
+			"notFound": "Formação não encontrada.",
+			"notFoundBody": "A formação que procura não existe ou foi removido.",
+			"certificate": "Certificado",
+			"exam": "Exame",
+			"specSheet": "Ficha",
+			"modality": "Modalidade",
+			"duration": "Duração",
+			"price": "Preço"
 		}
 	},
 	"products": {
@@ -314,8 +324,14 @@
 		"mission": "Conectar fornecedores internacionais aos mercados angolano e africano de petróleo & gás e indústria pesada, oferecendo soluções de excelência que promovem inovação, sustentabilidade, conteúdo local e desenvolvimento comunitário.",
 		"valuesTitle": "Valores",
 		"values": [
-			{ "title": "Segurança", "blurb": "A Vida humana em primeiro lugar – Protegemos vidas, equipamentos e o ecossistema." },
-			{ "title": "Integridade", "blurb": "Defendemos condutas éticas em todos os níveis da organização." },
+			{
+				"title": "Segurança",
+				"blurb": "A Vida humana em primeiro lugar – Protegemos vidas, equipamentos e o ecossistema."
+			},
+			{
+				"title": "Integridade",
+				"blurb": "Defendemos condutas éticas em todos os níveis da organização."
+			},
 			{
 				"title": "Respeito",
 				"blurb": "Acreditamos na dignidade de cada indivíduo, promovendo a inclusão, a diversidade e as relações éticas."
@@ -343,7 +359,10 @@
 				"title": "Transparência",
 				"blurb": "Mantemos uma gestão e comunicação clara, honesta e acessível a todos os stakeholders, reforçando a confiança institucional."
 			},
-			{ "title": "Solidariedade", "blurb": "Valorizamos as pessoas e apoiamos no desenvolvimento das comunidades, respeitando os direitos humanos e culturais." }
+			{
+				"title": "Solidariedade",
+				"blurb": "Valorizamos as pessoas e apoiamos no desenvolvimento das comunidades, respeitando os direitos humanos e culturais."
+			}
 		]
 	},
 	"careers": {
@@ -471,7 +490,9 @@
 		"quickLinksTitle": "Links rápidos",
 		"mediaLinksTitle": "Mídia",
 		"contactTitle": "Contactos",
-		"rights": "Todos os direitos reservados."
+		"rights": "Todos os direitos reservados.",
+		"developedBy": "Desenvolvido por",
+		"developerName": "Caxinda divulga"
 	},
 	"admin": {
 		"logout": "Sair",

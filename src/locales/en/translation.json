@@ -32,7 +32,9 @@
 		"apply": "Apply",
 		"backHome": "Back to home",
 		"copy": "Copy",
-		"close": "Close"
+		"close": "Close",
+		"errorSendingMessage": "Error sending message",
+		"errorSendingApplication": "Error sending application"
 	},
 	"hero": {
 		"eyebrow": "Oil & Gas | Energy | Mining | Manpower",
@@ -232,6 +234,7 @@
 		"viewDetails": "View details",
 		"emptyTitle": "No trainings available yet.",
 		"emptyBody": "We are preparing our training catalogue.",
+		"emptyNotFound": "No training found.",
 		"detail": {
 			"outcomes": "Learning Outcomes",
 			"modules": "Modules",
@@ -242,7 +245,14 @@
 			"pmi": "PMI Program",
 			"enroll": "Contact us",
 			"back": "Back to trainings",
-			"notFound": "Training not found."
+			"notFound": "Training not found.",
+			"notFoundBody": "The training you are looking for does not exist or has been removed.",
+			"certificate": "Certificate",
+			"exam": "Exam",
+			"specSheet": "Spec sheet",
+			"modality": "Modality",
+			"duration": "Duration",
+			"price": "Price"
 		}
 	},
 	"products": {
@@ -314,8 +324,14 @@
 		"mission": "To connect international suppliers to the Angolan and African oil & gas and heavy industry markets, offering excellence solutions that promote innovation, sustainability, local content and community development.",
 		"valuesTitle": "Values",
 		"values": [
-			{ "title": "Safety", "blurb": "Human life first – We protect lives, equipment and the ecosystem." },
-			{ "title": "Integrity", "blurb": "We defend ethical conduct at all levels of the organisation." },
+			{
+				"title": "Safety",
+				"blurb": "Human life first – We protect lives, equipment and the ecosystem."
+			},
+			{
+				"title": "Integrity",
+				"blurb": "We defend ethical conduct at all levels of the organisation."
+			},
 			{
 				"title": "Respect",
 				"blurb": "We believe in the dignity of every individual, promoting inclusion, diversity and ethical relationships."
@@ -343,7 +359,10 @@
 				"title": "Transparency",
 				"blurb": "We maintain clear, honest and accessible management and communication with all stakeholders, reinforcing institutional trust."
 			},
-			{ "title": "Solidarity", "blurb": "We value people and support community development, respecting human and cultural rights." }
+			{
+				"title": "Solidarity",
+				"blurb": "We value people and support community development, respecting human and cultural rights."
+			}
 		]
 	},
 	"careers": {
@@ -471,7 +490,9 @@
 		"quickLinksTitle": "Quick links",
 		"mediaLinksTitle": "Media",
 		"contactTitle": "Contact",
-		"rights": "All rights reserved."
+		"rights": "All rights reserved.",
+		"developedBy": "Developed by",
+		"developerName": "Caxinda divulga"
 	},
 	"admin": {
 		"logout": "Log out",

@@ -206,14 +206,14 @@ export function Footer() {
 						{t('brand')} © {year}. {t('footer.rights')}
 					</p>
 					<p className="flex items-center gap-1">
-						Desenvolvido por{' '}
+						{t('footer.developedBy')}{' '}
 						<a
 							href="https://www.caxiauto.com/"
 							target="_blank"
 							rel="noreferrer noopener"
 							className="text-paper/70 underline decoration-paper/30 underline-offset-2 transition-colors hover:text-volt hover:decoration-volt"
 						>
-							Caxinda divulga
+							{t('footer.developerName')}
 						</a>
 					</p>
 				</div>

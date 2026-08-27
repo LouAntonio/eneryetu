@@ -48,13 +48,13 @@ export function TrainingDetail() {
 				<div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
 					<div className="rounded-2xl border border-line-warm bg-card p-8 sm:p-12">
 						<h1 className="font-editorial text-3xl font-semibold text-warm-ink">
-							Treinamento não encontrado
+							{t('training.detail.notFound')}
 						</h1>
 						<p className="mt-4 text-sand">
-							O treinamento que procura não existe ou foi removido.
+							{t('training.detail.notFoundBody')}
 						</p>
 						<Link to="/training" className="btn btn-sun mt-6 px-6 py-3">
-							← Voltar
+							← {t('training.detail.back')}
 						</Link>
 					</div>
 				</div>
@@ -88,7 +88,7 @@ export function TrainingDetail() {
 							{training.deliveryMode}
 						</span>
 						{training.durationDays ? (
-							<span className="text-sm text-sand">{training.durationDays} dias</span>
+							<span className="text-sm text-sand">{training.durationDays} {t('training.days', { count: training.durationDays })}</span>
 						) : null}
 					</div>
 
@@ -107,12 +107,12 @@ export function TrainingDetail() {
 					<div className="mt-6 flex flex-wrap gap-3">
 						{training.includesCert && (
 							<span className="inline-flex items-center gap-1.5 rounded-full bg-volt/15 px-3 py-1.5 text-xs font-semibold text-volt">
-								✓ Certificado
+								✓ {t('training.detail.certificate')}
 							</span>
 						)}
 						{training.includesExam && (
 							<span className="inline-flex items-center gap-1.5 rounded-full bg-blue/15 px-3 py-1.5 text-xs font-semibold text-blue">
-								✓ Exame
+								✓ {t('training.detail.exam')}
 							</span>
 						)}
 					</div>
@@ -130,7 +130,7 @@ export function TrainingDetail() {
 						{outcomes.length > 0 && (
 							<div className="mt-10">
 								<h2 className="font-editorial text-2xl font-semibold text-warm-ink">
-									Objetivos de aprendizagem
+									{t('training.detail.outcomes')}
 								</h2>
 								<ul className="mt-4 space-y-2">
 									{outcomes.map((item, i) => (
@@ -146,7 +146,7 @@ export function TrainingDetail() {
 						{modules.length > 0 && (
 							<div className="mt-10">
 								<h2 className="font-editorial text-2xl font-semibold text-warm-ink">
-									Módulos
+									{t('training.detail.modules')}
 								</h2>
 								<ol className="mt-4 space-y-3">
 									{modules.map((item, i) => (
@@ -164,7 +164,7 @@ export function TrainingDetail() {
 						{prerequisites && (
 							<div className="mt-10">
 								<h2 className="font-editorial text-2xl font-semibold text-warm-ink">
-									Pré-requisitos
+									{t('training.detail.prerequisites')}
 								</h2>
 								<p className="mt-4 leading-relaxed text-sand">{prerequisites}</p>
 							</div>
@@ -174,27 +174,27 @@ export function TrainingDetail() {
 					<aside className="order-first lg:order-none">
 						<div className="rounded-2xl border border-line-warm bg-card p-6 lg:sticky lg:top-24">
 							<span className="font-editorial text-lg font-semibold text-warm-ink">
-								Ficha
+								{t('training.detail.specSheet')}
 							</span>
 							<dl className="mt-3 divide-y divide-line-warm border-t border-line-warm">
-								<SpecRow label="Modalidade" value={training.deliveryMode} />
+								<SpecRow label={t('training.detail.modality')} value={training.deliveryMode} />
 								<SpecRow
-									label="Duração"
+									label={t('training.detail.duration')}
 									value={
 										training.durationDays
-											? `${training.durationDays} dias`
+											? `${training.durationDays} ${t('training.days', { count: training.durationDays })}`
 											: null
 									}
 								/>
 								{training.price ? (
 									<SpecRow
-										label="Preço"
+										label={t('training.detail.price')}
 										value={formatCurrency(training.price, training.currency)}
 									/>
 								) : null}
 								{(training.pduCredits || training.ceuCredits) && (
 									<SpecRow
-										label="Créditos"
+										label={t('training.detail.credits')}
 										value={[
 											training.pduCredits
 												? `${training.pduCredits} PDU`
@@ -209,7 +209,7 @@ export function TrainingDetail() {
 								)}
 								{training.pmiProgramNumber && (
 									<SpecRow
-										label="PMI Program"
+										label={t('training.detail.pmi')}
 										value={training.pmiProgramNumber}
 									/>
 								)}
@@ -218,7 +218,7 @@ export function TrainingDetail() {
 								to="/contact"
 								className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-sun px-6 py-3 font-editorial text-base font-semibold text-warm-ink transition-colors hover:bg-amber"
 							>
-								Contacte-nos →
+								{t('training.detail.enroll')} →
 							</Link>
 						</div>
 					</aside>

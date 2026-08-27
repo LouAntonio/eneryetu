@@ -47,7 +47,7 @@ export function ContactForm() {
 			});
 			setSent(true);
 		} catch (err: unknown) {
-			const msg = err instanceof Error ? err.message : 'Erro ao enviar mensagem';
+			const msg = err instanceof Error ? err.message : t('common.errorSendingMessage');
 			setServerError(msg);
 		} finally {
 			setLoading(false);

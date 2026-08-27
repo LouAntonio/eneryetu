@@ -11,13 +11,6 @@ import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
 import { LoadingBoard } from './media/shared';
 
-const FILTER_OPTIONS = [
-	{ key: 'all', label: 'Todos' },
-	{ key: 'PRESENCIAL', label: 'Presencial' },
-	{ key: 'ONLINE', label: 'Online' },
-	{ key: 'AUTOFORMACAO', label: 'Autoformação' },
-] as const;
-
 function formatCurrency(price: number | null, currency: string): string {
 	if (!price) return '';
 	return new Intl.NumberFormat('pt-AO', {
@@ -48,7 +41,7 @@ function TrainingCard({ training }: { training: TrainingType }) {
 						{training.deliveryMode}
 					</span>
 					{training.durationDays ? (
-						<span className="text-xs text-sand">{training.durationDays} dias</span>
+						<span className="text-xs text-sand">{training.durationDays} {t('training.days', { count: training.durationDays })}</span>
 					) : null}
 				</div>
 				<h3 className="mt-4 font-editorial text-xl font-semibold leading-[1.15] text-warm-ink">
@@ -81,6 +74,13 @@ function TrainingCard({ training }: { training: TrainingType }) {
 export function Training() {
 	const { t } = useTranslation();
 	const [filter, setFilter] = useState<string>('all');
+
+	const FILTER_OPTIONS = [
+		{ key: 'all', label: t('training.all') },
+		{ key: 'PRESENCIAL', label: t('training.presencial') },
+		{ key: 'ONLINE', label: t('training.online') },
+		{ key: 'AUTOFORMACAO', label: t('training.autoformacao') },
+	] as const;
 
 	const { data: trainings, isLoading } = useQuery({
 		queryKey: ['training', 'list'],
@@ -141,7 +141,7 @@ export function Training() {
 					) : !filtered || filtered.length === 0 ? (
 						<div className="rounded-2xl border border-line-warm bg-card p-8 sm:p-12">
 							<p className="font-editorial text-xl italic text-sand">
-								Nenhum treinamento encontrado.
+								{t('training.emptyNotFound')}
 							</p>
 						</div>
 					) : (

@@ -86,9 +86,7 @@ export function Home() {
 						body={t('about.body1')}
 					/>
 					<div className="flex flex-col justify-end">
-						<p className="text-lg leading-relaxed text-slate">
-							{t('about.body2')}
-						</p>
+						<p className="text-lg leading-relaxed text-slate">{t('about.body2')}</p>
 						<Link
 							to="/about"
 							className="btn btn-mono mt-6 justify-self-start px-5 py-2.5"
