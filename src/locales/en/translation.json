@@ -54,11 +54,11 @@
 	"intro": {
 		"eyebrow": "Who we are",
 		"title": "An Angolan services company for Oil & Gas and Mining.",
-		"body": "Fully Angolan-owned, we were founded by professionals with over 15 years of experience in Project Management in the Oil & Gas industry. We work with an ESG focus and the energy transition in mind, creating value for investors, employees and local communities.",
+		"body": "We are an Oil & Gas and Mining sector services company, 100% Angolan, created by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas sector.",
 		"points": [
-			"100% Angolan-owned",
-			"+15 years in O&G project management",
-			"ESG and energy-transition focus",
+			"100% Angolan",
+			"15+ years in O&G project management",
+			"ESG company",
 			"Deep knowledge of the Angolan oil market"
 		],
 		"cta": "Learn more about us"
@@ -188,39 +188,33 @@
 	},
 	"sectors": {
 		"eyebrow": "Sectors",
-		"title": "Where we work",
-		"body": "Energy needs differ by industry. We know the equipment, the standards and the uptime each one demands.",
-		"heroImage": "/images/others/Prancheta 3.jpg",
+		"title": "Sectors where we operate",
+		"body": "",
+		"heroImage": "/images/hero/f5.jpg",
 		"items": [
 			{
-				"title": "Oil & gas",
-				"blurb": "Power and equipment for onshore operations and support facilities.",
-				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
+				"title": "Oil & Gas"
 			},
 			{
-				"title": "Mining & resources",
-				"blurb": "Plant power, standby systems and parts supply for site crews.",
-				"image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=800&auto=format&fit=crop"
+				"title": "Mining"
 			},
 			{
-				"title": "Telecom",
-				"blurb": "Rural site power and backup for towers, exchanges and data shelters.",
-				"image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop"
+				"title": "Renewable Energy"
 			},
 			{
-				"title": "Agribusiness",
-				"blurb": "Cold-chain and irrigation power for farms, processors and storage.",
-				"image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
+				"title": "Blue Economy"
 			},
 			{
-				"title": "Public infrastructure",
-				"blurb": "Electrification for health, education and public buildings.",
-				"image": "https://images.unsplash.com/photo-1566576912321-d58dd7a73409?q=80&w=800&auto=format&fit=crop"
+				"title": "Transport"
 			},
 			{
-				"title": "Industrial & commercial",
-				"blurb": "Solar, storage and maintenance for factories and commercial buildings.",
-				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
+				"title": "Civil Construction"
+			},
+			{
+				"title": "Water Treatment"
+			},
+			{
+				"title": "Waste Management"
 			}
 		]
 	},
@@ -312,46 +306,46 @@
 	"about": {
 		"eyebrow": "About us",
 		"title": "The Angolan partner for strategic sourcing and local content.",
-		"lead": "ENERYETU – COMÉRCIO & SERVIÇOS LDA is a services company operating in the Oil & Gas and Mining industries.",
-		"body1": "Fully Angolan-owned, it was founded by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas industry — with deep knowledge of the national oil market.",
-		"body2": "Committed to ESG principles, it promotes sustainable practices and the energy transition, pursuing strategic partnerships that generate value for investors, employees and local communities.",
+		"lead": "ENERYETU is an Angolan industrial services and solutions company supporting the Oil & Gas and Mining sectors through Strategic Sourcing, Technical Consulting, Skilled Manpower, and specialised industrial services.",
+		"body1": "We are an Oil & Gas and Mining sector services company, 100% Angolan, created by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas sector.",
+		"body2": "We are an ESG (Environmental, Social & Governance) company — Committed to sustainable practices, respecting the environment, minimising environmental risks and supporting the energy transition in the industrial and oil sectors.\n\nWe have deep knowledge of the Angolan oil market and are interested in establishing strategic partnerships capable of bringing mutual benefits to companies, investors, employees, partners and communities.",
 		"heroImage": "/images/others/Prancheta 9.jpg",
 		"visionTitle": "Vision",
-		"vision": "To be Africa's leading platform for Strategic Sourcing and Local Content, positioning Angola as a competitive hub for global industrial supply chains.",
+		"vision": "To be an innovative company of national and international reference in the representation and development of businesses in the oil, gas and other heavy industries sectors, positioning Angola as a strategic hub in the global supply chain.",
 		"missionTitle": "Mission",
-		"mission": "To create and facilitate business opportunities for national and international companies through integrated market-access and business-development solutions.",
+		"mission": "To connect international suppliers to the Angolan and African oil & gas and heavy industry markets, offering excellence solutions that promote innovation, sustainability, local content and community development.",
 		"valuesTitle": "Values",
 		"values": [
-			{ "title": "Safety", "blurb": "Human life first, always." },
-			{ "title": "Integrity", "blurb": "Acting with rectitude in every relationship." },
+			{ "title": "Safety", "blurb": "Human life first – We protect lives, equipment and the ecosystem." },
+			{ "title": "Integrity", "blurb": "We defend ethical conduct at all levels of the organisation." },
 			{
 				"title": "Respect",
-				"blurb": "For people, for communities and for the environment."
+				"blurb": "We believe in the dignity of every individual, promoting inclusion, diversity and ethical relationships."
 			},
 			{
 				"title": "Responsibility",
-				"blurb": "For our work, our results and our impact."
+				"blurb": "We act with social awareness, contributing with real projects that positively impact the environment and people's well-being."
 			},
 			{
 				"title": "Human Dignity",
-				"blurb": "Fair and dignified treatment for all."
+				"blurb": "We promote and protect human life by finding dignified solutions."
 			}
 		],
 		"principlesTitle": "Principles",
 		"principles": [
 			{
 				"title": "Legality",
-				"blurb": "Compliance with national and international laws."
+				"blurb": "We always act in compliance with the Law, respecting national and international standards and contractual commitments."
 			},
 			{
 				"title": "Justice & Fairness",
-				"blurb": "Equal conditions in every decision."
+				"blurb": "We promote equal opportunities and fair treatment for all people, with attention to the specific needs of each reality."
 			},
 			{
 				"title": "Transparency",
-				"blurb": "Clarity and honesty with clients and partners."
+				"blurb": "We maintain clear, honest and accessible management and communication with all stakeholders, reinforcing institutional trust."
 			},
-			{ "title": "Solidarity", "blurb": "Commitment to the communities where we operate." }
+			{ "title": "Solidarity", "blurb": "We value people and support community development, respecting human and cultural rights." }
 		],
 		"rows": [
 			{ "value": "25", "label": "Years on Angolan ground" },
@@ -481,7 +475,7 @@
 		}
 	},
 	"footer": {
-		"about": "ENERYETU is an Angolan industrial services and solutions company supporting the Oil & Gas and Mining sectors through Strategic Sourcing, Technical Consulting, Skilled Manpower, and specialised industrial services.",
+		"about": "We are an Oil & Gas and Mining sector services company, 100% Angolan, created by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas sector.",
 		"quickLinksTitle": "Quick links",
 		"mediaLinksTitle": "Media",
 		"contactTitle": "Contact",

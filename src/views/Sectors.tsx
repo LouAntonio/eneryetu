@@ -44,9 +44,11 @@ export function Sectors() {
 										<h2 className="font-display text-2xl font-bold uppercase leading-none tracking-tight text-ink transition-colors group-hover:text-paper">
 											{sector.title}
 										</h2>
-										<p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate transition-colors group-hover:text-paper/70">
-											{sector.blurb}
-										</p>
+										{sector.blurb ? (
+											<p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate transition-colors group-hover:text-paper/70">
+												{sector.blurb}
+											</p>
+										) : null}
 									</div>
 								</div>
 							</article>

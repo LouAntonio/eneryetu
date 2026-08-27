@@ -5,7 +5,7 @@ import { Providers } from '@/components/Providers';
 export const metadata: Metadata = {
 	title: 'ENERYETU',
 	description:
-		'ENERYETU is the Angolan energy partner bridging international suppliers, equipment, machinery and skilled manpower to local projects — and installing solar, wind, storage and off-grid systems.',
+		'ENERYETU is an Oil & Gas and Mining sector services company, 100% Angolan, created by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas sector.',
 	icons: { icon: '/icon.png' },
 };
 

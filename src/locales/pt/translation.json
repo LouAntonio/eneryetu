@@ -54,11 +54,11 @@
 	"intro": {
 		"eyebrow": "Quem somos",
 		"title": "Empresa angolana de serviços para Petróleo & Gás e Mineração.",
-		"body": "Totalmente de capital angolano, fomos fundados por profissionais com mais de 15 anos de experiência em Gestão de Projetos no setor de Petróleo & Gás. Atuamos com foco em ESG e na transição energética, criando valor para investidores, colaboradores e comunidades locais.",
+		"body": "Somos uma empresa de Prestação de Serviços do Sector de Petróleo e Gás e Mineiro, 100% angolana, criada por profissionais angolanos com mais de 15 anos de Experiência em Gestão de Projectos no Sector de Petróleo e Gás.",
 		"points": [
-			"100% capital angolano",
-			"+15 anos em Gestão de Projetos O&G",
-			"Foco em ESG e transição energética",
+			"100% angolano",
+			"15+ anos em Gestão de Projectos O&G",
+			"Empresa ASG",
 			"Conhecimento do mercado petrolífero angolano"
 		],
 		"cta": "Conheça-nos melhor"
@@ -187,50 +187,34 @@
 		}
 	},
 	"sectors": {
-		"eyebrow": "Setores",
-		"title": "Onde trabalhamos",
-		"body": "Atuamos nos setores que movem a economia angolana, com conhecimento do equipamento, das normas e das exigências de cada indústria.",
-		"heroImage": "/images/others/Prancheta 3.jpg",
+		"eyebrow": "Sectores",
+		"title": "Sectores onde operamos",
+		"body": "",
+		"heroImage": "/images/hero/f5.jpg",
 		"items": [
 			{
-				"title": "Petróleo & Gás",
-				"blurb": "Sourcing, manutenção, integridade e serviços de apoio para operações a montante e a jusante.",
-				"image": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=800&auto=format&fit=crop"
+				"title": "Petróleo & Gás"
 			},
 			{
-				"title": "Mineração extrativa",
-				"blurb": "Fornecimento de materiais, mão-de-obra qualificada e serviços técnicos para operações mineiras.",
-				"image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=800&auto=format&fit=crop"
+				"title": "Mineiro"
 			},
 			{
-				"title": "Energias renováveis",
-				"blurb": "Gestão de projetos, instalação e manutenção de estruturas de energia renovável.",
-				"image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop"
+				"title": "Energias Renováveis"
 			},
 			{
-				"title": "Economia azul",
-				"blurb": "Serviços e equipamento para as indústrias marítimas e costeiras.",
-				"image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
+				"title": "Economia Azul"
 			},
 			{
-				"title": "Logística & Transporte",
-				"blurb": "Movimentação e transferência de carga dentro e fora de Angola, com gestão de contratos ponta a ponta.",
-				"image": "https://images.unsplash.com/photo-1566576912321-d58dd7a73409?q=80&w=800&auto=format&fit=crop"
+				"title": "Transporte"
 			},
 			{
-				"title": "Construção civil",
-				"blurb": "Apoio a contratos de engenharia e construção de estruturas industriais e civis.",
-				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
+				"title": "Construção Civil"
 			},
 			{
-				"title": "Tratamento de águas",
-				"blurb": "Instalação e manutenção de sistemas de purificação industriais e residenciais.",
-				"image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=800&auto=format&fit=crop"
+				"title": "Tratamento de Água"
 			},
 			{
-				"title": "Gestão de resíduos",
-				"blurb": "Transporte, tratamento, reciclagem e eliminação de resíduos, incluindo resíduos químicos.",
-				"image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b0b9?q=80&w=800&auto=format&fit=crop"
+				"title": "Gestão de Resíduos"
 			}
 		]
 	},
@@ -322,46 +306,46 @@
 	"about": {
 		"eyebrow": "Sobre nós",
 		"title": "O parceiro angolano de fornecimento estratégico e conteúdo local.",
-		"lead": "A ENERYETU – COMÉRCIO & SERVIÇOS LDA é uma empresa prestadora de serviços que atua nas indústrias de Petróleo & Gás e Mineração.",
-		"body1": "Totalmente de capital angolano, foi fundada por profissionais angolanos com mais de 15 anos de experiência em Gestão de Projetos no setor de Petróleo & Gás — com profundo conhecimento do mercado petrolífero nacional.",
-		"body2": "Comprometida com os princípios ESG, promove práticas sustentáveis e a transição energética, buscando parcerias estratégicas que gerem valor para investidores, colaboradores e comunidades locais.",
+		"lead": "A ENERYETU é uma empresa angolana de serviços e soluções industriais que apoia os setores de Petróleo e Gás e de Mineração por meio de *Strategic Sourcing*, consultoria técnica, mão de obra qualificada e serviços industriais especializados.",
+		"body1": "Somos uma empresa de Prestação de Serviços do Sector de Petróleo e Gás e Mineiro, 100% angolana, criada por profissionais angolanos com mais de 15 anos de Experiência em Gestão de Projectos no Sector de Petróleo e Gás.",
+		"body2": "Somos uma empresa ASG (Ambiental, Social & Governança) - Comprometida com práticas sustentáveis, respeitando o meio ambiente, minimizando riscos ambientais e apoiando a transição energética no sector industrial e petrolífero.\n\nConhecemos bem o mercado petrolífero angolano e estamos interessados em estabelecer parcerias estratégicas capazes de trazer benefícios mútuos para empresas, investidores, colaboradores, parceiros e comunidades.",
 		"heroImage": "/images/others/Prancheta 9.jpg",
 		"visionTitle": "Visão",
-		"vision": "Ser uma plataforma líder em África para Fornecimento Estratégico e Conteúdo Local, posicionando Angola como um hub competitivo para cadeias de suprimentos industriais globais.",
+		"vision": "Ser uma empresa inovadora de referência nacional e internacional na representação e desenvolvimento de negócios nos sectores de petróleo e gás e outras indústrias pesadas posicionando Angola como hub estratégico na cadeia global de fornecimento.",
 		"missionTitle": "Missão",
-		"mission": "Criar e facilitar oportunidades de negócios para empresas nacionais e internacionais através de soluções integradas de acesso ao mercado e desenvolvimento de negócios.",
+		"mission": "Conectar fornecedores internacionais aos mercados angolano e africano de petróleo & gás e indústria pesada, oferecendo soluções de excelência que promovem inovação, sustentabilidade, conteúdo local e desenvolvimento comunitário.",
 		"valuesTitle": "Valores",
 		"values": [
-			{ "title": "Segurança", "blurb": "A vida humana em primeiro lugar, sempre." },
-			{ "title": "Integridade", "blurb": "Agir com retidão em todas as relações." },
+			{ "title": "Segurança", "blurb": "A Vida humana em primeiro lugar – Protegemos vidas, equipamentos e o ecossistema." },
+			{ "title": "Integridade", "blurb": "Defendemos condutas éticas em todos os níveis da organização." },
 			{
 				"title": "Respeito",
-				"blurb": "Pelas pessoas, pelas comunidades e pelo ambiente."
+				"blurb": "Acreditamos na dignidade de cada indivíduo, promovendo a inclusão, a diversidade e as relações éticas."
 			},
 			{
 				"title": "Responsabilidade",
-				"blurb": "Pelo nosso trabalho, pelos resultados e pelo impacto."
+				"blurb": "Actuamos com consciência social, contribuindo com projectos reais que impactem positivamente para o meio ambiente, bem-estar das pessoas."
 			},
 			{
-				"title": "Dignidade Humana",
-				"blurb": "Tratamento justo e digno para todos."
+				"title": "Dignidade da Pessoa Humana",
+				"blurb": "Promovemos e protegemos a vida humana encontrando soluções dignas."
 			}
 		],
 		"principlesTitle": "Princípios",
 		"principles": [
 			{
 				"title": "Legalidade",
-				"blurb": "Conformidade com as leis nacionais e internacionais."
+				"blurb": "Agimos sempre em conformidade com a Lei, respeitando as normas nacionais e internacionais e os compromissos contratuais."
 			},
 			{
-				"title": "Justiça e Equidade",
-				"blurb": "Igualdade de condições em todas as decisões."
+				"title": "Justiça & Equidade",
+				"blurb": "Promovemos igualdade de oportunidades e tratamento justo para todas as pessoas, com atenção às necessidades específicas de cada realidade."
 			},
 			{
 				"title": "Transparência",
-				"blurb": "Clareza e honestidade na relação com clientes e parceiros."
+				"blurb": "Mantemos uma gestão e comunicação clara, honesta e acessível a todos os stakeholders, reforçando a confiança institucional."
 			},
-			{ "title": "Solidariedade", "blurb": "Compromisso com as comunidades onde atuamos." }
+			{ "title": "Solidariedade", "blurb": "Valorizamos as pessoas e apoiamos no desenvolvimento das comunidades, respeitando os direitos humanos e culturais." }
 		],
 		"rows": [
 			{ "value": "25", "label": "Anos em solo angolano" },
@@ -491,7 +475,7 @@
 		}
 	},
 	"footer": {
-		"about": "A ENERYETU é uma empresa angolana de serviços e soluções industriais que apoia os setores de Petróleo e Gás e de Mineração por meio de *Strategic Sourcing*, consultoria técnica, mão de obra qualificada e serviços industriais especializados.",
+		"about": "Somos uma empresa de Prestação de Serviços do Sector de Petróleo e Gás e Mineiro, 100% angolana, criada por profissionais angolanos com mais de 15 anos de Experiência em Gestão de Projectos no Sector de Petróleo e Gás.",
 		"quickLinksTitle": "Links rápidos",
 		"mediaLinksTitle": "Mídia",
 		"contactTitle": "Contactos",

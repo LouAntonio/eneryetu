@@ -183,9 +183,11 @@ export function Home() {
 									<h3 className="font-display text-lg font-bold uppercase tracking-tight text-ink transition-colors group-hover:text-paper">
 										{sector.title}
 									</h3>
-									<p className="mt-1 text-sm leading-relaxed text-slate transition-colors group-hover:text-paper/70">
-										{sector.blurb}
-									</p>
+									{sector.blurb ? (
+										<p className="mt-1 text-sm leading-relaxed text-slate transition-colors group-hover:text-paper/70">
+											{sector.blurb}
+										</p>
+									) : null}
 								</div>
 							</Link>
 						))}
