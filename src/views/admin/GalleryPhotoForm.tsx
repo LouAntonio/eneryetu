@@ -71,7 +71,7 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 			const fd = new FormData();
 			fd.append('file', selectedFile);
 			const uploadResp = (await api.post<{ data: { url: string; publicId: string } }>(
-				'/upload/gallery/photos',
+				'/upload/gallery-photo',
 				fd,
 			)).data;
 
