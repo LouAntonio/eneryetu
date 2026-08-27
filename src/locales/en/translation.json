@@ -113,7 +113,7 @@
 				"title": "Integrity management",
 				"blurb": "Structural inspection and non-destructive testing of welds in compliance with ISO and ASNT standards.",
 				"spec": "NDT · ISO · ASNT",
-				"image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Integrity management.jpg"
 			},
 			{
 				"title": "Fabric maintenance & painting",
@@ -125,7 +125,7 @@
 				"title": "Renewable energy",
 				"blurb": "Project management, installation and maintenance of renewable energy structures.",
 				"spec": "Energy transition",
-				"image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Renewable energy.jpg"
 			},
 			{
 				"title": "Waste management",
@@ -155,7 +155,7 @@
 				"title": "Mechanical / electrical / instrumentation",
 				"blurb": "Preventive and corrective maintenance of mechanical, electrical and instrumentation systems.",
 				"spec": "M&E · instrumentation",
-				"image": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Mechanical electrical instrumentation.jpg"
 			}
 		],
 		"beyond": {
