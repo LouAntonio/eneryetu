@@ -321,3 +321,44 @@ export async function handleDeleteTrainingCover(req: NextRequest, id: string) {
 		data: { coverImage: null, coverImagePubId: null },
 	});
 }
+
+export async function handleUploadProductCover(req: NextRequest, id: string) {
+	await requireAdmin(req);
+	const product = await prisma.product.findUnique({ where: { id } });
+	if (!product) {
+		throw new HttpError(404, 'Produto não encontrado');
+	}
+
+	const file = await getEventFile(req, 'file', IMAGE_EXTENSIONS, MAX_IMAGE_SIZE);
+
+	await destroyStored(product.coverImagePubId ?? undefined, product.coverImage ?? undefined);
+
+	const buffer = Buffer.from(await file.arrayBuffer());
+	const result = await uploadToCloudinary(buffer, id, 'cover', false);
+
+	await prisma.product.update({
+		where: { id },
+		data: { coverImage: result.secure_url, coverImagePubId: result.public_id },
+	});
+
+	return result.secure_url;
+}
+
+export async function handleDeleteProductCover(req: NextRequest, id: string) {
+	await requireAdmin(req);
+	const product = await prisma.product.findUnique({ where: { id } });
+	if (!product) {
+		throw new HttpError(404, 'Produto não encontrado');
+	}
+
+	if (!product.coverImage && !product.coverImagePubId) {
+		throw new HttpError(400, 'O produto não tem imagem de capa');
+	}
+
+	await destroyStored(product.coverImagePubId ?? undefined, product.coverImage ?? undefined);
+
+	await prisma.product.update({
+		where: { id },
+		data: { coverImage: null, coverImagePubId: null },
+	});
+}

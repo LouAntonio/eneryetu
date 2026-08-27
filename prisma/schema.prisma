@@ -230,3 +230,27 @@ model JobListing {
 	@@index([slug])
 	@@index([status])
 }
+
+// --- CONTEÚDO: PRODUTOS ---
+
+model Product {
+	id              String   @id @default(uuid()) @db.VarChar(36)
+	title           String   @db.VarChar(255)
+	slug            String   @unique @db.VarChar(120)
+	description     String?  @db.Text
+	blurb           String?  @db.VarChar(500)
+	coverImage      String?  @db.VarChar(500)
+	coverImagePubId String?  @db.VarChar(255)
+	status          Status   @default(RASCUNHO)
+	featured        Boolean  @default(false)
+	sortOrder       Int      @default(0)
+	metaTitle       String?  @db.VarChar(160)
+	metaDescription String?  @db.VarChar(320)
+	createdBy       String?  @db.VarChar(36)
+	createdAt       DateTime @default(now())
+	updatedAt       DateTime @updatedAt
+	publishedAt     DateTime?
+
+	@@index([slug])
+	@@index([status])
+}

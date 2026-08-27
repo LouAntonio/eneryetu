@@ -260,6 +260,8 @@
 		"title": "Produtos e equipamentos certificados",
 		"body": "Fornecemos uma ampla gama de produtos industriais certificados para os setores de Petróleo & Gás, Mineração e Energia.",
 		"heroImage": "/images/others/Prancheta 8.jpg",
+		"emptyTitle": "Ainda não há produtos disponíveis.",
+		"emptyBody": "Estamos a preparar o nosso catálogo de produtos.",
 		"categories": [
 			{
 				"title": "Equipamentos de perfuração",
@@ -517,6 +519,7 @@
 			"eventTypes": "Tipos de evento",
 			"gallery": "Galeria",
 			"trainings": "Formações",
+			"products": "Produtos",
 			"jobs": "Vagas"
 		},
 		"status": {
@@ -675,6 +678,24 @@
 			"pduCredits": "Créditos PDU",
 			"ceuCredits": "Créditos CEU",
 			"pmiProgramNumber": "Número do programa PMI",
+			"status": "Estado",
+			"featured": "Destaque",
+			"sortOrder": "Ordem",
+			"metaTitle": "Meta título",
+			"metaDescription": "Meta descrição"
+		},
+		"products": {
+			"eyebrow": "Conteúdo",
+			"title": "Produtos",
+			"add": "Novo produto",
+			"editTitle": "Editar produto",
+			"newTitle": "Novo produto",
+			"titleField": "Título",
+			"slug": "Slug",
+			"blurb": "Resumo",
+			"description": "Descrição",
+			"coverImage": "Imagem de capa",
+			"noCover": "Ainda sem capa — carregue após guardar.",
 			"status": "Estado",
 			"featured": "Destaque",
 			"sortOrder": "Ordem",

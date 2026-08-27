@@ -166,3 +166,22 @@ export interface JobListing {
 	updatedAt?: string;
 	publishedAt?: string | null;
 }
+
+export interface Product {
+	id: string;
+	title: string;
+	slug: string;
+	description?: string | null;
+	blurb?: string | null;
+	coverImage?: string | null;
+	coverImagePubId?: string | null;
+	status: Status;
+	featured: boolean;
+	sortOrder: number;
+	metaTitle?: string | null;
+	metaDescription?: string | null;
+	createdBy?: string | null;
+	createdAt?: string;
+	updatedAt?: string;
+	publishedAt?: string | null;
+}

@@ -13,6 +13,7 @@ const NAV = [
 	{ to: '/eneryetu/gallery', labelKey: 'admin.nav.gallery', end: false },
 	{ to: '/eneryetu/gallery/categories', labelKey: 'admin.galleryCategories.title', end: false },
 	{ to: '/eneryetu/trainings', labelKey: 'admin.nav.trainings', end: false },
+	{ to: '/eneryetu/products', labelKey: 'admin.nav.products', end: false },
 	{ to: '/eneryetu/jobs', labelKey: 'admin.nav.jobs', end: false },
 ] as const;
 

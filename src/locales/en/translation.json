@@ -260,6 +260,8 @@
 		"title": "Certified products and equipment",
 		"body": "We supply a wide range of certified industrial products for the Oil & Gas, Mining and Energy sectors.",
 		"heroImage": "/images/others/Prancheta 8.jpg",
+		"emptyTitle": "No products available yet.",
+		"emptyBody": "We are preparing our product catalogue.",
 		"categories": [
 			{
 				"title": "Drilling equipment",
@@ -517,6 +519,7 @@
 			"eventTypes": "Event types",
 			"gallery": "Gallery",
 			"trainings": "Trainings",
+			"products": "Products",
 			"jobs": "Jobs"
 		},
 		"status": {
@@ -675,6 +678,24 @@
 			"pduCredits": "PDU credits",
 			"ceuCredits": "CEU credits",
 			"pmiProgramNumber": "PMI program number",
+			"status": "Status",
+			"featured": "Featured",
+			"sortOrder": "Sort order",
+			"metaTitle": "Meta title",
+			"metaDescription": "Meta description"
+		},
+		"products": {
+			"eyebrow": "Content",
+			"title": "Products",
+			"add": "New product",
+			"editTitle": "Edit product",
+			"newTitle": "New product",
+			"titleField": "Title",
+			"slug": "Slug",
+			"blurb": "Blurb",
+			"description": "Description",
+			"coverImage": "Cover image",
+			"noCover": "No cover yet — upload after saving.",
 			"status": "Status",
 			"featured": "Featured",
 			"sortOrder": "Sort order",
