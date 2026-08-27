@@ -12,10 +12,10 @@ import { ServiceCard } from '../components/ServiceCard';
 import { StatRow } from '../components/StatRow';
 
 const HERO_IMAGES = [
-	'/images/hero/f6.jpg',
-	'/images/hero/f7.jpg',
-	'/images/hero/f8.jpeg',
-	'/images/hero/f9.png',
+	'/images/others/Prancheta 2.jpg',
+	'/images/others/Prancheta 4.jpg',
+	'/images/others/Prancheta 5.jpg',
+	'/images/others/Prancheta 7.jpg',
 ];
 
 export function Home() {

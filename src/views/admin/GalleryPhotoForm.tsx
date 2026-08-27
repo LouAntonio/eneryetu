@@ -70,10 +70,12 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 
 			const fd = new FormData();
 			fd.append('file', selectedFile);
-			const uploadResp = (await api.post<{ data: { url: string; publicId: string } }>(
-				'/upload/gallery-photo',
-				fd,
-			)).data;
+			const uploadResp = (
+				await api.post<{ data: { url: string; publicId: string } }>(
+					'/upload/gallery-photo',
+					fd,
+				)
+			).data;
 
 			return api.post('/gallery/photos', {
 				title: form.title || null,
@@ -127,11 +129,7 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 				<label className={labelClass}>{t('admin.gallery.image')}</label>
 				<div className="mt-2 border border-dashed border-line bg-white p-6 text-center">
 					{previewUrl ? (
-						<img
-							src={previewUrl}
-							alt=""
-							className="mx-auto h-40 w-full object-cover"
-						/>
+						<img src={previewUrl} alt="" className="mx-auto h-40 w-full object-cover" />
 					) : photo?.imageUrl ? (
 						<img
 							src={assetUrl(photo.imageUrl) ?? ''}

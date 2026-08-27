@@ -67,7 +67,7 @@
 		"eyebrow": "Serviços",
 		"title": "Doze linhas de serviço, um único parceiro.",
 		"body": "Soluções integradas de acesso ao mercado e desenvolvimento de negócios — do sourcing à manutenção, num só contrato.",
-		"heroImage": "/images/hero/f1.jpg",
+		"heroImage": "/images/others/Prancheta 1.jpg",
 		"items": [
 			{
 				"title": "Sourcing estratégico",
@@ -190,7 +190,7 @@
 		"eyebrow": "Setores",
 		"title": "Onde trabalhamos",
 		"body": "Atuamos nos setores que movem a economia angolana, com conhecimento do equipamento, das normas e das exigências de cada indústria.",
-		"heroImage": "/images/hero/f2.jpg",
+		"heroImage": "/images/others/Prancheta 3.jpg",
 		"items": [
 			{
 				"title": "Petróleo & Gás",
@@ -238,7 +238,7 @@
 		"eyebrow": "Formações",
 		"title": "Competências que ficam no local.",
 		"body": "Formação profissional para equipas nacionais e internacionais — para que quem opera e mantém a sua instalação a domine de verdade.",
-		"heroImage": "/images/hero/f3.jpg",
+		"heroImage": "/images/others/Prancheta 6.jpg",
 		"features": ["Gestão de Projetos", "Primavera P6", "Soldadura", "Inspeção NDT"],
 		"cta": "Ver a formação",
 		"all": "Todos",
@@ -267,7 +267,7 @@
 		"eyebrow": "Produtos",
 		"title": "Produtos e equipamentos certificados",
 		"body": "Fornecemos uma ampla gama de produtos industriais certificados para os setores de Petróleo & Gás, Mineração e Energia.",
-		"heroImage": "/images/hero/f4.jpg",
+		"heroImage": "/images/others/Prancheta 8.jpg",
 		"categories": [
 			{
 				"title": "Equipamentos de perfuração",
@@ -325,7 +325,7 @@
 		"lead": "A ENERYETU – COMÉRCIO & SERVIÇOS LDA é uma empresa prestadora de serviços que atua nas indústrias de Petróleo & Gás e Mineração.",
 		"body1": "Totalmente de capital angolano, foi fundada por profissionais angolanos com mais de 15 anos de experiência em Gestão de Projetos no setor de Petróleo & Gás — com profundo conhecimento do mercado petrolífero nacional.",
 		"body2": "Comprometida com os princípios ESG, promove práticas sustentáveis e a transição energética, buscando parcerias estratégicas que gerem valor para investidores, colaboradores e comunidades locais.",
-		"heroImage": "/images/hero/f5.jpg",
+		"heroImage": "/images/others/Prancheta 9.jpg",
 		"visionTitle": "Visão",
 		"vision": "Ser uma plataforma líder em África para Fornecimento Estratégico e Conteúdo Local, posicionando Angola como um hub competitivo para cadeias de suprimentos industriais globais.",
 		"missionTitle": "Missão",
@@ -374,7 +374,7 @@
 		"eyebrow": "Carreiras",
 		"title": "Construa o futuro angolano connosco.",
 		"body": "Contratamos profissionais que querem crescer com os setores de Petróleo & Gás e Mineração em Angola. Se é o seu caso, fale connosco.",
-		"heroImage": "/images/hero/f6.jpg",
+		"heroImage": "/images/others/Prancheta 1.jpg",
 		"applyLabel": "Interessado? Envie o seu CV para",
 		"applyHint": "Mencione a área de interesse no assunto do email.",
 		"openPositions": "Vagas Abertas",
@@ -411,7 +411,7 @@
 		"eyebrow": "Mídia",
 		"title": "Notícias, eventos e o trabalho por trás dos painéis.",
 		"body": "Notas de campo dos nossos engenheiros, eventos públicos que organizamos e fotografias do trabalho.",
-		"heroImage": "/images/hero/f7.jpg",
+		"heroImage": "/images/others/Prancheta 3.jpg",
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "As notas de campo estão a ser redigidas.",
@@ -460,7 +460,7 @@
 		"eyebrow": "Contactos",
 		"title": "Fale connosco.",
 		"body": "Diga-nos o que precisa — sourcing, serviços, logística ou parcerias — e voltaremos com uma resposta, normalmente num dia útil.",
-		"heroImage": "/images/hero/f8.jpeg",
+		"heroImage": "/images/others/Prancheta 6.jpg",
 		"detailsTitle": "Sede",
 		"address": "Apartamento 5, 1º andar, edifício E152, Rua 70, bairro Nova Vida, Luanda, Angola",
 		"phone": "+244 923 734 199 / +244 945 459 270",
