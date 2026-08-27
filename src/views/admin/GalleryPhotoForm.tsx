@@ -42,29 +42,40 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 
 	const [form, setForm] = useState(() => (photo ? toForm(photo) : emptyForm));
 	const [error, setError] = useState('');
-	const coverInput = useRef<HTMLInputElement>(null);
+	const [selectedFile, setSelectedFile] = useState<File | null>(null);
+	const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+	const fileInput = useRef<HTMLInputElement>(null);
 
 	const save = useMutation({
 		mutationFn: async () => {
 			const body = {
 				title: form.title || null,
 				categoryId: form.categoryId,
-				sortOrder: form.sortOrder,
+				sortOrder: editing ? form.sortOrder : 0,
 			};
 			if (editing) {
 				return api.put(`/gallery/photos/${id}`, body);
 			}
 			return api.post('/gallery/photos', body);
 		},
-		onSuccess: (resp) => {
+		onSuccess: async (resp) => {
 			const saved = (resp as { data?: GalleryPhoto }).data;
-			if (editing) {
-				navigate('/eneryetu/gallery');
-			} else if (saved?.id) {
-				navigate(`/eneryetu/gallery/${saved.id}`);
-			} else {
-				navigate('/eneryetu/gallery');
+
+			if (selectedFile && saved?.id) {
+				const fd = new FormData();
+				fd.append('file', selectedFile);
+				fd.append('title', form.title);
+				fd.append('categoryId', form.categoryId);
+				fd.append('sortOrder', String(editing ? form.sortOrder : 0));
+				try {
+					await api.post(`/upload/gallery/photos/${saved.id}`, fd);
+					await queryClient.invalidateQueries({ queryKey: ['gallery-photos'] });
+				} catch {
+					// upload failed but record was created
+				}
 			}
+
+			navigate('/eneryetu/gallery');
 		},
 		onError: (err: unknown) => {
 			const msg =
@@ -75,17 +86,6 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 			setError(msg);
 		},
 	});
-
-	const onSubmit = (event: FormEvent) => {
-		event.preventDefault();
-		setError('');
-		save.mutate();
-	};
-
-	const set =
-		<K extends keyof typeof form>(key: K) =>
-		(value: (typeof form)[K]) =>
-			setForm((prev) => ({ ...prev, [key]: value }));
 
 	const upload = useMutation({
 		mutationFn: async (file: File) => {
@@ -99,10 +99,28 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 		onSuccess: () => void queryClient.invalidateQueries({ queryKey: ['gallery-photos'] }),
 	});
 
-	const onCoverPick = () => {
-		const file = coverInput.current?.files?.[0];
+	const onSubmit = (event: FormEvent) => {
+		event.preventDefault();
+		setError('');
+		save.mutate();
+	};
+
+	const onFilePick = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const file = event.target.files?.[0];
+		if (!file) return;
+		setSelectedFile(file);
+		setPreviewUrl(URL.createObjectURL(file));
+	};
+
+	const onUploadExisting = () => {
+		const file = fileInput.current?.files?.[0];
 		if (file) upload.mutate(file);
 	};
+
+	const set =
+		<K extends keyof typeof form>(key: K) =>
+		(value: (typeof form)[K]) =>
+			setForm((prev) => ({ ...prev, [key]: value }));
 
 	return (
 		<form onSubmit={onSubmit} noValidate className="max-w-4xl space-y-6">
@@ -111,6 +129,48 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 					{error}
 				</p>
 			) : null}
+
+			{/* Upload — visível em criar e editar */}
+			<div>
+				<label className={labelClass}>{t('admin.gallery.image')}</label>
+				<div className="mt-2 border border-dashed border-line bg-white p-6 text-center">
+					{previewUrl ? (
+						<img
+							src={previewUrl}
+							alt=""
+							className="mx-auto h-40 w-full object-cover"
+						/>
+					) : photo?.imageUrl ? (
+						<img
+							src={assetUrl(photo.imageUrl) ?? ''}
+							alt=""
+							className="mx-auto h-40 w-full object-cover"
+						/>
+					) : (
+						<p className="font-mono text-xs text-slate">{t('admin.gallery.noImage')}</p>
+					)}
+					<label className="btn btn-mono mt-4 cursor-pointer px-4 py-2 text-xs">
+						{t('admin.upload')}
+						<input
+							ref={fileInput}
+							type="file"
+							accept="image/*"
+							className="hidden"
+							onChange={onFilePick}
+						/>
+					</label>
+					{editing && photo?.imageUrl && !previewUrl && (
+						<button
+							type="button"
+							onClick={onUploadExisting}
+							disabled={upload.isPending}
+							className="btn btn-sun ml-3 mt-4 px-4 py-2 text-xs"
+						>
+							{upload.isPending ? '…' : t('admin.save')}
+						</button>
+					)}
+				</div>
+			</div>
 
 			<div className="grid gap-6 lg:grid-cols-2">
 				<div>
@@ -146,22 +206,24 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 				</div>
 			</div>
 
-			<div>
-				<label htmlFor="photo-sort" className={labelClass}>
-					{t('admin.gallery.sortOrder')}
-				</label>
-				<input
-					id="photo-sort"
-					type="number"
-					value={form.sortOrder}
-					onChange={(event) => set('sortOrder')(Number(event.target.value))}
-					className={inputClass}
-				/>
-			</div>
+			{editing && (
+				<div>
+					<label htmlFor="photo-sort" className={labelClass}>
+						{t('admin.gallery.sortOrder')}
+					</label>
+					<input
+						id="photo-sort"
+						type="number"
+						value={form.sortOrder}
+						onChange={(event) => set('sortOrder')(Number(event.target.value))}
+						className={inputClass}
+					/>
+				</div>
+			)}
 
 			<div className="flex items-center gap-3 border-t border-line pt-6">
 				<button type="submit" disabled={save.isPending} className="btn btn-sun px-6 py-3">
-					{save.isPending ? '…' : editing ? t('admin.save') : t('admin.save')}
+					{save.isPending ? '…' : t('admin.save')}
 				</button>
 				<Link
 					to="/eneryetu/gallery"
@@ -170,42 +232,6 @@ function GalleryPhotoFormInner({ photo, editing, id, categories }: GalleryPhotoF
 					{t('admin.cancel')}
 				</Link>
 			</div>
-
-			{editing && photo ? (
-				<div className="space-y-6 border-t border-line pt-6">
-					<h2 className="font-display text-2xl font-black uppercase tracking-tight text-ink">
-						{t('admin.gallery.image')}
-					</h2>
-
-					<div className="border border-line bg-white p-5">
-						<div className="flex flex-wrap items-end justify-between gap-4">
-							<div>
-								<span className={labelClass}>{t('admin.gallery.image')}</span>
-								<p className="mt-1 font-mono text-xs text-slate">
-									{photo.imageUrl ? photo.imageUrl : t('admin.gallery.noImage')}
-								</p>
-							</div>
-							<label className="btn btn-mono cursor-pointer px-4 py-2 text-xs">
-								{t('admin.upload')}
-								<input
-									ref={coverInput}
-									type="file"
-									accept="image/*"
-									className="hidden"
-									onChange={onCoverPick}
-								/>
-							</label>
-						</div>
-						{photo.imageUrl ? (
-							<img
-								src={assetUrl(photo.imageUrl) ?? ''}
-								alt=""
-								className="mt-4 h-40 w-full object-cover"
-							/>
-						) : null}
-					</div>
-				</div>
-			) : null}
 		</form>
 	);
 }
