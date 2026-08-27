@@ -6,7 +6,6 @@ import { useQuery } from '@tanstack/react-query';
 
 import { api } from '../../services/api';
 import type { GalleryCategory, GalleryPhoto } from '../../types';
-import { PageHero } from '../../components/PageHero';
 import { EmptyBoard, LoadingBoard } from './shared';
 
 export function MediaGallery() {
@@ -56,14 +55,6 @@ export function MediaGallery() {
 
 	return (
 		<>
-			<PageHero
-				id="hero"
-				eyebrow={t('media.eyebrow')}
-				title={t('media.gallery.title')}
-				body={t('media.gallery.emptyBody')}
-				image={t('media.heroImage')}
-			/>
-
 			<section className="min-h-[40vh] bg-bone">
 				<div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
 					{isLoading ? (

@@ -10,9 +10,9 @@
 	--color-ink: #0b1b2a;
 	--color-ink-deep: #07131f;
 	--color-paper: #f0f4f8;
-	--color-blue: #2d88c8;
-	--color-blue-deep: #1b6fa8;
-	--color-blue-dark: #15568a;
+	--color-blue: #48cae4;
+	--color-blue-deep: #30b3d6;
+	--color-blue-dark: #2199b8;
 	--color-sun: #ffb43a;
 	--color-sun-deep: #d98a10;
 	--color-volt: #fff110;
@@ -79,8 +79,8 @@ body {
 
 @utility grid-light {
 	background-image:
-		linear-gradient(to right, rgba(45, 136, 200, 0.09) 1px, transparent 1px),
-		linear-gradient(to bottom, rgba(45, 136, 200, 0.09) 1px, transparent 1px);
+		linear-gradient(to right, rgba(72, 202, 228, 0.09) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(72, 202, 228, 0.09) 1px, transparent 1px);
 	background-size: 32px 32px;
 }
 

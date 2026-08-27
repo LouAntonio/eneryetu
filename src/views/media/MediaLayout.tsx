@@ -4,8 +4,6 @@ import { NavLink } from '../../lib/routing';
 import { useTranslation } from 'react-i18next';
 import type { ReactNode } from 'react';
 
-import { Postmark } from './shared';
-
 const MEDIA_KEYS = ['blog', 'news', 'events', 'gallery'] as const;
 type MediaKey = (typeof MEDIA_KEYS)[number];
 
@@ -45,7 +43,6 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 							{t('media.body')}
 						</p>
 					</div>
-					<Postmark place="LUANDA" className="hidden shrink-0 lg:inline-flex" />
 				</div>
 
 				<div aria-hidden className="absolute bottom-0 inset-x-0 z-10 h-1 w-full bg-volt" />

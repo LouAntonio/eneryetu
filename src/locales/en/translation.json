@@ -35,7 +35,7 @@
 		"close": "Close"
 	},
 	"hero": {
-		"eyebrow": "Services for Oil & Gas and Mining · Luanda — Oil & Gas | Energy | Mining | Manpower",
+		"eyebrow": "Oil & Gas | Energy | Mining | Manpower",
 		"title": "Strategic sourcing and local content.",
 		"lede": "EnerYetu creates and facilitates business opportunities for national and international companies — sourcing of parts, materials and equipment, consulting, skilled manpower, logistics and technical services in Angola.",
 		"ctaPrimary": "Request a quote",
@@ -67,7 +67,7 @@
 		"eyebrow": "Services",
 		"title": "Twelve service lines, one partner.",
 		"body": "Integrated market-access and business-development solutions — from sourcing to maintenance, under a single contract.",
-		"heroImage": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f1.jpg",
 		"items": [
 			{
 				"title": "Strategic sourcing",
@@ -190,7 +190,7 @@
 		"eyebrow": "Sectors",
 		"title": "Where we work",
 		"body": "Energy needs differ by industry. We know the equipment, the standards and the uptime each one demands.",
-		"heroImage": "https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f2.jpg",
 		"items": [
 			{
 				"title": "Oil & gas",
@@ -228,7 +228,7 @@
 		"eyebrow": "Training",
 		"title": "Skills that stay on site.",
 		"body": "Professional training for national and international teams — so the people who run and maintain your facility truly master it.",
-		"heroImage": "https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f3.jpg",
 		"features": ["Project Management", "Primavera P6", "Welding", "NDT Inspection"],
 		"cta": "See our training",
 		"all": "All",
@@ -257,7 +257,7 @@
 		"eyebrow": "Products",
 		"title": "Certified products and equipment",
 		"body": "We supply a wide range of certified industrial products for the Oil & Gas, Mining and Energy sectors.",
-		"heroImage": "https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f4.jpg",
 		"categories": [
 			{
 				"title": "Drilling equipment",
@@ -315,7 +315,7 @@
 		"lead": "ENERYETU – COMÉRCIO & SERVIÇOS LDA is a services company operating in the Oil & Gas and Mining industries.",
 		"body1": "Fully Angolan-owned, it was founded by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas industry — with deep knowledge of the national oil market.",
 		"body2": "Committed to ESG principles, it promotes sustainable practices and the energy transition, pursuing strategic partnerships that generate value for investors, employees and local communities.",
-		"heroImage": "https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f5.jpg",
 		"visionTitle": "Vision",
 		"vision": "To be Africa's leading platform for Strategic Sourcing and Local Content, positioning Angola as a competitive hub for global industrial supply chains.",
 		"missionTitle": "Mission",
@@ -364,7 +364,7 @@
 		"eyebrow": "Careers",
 		"title": "Build Angola's future with us.",
 		"body": "We hire professionals who want to grow with Angola's Oil & Gas and Mining industries. If that is you, tell us.",
-		"heroImage": "https://images.unsplash.com/photo-1648369000096-109763c11e8e?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f6.jpg",
 		"applyLabel": "Interested? Send your CV to",
 		"applyHint": "Mention your area of interest in the subject line.",
 		"openPositions": "Open Positions",
@@ -401,7 +401,7 @@
 		"eyebrow": "Media",
 		"title": "News, events and the work behind the panels.",
 		"body": "Field notes from our engineers, public events we host, and photographs of the work.",
-		"heroImage": "https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f7.jpg",
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "Field notes are being drafted.",
@@ -450,7 +450,7 @@
 		"eyebrow": "Contact",
 		"title": "Talk to us.",
 		"body": "Tell us what you need — sourcing, services, logistics or partnerships — and we will come back with an answer, usually within one business day.",
-		"heroImage": "https://images.unsplash.com/photo-1722183704200-e96339975ba4?q=80&w=2400&auto=format&fit=crop",
+		"heroImage": "/images/hero/f8.jpeg",
 		"detailsTitle": "Head office",
 		"address": "Apartment 5, 1st floor, building E152, Rua 70, Nova Vida district, Luanda, Angola",
 		"phone": "+244 923 734 199 / +244 945 459 270",

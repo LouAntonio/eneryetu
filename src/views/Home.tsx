@@ -12,10 +12,10 @@ import { ServiceCard } from '../components/ServiceCard';
 import { StatRow } from '../components/StatRow';
 
 const HERO_IMAGES = [
-	'https://images.unsplash.com/photo-1578356058390-f58c575337a2?q=80&w=2400&auto=format&fit=crop',
-	'https://images.unsplash.com/photo-1690508313456-bf8c851e8319?q=80&w=2400&auto=format&fit=crop',
-	'https://images.unsplash.com/photo-1648555394313-494797ad48fc?q=80&w=2400&auto=format&fit=crop',
-	'https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=2400&auto=format&fit=crop',
+	'/images/hero/f6.jpg',
+	'/images/hero/f7.jpg',
+	'/images/hero/f8.jpeg',
+	'/images/hero/f9.png',
 ];
 
 export function Home() {
