@@ -12,7 +12,7 @@ export function CtaBand() {
 			<div className="bg-ink text-paper">
 				<div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-8 px-6 py-16 sm:flex-row sm:items-center sm:justify-between lg:py-20">
 					<div>
-						<p className="ui-label text-volt">EnerYetu</p>
+						<p className="ui-label text-volt">ENERYETU</p>
 						<h2 className="mt-4 max-w-xl font-display text-4xl font-black uppercase leading-[0.95] tracking-tight text-paper sm:text-5xl">
 							{t('cta.title')}
 						</h2>

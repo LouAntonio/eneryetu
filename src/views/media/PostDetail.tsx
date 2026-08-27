@@ -126,7 +126,7 @@ export function MediaPostDetail() {
 								/>
 								<SpecRow
 									label={t('media.spec.author')}
-									value={name ?? 'EnerYetu'}
+									value={name ?? 'ENERYETU'}
 								/>
 								<SpecRow label={t('media.spec.reading')} value={readTime} />
 							</dl>

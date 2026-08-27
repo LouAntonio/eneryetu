@@ -26,7 +26,7 @@ export function NotFound() {
 					/>
 					<path d="M116 16 H196" className="pulse-path stroke-volt" strokeWidth="1.6" />
 				</svg>
-				<span className="mt-8 block ui-label text-volt">EnerYetu — network</span>
+				<span className="mt-8 block ui-label text-volt">ENERYETU — network</span>
 				<h1 className="mx-auto mt-4 max-w-3xl font-display text-6xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-8xl">
 					{t('notFound.title')}
 				</h1>

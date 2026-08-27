@@ -14,7 +14,7 @@ export function AdminLayout({ children }: { children: ReactNode }) {
 			<div className="flex min-h-screen items-center justify-center bg-ink-deep text-paper">
 				<div className="flex items-center gap-3">
 					<span aria-hidden className="node-live h-2.5 w-2.5 rounded-full bg-volt" />
-					<span className="ui-label text-paper/70">EnerYetu — control room</span>
+					<span className="ui-label text-paper/70">ENERYETU — control room</span>
 				</div>
 			</div>
 		);

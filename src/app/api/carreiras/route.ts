@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 		await sendMail({
 			subject: `Candidatura via site — ${nome}`,
 			html: `
-				<h2>Candidatura espontânea — EnerYetu</h2>
+				<h2>Candidatura espontânea — ENERYETU</h2>
 				<table style="border-collapse:collapse;width:100%;max-width:600px">
 					<tr><td style="padding:8px;font-weight:700;border:1px solid #ddd">Nome</td><td style="padding:8px;border:1px solid #ddd">${nome}</td></tr>
 					<tr><td style="padding:8px;font-weight:700;border:1px solid #ddd">Email</td><td style="padding:8px;border:1px solid #ddd">${email}</td></tr>

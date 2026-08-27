@@ -55,7 +55,7 @@ const events = [
 		description:
 			'Instalação de sistema solar fotovoltaico para condomínio residencial em Luanda.',
 		fullDescription:
-			'A EnerYetu concluiu a instalação de um sistema solar fotovoltaico de 50kW para um condomínio residencial de luxo em Luanda. O projeto incluiu painéis de alta eficiência, inversores string e sistema de monitorização remota.',
+			'A ENERYETU concluiu a instalação de um sistema solar fotovoltaico de 50kW para um condomínio residencial de luxo em Luanda. O projeto incluiu painéis de alta eficiência, inversores string e sistema de monitorização remota.',
 		startDate: new Date('2026-03-15'),
 		endDate: new Date('2026-03-20'),
 		displayDate: 'MAR · 2026',
@@ -71,7 +71,7 @@ const events = [
 		subtitle: 'Formação para instaladores',
 		description: 'Workshop prático de instalação de sistemas solares fotovoltaicos.',
 		fullDescription:
-			'A EnerYetu realizou um workshop de dois dias para 30 instaladores locais, cobrindo desde a dimensionamento de sistemas até a instalação e manutenção de painéis solares.',
+			'A ENERYETU realizou um workshop de dois dias para 30 instaladores locais, cobrindo desde a dimensionamento de sistemas até a instalação e manutenção de painéis solares.',
 		startDate: new Date('2026-04-10'),
 		endDate: new Date('2026-04-11'),
 		displayDate: 'ABR · 2026',
@@ -87,7 +87,7 @@ const events = [
 		subtitle: 'ENEX 2026',
 		description: 'Principal feira de energia renovável na África Austral.',
 		fullDescription:
-			'A EnerYetu participou na ENEX 2026, apresentando as suas soluções de energia solar, eólica e armazenamento para o mercado angolano.',
+			'A ENERYETU participou na ENEX 2026, apresentando as suas soluções de energia solar, eólica e armazenamento para o mercado angolano.',
 		startDate: new Date('2026-05-20'),
 		endDate: new Date('2026-05-22'),
 		displayDate: 'MAI · 2026',
@@ -103,7 +103,7 @@ const events = [
 		subtitle: 'Parque eólico de 5MW',
 		description: 'Desenvolvimento de parque eólico para comunidade rural em Benguela.',
 		fullDescription:
-			'A EnerYetu está a desenvolver um parque eólico de 5MW para fornecer energia limpa a uma comunidade rural isolada em Benguela.',
+			'A ENERYETU está a desenvolver um parque eólico de 5MW para fornecer energia limpa a uma comunidade rural isolada em Benguela.',
 		startDate: new Date('2026-06-01'),
 		displayDate: 'JUN · 2026',
 		countryName: 'Angola',
@@ -117,7 +117,7 @@ const events = [
 const posts = [
 	{
 		type: 'NOTICIA',
-		title: 'EnerYetu conclui instalação solar de 50kW em Luanda',
+		title: 'ENERYETU conclui instalação solar de 50kW em Luanda',
 		excerpt:
 			'Sistema fotovoltaico com monitorização remota para condomínio residencial, entregue em cinco dias.',
 		content: `
@@ -136,11 +136,11 @@ const posts = [
 	},
 	{
 		type: 'NOTICIA',
-		title: 'EnerYetu participa na ENEX 2026',
+		title: 'ENERYETU participa na ENEX 2026',
 		excerpt:
-			'A principal feira de energia renovável da África Austral contou com as soluções solares, eólicas e de armazenamento da EnerYetu.',
+			'A principal feira de energia renovável da África Austral contou com as soluções solares, eólicas e de armazenamento da ENERYETU.',
 		content: `
-            <p>A EnerYetu marcou presença na ENEX 2026, apresentando ao mercado angolano as suas soluções de energia solar, eólica e armazenamento.</p>
+            <p>A ENERYETU marcou presença na ENEX 2026, apresentando ao mercado angolano as suas soluções de energia solar, eólica e armazenamento.</p>
             <p>Durante os três dias de feira, a equipa recebeu parceiros, fornecedores e clientes interessados em projetos residenciais, comerciais e rurais.</p>
             <blockquote>O interesse em mini-redes rurais e sistemas off-grid foi o destaque desta edição.</blockquote>
             <p>A participação reforça o compromisso da empresa em ligar o fornecimento internacional ao trabalho de campo em Angola.</p>
@@ -151,11 +151,11 @@ const posts = [
 	},
 	{
 		type: 'NOTICIA',
-		title: 'EnerYetu lança programa de formação técnica para instaladores',
+		title: 'ENERYETU lança programa de formação técnica para instaladores',
 		excerpt:
 			'Formação prática em instalação e manutenção de sistemas solares, com certificação e entrega no local.',
 		content: `
-            <p>A EnerYetu abriu um programa de formação técnica dirigido a instaladores e técnicos de manutenção de sistemas solares.</p>
+            <p>A ENERYETU abriu um programa de formação técnica dirigido a instaladores e técnicos de manutenção de sistemas solares.</p>
             <h2>O que o programa oferece</h2>
             <ul>
                 <li>Formação prática em equipamento real</li>
@@ -181,7 +181,7 @@ const posts = [
                 <li>Verificação de ligações e inversores</li>
                 <li>Análise de produção e alarmes</li>
             </ol>
-            <p>Na EnerYetu, os contratos de manutenção incluem relatórios de desempenho e resposta prioritária, para que o seu sistema não pare quando menos espera.</p>
+            <p>Na ENERYETU, os contratos de manutenção incluem relatórios de desempenho e resposta prioritária, para que o seu sistema não pare quando menos espera.</p>
         `,
 		status: 'PUBLICADO',
 		featured: true,
@@ -219,7 +219,7 @@ const posts = [
                 <li>Dimensionamento híbrido com solar e armazenamento</li>
                 <li>Manutenção planeada de componentes mecânicos</li>
             </ol>
-            <p>A equipa de engenharia da EnerYetu apoia desde a avaliação do recurso até à entrega e manutenção da central.</p>
+            <p>A equipa de engenharia da ENERYETU apoia desde a avaliação do recurso até à entrega e manutenção da central.</p>
         `,
 		status: 'PUBLICADO',
 		featured: false,
@@ -298,7 +298,7 @@ async function main() {
 			data: {
 				id: uuidv7(),
 				name: 'Admin',
-				surname: 'EnerYetu',
+				surname: 'ENERYETU',
 				email: adminEmail,
 				password: await bcrypt.hash('qwerty123!', 10),
 				role: 'ADMIN',

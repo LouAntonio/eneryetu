@@ -138,7 +138,11 @@ export function Header() {
 		>
 			<div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-3">
 				<Link to="/" className="flex items-center" aria-label={t('brand')}>
-					<img src="/logo.png" alt={t('brand')} className="h-18 w-18 object-contain" />
+					<img
+						src="/logoBlue.png"
+						alt={t('brand')}
+						className="h-18 w-18 object-contain"
+					/>
 				</Link>
 
 				<nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Contact } from '@/views/Contact';
 
 export function generateMetadata(): Metadata {
-	return { title: 'Blog Post | EnerYetu' };
+	return { title: 'Blog Post | ENERYETU' };
 }
 
 export default function Page() {
