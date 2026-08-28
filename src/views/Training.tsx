@@ -37,7 +37,7 @@ function TrainingCard({ training }: { training: TrainingType }) {
 			)}
 			<div className="flex flex-1 flex-col p-6">
 				<div className="flex flex-wrap items-center gap-2">
-					<span className="inline-flex items-center rounded-full bg-blue/10 px-3 py-1 text-xs font-semibold text-blue">
+					<span className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink">
 						{training.deliveryMode}
 					</span>
 					{training.durationDays ? (
@@ -51,7 +51,7 @@ function TrainingCard({ training }: { training: TrainingType }) {
 					{training.title}
 				</h3>
 				{training.price ? (
-					<p className="mt-3 font-mono text-sm font-medium text-amber">
+					<p className="mt-3 font-mono text-sm font-medium text-warm-ink">
 						{formatCurrency(training.price, training.currency)}
 					</p>
 				) : null}
@@ -126,7 +126,7 @@ export function Training() {
 								onClick={() => setFilter(opt.key)}
 								className={`inline-flex items-center rounded-full border px-4 py-2 font-mono text-xs font-medium uppercase tracking-wider transition-colors ${
 									filter === opt.key
-										? 'border-amber bg-amber/10 text-amber'
+										? 'border-amber bg-amber text-ink'
 										: 'border-line bg-white text-sand hover:border-amber/50'
 								}`}
 							>

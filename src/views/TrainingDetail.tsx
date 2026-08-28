@@ -82,7 +82,7 @@ export function TrainingDetail() {
 
 				<div className="mt-8">
 					<div className="flex flex-wrap items-center gap-3">
-						<span className="inline-flex items-center rounded-full bg-blue/10 px-3 py-1 text-xs font-semibold text-blue">
+						<span className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink">
 							{training.deliveryMode}
 						</span>
 						{training.durationDays ? (
@@ -98,8 +98,8 @@ export function TrainingDetail() {
 					</h1>
 
 					{training.price ? (
-						<div className="mt-6 inline-flex items-center rounded-xl bg-amber/10 px-5 py-3">
-							<span className="font-mono text-lg font-bold text-amber">
+						<div className="mt-6 inline-flex items-center rounded-xl bg-amber px-5 py-3">
+							<span className="font-mono text-lg font-bold text-ink">
 								{formatCurrency(training.price, training.currency)}
 							</span>
 						</div>
@@ -107,12 +107,12 @@ export function TrainingDetail() {
 
 					<div className="mt-6 flex flex-wrap gap-3">
 						{training.includesCert && (
-							<span className="inline-flex items-center gap-1.5 rounded-full bg-volt/15 px-3 py-1.5 text-xs font-semibold text-volt">
+							<span className="inline-flex items-center gap-1.5 rounded-full bg-volt px-3 py-1.5 text-xs font-semibold text-ink">
 								✓ {t('training.detail.certificate')}
 							</span>
 						)}
 						{training.includesExam && (
-							<span className="inline-flex items-center gap-1.5 rounded-full bg-blue/15 px-3 py-1.5 text-xs font-semibold text-blue">
+							<span className="inline-flex items-center gap-1.5 rounded-full bg-blue px-3 py-1.5 text-xs font-semibold text-ink">
 								✓ {t('training.detail.exam')}
 							</span>
 						)}
@@ -152,7 +152,7 @@ export function TrainingDetail() {
 								<ol className="mt-4 space-y-3">
 									{modules.map((item, i) => (
 										<li key={i} className="flex items-start gap-3 text-sand">
-											<span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber/15 font-mono text-xs font-bold text-amber">
+											<span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber font-mono text-xs font-bold text-ink">
 												{i + 1}
 											</span>
 											{item}

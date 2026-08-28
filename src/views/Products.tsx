@@ -69,7 +69,7 @@ function ProductModal({ product, onClose }: { product: Product; onClose: () => v
 
 				{/* Content — right half (desktop) / bottom 60% (mobile) */}
 				<div className="flex flex-1 flex-col overflow-y-auto px-6 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
-					<p className="font-mono text-[0.65rem] font-medium uppercase tracking-[0.16em] text-amber">
+					<p className="font-mono text-[0.65rem] font-medium uppercase tracking-[0.16em] text-warm-ink">
 						{t('products.eyebrow')}
 					</p>
 

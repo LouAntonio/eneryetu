@@ -28,7 +28,7 @@ export function FAQ() {
 								key={i}
 								className="group border border-line bg-white p-6 transition-colors hover:border-ink/20"
 							>
-								<summary className="cursor-pointer font-display text-lg font-bold tracking-tight text-ink marker:text-blue">
+								<summary className="cursor-pointer font-display text-lg font-bold tracking-tight text-ink marker:text-ink">
 									{faq.question}
 								</summary>
 								<p className="mt-4 leading-relaxed text-slate">{faq.answer}</p>

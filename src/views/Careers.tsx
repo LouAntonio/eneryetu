@@ -35,7 +35,7 @@ function JobCard({ job }: { job: JobListing }) {
 						{job.location && <span>{job.location}</span>}
 					</div>
 				</div>
-				<span className="shrink-0 inline-flex items-center rounded-full bg-blue/10 px-3 py-1 text-xs font-semibold text-blue">
+				<span className="shrink-0 inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink">
 					{t(JOB_TYPE_LABELS[job.jobType] ?? job.jobType, { defaultValue: job.jobType })}
 				</span>
 			</div>

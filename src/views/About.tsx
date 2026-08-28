@@ -38,13 +38,13 @@ export function About() {
 			<section className="border-b border-line">
 				<div className="mx-auto grid w-full max-w-6xl gap-px border border-line bg-line px-0 lg:grid-cols-2">
 					<div className="bg-white p-8 lg:p-10">
-						<span className="ui-label text-sun-deep">{t('about.visionTitle')}</span>
+						<span className="ui-label text-ink">{t('about.visionTitle')}</span>
 						<p className="mt-4 font-display text-xl font-bold leading-snug tracking-tight text-ink">
 							{t('about.vision')}
 						</p>
 					</div>
 					<div className="bg-white p-8 lg:p-10">
-						<span className="ui-label text-blue">{t('about.missionTitle')}</span>
+						<span className="ui-label text-ink">{t('about.missionTitle')}</span>
 						<p className="mt-4 font-display text-xl font-bold leading-snug tracking-tight text-ink">
 							{t('about.mission')}
 						</p>

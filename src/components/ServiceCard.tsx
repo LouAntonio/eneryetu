@@ -28,7 +28,7 @@ export function ServiceCard({ title, blurb, image, index }: ServiceCardProps) {
 				{index !== undefined ? (
 					<span
 						className={`font-mono text-[0.68rem] tracking-[0.18em] ${
-							revealed ? 'text-blue' : 'text-slate group-hover:text-paper/60'
+							revealed ? 'text-ink' : 'text-slate group-hover:text-paper/60'
 						}`}
 					>
 						{String(index).padStart(2, '0')}

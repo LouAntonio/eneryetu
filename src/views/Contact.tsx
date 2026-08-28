@@ -97,9 +97,9 @@ export function Contact() {
 						{/* Morada — banner full-width */}
 						<div className="border border-line border-l-4 border-l-blue bg-white p-5">
 							<div className="flex items-start gap-3">
-								<PinIcon className="mt-0.5 text-blue" />
+								<PinIcon className="mt-0.5 text-ink" />
 								<div>
-									<span className="ui-label text-blue">
+									<span className="ui-label text-ink">
 										{t('contact.detailsTitle')}
 									</span>
 									<p className="mt-2 font-mono text-sm leading-relaxed text-ink">
@@ -112,7 +112,7 @@ export function Contact() {
 						{/* Cards de contacto — grid 2 colunas */}
 						<div className="grid gap-4 sm:grid-cols-2">
 							<div className="flex items-start gap-3 border border-line bg-white p-5">
-								<PhoneIcon className="mt-0.5 text-blue" />
+								<PhoneIcon className="mt-0.5 text-ink" />
 								<div>
 									<span className="ui-label text-slate">
 										{t('contact.phoneLabel')}
@@ -120,13 +120,13 @@ export function Contact() {
 									<div className="mt-1 flex flex-col gap-1">
 										<a
 											href="tel:+244923734199"
-											className="font-mono text-sm text-ink transition-colors hover:text-blue"
+											className="font-mono text-sm text-ink transition-colors hover:text-blue-dark"
 										>
 											+244 923 734 199
 										</a>
 										<a
 											href="tel:+244945459270"
-											className="font-mono text-sm text-ink transition-colors hover:text-blue"
+											className="font-mono text-sm text-ink transition-colors hover:text-blue-dark"
 										>
 											+244 945 459 270
 										</a>
@@ -138,12 +138,12 @@ export function Contact() {
 								href="mailto:geral@eneryetu.com"
 								className="group flex items-start gap-3 border border-line bg-white p-5 transition-colors hover:border-blue"
 							>
-								<EmailIcon className="mt-0.5 text-blue" />
+								<EmailIcon className="mt-0.5 text-ink" />
 								<div>
 									<span className="ui-label text-slate">
 										{t('contact.emailLabel')}
 									</span>
-									<p className="mt-1 font-mono text-sm text-ink group-hover:text-blue">
+									<p className="mt-1 font-mono text-sm text-ink group-hover:text-blue-dark">
 										{t('contact.email')}
 									</p>
 								</div>
@@ -157,12 +157,12 @@ export function Contact() {
 							rel="noreferrer noopener"
 							className="group flex items-start gap-3 border border-line bg-white p-5 transition-colors hover:border-blue"
 						>
-							<LinkedinIcon className="mt-0.5 text-blue" />
+							<LinkedinIcon className="mt-0.5 text-ink" />
 							<div>
 								<span className="ui-label text-slate">
 									{t('contact.linkedinLabel')}
 								</span>
-								<p className="mt-1 font-mono text-sm text-ink group-hover:text-blue">
+								<p className="mt-1 font-mono text-sm text-ink group-hover:text-blue-dark">
 									linkedin.com/company/eneryetu
 								</p>
 							</div>
@@ -171,9 +171,7 @@ export function Contact() {
 						{/* Horários */}
 						<div>
 							<div className="flex items-center gap-3">
-								<span className="ui-label text-blue">
-									{t('contact.hoursTitle')}
-								</span>
+								<span className="ui-label text-ink">{t('contact.hoursTitle')}</span>
 								<span aria-hidden className="h-0.5 min-w-8 flex-1 bg-line" />
 							</div>
 							<ul className="mt-5 border border-line bg-white">

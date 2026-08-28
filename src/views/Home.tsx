@@ -198,7 +198,7 @@ export function Home() {
 			{/* PARTNERS */}
 			<section className="border-b border-line">
 				<div className="mx-auto w-full max-w-6xl px-6 py-16 text-center">
-					<p className="ui-label text-sun-deep">{t('partners.eyebrow')}</p>
+					<p className="ui-label text-ink">{t('partners.eyebrow')}</p>
 					<h2 className="mt-4 font-display text-4xl font-black uppercase tracking-tight text-ink sm:text-5xl">
 						{t('partners.title')}
 					</h2>

@@ -64,7 +64,7 @@ export function SunGlyph({ className = '' }: { className?: string }) {
 
 export function CategoryTag({ children }: { children: ReactNode }) {
 	return (
-		<span className="inline-flex items-center rounded-full bg-amber/15 px-3 py-1 text-xs font-semibold text-amber">
+		<span className="inline-flex items-center rounded-full bg-amber px-3 py-1 text-xs font-semibold text-ink">
 			{children}
 		</span>
 	);
