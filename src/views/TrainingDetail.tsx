@@ -39,13 +39,17 @@ export function TrainingDetail() {
 	});
 
 	if (isLoading) {
-		return <LoadingBoard label={t('media.loading')} />;
+		return (
+			<div className="bg-bone pt-32 lg:pt-36">
+				<LoadingBoard label={t('media.loading')} />
+			</div>
+		);
 	}
 
 	if (!training) {
 		return (
 			<section className="min-h-[40vh] bg-bone">
-				<div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
+				<div className="mx-auto w-full max-w-6xl px-6 pt-32 pb-16 lg:pt-36 lg:pb-20">
 					<div className="rounded-2xl border border-line-warm bg-card p-8 sm:p-12">
 						<h1 className="font-editorial text-3xl font-semibold text-warm-ink">
 							{t('training.detail.notFound')}
@@ -66,7 +70,7 @@ export function TrainingDetail() {
 
 	return (
 		<article className="min-h-[40vh] bg-bone">
-			<div className="mx-auto w-full max-w-6xl px-6 py-14 lg:py-20">
+			<div className="mx-auto w-full max-w-6xl px-6 pt-32 pb-14 lg:pt-36 lg:pb-20">
 				<BackLink to="/training" label={t('training.eyebrow')} />
 
 				{training.coverImage && (

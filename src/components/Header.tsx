@@ -37,13 +37,12 @@ const ROUTES: Record<Exclude<NavKey, 'media'> | 'media', string> = {
 	contact: '/contact',
 };
 
-const CHARGE_BAR_HEIGHT = 72;
-
 export function Header() {
 	const { t } = useTranslation();
 	const location = useLocation();
 	const [open, setOpen] = useState(false);
-	const [overHero, setOverHero] = useState(() => window.scrollY < 10);
+	const hasHeroRef = useRef(false);
+	const [overHero, setOverHero] = useState(() => window.scrollY < 1);
 	const [charge, setCharge] = useState(0);
 	useDocumentTitle();
 
@@ -52,13 +51,13 @@ export function Header() {
 		if (prevPathRef.current !== location.pathname) {
 			prevPathRef.current = location.pathname;
 			setOpen(false);
-			setOverHero(window.scrollY < 10);
 		}
 	}, [location.pathname]);
 	// eslint-disable-next-line @next/next/no-img-element
 
 	useEffect(() => {
 		const update = () => {
+			setOverHero(hasHeroRef.current && window.scrollY < 1);
 			const max = document.documentElement.scrollHeight - window.innerHeight;
 			if (max <= 0) {
 				setCharge(0);
@@ -76,20 +75,16 @@ export function Header() {
 	}, []);
 
 	useEffect(() => {
-		let observer: IntersectionObserver | null = null;
-		const setup = () => {
-			const hero = document.getElementById('hero');
-			if (!hero) return;
-			observer = new IntersectionObserver(
-				(entries) => setOverHero(entries[0]?.isIntersecting ?? false),
-				{ rootMargin: `-${CHARGE_BAR_HEIGHT}px 0px 0px 0px`, threshold: 0 },
-			);
-			observer.observe(hero);
-		};
-		const raf = requestAnimationFrame(setup);
+		let active = true;
+		const raf = requestAnimationFrame(() => {
+			if (!active) return;
+			const heroFound = !!document.getElementById('hero');
+			hasHeroRef.current = heroFound;
+			setOverHero(heroFound && window.scrollY < 1);
+		});
 		return () => {
+			active = false;
 			cancelAnimationFrame(raf);
-			observer?.disconnect();
 		};
 	}, [location.pathname]);
 
