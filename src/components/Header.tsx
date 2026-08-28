@@ -134,131 +134,135 @@ export function Header() {
 				}`;
 
 	return (
-		<header
-			className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-				overHero ? 'bg-transparent' : 'border-b border-line bg-white/95 backdrop-blur'
-			}`}
-		>
-			<div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-3">
-				<Link to="/" className="flex items-center" aria-label={t('brand')}>
-					<img
-						src="/logoBlue.png"
-						alt={t('brand')}
-						className="h-18 w-18 object-contain"
-					/>
-				</Link>
+		<>
+			<header
+				className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
+					overHero ? 'bg-transparent' : 'border-b border-line bg-white/95 backdrop-blur'
+				}`}
+			>
+				<div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-3">
+					<Link to="/" className="flex items-center" aria-label={t('brand')}>
+						<img
+							src="/logoBlue.png"
+							alt={t('brand')}
+							className="h-18 w-18 object-contain"
+						/>
+					</Link>
 
-				<nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
-					{NAV_KEYS.map((key) =>
-						key === 'media' ? (
-							<div key={key} className="group relative">
+					<nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
+						{NAV_KEYS.map((key) =>
+							key === 'media' ? (
+								<div key={key} className="group relative">
+									<NavLink
+										to={ROUTES.media}
+										aria-haspopup="true"
+										className={({ isActive }) => linkTone(isActive)}
+									>
+										<span className="flex items-center gap-1.5">
+											{labels.media}
+											<svg
+												width="8"
+												height="5"
+												viewBox="0 0 8 5"
+												aria-hidden
+												className="fill-current transition-transform duration-200 group-hover:rotate-180"
+											>
+												<path d="M0 0h8L4 5z" />
+											</svg>
+										</span>
+									</NavLink>
+									<div
+										className={`invisible absolute left-0 top-full z-20 w-52 py-2 opacity-0 shadow-sm transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 ${
+											overHero
+												? 'bg-ink-deep text-paper'
+												: 'border border-line bg-white'
+										}`}
+									>
+										{MEDIA_KEYS.map((child) => (
+											<NavLink
+												key={child}
+												to={`${ROUTES.media}/${child}`}
+												className={({ isActive }) =>
+													`flex items-center gap-2 px-4 py-2 font-mono text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors ${
+														isActive
+															? 'text-volt'
+															: overHero
+																? 'text-paper/70 hover:text-paper'
+																: 'text-slate hover:text-ink'
+													}`
+												}
+											>
+												{mediaLabels[child]}
+											</NavLink>
+										))}
+									</div>
+								</div>
+							) : (
 								<NavLink
-									to={ROUTES.media}
-									aria-haspopup="true"
+									key={key}
+									to={ROUTES[key]}
 									className={({ isActive }) => linkTone(isActive)}
 								>
-									<span className="flex items-center gap-1.5">
-										{labels.media}
-										<svg
-											width="8"
-											height="5"
-											viewBox="0 0 8 5"
-											aria-hidden
-											className="fill-current transition-transform duration-200 group-hover:rotate-180"
-										>
-											<path d="M0 0h8L4 5z" />
-										</svg>
-									</span>
+									{labels[key]}
 								</NavLink>
-								<div
-									className={`invisible absolute left-0 top-full z-20 w-52 py-2 opacity-0 shadow-sm transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 ${
-										overHero
-											? 'bg-ink-deep text-paper'
-											: 'border border-line bg-white'
-									}`}
-								>
-									{MEDIA_KEYS.map((child) => (
-										<NavLink
-											key={child}
-											to={`${ROUTES.media}/${child}`}
-											className={({ isActive }) =>
-												`flex items-center gap-2 px-4 py-2 font-mono text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors ${
-													isActive
-														? 'text-volt'
-														: overHero
-															? 'text-paper/70 hover:text-paper'
-															: 'text-slate hover:text-ink'
-												}`
-											}
-										>
-											{mediaLabels[child]}
-										</NavLink>
-									))}
-								</div>
-							</div>
-						) : (
-							<NavLink
-								key={key}
-								to={ROUTES[key]}
-								className={({ isActive }) => linkTone(isActive)}
-							>
-								{labels[key]}
-							</NavLink>
-						),
-					)}
-				</nav>
+							),
+						)}
+					</nav>
 
-				<div className="hidden lg:block">
-					<LanguageSwitcher dark={overHero} />
+					<div className="hidden lg:block">
+						<LanguageSwitcher dark={overHero} />
+					</div>
+
+					<button
+						type="button"
+						className={`flex h-10 w-10 items-center justify-center border transition-colors lg:hidden ${
+							overHero
+								? 'border-paper/30 text-paper'
+								: 'border-line bg-white text-ink'
+						}`}
+						onClick={() => setOpen((value) => !value)}
+						aria-expanded={open}
+						aria-controls="mobile-menu"
+						aria-label={open ? t('common.menuClose') : t('common.menuOpen')}
+					>
+						{open ? (
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 16 16"
+								aria-hidden
+								className="text-current"
+							>
+								<path
+									d="M2 2l12 12M14 2L2 14"
+									stroke="currentColor"
+									strokeWidth="2"
+									fill="none"
+								/>
+							</svg>
+						) : (
+							<svg
+								width="18"
+								height="12"
+								viewBox="0 0 18 12"
+								aria-hidden
+								className="text-current"
+							>
+								<rect width="18" height="2" rx="1" fill="currentColor" />
+								<rect y="5" width="18" height="2" rx="1" fill="currentColor" />
+								<rect y="10" width="18" height="2" rx="1" fill="currentColor" />
+							</svg>
+						)}
+					</button>
 				</div>
 
-				<button
-					type="button"
-					className={`flex h-10 w-10 items-center justify-center border transition-colors lg:hidden ${
-						overHero ? 'border-paper/30 text-paper' : 'border-line bg-white text-ink'
-					}`}
-					onClick={() => setOpen((value) => !value)}
-					aria-expanded={open}
-					aria-controls="mobile-menu"
-					aria-label={open ? t('common.menuClose') : t('common.menuOpen')}
-				>
-					{open ? (
-						<svg
-							width="16"
-							height="16"
-							viewBox="0 0 16 16"
-							aria-hidden
-							className="text-current"
-						>
-							<path
-								d="M2 2l12 12M14 2L2 14"
-								stroke="currentColor"
-								strokeWidth="2"
-								fill="none"
-							/>
-						</svg>
-					) : (
-						<svg
-							width="18"
-							height="12"
-							viewBox="0 0 18 12"
-							aria-hidden
-							className="text-current"
-						>
-							<rect width="18" height="2" rx="1" fill="currentColor" />
-							<rect y="5" width="18" height="2" rx="1" fill="currentColor" />
-							<rect y="10" width="18" height="2" rx="1" fill="currentColor" />
-						</svg>
-					)}
-				</button>
-			</div>
-
-			<div aria-hidden className="relative h-0.5 w-full bg-line/40">
-				<div
-					className="absolute inset-y-0 left-0 bg-volt transition-[width] duration-150 ease-out"
-					style={{ width: `${charge * 100}%` }}
-				/>
-			</div>
+				<div aria-hidden className="relative h-0.5 w-full bg-line/40">
+					<div
+						className="absolute inset-y-0 left-0 bg-volt transition-[width] duration-150 ease-out"
+						style={{ width: `${charge * 100}%` }}
+					/>
+				</div>
+			</header>
 
 			{open ? (
 				<div id="mobile-menu" className="fixed inset-0 z-50 lg:hidden">
@@ -332,6 +336,6 @@ export function Header() {
 					</div>
 				</div>
 			) : null}
-		</header>
+		</>
 	);
 }

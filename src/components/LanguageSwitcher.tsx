@@ -21,7 +21,7 @@ export function LanguageSwitcher({ dark = false }: LanguageSwitcherProps) {
 
 	return (
 		<div
-			className={`flex items-center border-2 font-mono text-xs font-semibold uppercase tracking-[0.18em] ${tone}`}
+			className={`inline-flex items-center border-2 font-mono text-xs font-semibold uppercase tracking-[0.18em] ${tone}`}
 			role="group"
 			aria-label="Language"
 		>
