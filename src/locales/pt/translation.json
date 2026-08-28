@@ -89,7 +89,7 @@
 				"title": "Fornecimento de materiais",
 				"blurb": "Sobressalentes, equipamentos certificados, produtos químicos, lubrificantes e consumíveis industriais.",
 				"spec": "Equipamento certificado",
-				"image": "https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Materials supply.png"
 			},
 			{
 				"title": "Manutenção e reparação",
@@ -182,7 +182,7 @@
 		"eyebrow": "Sectores",
 		"title": "Sectores onde operamos",
 		"body": "",
-		"heroImage": "/images/hero/f9.png",
+		"heroImage": "/images/others/sectors.png",
 		"items": [
 			{
 				"title": "Petróleo & Gás",
@@ -190,7 +190,7 @@
 			},
 			{
 				"title": "Mineiro",
-				"image": "/images/others/Mining.jpg"
+				"image": "/images/others/Mining.png"
 			},
 			{
 				"title": "Energias Renováveis",
@@ -371,7 +371,7 @@
 		"eyebrow": "Carreiras",
 		"title": "Construa o futuro angolano connosco.",
 		"body": "Contratamos profissionais que querem crescer com os setores de Petróleo & Gás e Mineração em Angola. Se é o seu caso, fale connosco.",
-		"heroImage": "/images/others/Prancheta 1.jpg",
+		"heroImage": "/images/others/carrers.png",
 		"applyLabel": "Interessado? Envie o seu CV para",
 		"applyHint": "Mencione a área de interesse no assunto do email.",
 		"openPositions": "Vagas Abertas",
@@ -408,7 +408,7 @@
 		"eyebrow": "Mídia",
 		"title": "Notícias, eventos e o trabalho por trás dos painéis.",
 		"body": "Notas de campo dos nossos engenheiros, eventos públicos que organizamos e fotografias do trabalho.",
-		"heroImage": "/images/others/Prancheta 3.jpg",
+		"heroImage": "/images/others/Prancheta 1.jpg",
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "As notas de campo estão a ser redigidas.",

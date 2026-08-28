@@ -46,7 +46,7 @@
 	"intro": {
 		"eyebrow": "Who we are",
 		"title": "An Angolan services company for Oil & Gas and Mining.",
-		"body": "We are an Oil & Gas and Mining sector services company, 100% Angolan, created by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas sector.",
+		"body": "We are a service provider company operating in the Oil & Gas and Mining Industries, fully Angolan-owned, founded by Angolan professionals with over 15 years of experience in Project Management within the Oil & Gas sector.",
 		"points": [
 			"100% Angolan",
 			"15+ years in O&G project management",
@@ -89,7 +89,7 @@
 				"title": "Materials supply",
 				"blurb": "Spare parts, certified equipment, chemical products, lubricants and industrial consumables.",
 				"spec": "Certified equipment",
-				"image": "https://images.unsplash.com/photo-1633155617309-6201a8096e8a?q=80&w=800&auto=format&fit=crop"
+				"image": "/images/others/Materials supply.png"
 			},
 			{
 				"title": "Maintenance & repair",
@@ -182,7 +182,7 @@
 		"eyebrow": "Sectors",
 		"title": "Sectors where we operate",
 		"body": "",
-		"heroImage": "/images/hero/f9.png",
+		"heroImage": "/images/others/sectors.png",
 		"items": [
 			{
 				"title": "Oil & Gas",
@@ -190,7 +190,7 @@
 			},
 			{
 				"title": "Mining",
-				"image": "/images/others/Mining.jpg"
+				"image": "/images/others/Mining.png"
 			},
 			{
 				"title": "Renewable Energy",
@@ -317,53 +317,53 @@
 		"eyebrow": "About us",
 		"title": "The Angolan partner for strategic sourcing and local content.",
 		"lead": "ENERYETU is an Angolan industrial services and solutions company supporting the Oil & Gas and Mining sectors through Strategic Sourcing, Technical Consulting, Skilled Manpower, and specialised industrial services.",
-		"body1": "We are an Oil & Gas and Mining sector services company, 100% Angolan, created by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas sector.",
-		"body2": "We are an ESG (Environmental, Social & Governance) company — Committed to sustainable practices, respecting the environment, minimising environmental risks and supporting the energy transition in the industrial and oil sectors.\n\nWe have deep knowledge of the Angolan oil market and are interested in establishing strategic partnerships capable of bringing mutual benefits to companies, investors, employees, partners and communities.",
+		"body1": "We are a service provider company operating in the Oil & Gas and Mining Industries, fully Angolan-owned, founded by Angolan professionals with over 15 years of experience in Project Management within the Oil & Gas sector.",
+		"body2": "We are an ESG-focused company (Environmental, Social & Governance), committed to sustainable practices, environmental stewardship, and supporting the energy transition within the industrial and oil e gas sectors.\n\nWe have deep knowledge of the Angolan Oil market and we are keen to establish strategic partnerships that generate mutual value for companies, investors, partners, employees, and local communities.",
 		"heroImage": "/images/others/Prancheta 9.jpg",
 		"visionTitle": "Vision",
-		"vision": "To be an innovative company of national and international reference in the representation and development of businesses in the oil, gas and other heavy industries sectors, positioning Angola as a strategic hub in the global supply chain.",
+		"vision": "To be a leading African platform for Strategic Sourcing and Local Content, connecting global capabilities with opportunities in Angola and across the continent, and positioning Angola as a strategic gateway and competitive hub for global Oil & Gas and heavy industry supply chains.",
 		"missionTitle": "Mission",
-		"mission": "To connect international suppliers to the Angolan and African oil & gas and heavy industry markets, offering excellence solutions that promote innovation, sustainability, local content and community development.",
+		"mission": "To create and facilitate business opportunities for national and international companies in Angola and across African markets through integrated Strategic Sourcing, Local Content, market access, and business development solutions, fostering sustainable value for clients, partners, local industries, and communities.",
 		"valuesTitle": "Values",
 		"values": [
 			{
-				"title": "Safety",
-				"blurb": "Human life first – We protect lives, equipment and the ecosystem."
+				"title": "SAFETY",
+				"blurb": "Human life comes first – We protect lives, equipment, and the ecosystem."
 			},
 			{
-				"title": "Integrity",
-				"blurb": "We defend ethical conduct at all levels of the organisation."
+				"title": "INTEGRITY",
+				"blurb": "We uphold ethical conduct at all levels of the organization."
 			},
 			{
-				"title": "Respect",
-				"blurb": "We believe in the dignity of every individual, promoting inclusion, diversity and ethical relationships."
+				"title": "RESPECT",
+				"blurb": "We believe in the dignity of every individual, promoting inclusion, diversity, and ethical relationship."
 			},
 			{
-				"title": "Responsibility",
-				"blurb": "We act with social awareness, contributing with real projects that positively impact the environment and people's well-being."
+				"title": "RESPONSIBILITY",
+				"blurb": "We act with social consciousness, contributing to real projects that positively impact businesses, the environment and people's well-being."
 			},
 			{
-				"title": "Human Dignity",
-				"blurb": "We promote and protect human life by finding dignified solutions."
+				"title": "HUMAN DIGNITY",
+				"blurb": "We promote and protect human life by delivering dignifying solutions."
 			}
 		],
 		"principlesTitle": "Principles",
 		"principles": [
 			{
-				"title": "Legality",
-				"blurb": "We always act in compliance with the Law, respecting national and international standards and contractual commitments."
+				"title": "LEGALITY",
+				"blurb": "We always act in full compliance with the law, adhering to national and international regulations and contractual obligations."
 			},
 			{
-				"title": "Justice & Equity",
-				"blurb": "We promote equal opportunities and fair treatment for all people, with attention to the specific needs of each reality."
+				"title": "JUSTICE & EQUITY",
+				"blurb": "We promote equal opportunities and fair treatment for all, paying close attention to the specific needs of each context."
 			},
 			{
-				"title": "Transparency",
-				"blurb": "We maintain clear, honest and accessible management and communication with all stakeholders, reinforcing institutional trust."
+				"title": "TRANSPARENCY",
+				"blurb": "We maintain clear, honest, and accessible management and communication for all stakeholders, reinforcing institutional trust."
 			},
 			{
-				"title": "Solidarity",
-				"blurb": "We value people and support community development, respecting human and cultural rights."
+				"title": "SOLIDARITY",
+				"blurb": "We value people and support community development, respecting the Environment as well as human and cultural rights."
 			}
 		]
 	},
@@ -371,7 +371,7 @@
 		"eyebrow": "Careers",
 		"title": "Build Angola's future with us.",
 		"body": "We hire professionals who want to grow with Angola's Oil & Gas and Mining industries. If that is you, tell us.",
-		"heroImage": "/images/others/Prancheta 1.jpg",
+		"heroImage": "/images/others/carrers.png",
 		"applyLabel": "Interested? Send your CV to",
 		"applyHint": "Mention your area of interest in the subject line.",
 		"openPositions": "Open Positions",
@@ -408,7 +408,7 @@
 		"eyebrow": "Media",
 		"title": "News, events and the work behind the panels.",
 		"body": "Field notes from our engineers, public events we host, and photographs of the work.",
-		"heroImage": "/images/others/Prancheta 3.jpg",
+		"heroImage": "/images/others/Prancheta 1.jpg",
 		"blog": {
 			"title": "Blog",
 			"emptyTitle": "Field notes are being drafted.",
@@ -488,7 +488,7 @@
 		}
 	},
 	"footer": {
-		"about": "We are an Oil & Gas and Mining sector services company, 100% Angolan, created by Angolan professionals with over 15 years of experience in Project Management in the Oil & Gas sector.",
+		"about": "We are a service provider company operating in the Oil & Gas and Mining Industries, fully Angolan-owned, founded by Angolan professionals with over 15 years of experience in Project Management within the Oil & Gas sector.",
 		"quickLinksTitle": "Quick links",
 		"mediaLinksTitle": "Media",
 		"contactTitle": "Contact",
