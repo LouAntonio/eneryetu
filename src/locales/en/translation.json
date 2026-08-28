@@ -299,13 +299,18 @@
 	"partners": {
 		"eyebrow": "Partners",
 		"title": "A network of strategic partners",
-		"body": "We work with domestic and international partners to deliver complete solutions to our clients.",
+		"body": "We work with local and international partners to deliver complete solutions to our clients.",
 		"items": [
-			{ "name": "Elite Flow Control", "logo": "/images/parceiros/elite.png" },
 			{ "name": "Elite Project Engineering", "logo": "/images/parceiros/elite.png" },
 			{ "name": "Rico Organizações", "logo": "/images/parceiros/rico.png" },
 			{ "name": "Synergy Projects Consulting", "logo": "/images/parceiros/synergy.png" },
-			{ "name": "Risaku Energy Services Company", "logo": "/images/parceiros/risaku.png" }
+			{ "name": "Risaku Energy Services Company", "logo": "/images/parceiros/risaku.png" },
+			{ "name": "Kwame", "logo": "/images/parceiros/kwame.jpg" },
+			{ "name": "DallOil", "logo": "/images/parceiros/dalloil.png" },
+			{ "name": "Fudao", "logo": "/images/parceiros/fudao.png" },
+			{ "name": "OAT", "logo": "/images/parceiros/oat.png" },
+			{ "name": "Trident", "logo": "/images/parceiros/trident.png" },
+			{ "name": "WEPROQURE", "logo": "/images/parceiros/weproqure.png" }
 		]
 	},
 	"cta": {
