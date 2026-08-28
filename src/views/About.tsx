@@ -2,8 +2,14 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { PageHero } from '../components/PageHero';
+import { CarouselHero } from '../components/CarouselHero';
 import { SectionHeading } from '../components/SectionHeading';
+
+const HERO_IMAGES = [
+	'/images/others/about1.jpg',
+	'/images/others/about2.avif',
+	'/images/others/about3.webp',
+];
 
 export function About() {
 	const { t } = useTranslation();
@@ -12,12 +18,12 @@ export function About() {
 
 	return (
 		<>
-			<PageHero
+			<CarouselHero
 				id="hero"
+				images={HERO_IMAGES}
 				eyebrow={t('about.eyebrow')}
 				title={t('about.title')}
 				body={t('about.lead')}
-				image={t('about.heroImage')}
 			/>
 
 			<section className="border-b border-line">
