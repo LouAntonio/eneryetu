@@ -14,6 +14,7 @@
 		"events": "Events",
 		"gallery": "Gallery",
 		"careers": "Careers",
+		"faq": "FAQ",
 		"contact": "Contact"
 	},
 	"ticker": {
@@ -723,6 +724,46 @@
 			"metaTitle": "Meta title",
 			"metaDescription": "Meta description"
 		}
+	},
+	"faq": {
+		"eyebrow": "FAQ",
+		"title": "Frequently Asked Questions",
+		"body": "Find answers to the most common questions about our services, sectors, and how we operate.",
+		"heroImage": "/images/others/Prancheta 3.jpg",
+		"items": [
+			{
+				"question": "What services does ENERYETU provide?",
+				"answer": "We provide strategic sourcing, consulting & intermediation, manpower supply, logistics & supply chain, materials supply, maintenance & repair, water treatment, engineering & construction, integrity management, fabric maintenance & painting, renewable energy, waste management, industrial cleaning, fabrication & construction of structures, technical assistance, and mechanical/electrical/instrumentation services."
+			},
+			{
+				"question": "Which industries do you serve?",
+				"answer": "We serve the Oil & Gas, Mining, Renewable Energy, Blue Economy, Transport, Civil Construction, Water Treatment, and Waste Management sectors."
+			},
+			{
+				"question": "Where is ENERYETU located?",
+				"answer": "Our head office is located in Luanda, Angola — Apartment 5, 1st floor, building E152, Rua 70, Nova Vida district."
+			},
+			{
+				"question": "How can I request a quote?",
+				"answer": "You can request a quote through our Contact page, by calling +244 923 734 199 or +244 945 459 270, or by emailing geral@eneryetu.com. We typically respond within one business day."
+			},
+			{
+				"question": "Does ENERYETU offer training programs?",
+				"answer": "Yes. We offer professional training in Project Management, Primavera P6, Welding, and NDT Inspection for national and international teams."
+			},
+			{
+				"question": "Is ENERYETU an Angolan-owned company?",
+				"answer": "Yes. We are 100% Angolan-owned, founded by Angolan professionals with over 15 years of experience in Project Management within the Oil & Gas sector."
+			},
+			{
+				"question": "What is ENERYETU's approach to ESG?",
+				"answer": "We are an ESG-focused company committed to sustainable practices, environmental stewardship, and supporting the energy transition within the industrial and oil & gas sectors."
+			},
+			{
+				"question": "How can I apply for a job at ENERYETU?",
+				"answer": "You can apply through our Careers page by submitting a spontaneous application, or by sending your CV to geral@eneryetu.com mentioning your area of interest."
+			}
+		]
 	},
 	"notFound": {
 		"title": "You are off the grid.",

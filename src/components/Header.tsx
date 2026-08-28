@@ -16,6 +16,7 @@ const NAV_KEYS = [
 	'training',
 	'media',
 	'careers',
+	'faq',
 	'contact',
 ] as const;
 const MEDIA_KEYS = ['blog', 'news', 'events', 'gallery'] as const;
@@ -32,6 +33,7 @@ const ROUTES: Record<Exclude<NavKey, 'media'> | 'media', string> = {
 	training: '/training',
 	media: '/media',
 	careers: '/careers',
+	faq: '/faq',
 	contact: '/contact',
 };
 
@@ -108,6 +110,7 @@ export function Header() {
 		training: t('navigation.training'),
 		media: t('navigation.media'),
 		careers: t('navigation.careers'),
+		faq: t('navigation.faq'),
 		contact: t('navigation.contact'),
 	};
 	const mediaLabels: Record<MediaKey, string> = {

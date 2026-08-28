@@ -91,6 +91,7 @@ export function Footer() {
 		{ key: 'sectors', to: '/sectors' },
 		{ key: 'services', to: '/services' },
 		{ key: 'training', to: '/training' },
+		{ key: 'faq', to: '/faq' },
 	] as const;
 
 	const media = [

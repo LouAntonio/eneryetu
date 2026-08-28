@@ -14,6 +14,7 @@
 		"events": "Eventos",
 		"gallery": "Galeria",
 		"careers": "Carreiras",
+		"faq": "FAQ",
 		"contact": "Contactos"
 	},
 	"ticker": {
@@ -723,6 +724,46 @@
 			"metaTitle": "Meta título",
 			"metaDescription": "Meta descrição"
 		}
+	},
+	"faq": {
+		"eyebrow": "FAQ",
+		"title": "Perguntas Frequentes",
+		"body": "Encontre respostas às perguntas mais comuns sobre os nossos serviços, sectores e como operamos.",
+		"heroImage": "/images/others/Prancheta 3.jpg",
+		"items": [
+			{
+				"question": "Que serviços a ENERYETU presta?",
+				"answer": "Prestamos serviços de sourcing estratégico, consultoria e intermediação, fornecimento de mão-de-obra, logística e cadeia de suprimentos, fornecimento de materiais, manutenção e reparação, tratamento de água, engenharia e construção, gestão de integridade, manutenção de fabricação e pintura, energias renováveis, gestão de resíduos, limpeza industrial, fabrico e construção de estruturas, assistência técnica, e serviços de mecânica/elétrica/instrumentação."
+			},
+			{
+				"question": "Que sectores atendem?",
+				"answer": "Atendemos os sectores de Petróleo & Gás, Mineração, Energias Renováveis, Economia Azul, Transporte, Construção Civil, Tratamento de Água e Gestão de Resíduos."
+			},
+			{
+				"question": "Onde está localizada a ENERYETU?",
+				"answer": "A nossa sede está localizada em Luanda, Angola — Apartamento 5, 1º andar, edifício E152, Rua 70, bairro Nova Vida."
+			},
+			{
+				"question": "Como posso solicitar um orçamento?",
+				"answer": "Pode solicitar um orçamento através da nossa página de Contactos, ligando para +244 923 734 199 ou +244 945 459 270, ou enviando um email para geral@eneryetu.com. Normalmente respondemos num dia útil."
+			},
+			{
+				"question": "A ENERYETU oferece programas de formação?",
+				"answer": "Sim. Oferecemos formação profissional em Gestão de Projectos, Primavera P6, Soldadura e Inspeção NDT para equipas nacionais e internacionais."
+			},
+			{
+				"question": "A ENERYETU é uma empresa angolana?",
+				"answer": "Sim. Somos 100% angolanos, fundados por profissionais angolanos com mais de 15 anos de experiência em Gestão de Projectos no sector de Petróleo e Gás."
+			},
+			{
+				"question": "Qual é a abordagem da ENERYETU ao ESG?",
+				"answer": "Somos uma empresa focada em ESG, comprometida com práticas sustentáveis, stewardship ambiental e apoio à transição energética nos sectores industrial e de petróleo & gás."
+			},
+			{
+				"question": "Como posso candidatar-me a um emprego na ENERYETU?",
+				"answer": "Pode candidatar-se através da nossa página de Carreiras submetendo uma candidatura espontânea, ou enviando o seu CV para geral@eneryetu.com mencionando a sua área de interesse."
+			}
+		]
 	},
 	"notFound": {
 		"title": "Está fora da rede.",
