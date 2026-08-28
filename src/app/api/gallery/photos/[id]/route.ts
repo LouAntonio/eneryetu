@@ -1,6 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { prisma } from '@/server/prisma';
 import { requireAdmin } from '@/server/auth';
+import { destroyAsset } from '@/server/cloudinary';
 import { ok, okMessage, fail, readJson, handleError } from '@/server/http';
 
 const photoInclude = { category: true };
@@ -54,6 +55,10 @@ export async function DELETE(req: NextRequest, ctx: { params: Promise<{ id: stri
 		const existing = await prisma.galleryPhoto.findUnique({ where: { id } });
 		if (!existing) {
 			return fail(404, 'Foto não encontrada');
+		}
+
+		if (existing.publicId) {
+			await destroyAsset(existing.publicId).catch(() => undefined);
 		}
 
 		await prisma.galleryPhoto.delete({ where: { id } });

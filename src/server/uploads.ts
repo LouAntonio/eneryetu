@@ -242,6 +242,13 @@ export async function handleUploadGalleryPhoto(
 	await requireAdmin(req);
 	const file = await getEventFile(req, 'file', IMAGE_EXTENSIONS, MAX_IMAGE_SIZE);
 
+	if (id) {
+		const existing = await prisma.galleryPhoto.findUnique({ where: { id } });
+		if (existing) {
+			await destroyStored(existing.publicId ?? undefined, existing.imageUrl ?? undefined);
+		}
+	}
+
 	const buffer = Buffer.from(await file.arrayBuffer());
 	const result = await uploadToCloudinary(buffer, id ?? 'gallery', 'photo', false);
 

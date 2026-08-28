@@ -1,6 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { prisma } from '@/server/prisma';
 import { requireAdmin } from '@/server/auth';
+import { destroyAsset } from '@/server/cloudinary';
 import { ok, okMessage, fail, readJson, handleError } from '@/server/http';
 
 export async function GET(_req: NextRequest, ctx: { params: Promise<{ id: string }> }) {
@@ -31,7 +32,6 @@ export async function PUT(req: NextRequest, ctx: { params: Promise<{ id: string 
 			return fail(404, 'Produto não encontrado');
 		}
 
-		const { destroyAsset } = await import('@/server/cloudinary');
 		if (
 			typeof body.coverImage === 'string' &&
 			body.coverImage !== existing.coverImage &&
@@ -65,6 +65,10 @@ export async function DELETE(req: NextRequest, ctx: { params: Promise<{ id: stri
 		const product = await prisma.product.findUnique({ where: { id } });
 		if (!product) {
 			return fail(404, 'Produto não encontrado');
+		}
+
+		if (product.coverImagePubId) {
+			await destroyAsset(product.coverImagePubId).catch(() => undefined);
 		}
 
 		await prisma.product.delete({ where: { id } });
