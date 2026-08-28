@@ -110,7 +110,7 @@ export function MediaPostDetail() {
 						/>
 					</div>
 
-					<aside className="hidden lg:block">
+					<aside className="lg:block">
 						<div className="rounded-2xl border border-line-warm bg-card p-6 lg:sticky lg:top-24">
 							<span className="font-editorial text-lg font-semibold text-warm-ink">
 								{t('media.specTitle')}

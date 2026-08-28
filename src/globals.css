@@ -197,10 +197,14 @@ body {
 	}
 
 	.rich-content table {
-		width: 100%;
+		display: block;
+		max-width: 100%;
+		width: max-content;
+		overflow-x: auto;
 		border-collapse: collapse;
 		margin: 1.25em 0;
 		font-size: 0.85rem;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.rich-content th,

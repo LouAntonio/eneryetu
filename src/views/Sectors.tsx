@@ -20,11 +20,11 @@ export function Sectors() {
 
 			<section>
 				<div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
-					<div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+					<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
 						{sectors.map((sector) => (
 							<div
 								key={sector.title}
-								className="group relative aspect-[4/5] overflow-hidden rounded-lg bg-ink"
+								className="group relative aspect-[3/2] overflow-hidden rounded-lg bg-ink sm:aspect-[4/5]"
 							>
 								{sector.image ? (
 									<img

@@ -36,7 +36,7 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 				<div className="relative mx-auto flex w-full max-w-6xl items-end justify-between gap-8 px-6 pb-14 pt-28">
 					<div className="max-w-2xl">
 						<span className="ui-label text-paper/70">{t('media.eyebrow')}</span>
-						<h1 className="mt-5 max-w-3xl font-display text-6xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-7xl">
+						<h1 className="mt-5 max-w-3xl text-balance font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-6xl lg:text-7xl">
 							{t('media.title')}
 						</h1>
 						<p className="mt-5 max-w-xl text-lg leading-relaxed text-paper/75">
@@ -49,7 +49,7 @@ export function MediaLayout({ children }: { children: ReactNode }) {
 			</header>
 
 			<nav aria-label={t('navigation.media')} className="border-b border-line-warm bg-bone">
-				<div className="mx-auto flex w-full max-w-6xl gap-2 overflow-x-auto px-6 py-4">
+				<div className="mx-auto flex w-full max-w-6xl flex-wrap gap-2 px-6 py-4">
 					{MEDIA_KEYS.map((key) => (
 						<NavLink
 							key={key}

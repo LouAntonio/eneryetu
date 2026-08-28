@@ -87,12 +87,12 @@ export function PartnerMarquee({ partners }: { partners: Partner[] }) {
 				{items.map((partner, i) => (
 					<div
 						key={`${partner.name}-${i}`}
-						className="flex shrink-0 items-center justify-center px-10"
+						className="flex shrink-0 items-center justify-center px-6 sm:px-10"
 					>
 						<img
 							src={partner.logo}
 							alt={partner.name}
-							className="h-[200px] w-[200px] object-contain opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+							className="h-[120px] w-[120px] object-contain opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0 sm:h-[200px] sm:w-[200px]"
 							loading="lazy"
 							draggable={false}
 						/>

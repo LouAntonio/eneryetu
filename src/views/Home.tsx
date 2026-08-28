@@ -58,7 +58,7 @@ export function Home() {
 
 				<div className="relative mx-auto w-full max-w-6xl px-6 pb-14 pt-28 sm:pt-32 lg:pt-36">
 					<span className="ui-label text-paper/70">{t('hero.eyebrow')}</span>
-					<h1 className="mt-5 max-w-4xl font-display text-6xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-7xl lg:text-8xl">
+					<h1 className="mt-5 max-w-4xl text-balance font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-6xl lg:text-7xl xl:text-8xl">
 						{t('hero.title')}
 					</h1>
 					<p className="mt-6 max-w-2xl text-lg leading-relaxed text-paper/75">
@@ -138,12 +138,12 @@ export function Home() {
 						title={t('sectors.title')}
 						tone="sun"
 					/>
-					<div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+					<div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
 						{sectors.slice(0, 4).map((sector) => (
 							<Link
 								key={sector.title}
 								to="/sectors"
-								className="group relative aspect-[4/5] overflow-hidden rounded-lg bg-ink"
+								className="group relative aspect-[3/2] overflow-hidden rounded-lg bg-ink sm:aspect-[4/5]"
 							>
 								{sector.image ? (
 									<img

@@ -38,7 +38,7 @@ export function SectionHeading({
 					}`}
 				/>
 			</div>
-			<h2 className="mt-5 max-w-3xl font-display text-5xl font-black uppercase leading-[0.95] tracking-tight text-ink sm:text-6xl">
+			<h2 className="mt-5 max-w-3xl text-balance font-display text-3xl font-black uppercase leading-[0.95] tracking-tight text-ink sm:text-4xl lg:text-5xl">
 				{title}
 			</h2>
 			{body ? (

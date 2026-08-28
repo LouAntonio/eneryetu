@@ -12,7 +12,7 @@ export function PageHeader({ eyebrow, title, body }: PageHeaderProps) {
 			<div aria-hidden className="absolute inset-0 -z-10 grid-light opacity-60" />
 			<div className="relative mx-auto w-full max-w-6xl px-6">
 				<span className="ui-label text-slate">{eyebrow}</span>
-				<h1 className="mt-4 max-w-3xl font-display text-6xl font-black uppercase leading-[0.92] tracking-tight text-ink sm:text-7xl">
+				<h1 className="mt-4 max-w-3xl text-balance font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-ink sm:text-6xl lg:text-7xl">
 					{title}
 				</h1>
 				{body ? (

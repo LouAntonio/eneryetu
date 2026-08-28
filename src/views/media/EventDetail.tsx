@@ -88,7 +88,7 @@ export function MediaEventDetail() {
 						) : null}
 					</div>
 
-					<aside className="order-first lg:order-none">
+					<aside className="lg:order-none">
 						<div className="rounded-2xl border border-line-warm bg-card p-6 lg:sticky lg:top-24">
 							<span className="font-editorial text-lg font-semibold text-warm-ink">
 								{t('media.events.spec.title')}

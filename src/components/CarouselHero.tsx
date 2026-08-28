@@ -55,7 +55,7 @@ export function CarouselHero({
 
 			<div className="relative mx-auto w-full max-w-6xl px-6 pb-14 pt-28 sm:pt-32 lg:pt-36">
 				<span className="ui-label text-paper/70">{eyebrow}</span>
-				<h1 className="mt-5 max-w-4xl font-display text-6xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-7xl lg:text-8xl">
+				<h1 className="mt-5 max-w-4xl text-balance font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-paper sm:text-6xl lg:text-7xl xl:text-8xl">
 					{title}
 				</h1>
 				{body ? (
