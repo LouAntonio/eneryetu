@@ -131,10 +131,10 @@ export function MediaGallery() {
 				onClick={(e) => {
 					if (e.target === dialogRef.current) closeLightbox();
 				}}
-				className="backdrop:bg-warm-ink/90 rounded-2xl border-0 bg-transparent p-0 backdrop:backdrop-blur-sm"
+				className="fixed inset-0 m-0 h-full w-full border-0 bg-transparent p-0 backdrop:bg-warm-ink/90 backdrop:backdrop-blur-sm"
 			>
 				{lightboxPhoto && (
-					<div className="relative flex min-h-[50vh] items-center justify-center">
+					<div className="relative flex h-full w-full items-center justify-center p-6">
 						<button
 							type="button"
 							onClick={closeLightbox}
