@@ -32,10 +32,7 @@ export function Topbar({ title, eyebrow }: TopbarProps) {
 						</div>
 					) : null}
 					<div aria-hidden className="hidden h-8 w-px bg-line sm:block" />
-					<Link
-						to="/"
-						className="btn btn-mono px-4 py-2 text-xs"
-					>
+					<Link to="/" className="btn btn-mono px-4 py-2 text-xs">
 						↗ {t('admin.backToSite')}
 					</Link>
 					<button

@@ -91,7 +91,7 @@ export function TrainingDetail() {
 						</span>
 						{training.durationDays ? (
 							<span className="text-sm text-sand">
-								{t('training.days', { count: training.durationDays })}
+								{training.durationDays} {t('training.days')}
 							</span>
 						) : null}
 					</div>
@@ -189,9 +189,7 @@ export function TrainingDetail() {
 									label={t('training.detail.duration')}
 									value={
 										training.durationDays
-											? t('training.days', {
-													count: training.durationDays,
-												})
+											? `${training.durationDays} ${t('training.days')}`
 											: null
 									}
 								/>

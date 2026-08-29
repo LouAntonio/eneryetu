@@ -3,7 +3,16 @@
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { api } from '../../services/api';
-import type { Event, GalleryPhoto, Paginated, Post, Product, Training, JobListing, User } from '../../types';
+import type {
+	Event,
+	GalleryPhoto,
+	Paginated,
+	Post,
+	Product,
+	Training,
+	JobListing,
+	User,
+} from '../../types';
 import { AdminPage } from '../../components/admin/AdminPage';
 
 function useCount<T>(key: string, url: string) {

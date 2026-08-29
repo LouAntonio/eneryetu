@@ -22,7 +22,11 @@ const NAV_GROUPS = [
 		labelKey: 'admin.sidebar.media',
 		items: [
 			{ to: '/eneryetu/gallery', labelKey: 'admin.nav.gallery', end: false },
-			{ to: '/eneryetu/gallery/categories', labelKey: 'admin.galleryCategories.title', end: false },
+			{
+				to: '/eneryetu/gallery/categories',
+				labelKey: 'admin.galleryCategories.title',
+				end: false,
+			},
 		],
 	},
 	{
@@ -93,7 +97,13 @@ export function Sidebar() {
 					className="flex items-center gap-2 border border-paper/20 px-3 py-2.5 font-mono text-[0.68rem] font-medium uppercase tracking-[0.18em] text-paper/60 transition-colors hover:border-volt hover:text-volt"
 				>
 					<svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
-						<path d="M1 6h8M5.5 2L2 6l3.5 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+						<path
+							d="M1 6h8M5.5 2L2 6l3.5 4"
+							stroke="currentColor"
+							strokeWidth="1.2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+						/>
 					</svg>
 					{t('admin.backToSite')}
 				</NavLink>

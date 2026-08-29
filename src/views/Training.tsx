@@ -42,8 +42,7 @@ function TrainingCard({ training }: { training: TrainingType }) {
 					</span>
 					{training.durationDays ? (
 						<span className="text-xs text-sand">
-							{training.durationDays}{' '}
-							{t('training.days', { count: training.durationDays })}
+							{training.durationDays} {t('training.days')}
 						</span>
 					) : null}
 				</div>
