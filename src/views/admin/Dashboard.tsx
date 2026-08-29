@@ -3,14 +3,14 @@
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { api } from '../../services/api';
-import type { Event, Paginated, Post, User } from '../../types';
+import type { Event, GalleryPhoto, Paginated, Post, Product, Training, JobListing, User } from '../../types';
 import { AdminPage } from '../../components/admin/AdminPage';
 
 function useCount<T>(key: string, url: string) {
 	return useQuery({
 		queryKey: [key, 'count'],
 		queryFn: async () => {
-			const page = await api.get<Paginated<T>>(url, { params: { limit: 1 } });
+			const page = await api.get<Paginated<T>>(url, { params: { limit: 1, all: 'true' } });
 			return page.pagination.total;
 		},
 	});
@@ -25,6 +25,10 @@ export function Dashboard() {
 	});
 	const posts = useCount<Post>('posts', '/posts');
 	const events = useCount<Event>('events', '/events');
+	const trainings = useCount<Training>('trainings', '/trainings');
+	const products = useCount<Product>('products', '/products');
+	const jobs = useCount<JobListing>('jobs', '/jobs');
+	const galleryPhotos = useCount<GalleryPhoto>('galleryPhotos', '/gallery/photos');
 
 	const stats = [
 		{
@@ -38,11 +42,31 @@ export function Dashboard() {
 			value: events.data ?? '—',
 			loading: events.isLoading,
 		},
+		{
+			label: t('admin.dashboard.trainings'),
+			value: trainings.data ?? '—',
+			loading: trainings.isLoading,
+		},
+		{
+			label: t('admin.dashboard.products'),
+			value: products.data ?? '—',
+			loading: products.isLoading,
+		},
+		{
+			label: t('admin.dashboard.jobs'),
+			value: jobs.data ?? '—',
+			loading: jobs.isLoading,
+		},
+		{
+			label: t('admin.dashboard.galleryPhotos'),
+			value: galleryPhotos.data ?? '—',
+			loading: galleryPhotos.isLoading,
+		},
 	];
 
 	return (
 		<AdminPage eyebrow={t('admin.dashboard.eyebrow')} title={t('admin.dashboard.title')}>
-			<div className="grid gap-px border border-line bg-line sm:grid-cols-3">
+			<div className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
 				{stats.map((stat) => (
 					<div key={stat.label} className="bg-white p-6">
 						<div className="flex items-center gap-3">
@@ -56,7 +80,7 @@ export function Dashboard() {
 							)}
 							<span className="ui-label text-slate">{stat.label}</span>
 						</div>
-						<div className="mt-5 font-display text-6xl font-black uppercase leading-none tracking-tight text-ink tabular-nums">
+						<div className="mt-5 font-display text-5xl font-black uppercase leading-none tracking-tight text-ink tabular-nums">
 							{stat.value}
 						</div>
 					</div>

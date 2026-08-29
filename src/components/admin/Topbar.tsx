@@ -1,5 +1,6 @@
 'use client';
 
+import { Link } from '../../lib/routing';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../hooks/useAuth';
 
@@ -21,7 +22,7 @@ export function Topbar({ title, eyebrow }: TopbarProps) {
 						{title}
 					</h1>
 				</div>
-				<div className="flex items-center gap-4">
+				<div className="flex items-center gap-3">
 					{user ? (
 						<div className="hidden text-right sm:block">
 							<p className="font-mono text-xs font-semibold text-ink">
@@ -31,6 +32,12 @@ export function Topbar({ title, eyebrow }: TopbarProps) {
 						</div>
 					) : null}
 					<div aria-hidden className="hidden h-8 w-px bg-line sm:block" />
+					<Link
+						to="/"
+						className="btn btn-mono px-4 py-2 text-xs"
+					>
+						↗ {t('admin.backToSite')}
+					</Link>
 					<button
 						type="button"
 						onClick={() => void logout()}

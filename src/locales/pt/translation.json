@@ -533,12 +533,23 @@
 			"published": "Publicado",
 			"archived": "Arquivado"
 		},
+		"sidebar": {
+			"overview": "Visão geral",
+			"content": "Conteúdo",
+			"media": "Mídia",
+			"taxonomy": "Taxonomia",
+			"access": "Acesso"
+		},
 		"login": {
 			"invalid": "Credenciais inválidas.",
 			"eyebrow": "Acesso restrito",
 			"title": "Sala de controlo",
 			"email": "Email",
+			"emailPlaceholder": "voce@empresa.com",
 			"password": "Senha",
+			"passwordPlaceholder": "A sua senha",
+			"showPassword": "Mostrar senha",
+			"hidePassword": "Ocultar senha",
 			"submit": "Entrar"
 		},
 		"dashboard": {
@@ -547,6 +558,12 @@
 			"users": "Utilizadores",
 			"posts": "Publicações",
 			"events": "Eventos",
+			"trainings": "Formações",
+			"products": "Produtos",
+			"jobs": "Vagas",
+			"galleryPhotos": "Fotos da galeria",
+			"categories": "Categorias",
+			"eventTypes": "Tipos de evento",
 			"note": "Nota de campo",
 			"noteBody": "O conteúdo editado aqui é publicado no site público de imediato. Os rascunhos ficam ocultos até os definir como Publicado."
 		},

@@ -533,12 +533,23 @@
 			"published": "Published",
 			"archived": "Archived"
 		},
+		"sidebar": {
+			"overview": "Overview",
+			"content": "Content",
+			"media": "Media",
+			"taxonomy": "Taxonomy",
+			"access": "Access"
+		},
 		"login": {
 			"invalid": "Invalid credentials.",
 			"eyebrow": "Restricted access",
 			"title": "Control room",
 			"email": "Email",
+			"emailPlaceholder": "you@company.com",
 			"password": "Password",
+			"passwordPlaceholder": "Your password",
+			"showPassword": "Show password",
+			"hidePassword": "Hide password",
 			"submit": "Enter"
 		},
 		"dashboard": {
@@ -547,6 +558,12 @@
 			"users": "Users",
 			"posts": "Posts",
 			"events": "Events",
+			"trainings": "Trainings",
+			"products": "Products",
+			"jobs": "Jobs",
+			"galleryPhotos": "Gallery photos",
+			"categories": "Categories",
+			"eventTypes": "Event types",
 			"note": "Field note",
 			"noteBody": "Content edited here is published to the public site immediately. Drafts stay hidden until you set them to Published."
 		},
