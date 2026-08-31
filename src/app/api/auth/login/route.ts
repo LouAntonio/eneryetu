@@ -31,6 +31,11 @@ export async function POST(req: NextRequest) {
 		const accessToken = generateAccessToken(user);
 		const refreshToken = generateRefreshToken(user);
 
+		const modules = await prisma.userModule.findMany({
+			where: { userId: user.id },
+			select: { module: true },
+		});
+
 		const refreshExpires = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
 		await prisma.refreshToken.create({
 			data: {
@@ -48,6 +53,7 @@ export async function POST(req: NextRequest) {
 				surname: user.surname,
 				email: user.email,
 				role: user.role,
+				modules,
 			},
 			accessToken,
 			refreshToken,

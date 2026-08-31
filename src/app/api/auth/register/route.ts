@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
 		const hashedPassword = await bcrypt.hash(password as string, 10);
 
 		const moduleKeys: ModuleKey[] = Array.isArray(modules)
-			? modules.filter((m) => VALID_MODULES.has(m as ModuleKey)) as ModuleKey[]
+			? (modules.filter((m) => VALID_MODULES.has(m as ModuleKey)) as ModuleKey[])
 			: [];
 
 		const user = await prisma.user.create({

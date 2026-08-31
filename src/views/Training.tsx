@@ -49,31 +49,33 @@ function TrainingCard({ training }: { training: TrainingType }) {
 				<div className="aspect-[16/10] w-full bg-gradient-to-br from-evergreen/10 to-sand/10" />
 			)}
 			<div className="flex flex-1 flex-col p-6">
-			<div className="flex flex-wrap items-center gap-2">
-				{training.segments && training.segments.length > 0 ? (
-					training.segments.map((segment) => (
-						<span
-							key={segment.id}
-							className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink"
-						>
-							{t(modeKey(segment.mode))}
-							{segment.daysCount ? ` · ${segment.daysCount} ${t('training.days')}` : ''}
-							{segment.dayLabel ? ` · ${segment.dayLabel}` : ''}
-						</span>
-					))
-				) : (
-					<>
-						<span className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink">
-							{training.deliveryMode}
-						</span>
-						{training.durationDays ? (
-							<span className="text-xs text-sand">
-								{training.durationDays} {t('training.days')}
+				<div className="flex flex-wrap items-center gap-2">
+					{training.segments && training.segments.length > 0 ? (
+						training.segments.map((segment) => (
+							<span
+								key={segment.id}
+								className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink"
+							>
+								{t(modeKey(segment.mode))}
+								{segment.daysCount
+									? ` · ${segment.daysCount} ${t('training.days')}`
+									: ''}
+								{segment.dayLabel ? ` · ${segment.dayLabel}` : ''}
 							</span>
-						) : null}
-					</>
-				)}
-			</div>
+						))
+					) : (
+						<>
+							<span className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink">
+								{training.deliveryMode}
+							</span>
+							{training.durationDays ? (
+								<span className="text-xs text-sand">
+									{training.durationDays} {t('training.days')}
+								</span>
+							) : null}
+						</>
+					)}
+				</div>
 				<h3 className="mt-4 font-editorial text-xl font-semibold leading-[1.15] text-warm-ink">
 					{training.title}
 				</h3>

@@ -17,8 +17,7 @@ export async function GET(req: NextRequest) {
 		);
 		const skip = (page - 1) * limit;
 
-		const isAdminAll =
-			url.searchParams.get('all') === 'true' && user?.role === 'SUPERADMIN';
+		const isAdminAll = url.searchParams.get('all') === 'true' && user?.role === 'SUPERADMIN';
 		const where = isAdminAll ? {} : { status: 'PUBLICADO' as const };
 		const type = url.searchParams.get('type');
 		if (type === 'NOTICIA' || type === 'BLOG') {

@@ -10,9 +10,7 @@ export const ALL_MODULES: ModuleKey[] = [
 	'TAXONOMY',
 ];
 
-export function roleLabelKey(
-	role: User['role'],
-): 'admin.roles.SUPERADMIN' | 'admin.roles.ADMIN' {
+export function roleLabelKey(role: User['role']): 'admin.roles.SUPERADMIN' | 'admin.roles.ADMIN' {
 	return `admin.roles.${role}`;
 }
 

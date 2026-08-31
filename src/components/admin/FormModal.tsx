@@ -1,6 +1,7 @@
 'use client';
 
 import type { ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
 interface FormModalProps {
 	title: string;
@@ -9,7 +10,7 @@ interface FormModalProps {
 }
 
 export function FormModal({ title, onClose, children }: FormModalProps) {
-	return (
+	return createPortal(
 		<div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto p-4 sm:p-8">
 			<div className="fixed inset-0 bg-ink/70" onClick={onClose} aria-hidden />
 			<div className="relative w-full max-w-lg border border-line bg-paper shadow-xl">
@@ -27,6 +28,7 @@ export function FormModal({ title, onClose, children }: FormModalProps) {
 				</div>
 				<div className="px-5 py-6">{children}</div>
 			</div>
-		</div>
+		</div>,
+		document.body,
 	);
 }

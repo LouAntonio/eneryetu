@@ -19,8 +19,7 @@ export async function GET(req: NextRequest) {
 
 		const isAdminAll =
 			url.searchParams.get('all') === 'true' &&
-			(user?.role === 'SUPERADMIN' ||
-				(user ? await canManageModule(user, 'EVENTS') : false));
+			(user?.role === 'SUPERADMIN' || (user ? await canManageModule(user, 'EVENTS') : false));
 		const where = isAdminAll ? {} : { status: 'PUBLICADO' as const };
 
 		const [events, total] = await Promise.all([

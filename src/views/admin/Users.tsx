@@ -43,8 +43,7 @@ export function Users() {
 
 	const { data, isLoading } = useQuery({
 		queryKey: ['users'],
-		queryFn: async () =>
-			(await api.get<{ data: User[] }>('/auth/users')).data as User[],
+		queryFn: async () => (await api.get<{ data: User[] }>('/auth/users')).data as User[],
 	});
 
 	const createUser = useMutation({

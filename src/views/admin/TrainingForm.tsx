@@ -413,9 +413,7 @@ function TrainingFormInner({ training, editing, id }: TrainingFormInnerProps) {
 										}}
 										className={inputClass}
 									>
-										<option value="presencial">
-											{t('training.inPerson')}
-										</option>
+										<option value="presencial">{t('training.inPerson')}</option>
 										<option value="online">{t('training.online')}</option>
 										<option value="autoformacao">
 											{t('training.selfStudy')}

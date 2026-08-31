@@ -1,12 +1,6 @@
 export type Role = 'SUPERADMIN' | 'ADMIN';
 export type ModuleKey =
-	| 'POSTS'
-	| 'EVENTS'
-	| 'TRAININGS'
-	| 'PRODUCTS'
-	| 'JOBS'
-	| 'GALLERY'
-	| 'TAXONOMY';
+	'POSTS' | 'EVENTS' | 'TRAININGS' | 'PRODUCTS' | 'JOBS' | 'GALLERY' | 'TAXONOMY';
 export type Status = 'RASCUNHO' | 'PUBLICADO' | 'ARQUIVADO';
 export type PostType = 'NOTICIA' | 'BLOG';
 

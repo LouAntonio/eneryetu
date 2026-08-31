@@ -17,9 +17,8 @@ export function ChangePasswordDialog({ onClose }: { onClose: () => void }) {
 	const [message, setMessage] = useState('');
 	const [loading, setLoading] = useState(false);
 
-	const onField =
-		(field: keyof typeof form) => (event: React.ChangeEvent<HTMLInputElement>) =>
-			setForm((prev) => ({ ...prev, [field]: event.target.value }));
+	const onField = (field: keyof typeof form) => (event: React.ChangeEvent<HTMLInputElement>) =>
+		setForm((prev) => ({ ...prev, [field]: event.target.value }));
 
 	const onSubmit = async (event: FormEvent) => {
 		event.preventDefault();

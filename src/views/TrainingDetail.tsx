@@ -258,21 +258,6 @@ export function TrainingDetail() {
 											: null
 									}
 								/>
-								{training.segments && training.segments.length > 0 ? (
-									<SpecRow
-										label={t('training.detail.segments')}
-										value={training.segments
-											.map(
-												(segment) =>
-													`${t(modeKey(segment.mode))}${
-														segment.daysCount ? ` (${segment.daysCount})` : ''
-													}${
-														segment.dayLabel ? ` · ${segment.dayLabel}` : ''
-													}`,
-											)
-											.join(' / ')}
-									/>
-								) : null}
 								{training.price ? (
 									<SpecRow
 										label={t('training.detail.price')}

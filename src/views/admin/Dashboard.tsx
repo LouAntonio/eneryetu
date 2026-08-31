@@ -38,12 +38,42 @@ export function Dashboard() {
 	const galleryPhotos = useCount<GalleryPhoto>('galleryPhotos', '/gallery/photos');
 
 	const stats = [
-		{ label: t('admin.dashboard.posts'), value: posts.data ?? '—', loading: posts.isLoading, show: canManage(user, 'POSTS') },
-		{ label: t('admin.dashboard.events'), value: events.data ?? '—', loading: events.isLoading, show: canManage(user, 'EVENTS') },
-		{ label: t('admin.dashboard.trainings'), value: trainings.data ?? '—', loading: trainings.isLoading, show: canManage(user, 'TRAININGS') },
-		{ label: t('admin.dashboard.products'), value: products.data ?? '—', loading: products.isLoading, show: canManage(user, 'PRODUCTS') },
-		{ label: t('admin.dashboard.jobs'), value: jobs.data ?? '—', loading: jobs.isLoading, show: canManage(user, 'JOBS') },
-		{ label: t('admin.dashboard.galleryPhotos'), value: galleryPhotos.data ?? '—', loading: galleryPhotos.isLoading, show: canManage(user, 'GALLERY') },
+		{
+			label: t('admin.dashboard.posts'),
+			value: posts.data ?? '—',
+			loading: posts.isLoading,
+			show: canManage(user, 'POSTS'),
+		},
+		{
+			label: t('admin.dashboard.events'),
+			value: events.data ?? '—',
+			loading: events.isLoading,
+			show: canManage(user, 'EVENTS'),
+		},
+		{
+			label: t('admin.dashboard.trainings'),
+			value: trainings.data ?? '—',
+			loading: trainings.isLoading,
+			show: canManage(user, 'TRAININGS'),
+		},
+		{
+			label: t('admin.dashboard.products'),
+			value: products.data ?? '—',
+			loading: products.isLoading,
+			show: canManage(user, 'PRODUCTS'),
+		},
+		{
+			label: t('admin.dashboard.jobs'),
+			value: jobs.data ?? '—',
+			loading: jobs.isLoading,
+			show: canManage(user, 'JOBS'),
+		},
+		{
+			label: t('admin.dashboard.galleryPhotos'),
+			value: galleryPhotos.data ?? '—',
+			loading: galleryPhotos.isLoading,
+			show: canManage(user, 'GALLERY'),
+		},
 	].filter((stat) => stat.show);
 
 	return (
