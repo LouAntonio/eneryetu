@@ -55,7 +55,7 @@ export function SolutionsContactForm({ services = [] }: { services?: string[] })
 		setLoading(true);
 		setServerError('');
 		try {
-			const response = await fetch('/api/solutions-contact', {
+			const response = await fetch('/api/solutions/lead', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(values),

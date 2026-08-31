@@ -349,7 +349,30 @@
 				"area": "Área coberta da instalação",
 				"workshops": "Área de oficinas",
 				"capacity": "Capacidade de armazenamento"
+			},
+			"meta": {
+				"location": "Localização",
+				"locationValue": "Cacuaco, Luanda · Angola",
+				"founded": "Fundada",
+				"foundedValue": "Operações desde 2018",
+				"scope": "Âmbito",
+				"scopeValue": "Onshore · Offshore",
+				"sectors": "Sectores",
+				"sectorsValue": "Oil & Gas · Mineração · Indústria"
 			}
+		},
+		"bento": {
+			"eyebrow": "Capacidade em operação",
+			"title": "O que a ENERYETU Solutions opera.",
+			"lead": "Instalações, equipas e catálogo — uma leitura rápida do que está em operação no site de Cacuaco.",
+			"servicesTag": "Linhas de serviço",
+			"servicesLabel": "Treze linhas de serviço",
+			"servicesNote": "Tudo sob um único contrato.",
+			"epcLabel": "EPC, brownfield, fabrication",
+			"epcNote": "Médio e grande porte · Oil & Gas · Mineração",
+			"partnersTag": "Parceiros",
+			"partnersLabel": "Rede de execução",
+			"partnersNote": "Logística, equipamentos, EPC."
 		},
 		"services": {
 			"eyebrow": "O que fazemos",
