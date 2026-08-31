@@ -229,13 +229,14 @@ export function EnergyetuSolutions() {
 			>
 				<div className="mx-auto max-w-7xl px-6">
 					<div className="mb-14 max-w-3xl">
-						<p className="mb-3 flex items-center gap-3 ui-label text-blue-dark">
-							<span className="node-live h-1.5 w-1.5 rounded-full bg-volt" />
-							{t('solutions.fabrication.eyebrow')}
+						<p className="mb-4 flex items-center gap-3">
+							<span className="section-tag text-blue-dark">
+								{t('solutions.fabrication.eyebrow')}
+							</span>
 						</p>
 						<h2
 							id="fabrication-title"
-							className="font-display mb-4 text-4xl font-black uppercase tracking-tight text-ink lg:text-5xl"
+							className="font-display mb-4 text-4xl font-bold uppercase tracking-tight text-ink lg:text-5xl"
 						>
 							{t('solutions.fabrication.title')}
 						</h2>
@@ -263,13 +264,14 @@ export function EnergyetuSolutions() {
 			>
 				<div className="mx-auto max-w-7xl px-6">
 					<div className="mb-14 max-w-3xl">
-						<p className="mb-3 flex items-center gap-3 ui-label text-blue-dark">
-							<span className="node-live h-1.5 w-1.5 rounded-full bg-volt" />
-							{t('solutions.maintenance.eyebrow')}
+						<p className="mb-4 flex items-center gap-3">
+							<span className="section-tag text-blue-dark">
+								{t('solutions.maintenance.eyebrow')}
+							</span>
 						</p>
 						<h2
 							id="maintenance-title"
-							className="font-display mb-4 text-4xl font-black uppercase tracking-tight text-ink lg:text-5xl"
+							className="font-display text-4xl font-bold uppercase tracking-tight text-ink lg:text-5xl"
 						>
 							{t('solutions.maintenance.title')}
 						</h2>
@@ -293,11 +295,12 @@ export function EnergyetuSolutions() {
 			>
 				<div className="relative mx-auto max-w-7xl px-6">
 					<div className="mb-12 max-w-3xl">
-						<p className="mb-3 flex items-center gap-3 ui-label text-volt">
-							<span className="node-live h-1.5 w-1.5 rounded-full bg-volt" />
-							{t('solutions.partners.eyebrow')}
+						<p className="mb-4 flex items-center gap-3">
+							<span className="section-tag text-volt">
+								{t('solutions.partners.eyebrow')}
+							</span>
 						</p>
-						<h2 className="font-display text-4xl font-black uppercase tracking-tight text-paper lg:text-5xl">
+						<h2 className="font-display text-4xl font-bold uppercase tracking-tight text-paper lg:text-5xl">
 							{t('solutions.partners.title')}
 						</h2>
 					</div>
@@ -308,14 +311,15 @@ export function EnergyetuSolutions() {
 
 			<section id="proposal" className="relative overflow-hidden py-20 lg:py-28">
 				<div className="relative z-10 mx-auto max-w-7xl px-6">
-					<div className="relative overflow-hidden rounded-3xl bg-ink-deep p-8 text-paper lg:p-14">
+					<div className="corner-plate drawing-plate-dark relative overflow-hidden p-8 text-paper lg:p-14">
 						<div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
 							<div>
-								<p className="mb-3 flex items-center gap-3 ui-label text-volt">
-									<span className="node-live h-1.5 w-1.5 rounded-full bg-volt" />
-									{t('solutions.requestProposal')}
+								<p className="mb-4 flex items-center gap-3">
+									<span className="section-tag text-volt">
+										{t('solutions.requestProposal')}
+									</span>
 								</p>
-								<h2 className="font-display mb-6 text-4xl font-black uppercase leading-[0.9] tracking-tight text-paper lg:text-5xl">
+								<h2 className="font-display mb-6 text-4xl font-bold uppercase leading-[0.9] tracking-tight text-paper lg:text-5xl">
 									{t('solutions.cta.title')}
 								</h2>
 								<p className="mb-8 text-lg text-paper/75">
@@ -333,7 +337,7 @@ export function EnergyetuSolutions() {
 								</div>
 							</div>
 
-							<div className="rounded-2xl border border-paper/10 bg-paper/5 p-6 lg:p-8">
+							<div className="border border-paper/10 bg-white/[0.03] p-6 lg:p-8">
 								<h3 className="font-display mb-6 text-2xl font-bold uppercase tracking-tight text-paper">
 									{t('solutions.form.title')}
 								</h3>

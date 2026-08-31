@@ -825,6 +825,117 @@ body {
 }
 
 /* ------------------------------------------------------------------ *
+ * ENERYETU SOLUTIONS — "Single-line drawing" vocabulary
+ * The solutions landing reads as a technical drawing sheet: hairline
+ * rules, corner ticks, dimension callouts, section plates. Blue is the
+ * linework colour, volt is the single marker accent.
+ * ------------------------------------------------------------------ */
+
+/* Section plate — a bordered, sharp-cornered drawing panel */
+@utility drawing-plate {
+	background-color: rgba(255, 255, 255, 0.6);
+	border: 1px solid var(--color-line);
+	border-radius: 2px;
+}
+
+/* Dark plate for the dark "section"/plate areas */
+@utility drawing-plate-dark {
+	background-color: var(--color-ink-deep);
+	border: 1px solid rgba(72, 202, 228, 0.25);
+	border-radius: 2px;
+}
+
+/* Corner tick marks — small blue ticks in the four corners of a plate */
+.corner-plate {
+	position: relative;
+}
+.corner-plate::before,
+.corner-plate::after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 0 solid var(--color-blue);
+	pointer-events: none;
+}
+.corner-plate::before {
+	top: -1px;
+	left: -1px;
+	border-top-width: 2px;
+	border-left-width: 2px;
+}
+.corner-plate::after {
+	bottom: -1px;
+	right: -1px;
+	border-bottom-width: 2px;
+	border-right-width: 2px;
+}
+
+/* Signature — a horizontal dimension callout line: a rule between two
+ * tick marks with a centred measurement sitting on it. Used as the page's
+ * connecting structural device (replaces fake numbered markers). */
+.dimension {
+	position: relative;
+	height: 1px;
+	background: var(--color-blue);
+	display: flex;
+	align-items: center;
+}
+.dimension::before,
+.dimension::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	width: 1px;
+	height: 7px;
+	background: var(--color-blue);
+	transform: translateY(-50%);
+}
+.dimension::before {
+	left: 0;
+}
+.dimension::after {
+	right: 0;
+}
+
+/* Section tag — a labelled callout with dimension ticks */
+.section-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.65rem;
+	font-family: var(--font-mono);
+	font-size: 0.68rem;
+	font-weight: 500;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--color-blue-dark);
+}
+.section-tag::before,
+.section-tag::after {
+	content: '';
+	width: 14px;
+	height: 1px;
+	background: var(--color-blue);
+}
+
+/* Blueprint sheet — faint grid for the drawing ground (sparing) */
+@utility sheet-grid {
+	background-image:
+		linear-gradient(to right, rgba(72, 202, 228, 0.06) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(72, 202, 228, 0.06) 1px, transparent 1px);
+	background-size: 28px 28px;
+}
+
+/* Drawing callout label — mono measurement (dimension value) */
+.dim-value {
+	font-family: var(--font-mono);
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	color: var(--color-ink);
+}
+
+/* ------------------------------------------------------------------ *
  * Reduced motion
  * ------------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {

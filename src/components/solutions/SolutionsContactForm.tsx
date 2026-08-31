@@ -18,7 +18,7 @@ type Errors = Partial<Pick<Values, 'name' | 'email' | 'message'>>;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const FIELD_CLASS =
-	'mt-2 w-full rounded-lg border border-line bg-white px-3.5 py-2.5 font-mono text-sm text-ink placeholder:text-slate/50 focus:border-blue-dark focus:outline-none focus:ring-1 focus:ring-blue/30 transition-colors';
+	'mt-2 w-full border border-line bg-white px-3.5 py-2.5 font-mono text-sm text-ink placeholder:text-slate/50 focus:border-blue-dark focus:outline-none focus:ring-1 focus:ring-blue/30 transition-colors';
 
 export function SolutionsContactForm({ services = [] }: { services?: string[] }) {
 	const { t } = useTranslation();
@@ -77,13 +77,10 @@ export function SolutionsContactForm({ services = [] }: { services?: string[] })
 
 	if (sent) {
 		return (
-			<div className="border-2 border-volt bg-ink p-8 text-paper">
-				<div className="flex items-center gap-3">
-					<span aria-hidden className="node-live h-3 w-3 rounded-full bg-volt" />
-					<h3 className="font-display text-3xl font-black uppercase tracking-tight">
-						{t('solutions.form.successTitle')}
-					</h3>
-				</div>
+			<div className="corner-plate drawing-plate-dark p-8 text-paper">
+				<h3 className="font-display text-3xl font-bold uppercase tracking-tight">
+					{t('solutions.form.successTitle')}
+				</h3>
 				<p className="mt-3 text-paper/70">{t('solutions.form.successBody')}</p>
 			</div>
 		);

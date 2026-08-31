@@ -39,13 +39,12 @@ export function FeatureBlock({
 					>
 						{/* Content Column */}
 						<div className="relative z-10">
-							<p className="mb-3 flex items-center gap-3 ui-label text-blue-dark">
-								<span className="node-live h-2 w-2 rounded-full bg-volt" />
-								{eyebrow}
+							<p className="mb-4 flex items-center gap-3">
+								<span className="section-tag text-blue-dark">{eyebrow}</span>
 							</p>
 							<h2
 								id={`feature-${title.replace(/\s+/g, '-').toLowerCase()}`}
-								className="font-display text-3xl lg:text-4xl font-black uppercase tracking-tight text-ink mb-6"
+								className="font-display text-3xl lg:text-4xl font-bold uppercase tracking-tight text-ink mb-6"
 							>
 								{title}
 							</h2>
@@ -57,13 +56,19 @@ export function FeatureBlock({
 							)}
 
 							{points && points.length > 0 && (
-								<ul className="space-y-4 mb-8" role="list">
+								<ul className="space-y-3 mb-8 border-t border-line pt-6" role="list">
 									{points.map((point, i) => (
 										<li
 											key={i}
-											className="flex items-start gap-4 group relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-volt before:opacity-100 transition-transform group-hover:before:translate-x-1 group-hover:translate-x-1"
+											className="flex items-start gap-4 pl-0 group"
 										>
-											<span className="text-slate leading-relaxed group-hover:text-ink transition-colors">
+											<span
+												aria-hidden
+												className="dim-value mt-1 text-blue-dark"
+											>
+												{String(i + 1).padStart(2, '0')}
+											</span>
+											<span className="text-slate leading-relaxed">
 												{point}
 											</span>
 										</li>
@@ -77,15 +82,13 @@ export function FeatureBlock({
 						{/* Image Column */}
 						{image && (
 							<div className="relative">
-								<div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-line/30 relative">
+								<div className="corner-plate aspect-video overflow-hidden border border-line bg-line/20 relative">
 									<img
 										src={image}
 										alt={imageAlt || title}
-										className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+										className="w-full h-full object-cover"
 										loading="lazy"
 									/>
-									{/* Volt accent corner */}
-									<div className="absolute bottom-4 right-4 w-16 h-16 border-2 border-volt rounded-tr-2xl border-t-transparent border-r-transparent opacity-50" />
 								</div>
 							</div>
 						)}
@@ -116,14 +119,13 @@ export function FeatureBlockCompact({
 }: FeatureBlockCompactProps) {
 	return (
 		<ScrollReveal animation="up" delay={delay} className={className}>
-			<div className="surface-elevated p-6 lg:p-8">
+			<div className="corner-plate drawing-plate p-6 lg:p-8">
 				{eyebrow && (
-					<p className="mb-3 flex items-center gap-3 ui-label text-blue-dark">
-						<span className="node-live h-2 w-2 rounded-full bg-volt" />
-						{eyebrow}
+					<p className="mb-4 flex items-center gap-3">
+						<span className="section-tag text-blue-dark">{eyebrow}</span>
 					</p>
 				)}
-				<h3 className="font-display text-2xl lg:text-3xl font-black uppercase tracking-tight text-ink mb-4">
+				<h3 className="font-display text-2xl lg:text-3xl font-bold uppercase tracking-tight text-ink mb-4">
 					{title}
 				</h3>
 
@@ -132,13 +134,19 @@ export function FeatureBlockCompact({
 				)}
 
 				{points && points.length > 0 && (
-					<ul className="space-y-3" role="list">
+					<ul className="space-y-3 border-t border-line pt-5" role="list">
 						{points.map((point, i) => (
 							<li
 								key={i}
-								className="flex items-start gap-3 text-slate leading-relaxed before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-volt before:shrink-0 before:mt-2.5"
+								className="flex items-start gap-4 text-slate leading-relaxed"
 							>
-								{point}
+								<span
+									aria-hidden
+									className="dim-value mt-0.5 text-blue-dark"
+								>
+									{String(i + 1).padStart(2, '0')}
+								</span>
+								<span className="flex-1">{point}</span>
 							</li>
 						))}
 					</ul>

@@ -16,7 +16,7 @@ export interface BentoCell {
 	 * `wide` spans 4 cols, `tall` spans 2 rows, `standard` is 2x1.
 	 */
 	span: 'feature' | 'wide' | 'tall' | 'standard' | 'compact';
-	tone?: 'volt' | 'sun' | 'blue' | 'paper';
+	tone?: 'volt' | 'blue' | 'paper';
 }
 
 interface MetricsBentoProps {
@@ -36,43 +36,42 @@ const SPAN_CLASS: Record<BentoCell['span'], string> = {
 };
 
 const TONE_CLASS: Record<NonNullable<BentoCell['tone']>, string> = {
-	volt: 'bg-ink-deep text-paper',
-	sun: 'bg-sun text-ink',
-	blue: 'bg-blue text-ink',
-	paper: 'bg-white text-ink',
+	volt: 'drawing-plate-dark text-paper',
+	blue: 'bg-blue/[0.12] text-ink',
+	paper: 'drawing-plate text-ink',
 };
 
 export function MetricsBento({ eyebrow, title, lead, cells, delay = 0 }: MetricsBentoProps) {
 	return (
 		<section
 			id="bento"
-			className="relative isolate overflow-hidden bg-ink-deep py-20 text-paper lg:py-28"
+			className="relative isolate overflow-hidden bg-paper py-20 lg:py-28"
 			aria-labelledby="bento-title"
 		>
 			<div className="mx-auto max-w-7xl px-6">
 				<div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
 					<div className="max-w-2xl">
-						<p className="mb-3 flex items-center gap-3 ui-label text-volt">
-							<span className="node-live h-1.5 w-1.5 rounded-full bg-volt" />
-							{eyebrow}
+						<p className="mb-4 flex items-center gap-3">
+							<span className="section-tag text-blue-dark">{eyebrow}</span>
 						</p>
 						<h2
 							id="bento-title"
-							className="font-display text-4xl font-black uppercase leading-[0.95] tracking-tight text-paper sm:text-5xl"
+							className="font-display text-4xl font-bold uppercase leading-[0.95] tracking-tight text-ink sm:text-5xl"
 						>
 							{title}
 						</h2>
 						{lead ? (
-							<p className="mt-4 text-base text-paper/70 sm:text-lg">{lead}</p>
+							<p className="mt-4 text-base text-slate sm:text-lg">{lead}</p>
 						) : null}
 					</div>
-					<p className="ui-label max-w-xs text-paper/50">{`// 6 cells · live capacity snapshot`}</p>
+					<p className="ui-label max-w-xs text-slate/70">{`CAPACITY · LIVE PLANT`}</p>
 				</div>
 
-				<div className="bento-grid grid grid-cols-1 gap-4 sm:grid-cols-6 sm:grid-rows-2 sm:auto-rows-[180px] lg:auto-rows-[200px]">
+				<div className="bento-grid grid grid-cols-1 gap-3 sm:grid-cols-6 sm:grid-rows-2 sm:auto-rows-[180px] lg:auto-rows-[200px]">
 					{cells.map((cell, index) => {
 						const tone = cell.tone ?? (cell.span === 'feature' ? 'volt' : 'paper');
 						const isFeature = cell.span === 'feature';
+						const dark = tone === 'volt';
 						return (
 							<ScrollReveal
 								key={cell.id}
@@ -81,19 +80,18 @@ export function MetricsBento({ eyebrow, title, lead, cells, delay = 0 }: Metrics
 								className={`${SPAN_CLASS[cell.span]}`}
 							>
 								<article
-									className={`group relative flex h-full w-full flex-col justify-between overflow-hidden rounded-2xl p-5 ring-1 ring-inset ring-white/5 transition-transform duration-500 hover:-translate-y-1 lg:p-6 ${TONE_CLASS[tone]}`}
+									className={`corner-plate group relative flex h-full w-full flex-col justify-between overflow-hidden p-5 lg:p-6 ${TONE_CLASS[tone]}`}
 								>
-									<div className="flex items-center justify-between">
+									<div className="flex items-start justify-between gap-3">
 										<span
-											className={`ui-label ${tone === 'volt' || tone === 'blue' ? 'text-ink/70' : 'text-slate'}`}
+											className={`ui-label ${dark ? 'text-blue' : 'text-blue-dark'}`}
 										>
 											{cell.tag}
 										</span>
 										<span
-											className={`ui-label ${tone === 'volt' || tone === 'blue' ? 'text-ink/60' : 'text-slate/60'}`}
+											className={`dim-value ${dark ? 'text-paper/45' : 'text-slate/60'}`}
 										>
-											{String(index + 1).padStart(2, '0')} /{' '}
-											{String(cells.length).padStart(2, '0')}
+											{String(cell.value).padStart(2, '0')}
 										</span>
 									</div>
 
@@ -102,23 +100,23 @@ export function MetricsBento({ eyebrow, title, lead, cells, delay = 0 }: Metrics
 											<AnimatedCounter
 												value={cell.value}
 												delay={delay + index * 80 + 120}
-												className={`font-display text-5xl font-black leading-none lg:text-6xl ${tone === 'volt' || tone === 'sun' || tone === 'blue' ? 'text-ink' : 'text-ink'}`}
+												className={`font-display text-5xl font-bold leading-none tabular-nums lg:text-6xl ${dark ? 'text-paper' : 'text-ink'}`}
 											/>
 											<span
-												className={`ui-label self-start pb-1 ${tone === 'volt' || tone === 'sun' || tone === 'blue' ? 'text-ink/70' : 'text-slate'}`}
+												className={`ui-label self-start pb-1 ${dark ? 'text-blue' : 'text-blue-dark'}`}
 											>
 												{cell.unit}
 											</span>
 										</div>
 										<div>
 											<p
-												className={`font-display text-base font-bold uppercase leading-tight tracking-tight ${tone === 'volt' || tone === 'sun' || tone === 'blue' ? 'text-ink' : 'text-ink'} ${isFeature ? 'lg:text-lg' : ''}`}
+												className={`font-display text-base font-bold uppercase leading-tight tracking-tight ${dark ? 'text-paper' : 'text-ink'} ${isFeature ? 'lg:text-lg' : ''}`}
 											>
 												{cell.label}
 											</p>
 											{cell.note ? (
 												<p
-													className={`mt-1.5 text-sm leading-relaxed ${tone === 'volt' || tone === 'sun' || tone === 'blue' ? 'text-ink/70' : 'text-slate'}`}
+													className={`mt-1.5 font-mono text-xs leading-relaxed ${dark ? 'text-paper/55' : 'text-slate'}`}
 												>
 													{cell.note}
 												</p>
@@ -128,12 +126,14 @@ export function MetricsBento({ eyebrow, title, lead, cells, delay = 0 }: Metrics
 
 									<div
 										aria-hidden
-										className={`absolute bottom-0 left-0 h-1 w-0 transition-all duration-500 group-hover:w-full ${
-											tone === 'volt' || tone === 'sun' || tone === 'blue'
-												? 'bg-ink'
-												: 'bg-volt'
-										}`}
-									/>
+										className={`dimension mt-5 ${dark ? 'bg-blue' : 'bg-blue'}`}
+									>
+										<span
+											className={`dim-value absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-transparent px-2 text-[0.65rem] ${dark ? 'text-paper/60' : 'text-slate/60'}`}
+										>
+											{`${String(index + 1).padStart(2, '0')} / ${String(cells.length).padStart(2, '0')}`}
+										</span>
+									</div>
 								</article>
 							</ScrollReveal>
 						);

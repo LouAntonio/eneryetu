@@ -23,37 +23,17 @@ const CATEGORY_BG = {
 	support: 'bg-paper',
 };
 
-const CATEGORY_ACCENT = {
-	field: 'from-blue to-blue-deep',
-	workshop: 'from-sun to-sun-deep',
-	epc: 'from-volt to-sun',
-	support: 'from-slate to-blue-dark',
-};
-
 export function ServiceCard({ title, icon, delay = 0, category = 'support' }: ServiceCardProps) {
 	return (
 		<ScrollReveal animation="up" delay={delay} className="group h-full">
-			<article className="surface-elevated p-6 lg:p-7 relative overflow-hidden h-full flex flex-col">
-				{/* Top accent bar */}
-				<div
-					className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${CATEGORY_ACCENT[category]} opacity-70 group-hover:opacity-100 transition-opacity`}
-				/>
-
-				{/* Status light */}
-				<span
-					aria-hidden
-					className={`node-live absolute right-4 top-5 h-2 w-2 rounded-full ${
-						category === 'workshop' ? 'bg-sun' : 'bg-volt'
-					}`}
-				/>
-
+			<article className="corner-plate drawing-plate p-5 relative overflow-hidden h-full flex flex-col">
 				{/* Icon */}
 				<div
-					className={`mb-5 h-12 w-12 rounded-lg ${CATEGORY_BG[category]} flex items-center justify-center ${CATEGORY_COLORS[category]} group-hover:scale-105 transition-transform duration-300`}
+					className={`mb-4 h-11 w-11 ${CATEGORY_BG[category]} flex items-center justify-center ${CATEGORY_COLORS[category]}`}
 				>
 					{icon || (
 						<svg
-							className="h-7 w-7"
+							className="h-6 w-6"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -66,12 +46,11 @@ export function ServiceCard({ title, icon, delay = 0, category = 'support' }: Se
 				</div>
 
 				{/* Title */}
-				<h3 className="font-display text-xl lg:text-2xl font-bold uppercase tracking-tight text-ink mb-3 group-hover:text-blue-dark transition-colors duration-300">
+				<h3 className="font-display text-lg font-bold uppercase tracking-tight text-ink mb-3">
 					{title}
 				</h3>
 
-				{/* Live current running along the node */}
-				<div className="current-line mt-auto pt-4" />
+				<div aria-hidden className="mt-auto dimension opacity-50" />
 			</article>
 		</ScrollReveal>
 	);

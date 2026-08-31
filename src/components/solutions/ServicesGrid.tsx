@@ -12,29 +12,15 @@ interface ServicesGridProps {
 interface CategoryGroup {
 	id: 'field' | 'workshop' | 'epc' | 'support';
 	label: string;
-	tone: 'volt' | 'sun' | 'blue' | 'paper';
+	tone: 'volt' | 'blue' | 'paper';
 }
 
 const CATEGORIES: CategoryGroup[] = [
-	{ id: 'field', label: 'Field operations', tone: 'volt' },
-	{ id: 'workshop', label: 'Workshop & maintenance', tone: 'sun' },
-	{ id: 'epc', label: 'EPC & fabrication', tone: 'blue' },
+	{ id: 'field', label: 'Field operations', tone: 'blue' },
+	{ id: 'workshop', label: 'Workshop & maintenance', tone: 'paper' },
+	{ id: 'epc', label: 'EPC & fabrication', tone: 'volt' },
 	{ id: 'support', label: 'Supply & support', tone: 'paper' },
 ];
-
-const TONE_ACCENT: Record<CategoryGroup['tone'], string> = {
-	volt: 'border-volt text-volt',
-	sun: 'border-sun text-sun-deep',
-	blue: 'border-blue-deep text-blue-dark',
-	paper: 'border-ink text-ink',
-};
-
-const TONE_NUMBER: Record<CategoryGroup['tone'], string> = {
-	volt: 'bg-volt text-ink',
-	sun: 'bg-sun text-ink',
-	blue: 'bg-blue text-ink',
-	paper: 'bg-ink text-paper',
-};
 
 export function ServicesGrid({ eyebrow, title, lead, items }: ServicesGridProps) {
 	const buckets = CATEGORIES.map((cat) => ({
@@ -60,61 +46,76 @@ export function ServicesGrid({ eyebrow, title, lead, items }: ServicesGridProps)
 	}));
 
 	return (
-		<section id="services" className="py-20 lg:py-28" aria-labelledby="services-title">
+		<section
+			id="services"
+			className="relative py-20 lg:py-28"
+			aria-labelledby="services-title"
+		>
 			<div className="mx-auto max-w-7xl px-6">
 				<div className="mb-14 max-w-3xl">
-					<p className="mb-3 flex items-center gap-3 ui-label text-blue-dark">
-						<span className="node-live h-1.5 w-1.5 rounded-full bg-volt" />
-						{eyebrow}
+					<p className="mb-4 flex items-center gap-3">
+						<span className="section-tag text-blue-dark">{eyebrow}</span>
 					</p>
 					<h2
 						id="services-title"
-						className="font-display mb-4 text-4xl font-black uppercase tracking-tight text-ink lg:text-5xl"
+						className="font-display mb-4 text-4xl font-bold uppercase tracking-tight text-ink lg:text-5xl"
 					>
 						{title}
 					</h2>
 					<p className="text-base text-slate sm:text-lg">{lead}</p>
 				</div>
 
-				<div className="grid gap-6 lg:grid-cols-2">
-					{buckets.map((bucket, bucketIdx) => (
-						<div
-							key={bucket.id}
-							className={`relative overflow-hidden rounded-2xl border-2 ${TONE_ACCENT[bucket.tone]} bg-white p-6 lg:p-7`}
-						>
-							<div className="mb-5 flex items-center justify-between">
-								<div className="flex items-center gap-3">
-									<span
-										className={`inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-black ${TONE_NUMBER[bucket.tone]}`}
+				<div className="grid gap-5 lg:grid-cols-2">
+					{buckets.map((bucket) => {
+						const dark = bucket.tone === 'volt';
+						return (
+							<div
+								key={bucket.id}
+								className={`corner-plate relative overflow-hidden p-6 lg:p-7 ${
+									dark ? 'drawing-plate-dark' : 'drawing-plate'
+								}`}
+							>
+								<div className="mb-6 flex items-center justify-between gap-3 border-b border-current/10 pb-4">
+									<h3
+										className={`font-display text-xl font-bold uppercase tracking-tight lg:text-2xl ${
+											dark ? 'text-paper' : 'text-ink'
+										}`}
 									>
-										{String(bucketIdx + 1).padStart(2, '0')}
-									</span>
-									<h3 className="font-display text-xl font-bold uppercase tracking-tight text-ink lg:text-2xl">
 										{bucket.label}
 									</h3>
-								</div>
-								<span className="ui-label text-slate">
-									{String(bucket.items.length).padStart(2, '0')} items
-								</span>
-							</div>
-
-							<ul className="space-y-2">
-								{bucket.items.map((item, idx) => (
-									<li
-										key={item.title}
-										className="flex items-start gap-3 border-t border-line/60 pt-2.5 first:border-t-0 first:pt-0"
+									<span
+										className={`dim-value ${dark ? 'text-blue' : 'text-blue-dark'}`}
 									>
-										<span className="ui-label pt-1.5 text-slate">
-											{String(idx + 1).padStart(2, '0')}
-										</span>
-										<span className="flex-1 text-sm text-ink sm:text-base">
-											{item.title}
-										</span>
-									</li>
-								))}
-							</ul>
-						</div>
-					))}
+										{String(bucket.items.length).padStart(2, '0')}
+									</span>
+								</div>
+
+								<ul className="space-y-0">
+									{bucket.items.map((item, idx) => (
+										<li
+											key={item.title}
+											className={`flex items-baseline gap-4 border-t py-3 first:border-t-0 first:pt-0 ${
+												dark ? 'border-white/10' : 'border-line/70'
+											}`}
+										>
+											<span
+												className={`dim-value ${dark ? 'text-paper/40' : 'text-slate/50'}`}
+											>
+												{String(idx + 1).padStart(2, '0')}
+											</span>
+											<span
+												className={`flex-1 text-sm sm:text-base ${
+													dark ? 'text-paper/85' : 'text-ink'
+												}`}
+											>
+												{item.title}
+											</span>
+										</li>
+									))}
+								</ul>
+							</div>
+						);
+					})}
 				</div>
 
 				<div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:hidden">

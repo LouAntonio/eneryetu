@@ -32,29 +32,28 @@ export function HeroImmersive({ backgroundImage }: HeroImmersiveProps) {
 			</div>
 			<div
 				aria-hidden
-				className="absolute inset-0 -z-20 bg-gradient-to-br from-ink-deep via-ink/80 to-ink/40"
+				className="absolute inset-0 -z-20 bg-gradient-to-br from-ink-deep via-ink/85 to-ink/50"
 			/>
 			<div
 				aria-hidden
-				className="absolute inset-0 -z-10 bg-gradient-to-t from-ink-deep/90 via-transparent to-transparent"
+				className="absolute inset-0 -z-10 bg-gradient-to-t from-ink-deep/95 via-ink/40 to-transparent"
 			/>
 
 			<div className="relative mx-auto w-full max-w-7xl px-6 pb-24 pt-28 sm:pt-32 lg:pt-40">
 				<ScrollReveal animation="fade" delay={0}>
-					<p className="mb-6 flex items-center gap-3 ui-label text-volt">
-						<span className="node-live h-1.5 w-1.5 rounded-full bg-volt" />
-						{t('solutions.hero.title')}
+					<p className="mb-8 flex items-center gap-3">
+						<span className="section-tag text-volt">{t('solutions.hero.title')}</span>
 					</p>
 				</ScrollReveal>
 
 				<ScrollReveal animation="up" delay={80} className="max-w-5xl">
-					<h1 className="font-editorial text-[clamp(2.75rem,6.5vw,5.75rem)] font-black leading-[0.92] tracking-[-0.02em] text-paper">
+					<h1 className="font-display text-[clamp(2.5rem,6vw,5.25rem)] font-bold uppercase leading-[0.92] tracking-tight text-paper">
 						{t('solutions.hero.headline')}
 					</h1>
 				</ScrollReveal>
 
-				<ScrollReveal animation="up" delay={180} className="mt-6 max-w-2xl">
-					<p className="text-base leading-relaxed text-paper/75 sm:text-lg lg:text-xl">
+				<ScrollReveal animation="up" delay={180} className="mt-8 max-w-2xl">
+					<p className="text-base leading-relaxed text-paper/80 sm:text-lg">
 						{t('solutions.hero.lede')}
 					</p>
 				</ScrollReveal>
@@ -71,7 +70,12 @@ export function HeroImmersive({ backgroundImage }: HeroImmersiveProps) {
 				</ScrollReveal>
 
 				<ScrollReveal animation="up" delay={360} className="mt-16">
-					<dl className="grid max-w-3xl grid-cols-2 gap-x-10 gap-y-6 border-t border-paper/15 pt-6 sm:grid-cols-4">
+					<div aria-hidden className="mb-6 hidden max-w-3xl items-center gap-4 sm:flex">
+						<span className="dimension flex-1" />
+						<span className="dim-value text-paper/50">PLATE_001</span>
+						<span className="dimension flex-1" />
+					</div>
+					<dl className="grid max-w-3xl grid-cols-2 gap-x-10 gap-y-6 border-t border-paper/20 pt-6 sm:grid-cols-4">
 						<div>
 							<dt className="ui-label text-paper/45">
 								{t('solutions.hero.meta.location')}
@@ -108,7 +112,7 @@ export function HeroImmersive({ backgroundImage }: HeroImmersiveProps) {
 				</ScrollReveal>
 			</div>
 
-			<div aria-hidden className="absolute inset-x-0 bottom-0 h-px w-full bg-volt/60" />
+			<div aria-hidden className="absolute inset-x-0 bottom-0 h-px w-full bg-volt/50" />
 		</section>
 	);
 }
