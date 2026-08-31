@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
-import { VoltLine } from './VoltLine';
 
 interface PartnerMarqueeV2Props {
 	partners: Array<{ name: string; logo: string }> | string[];
@@ -73,11 +72,6 @@ export function PartnerMarqueeV2({ partners, speed = 30, paused = false }: Partn
 
 	return (
 		<div className="relative overflow-hidden">
-			{/* Top Volt Line */}
-			<div className="hidden lg:block mb-6">
-				<VoltLine variant="divider" className="opacity-30 w-full max-w-6xl mx-auto" />
-			</div>
-
 			<div
 				ref={trackRef}
 				className="flex gap-6 lg:gap-8"
@@ -93,36 +87,28 @@ export function PartnerMarqueeV2({ partners, speed = 30, paused = false }: Partn
 						key={`${partner.name}-${index}`}
 						className="flex-shrink-0 w-40 lg:w-48 h-20 lg:h-24"
 					>
-						<div className="surface-elevated h-full w-full flex items-center justify-center p-4 transition-all duration-300 group relative overflow-hidden">
+						<div className="h-full w-full flex items-center justify-center p-4 transition-all duration-300 group relative overflow-hidden border border-paper/15 bg-white/[0.03]">
 							{partner.logo ? (
 								<img
 									src={partner.logo}
 									alt={partner.name}
-									className="max-h-full max-w-full object-contain grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
+									className="max-h-full max-w-full object-contain opacity-80 grayscale transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110"
 									loading="lazy"
 									draggable={false}
 								/>
 							) : (
-								<span className="font-display text-lg font-bold uppercase tracking-tight text-ink text-center">
+								<span className="font-display text-lg font-bold uppercase tracking-tight text-paper text-center">
 									{partner.name}
 								</span>
 							)}
-
-							{/* Volt glow on hover */}
-							<div className="absolute inset-0 bg-gradient-to-r from-volt/10 via-transparent to-volt/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 						</div>
 					</div>
 				))}
 			</div>
 
-			{/* Bottom Volt Line */}
-			<div className="hidden lg:block mt-6">
-				<VoltLine variant="divider" className="opacity-30 w-full max-w-6xl mx-auto" />
-			</div>
-
 			{/* Fade masks on sides */}
-			<div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-paper to-transparent pointer-events-none lg:block hidden" />
-			<div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-paper to-transparent pointer-events-none lg:block hidden" />
+			<div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-ink-deep to-transparent pointer-events-none hidden lg:block" />
+			<div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-ink-deep to-transparent pointer-events-none hidden lg:block" />
 		</div>
 	);
 }

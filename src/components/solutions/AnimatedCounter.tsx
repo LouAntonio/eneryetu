@@ -83,6 +83,7 @@ interface StatItemProps {
 	suffix?: string;
 	delay?: number;
 	className?: string;
+	dark?: boolean;
 }
 
 export function StatItem({
@@ -93,6 +94,7 @@ export function StatItem({
 	suffix = '',
 	delay = 0,
 	className = '',
+	dark = false,
 }: StatItemProps) {
 	return (
 		<div className={`text-center ${className}`}>
@@ -102,11 +104,11 @@ export function StatItem({
 					prefix={prefix}
 					suffix={suffix}
 					delay={delay}
-					className="text-5xl lg:text-6xl font-black text-ink"
+					className={`text-5xl lg:text-6xl font-black ${dark ? 'text-volt' : 'text-ink'}`}
 				/>
 				{unit && <span className="ui-label text-volt self-start pb-1 ml-1">{unit}</span>}
 			</div>
-			<p className="ui-label text-slate">{label}</p>
+			<p className={`ui-label ${dark ? 'text-paper/80' : 'text-slate'}`}>{label}</p>
 		</div>
 	);
 }

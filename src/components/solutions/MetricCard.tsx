@@ -1,7 +1,6 @@
 'use client';
 
-import { AnimatedCounter, StatItem } from './AnimatedCounter';
-import { VoltLine } from './VoltLine';
+import { AnimatedCounter } from './AnimatedCounter';
 import { ScrollReveal } from './ScrollReveal';
 
 interface MetricCardProps {
@@ -33,7 +32,7 @@ export function MetricCard({
 					<img
 						src={image}
 						alt={imageAlt || title}
-						className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+						className="w-full h-full object-cover opacity-25 group-hover:opacity-35 transition-opacity duration-500"
 					/>
 					<div className="absolute inset-0 bg-gradient-to-t from-ink/20 via-transparent to-transparent" />
 				</div>
@@ -57,15 +56,9 @@ export function MetricCard({
 					{/* Note */}
 					<p className="text-sm text-slate leading-relaxed mb-6">{note}</p>
 
-					{/* Volt accent line */}
-					<div
-						className="h-px bg-line/50 group-hover:bg-volt group-hover:scale-x-100 transition-all duration-300 origin-left w-24"
-						style={{ transform: 'scaleX(0.3)' }}
-					/>
+					{/* Accent line */}
+					<div className="h-1 w-16 bg-volt group-hover:w-28 transition-all duration-300" />
 				</div>
-
-				{/* Bottom accent */}
-				<div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-volt to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 			</article>
 		</ScrollReveal>
 	);
@@ -82,13 +75,13 @@ interface MetricsGridProps {
 export function MetricsGrid({ title, eyebrow, description, items, delay = 0 }: MetricsGridProps) {
 	return (
 		<ScrollReveal animation="up" delay={delay}>
-			<section className="py-16 lg:py-24" aria-labelledby="metrics-grid-title">
-				<div className="mx-auto max-w-6xl px-6">
-					<div className="mb-12 lg:mb-16 text-center max-w-3xl mx-auto">
+			<section className="py-20 lg:py-28" aria-labelledby="metrics-grid-title">
+				<div className="mx-auto max-w-7xl px-6">
+					<div className="max-w-3xl mb-14">
 						<p className="ui-label text-blue-dark mb-3">{eyebrow}</p>
 						<h2
 							id="metrics-grid-title"
-							className="font-display text-3xl lg:text-4xl font-black uppercase tracking-tight text-ink mb-4"
+							className="font-display text-4xl lg:text-5xl font-black uppercase tracking-tight text-ink mb-4"
 						>
 							{title}
 						</h2>
@@ -101,11 +94,6 @@ export function MetricsGrid({ title, eyebrow, description, items, delay = 0 }: M
 						{items.map((item, index) => (
 							<MetricCard key={item.title} {...item} delay={delay + index * 100} />
 						))}
-					</div>
-
-					{/* Volt Line divider below */}
-					<div className="mt-16 lg:mt-24 w-full max-w-4xl mx-auto">
-						<VoltLine variant="divider" className="opacity-30" />
 					</div>
 				</div>
 			</section>

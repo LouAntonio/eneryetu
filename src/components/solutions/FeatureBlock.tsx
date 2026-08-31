@@ -1,7 +1,6 @@
 'use client';
 
-import { ScrollReveal, StaggeredReveal } from './ScrollReveal';
-import { VoltLine } from './VoltLine';
+import { ScrollReveal } from './ScrollReveal';
 
 interface FeatureBlockProps {
 	eyebrow: string;
@@ -31,15 +30,10 @@ export function FeatureBlock({
 	return (
 		<ScrollReveal animation="up" delay={delay} className={className}>
 			<section
-				className="relative py-16 lg:py-24"
+				className="relative py-20 lg:py-28"
 				aria-labelledby={`feature-${title.replace(/\s+/g, '-').toLowerCase()}`}
 			>
-				{/* Volt Line divider above */}
-				<div className="hidden lg:block absolute -top-8 left-1/2 -translate-x-1/2 w-[80%] max-w-6xl">
-					<VoltLine variant="divider" className="opacity-30" />
-				</div>
-
-				<div className="mx-auto max-w-6xl px-6">
+				<div className="mx-auto max-w-7xl px-6">
 					<div
 						className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${reverse ? 'lg:row-reverse' : ''}`}
 					>
@@ -64,9 +58,9 @@ export function FeatureBlock({
 									{points.map((point, i) => (
 										<li
 											key={i}
-											className="flex items-start gap-4 group relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:rounded-full before:bg-volt before:opacity-0 group-hover:before:opacity-100 transition-opacity"
+											className="flex items-start gap-4 group relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-volt before:opacity-100 transition-transform group-hover:before:translate-x-1 group-hover:translate-x-1"
 										>
-											<span className="text-slate leading-relaxed">
+											<span className="text-slate leading-relaxed group-hover:text-ink transition-colors">
 												{point}
 											</span>
 										</li>
@@ -90,13 +84,6 @@ export function FeatureBlock({
 									{/* Volt accent corner */}
 									<div className="absolute bottom-4 right-4 w-16 h-16 border-2 border-volt rounded-tr-2xl border-t-transparent border-r-transparent opacity-50" />
 								</div>
-								{/* Floating stat/badge */}
-								<div className="absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 bg-white/95 backdrop-blur-sm border border-line/30 rounded-2xl p-4 shadow-lg animate-float">
-									<p className="ui-label text-volt">ENERYETU Solutions</p>
-									<p className="font-display text-lg font-bold uppercase tracking-tight text-ink">
-										Verified Capability
-									</p>
-								</div>
 							</div>
 						)}
 					</div>
@@ -104,6 +91,15 @@ export function FeatureBlock({
 			</section>
 		</ScrollReveal>
 	);
+}
+
+interface FeatureBlockCompactProps {
+	eyebrow?: string;
+	title: string;
+	description?: string;
+	points?: string[];
+	delay?: number;
+	className?: string;
 }
 
 /* Compact variant for tighter sections */
@@ -114,11 +110,11 @@ export function FeatureBlockCompact({
 	points,
 	delay = 0,
 	className = '',
-}: Omit<FeatureBlockProps, 'image' | 'imageAlt' | 'reverse' | 'children'>) {
+}: FeatureBlockCompactProps) {
 	return (
 		<ScrollReveal animation="up" delay={delay} className={className}>
 			<div className="surface-elevated p-6 lg:p-8">
-				<p className="ui-label text-blue-dark mb-3">{eyebrow}</p>
+				{eyebrow && <p className="ui-label text-blue-dark mb-3">{eyebrow}</p>}
 				<h3 className="font-display text-2xl lg:text-3xl font-black uppercase tracking-tight text-ink mb-4">
 					{title}
 				</h3>
@@ -132,9 +128,8 @@ export function FeatureBlockCompact({
 						{points.map((point, i) => (
 							<li
 								key={i}
-								className="flex items-start gap-3 text-slate leading-relaxed"
+								className="flex items-start gap-3 text-slate leading-relaxed before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-volt before:shrink-0 before:mt-2.5"
 							>
-								<span className="rev-chip text-volt shrink-0 mt-1">{i + 1}</span>
 								{point}
 							</li>
 						))}

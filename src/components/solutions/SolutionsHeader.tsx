@@ -13,21 +13,18 @@ export function SolutionsHeader() {
 				<Link
 					to="/eneryetu-solutions"
 					className="flex items-center gap-3 focus-ring"
-					aria-label="ENERYETU Solutions"
+					aria-label="ENERYETU"
 				>
 					<img
 						src="/images/parceiros/eneryetusolutions.png"
-						alt="ENERYETU Solutions"
+						alt="ENERYETU"
 						className="h-8 w-8 object-contain"
 					/>
-					<span className="hidden sm:block font-display text-xl font-black uppercase tracking-tight text-ink">
-						Solutions
-					</span>
 				</Link>
 
 				<div className="flex items-center gap-4">
 					<LanguageSwitcher dark={false} />
-					<Link to="/contact" className="btn-volt px-5 py-2 text-sm focus-ring">
+					<Link to="#proposal" className="btn-volt px-5 py-2 text-sm focus-ring">
 						{t('solutions.requestProposal')}
 					</Link>
 				</div>

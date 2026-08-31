@@ -1,64 +1,51 @@
 'use client';
 
-import { useTranslation } from 'react-i18next';
 import { ScrollReveal } from './ScrollReveal';
 
 interface ServiceCardProps {
-	index: number;
 	title: string;
-	description?: string;
 	icon?: React.ReactNode;
 	delay?: number;
 	category?: 'field' | 'workshop' | 'epc' | 'support';
 }
 
 const CATEGORY_COLORS = {
-	field: 'text-blue',
-	workshop: 'text-sun',
-	epc: 'text-volt',
+	field: 'text-blue-deep',
+	workshop: 'text-sun-deep',
+	epc: 'text-blue-deep',
 	support: 'text-slate',
 };
 
-const CATEGORY_LABELS = {
-	field: 'FIELD',
-	workshop: 'WORKSHOP',
-	epc: 'EPC',
-	support: 'SUPPORT',
+const CATEGORY_BG = {
+	field: 'bg-blue/10',
+	workshop: 'bg-sun/15',
+	epc: 'bg-volt/12',
+	support: 'bg-paper',
 };
 
-export function ServiceCard({
-	index,
-	title,
-	description,
-	icon,
-	delay = 0,
-	category = 'support',
-}: ServiceCardProps) {
-	const { t } = useTranslation();
-	const tag = `SVC-${String(index + 1).padStart(2, '0')}`;
+const CATEGORY_ACCENT = {
+	field: 'from-blue to-blue-deep',
+	workshop: 'from-sun to-sun-deep',
+	epc: 'from-volt to-sun',
+	support: 'from-slate to-blue-dark',
+};
 
+export function ServiceCard({ title, icon, delay = 0, category = 'support' }: ServiceCardProps) {
 	return (
-		<ScrollReveal animation="up" delay={delay} className="group">
-			<article className="surface-elevated p-6 lg:p-8 relative overflow-hidden">
-				{/* Category badge */}
-				<div className="absolute top-4 right-4">
-					<span
-						className={`ui-label px-2 py-1 rounded ${CATEGORY_COLORS[category]} bg-white/90 backdrop-blur`}
-					>
-						{CATEGORY_LABELS[category]}
-					</span>
-				</div>
-
-				{/* Tag */}
-				<div className="mb-4">
-					<span className="rev-chip text-blue-dark">{tag}</span>
-				</div>
+		<ScrollReveal animation="up" delay={delay} className="group h-full">
+			<article className="surface-elevated p-6 lg:p-7 relative overflow-hidden h-full flex flex-col">
+				{/* Top accent bar */}
+				<div
+					className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${CATEGORY_ACCENT[category]} opacity-70 group-hover:opacity-100 transition-opacity`}
+				/>
 
 				{/* Icon */}
-				<div className="mb-5 h-14 w-14 rounded-xl bg-ink/5 flex items-center justify-center group-hover:bg-volt/10 transition-colors duration-300">
+				<div
+					className={`mb-5 h-12 w-12 rounded-lg ${CATEGORY_BG[category]} flex items-center justify-center ${CATEGORY_COLORS[category]} group-hover:scale-105 transition-transform duration-300`}
+				>
 					{icon || (
 						<svg
-							className="h-8 w-8 text-blue"
+							className="h-7 w-7"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -71,22 +58,9 @@ export function ServiceCard({
 				</div>
 
 				{/* Title */}
-				<h3 className="font-display text-xl lg:text-2xl font-bold uppercase tracking-tight text-ink mb-3 group-hover:text-blue transition-colors duration-300">
+				<h3 className="font-display text-xl lg:text-2xl font-bold uppercase tracking-tight text-ink mb-3 group-hover:text-blue-dark transition-colors duration-300">
 					{title}
 				</h3>
-
-				{/* Description */}
-				{description && (
-					<p className="text-sm text-slate leading-relaxed mb-5 line-clamp-2">
-						{description}
-					</p>
-				)}
-
-				{/* Accent line */}
-				<div
-					className="h-px bg-line/50 group-hover:bg-volt group-hover:scale-x-100 transition-all duration-300 origin-left"
-					style={{ transform: 'scaleX(0)' }}
-				/>
 			</article>
 		</ScrollReveal>
 	);

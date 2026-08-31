@@ -260,6 +260,13 @@ body {
 	color: transparent;
 }
 
+@utility text-gradient-sun {
+	background: linear-gradient(90deg, var(--color-sun-deep), var(--color-sun));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
 /* Glass surface */
 @utility glass {
 	@apply bg-white/60 backdrop-blur-md border border-line/20;

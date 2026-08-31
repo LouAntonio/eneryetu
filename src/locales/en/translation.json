@@ -319,34 +319,20 @@
 		]
 	},
 	"solutions": {
-		"sheet": "SHEET",
-		"of": "/",
-		"rev": "REV",
-		"tag": "SVC",
-		"project": "PROJECT",
-		"projectValue": "ENERYETU SOLUTIONS — BUSINESS UNIT",
-		"scale": "SCALE",
-		"scaleValue": "1:1",
 		"requestProposal": "Request a proposal",
 		"getInTouch": "Get in touch",
-		"backToServices": "All services",
 		"hero": {
-			"title": "SOLUTIONS",
-			"headline": "Specialised industrial services, delivered as a business unit.",
-			"lede": "ENERYETU Solutions deploys dedicated engineering crews and field services — manpower, cleaning, maintenance, HVAC, scaffolding, fabrication and EPC structures for the Oil & Gas, Mining and heavy industry sectors.",
-			"note": "Drawing register · Industrial services · Angola",
-			"stat1Label": "Services",
-			"stat2Label": "Storage (m²)",
-			"stat3Label": "Partners",
-			"stat4Label": "EPC Ready"
+			"title": "Industrial services in Angola",
+			"headline": "Specialised crews and equipment, deployed where the work is.",
+			"lede": "ENERYETU Solutions mobilises dedicated engineering teams and field services — manpower, tank cleaning, maintenance, HVAC, scaffolding, fabrication and EPC structures for Oil & Gas, Mining and heavy industry."
 		},
 		"services": {
-			"eyebrow": "Drawing register",
-			"title": "Services",
-			"lead": "Thirteen service lines delivered by a single business unit."
+			"eyebrow": "What we do",
+			"title": "Thirteen service lines, one accountable unit",
+			"lead": "Everything under a single contract: from a trained crew on site to fully fabricated EPC structures."
 		},
 		"metal": {
-			"eyebrow": "Sheet 03 · Metal treatment",
+			"eyebrow": "Capability",
 			"title": "Metal structure treatment, repair & painting",
 			"points": [
 				"Corrosion control, surface preparation, structural repairs and industrial painting of structures — Structures, Decks and Pipework.",
@@ -355,8 +341,11 @@
 				"Internal and external pipe coating services."
 			]
 		},
+		"tankCleaning": {
+			"eyebrow": "Field services"
+		},
 		"facilities": {
-			"eyebrow": "Sheet 04 · Facilities",
+			"eyebrow": "Facilities",
 			"title": "Storage & facilities capability",
 			"lead": "Covered, ventilated and secure storage with CCTV, on the Cacuaco site.",
 			"nav1": {
@@ -380,26 +369,47 @@
 			"site": "The storage installation is located at the Cacuaco site, with sufficient infrastructure to support a wide range of services and their respective systems."
 		},
 		"fabrication": {
-			"eyebrow": "Sheet 05 · Fabrication",
+			"eyebrow": "Fabrication",
 			"title": "Equipment & component fabrication",
 			"lead": "EPC equipment, valves and materials for Oil & Gas and mining plants."
 		},
 		"materialsIntro": "Fabrication and supply of metal sheets, pipework and angle bars.",
 		"maintenance": {
-			"eyebrow": "Sheet 06 · Maintenance",
+			"eyebrow": "Maintenance",
 			"title": "Maintenance services"
 		},
 		"partners": {
-			"eyebrow": "Sheet 07 · Partners",
-			"title": "Business unit partners"
+			"eyebrow": "Partners",
+			"title": "Who we work with"
 		},
 		"cta": {
 			"title": "Bring your next scope to ENERYETU Solutions.",
 			"body": "Tell us the service, the site and the deadline — we handle the crew, the equipment and the execution.",
 			"action": "Request a proposal"
 		},
+		"form": {
+			"title": "Request a proposal",
+			"subtitle": "Tell us the service, the site and the deadline — we respond within one business day.",
+			"name": "Name",
+			"company": "Company",
+			"email": "Work email",
+			"phone": "Phone",
+			"service": "Service required",
+			"servicePlaceholder": "Select a service",
+			"deadline": "Site & deadline",
+			"message": "Tell us about the scope",
+			"submit": "Send proposal request",
+			"sending": "Sending...",
+			"successTitle": "Request received",
+			"successBody": "Our team will come back to you within one business day. Thanks for trusting ENERYETU Solutions.",
+			"errors": {
+				"name": "Please enter your name.",
+				"email": "Enter a valid email address.",
+				"message": "Tell us a little about the scope."
+			}
+		},
 		"footer": {
-			"unit": "ENERYETU SOLUTIONS — BUSINESS UNIT",
+			"unit": "ENERYETU SOLUTIONS",
 			"contactTitle": "Contact the unit",
 			"phone": "+244 923 734 199 · +244 945 459 270",
 			"email": "geral@eneryetu.com",
@@ -484,12 +494,12 @@
 		"partners": {
 			"title": "Business Unit Partners",
 			"items": [
-				"ENERYETU",
-				"RICO ORGANIZAÇÕES",
-				"DallOIL",
-				"OCEAN ATLANTIC PETROLEUM",
-				"ELITE FLOW CONTROL",
-				"Elite PROJECT ENGINEERING"
+				{ "name": "ENERYETU", "logo": "/images/parceiros/eneryetusolutions.png" },
+				{ "name": "RICO ORGANIZAÇÕES", "logo": "/images/parceiros/rico.png" },
+				{ "name": "DallOIL", "logo": "/images/parceiros/dalloil.png" },
+				{ "name": "OCEAN ATLANTIC PETROLEUM", "logo": "/images/parceiros/OAT.png" },
+				{ "name": "ELITE FLOW CONTROL", "logo": "/images/parceiros/elite.png" },
+				{ "name": "Elite PROJECT ENGINEERING", "logo": "/images/parceiros/elite.png" }
 			]
 		},
 		"construction": {
