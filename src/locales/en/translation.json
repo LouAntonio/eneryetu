@@ -321,10 +321,35 @@
 	"solutions": {
 		"requestProposal": "Request a proposal",
 		"getInTouch": "Get in touch",
+		"nav": [
+			"Services",
+			"Field",
+			"Facilities",
+			"Fabrication",
+			"Maintenance",
+			"Partners",
+			"Proposal"
+		],
 		"hero": {
 			"title": "Industrial services in Angola",
 			"headline": "Specialised crews and equipment, deployed where the work is.",
-			"lede": "ENERYETU Solutions mobilises dedicated engineering teams and field services — manpower, tank cleaning, maintenance, HVAC, scaffolding, fabrication and EPC structures for Oil & Gas, Mining and heavy industry."
+			"lede": "ENERYETU Solutions mobilises dedicated engineering teams and field services — manpower, tank cleaning, maintenance, HVAC, scaffolding, fabrication and EPC structures for Oil & Gas, Mining and heavy industry.",
+			"ticker": [
+				"Manpower",
+				"Tank cleaning",
+				"Maintenance",
+				"HVAC",
+				"Scaffolding",
+				"Fabrication",
+				"EPC structures",
+				"Generators",
+				"Logistics"
+			],
+			"telemetry": {
+				"area": "Covered facility area",
+				"workshops": "Workshop area",
+				"capacity": "Storage capacity"
+			}
 		},
 		"services": {
 			"eyebrow": "What we do",

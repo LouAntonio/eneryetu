@@ -39,7 +39,10 @@ export function FeatureBlock({
 					>
 						{/* Content Column */}
 						<div className="relative z-10">
-							<p className="ui-label text-blue-dark mb-3">{eyebrow}</p>
+							<p className="mb-3 flex items-center gap-3 ui-label text-blue-dark">
+								<span className="node-live h-2 w-2 rounded-full bg-volt" />
+								{eyebrow}
+							</p>
 							<h2
 								id={`feature-${title.replace(/\s+/g, '-').toLowerCase()}`}
 								className="font-display text-3xl lg:text-4xl font-black uppercase tracking-tight text-ink mb-6"
@@ -114,7 +117,12 @@ export function FeatureBlockCompact({
 	return (
 		<ScrollReveal animation="up" delay={delay} className={className}>
 			<div className="surface-elevated p-6 lg:p-8">
-				{eyebrow && <p className="ui-label text-blue-dark mb-3">{eyebrow}</p>}
+				{eyebrow && (
+					<p className="mb-3 flex items-center gap-3 ui-label text-blue-dark">
+						<span className="node-live h-2 w-2 rounded-full bg-volt" />
+						{eyebrow}
+					</p>
+				)}
 				<h3 className="font-display text-2xl lg:text-3xl font-black uppercase tracking-tight text-ink mb-4">
 					{title}
 				</h3>

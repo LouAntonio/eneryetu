@@ -321,10 +321,35 @@
 	"solutions": {
 		"requestProposal": "Solicitar proposta",
 		"getInTouch": "Contactar",
+		"nav": [
+			"Serviços",
+			"Campo",
+			"Instalações",
+			"Fabricação",
+			"Manutenção",
+			"Parceiros",
+			"Proposta"
+		],
 		"hero": {
 			"title": "Serviços industriais em Angola",
 			"headline": "Equipas e equipamentos especializados, no local do trabalho.",
-			"lede": "A ENERYETU Solutions mobiliza equipas de engenharia e serviços de campo dedicados — mão de obra, limpeza de tanques, manutenção, HVAC, andaimes, fabricação e estruturas EPC para Petróleo & Gás, Mineração e indústria pesada."
+			"lede": "A ENERYETU Solutions mobiliza equipas de engenharia e serviços de campo dedicados — mão de obra, limpeza de tanques, manutenção, HVAC, andaimes, fabricação e estruturas EPC para Petróleo & Gás, Mineração e indústria pesada.",
+			"ticker": [
+				"Mão de obra",
+				"Limpeza de tanques",
+				"Manutenção",
+				"HVAC",
+				"Andaimes",
+				"Fabricação",
+				"Estruturas EPC",
+				"Geradores",
+				"Logística"
+			],
+			"telemetry": {
+				"area": "Área coberta da instalação",
+				"workshops": "Área de oficinas",
+				"capacity": "Capacidade de armazenamento"
+			}
 		},
 		"services": {
 			"eyebrow": "O que fazemos",

@@ -277,15 +277,208 @@ body {
 	@apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt focus-visible:ring-offset-2 focus-visible:ring-offset-white;
 }
 
+/* ------------------------------------------------------------------ *
+ * Live Circuit — motion vocabulary for the ENERYETU Solutions landing
+ * ------------------------------------------------------------------ */
+
+/* Energy sweep — diagonal volt/cyan pulse crossing a dark surface */
+@keyframes energy-sweep {
+	0% {
+		transform: translateX(-120%) skewX(-18deg);
+	}
+	60%,
+	100% {
+		transform: translateX(240%) skewX(-18deg);
+	}
+}
+
+.energy-sweep {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 34%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 241, 16, 0.1),
+		rgba(72, 202, 228, 0.14),
+		transparent
+	);
+	pointer-events: none;
+	animation: energy-sweep 6.5s ease-in-out infinite;
+}
+
+/* Scanline — a single bright horizontal line passing down a dark area */
+@keyframes scanline {
+	0% {
+		top: -4%;
+		opacity: 0;
+	}
+	12% {
+		opacity: 0.7;
+	}
+	88% {
+		opacity: 0.7;
+	}
+	100% {
+		top: 104%;
+		opacity: 0;
+	}
+}
+
+.scanline {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(72, 202, 228, 0.55),
+		rgba(255, 241, 16, 0.4),
+		transparent
+	);
+	pointer-events: none;
+	animation: scanline 8s linear infinite;
+}
+
+/* Blueprint grid drift — slow background motion for depth on dark */
+@keyframes grid-drift {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 64px 64px;
+	}
+}
+
+.grid-drift {
+	animation: grid-drift 40s linear infinite;
+}
+
+/* Ticker — auto-scrolling mono telemetry line */
+@keyframes ticker {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.ticker-track {
+	display: flex;
+	width: max-content;
+	animation: ticker 28s linear infinite;
+}
+
+.ticker-track:hover {
+	animation-play-state: paused;
+}
+
+/* Rail current — traveling pulse along the vertical busbar */
+@keyframes rail-current {
+	0% {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	15% {
+		opacity: 1;
+	}
+	85% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+}
+
+.rail-current {
+	animation: rail-current 2.8s ease-in-out infinite;
+}
+
+/* Dark glass surface for live-circuit cards on dark sections */
+@utility glass-dark {
+	@apply bg-white/[0.04] backdrop-blur-md border border-white/10;
+}
+
+/* Vertical trace for the busbar rail */
+@utility trace-vertical {
+	background-image: linear-gradient(
+		to bottom,
+		rgba(72, 202, 228, 0.35) 1px,
+		transparent 1px
+	);
+	background-size: 1px 14px;
+}
+
+/* Status node variant */
+.node-live--cyan {
+	box-shadow: 0 0 8px rgba(72, 202, 228, 0.7);
+}
+
+/* Horizontal current — a light pulse running along a thin line (card node) */
+@keyframes current-x {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	15% {
+		opacity: 1;
+	}
+	85% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(340%);
+		opacity: 0;
+	}
+}
+
+.current-line {
+	position: relative;
+	height: 2px;
+	border-radius: 9999px;
+	background: rgba(72, 202, 228, 0.16);
+	overflow: hidden;
+}
+
+.current-line::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 40%;
+	border-radius: 9999px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(72, 202, 228, 0.9),
+		rgba(255, 241, 16, 0.85),
+		transparent
+	);
+	animation: current-x 2.4s ease-in-out infinite;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
 	.volt-line,
 	.reveal-up,
 	.reveal-fade,
-	.counter-up {
+	.counter-up,
+	.energy-sweep,
+	.scanline,
+	.grid-drift,
+	.ticker-track,
+	.rail-current {
 		animation: none !important;
 		opacity: 1 !important;
 		transform: none !important;
+	}
+
+	.current-line::after {
+		animation: none !important;
 	}
 }
 
@@ -359,6 +552,34 @@ body {
 	.btn-outline:hover {
 		background-color: var(--color-ink);
 		color: var(--color-paper);
+	}
+
+	.btn-ghost {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		border: 2px solid rgba(240, 244, 248, 0.45);
+		background-color: transparent;
+		color: var(--color-paper);
+		font-family: var(--font-display);
+		font-size: 0.875rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		transition: all 0.2s;
+		border-radius: 9999px;
+		padding: 0.5rem 1.25rem;
+	}
+
+	.btn-ghost:hover {
+		border-color: var(--color-volt);
+		color: var(--color-volt);
+		background-color: rgba(255, 241, 16, 0.06);
+	}
+
+	.btn-ghost-lg {
+		padding: 1rem 2rem;
+		font-size: 1.125rem;
 	}
 
 	.nameplate {

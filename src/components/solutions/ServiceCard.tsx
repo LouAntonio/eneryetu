@@ -39,6 +39,14 @@ export function ServiceCard({ title, icon, delay = 0, category = 'support' }: Se
 					className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${CATEGORY_ACCENT[category]} opacity-70 group-hover:opacity-100 transition-opacity`}
 				/>
 
+				{/* Status light */}
+				<span
+					aria-hidden
+					className={`node-live absolute right-4 top-5 h-2 w-2 rounded-full ${
+						category === 'workshop' ? 'bg-sun' : 'bg-volt'
+					}`}
+				/>
+
 				{/* Icon */}
 				<div
 					className={`mb-5 h-12 w-12 rounded-lg ${CATEGORY_BG[category]} flex items-center justify-center ${CATEGORY_COLORS[category]} group-hover:scale-105 transition-transform duration-300`}
@@ -61,6 +69,9 @@ export function ServiceCard({ title, icon, delay = 0, category = 'support' }: Se
 				<h3 className="font-display text-xl lg:text-2xl font-bold uppercase tracking-tight text-ink mb-3 group-hover:text-blue-dark transition-colors duration-300">
 					{title}
 				</h3>
+
+				{/* Live current running along the node */}
+				<div className="current-line mt-auto pt-4" />
 			</article>
 		</ScrollReveal>
 	);

@@ -77,8 +77,11 @@ export function MetricsGrid({ title, eyebrow, description, items, delay = 0 }: M
 		<ScrollReveal animation="up" delay={delay}>
 			<section className="py-20 lg:py-28" aria-labelledby="metrics-grid-title">
 				<div className="mx-auto max-w-7xl px-6">
-					<div className="max-w-3xl mb-14">
-						<p className="ui-label text-blue-dark mb-3">{eyebrow}</p>
+					<div className="mb-14 max-w-3xl">
+						<p className="mb-3 flex items-center gap-3 ui-label text-blue-dark">
+							<span className="node-live h-2 w-2 rounded-full bg-volt" />
+							{eyebrow}
+						</p>
 						<h2
 							id="metrics-grid-title"
 							className="font-display text-4xl lg:text-5xl font-black uppercase tracking-tight text-ink mb-4"
