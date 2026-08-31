@@ -78,7 +78,7 @@ export function Home() {
 			</section>
 
 			{/* BUSINESS UNIT — ENERYETU SOLUTIONS */}
-			<section className="border-b border-line bg-ink-deep text-paper">
+			<section className="border-b border-line bg-ink-deep text-paper hidden">
 				<div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-8 px-6 py-16 lg:flex-row lg:items-center lg:justify-between lg:py-20">
 					<div>
 						<p className="ui-label text-volt">{t('home.businessUnit.eyebrow')}</p>

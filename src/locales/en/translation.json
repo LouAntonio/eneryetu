@@ -224,12 +224,7 @@
 		"title": "Skills that stay on site.",
 		"body": "Professional training for national and international teams — so the people who run and maintain your facility truly master it.",
 		"heroImage": "/images/others/Prancheta 6.jpg",
-		"features": [
-			"Project Management",
-			"Primavera P6",
-			"Welding",
-			"NDT Inspection"
-		],
+		"features": ["Project Management", "Primavera P6", "Welding", "NDT Inspection"],
 		"cta": "See our training",
 		"all": "All",
 		"presencial": "In-person",
@@ -413,14 +408,14 @@
 				{
 					"name": "Cleaning & Treatment",
 					"items": [
-					{
-						"en": "TANK AND PIPEWORK CLEANING",
-						"pt": "Tank & pipework cleaning"
-					},
-					{
-						"en": "STRUCTURAL REPAIR & INDUSTRIAL PAINTING",
-						"pt": "Structural repair & industrial painting"
-					}
+						{
+							"en": "TANK AND PIPEWORK CLEANING",
+							"pt": "Tank & pipework cleaning"
+						},
+						{
+							"en": "STRUCTURAL REPAIR & INDUSTRIAL PAINTING",
+							"pt": "Structural repair & industrial painting"
+						}
 					]
 				},
 				{
@@ -495,32 +490,19 @@
 					"name": "Nave 1",
 					"area": "50,000 m²",
 					"sub": "12,000 m² covered (24%)",
-					"features": [
-						"Ventilated",
-						"Security",
-						"CCTV"
-					]
+					"features": ["Ventilated", "Security", "CCTV"]
 				},
 				"nave2": {
 					"name": "Nave 2",
 					"area": "2,000 m²",
 					"sub": "Fully covered",
-					"features": [
-						"Ventilated",
-						"Security",
-						"CCTV",
-						"Reinforced concrete floor"
-					]
+					"features": ["Ventilated", "Security", "CCTV", "Reinforced concrete floor"]
 				},
 				"silos": {
 					"name": "Silos",
 					"area": "40,000 L",
 					"sub": "12,000 m² covered (24%)",
-					"features": [
-						"Ventilation",
-						"Security",
-						"CCTV"
-					]
+					"features": ["Ventilation", "Security", "CCTV"]
 				}
 			},
 			"site": "The storage facility is located at the Cacuaco site, with infrastructure enough to support a wide range of services and their respective systems."

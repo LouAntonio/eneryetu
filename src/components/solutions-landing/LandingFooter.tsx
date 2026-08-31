@@ -26,7 +26,10 @@ export function LandingFooter() {
 						</p>
 						<ul className="mt-3 space-y-2 text-sm text-inklit/80">
 							<li>
-								<a href="tel:+244923734199" className="transition-colors hover:text-volt">
+								<a
+									href="tel:+244923734199"
+									className="transition-colors hover:text-volt"
+								>
 									{t('solutionsLanding.footer.phone')}
 								</a>
 							</li>
@@ -42,7 +45,9 @@ export function LandingFooter() {
 					</div>
 
 					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.3em] text-glow">ENERYETU</p>
+						<p className="font-mono text-xs uppercase tracking-[0.3em] text-glow">
+							ENERYETU
+						</p>
 						<Link
 							to="/"
 							className="mt-3 inline-flex items-center gap-2 text-sm text-inklit/80 transition-colors hover:text-volt"

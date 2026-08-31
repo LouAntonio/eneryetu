@@ -224,12 +224,7 @@
 		"title": "Competências que ficam no local.",
 		"body": "Formação profissional para equipas nacionais e internacionais — para que quem opera e mantém a sua instalação a domine de verdade.",
 		"heroImage": "/images/others/Prancheta 6.jpg",
-		"features": [
-			"Gestão de Projetos",
-			"Primavera P6",
-			"Soldadura",
-			"Inspeção NDT"
-		],
+		"features": ["Gestão de Projetos", "Primavera P6", "Soldadura", "Inspeção NDT"],
 		"cta": "Ver a formação",
 		"all": "Todos",
 		"presencial": "Presencial",
@@ -413,14 +408,14 @@
 				{
 					"name": "Limpeza & Tratamento",
 					"items": [
-					{
-						"en": "TANK AND PIPEWORK CLEANING",
-						"pt": "Limpeza de tanques e tubagens"
-					},
-					{
-						"en": "STRUCTURAL REPAIR & INDUSTRIAL PAINTING",
-						"pt": "Reparação estrutural e pintura"
-					}
+						{
+							"en": "TANK AND PIPEWORK CLEANING",
+							"pt": "Limpeza de tanques e tubagens"
+						},
+						{
+							"en": "STRUCTURAL REPAIR & INDUSTRIAL PAINTING",
+							"pt": "Reparação estrutural e pintura"
+						}
 					]
 				},
 				{
@@ -495,32 +490,19 @@
 					"name": "Nave 1",
 					"area": "50 000 m²",
 					"sub": "12 000 m² cobertos (24%)",
-					"features": [
-						"Ventilado",
-						"Segurança",
-						"CCTV"
-					]
+					"features": ["Ventilado", "Segurança", "CCTV"]
 				},
 				"nave2": {
 					"name": "Nave 2",
 					"area": "2 000 m²",
 					"sub": "Cobertura total",
-					"features": [
-						"Ventilado",
-						"Segurança",
-						"CCTV",
-						"Pavimento em betão reforçado"
-					]
+					"features": ["Ventilado", "Segurança", "CCTV", "Pavimento em betão reforçado"]
 				},
 				"silos": {
 					"name": "Silos",
 					"area": "40 000 L",
 					"sub": "12 000 m² cobertos (24%)",
-					"features": [
-						"Ventilação",
-						"Segurança",
-						"CCTV"
-					]
+					"features": ["Ventilação", "Segurança", "CCTV"]
 				}
 			},
 			"site": "A instalação de armazenamento localiza-se no site de Cacuaco, com infraestrutura suficiente para apoiar uma vasta gama de serviços e os respetivos sistemas."

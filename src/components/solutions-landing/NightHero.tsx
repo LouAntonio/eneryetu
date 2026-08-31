@@ -5,8 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from '@/lib/routing';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
-const HERO_IMG =
-	'/images/others/Fabrication%20%26%20construction%20of%20structures.jpeg';
+const HERO_IMG = '/images/others/Fabrication%20%26%20construction%20of%20structures.jpeg';
 const BRAND_IMG = '/images/parceiros/eneryetusolutions.png';
 
 interface ServiceItem {
@@ -21,14 +20,10 @@ interface ServiceGroup {
 export function NightHero() {
 	const { t } = useTranslation();
 	const groups = useMemo(
-		() =>
-			t('solutionsLanding.services.groups', { returnObjects: true }) as ServiceGroup[],
+		() => t('solutionsLanding.services.groups', { returnObjects: true }) as ServiceGroup[],
 		[t],
 	);
-	const tickerItems = useMemo(
-		() => groups.flatMap((g) => g.items.map((it) => it.en)),
-		[groups],
-	);
+	const tickerItems = useMemo(() => groups.flatMap((g) => g.items.map((it) => it.en)), [groups]);
 
 	const nav = [
 		{ href: '#servicos', label: t('solutionsLanding.nav.services') },
@@ -62,8 +57,16 @@ export function NightHero() {
 
 			{/* Top bar */}
 			<div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-8">
-				<Link to="/eneryetu-solutions" className="flex items-center gap-3" aria-label="ENERYETU Solutions">
-					<img src={BRAND_IMG} alt="ENERYETU Solutions" className="h-9 w-9 rounded-full bg-inklit/10 object-contain" />
+				<Link
+					to="/eneryetu-solutions"
+					className="flex items-center gap-3"
+					aria-label="ENERYETU Solutions"
+				>
+					<img
+						src={BRAND_IMG}
+						alt="ENERYETU Solutions"
+						className="h-9 w-9 rounded-full bg-inklit/10 object-contain"
+					/>
 					<span className="font-display-alt text-lg uppercase tracking-tight text-inklit">
 						Ener<span className="text-volt">Yetu</span> Solutions
 					</span>
@@ -130,7 +133,9 @@ export function NightHero() {
 				<div className="mt-14 grid grid-cols-1 gap-px overflow-hidden border border-edge bg-edge sm:grid-cols-3">
 					{readouts.map((r) => (
 						<div key={r.label} className="bg-void-deep/70 px-6 py-5">
-							<div className="font-display-alt text-3xl text-inklit sm:text-4xl">{r.value}</div>
+							<div className="font-display-alt text-3xl text-inklit sm:text-4xl">
+								{r.value}
+							</div>
 							<div className="mt-1 font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted">
 								{r.label}
 							</div>

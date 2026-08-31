@@ -17,8 +17,7 @@ interface ServiceGroup {
 export function ServiceRoster() {
 	const { t } = useTranslation();
 	const groups = useMemo(
-		() =>
-			t('solutionsLanding.services.groups', { returnObjects: true }) as ServiceGroup[],
+		() => t('solutionsLanding.services.groups', { returnObjects: true }) as ServiceGroup[],
 		[t],
 	);
 
@@ -46,7 +45,10 @@ export function ServiceRoster() {
 									{group.items.map((item) => {
 										const idx = runningIndex++;
 										return (
-											<li key={item.en} className="group flex items-start gap-4 py-4">
+											<li
+												key={item.en}
+												className="group flex items-start gap-4 py-4"
+											>
 												<span className="font-mono text-xs leading-6 text-glow/70">
 													{String(idx + 1).padStart(2, '0')}
 												</span>
@@ -54,7 +56,9 @@ export function ServiceRoster() {
 													<p className="font-mono text-sm uppercase tracking-[0.12em] text-inklit/85 transition-colors group-hover:text-volt">
 														{item.en}
 													</p>
-													<p className="mt-1 text-sm text-muted">{item.pt}</p>
+													<p className="mt-1 text-sm text-muted">
+														{item.pt}
+													</p>
 												</div>
 											</li>
 										);

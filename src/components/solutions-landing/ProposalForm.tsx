@@ -55,9 +55,7 @@ export function ProposalForm() {
 
 	const update =
 		(field: keyof Values) =>
-		(
-			event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
-		) => {
+		(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 			setValues((prev) => ({ ...prev, [field]: event.target.value }));
 		};
 
@@ -87,8 +85,7 @@ export function ProposalForm() {
 			}
 			setSent(true);
 		} catch (err: unknown) {
-			const msg =
-				err instanceof Error ? err.message : 'Não foi possível enviar o pedido.';
+			const msg = err instanceof Error ? err.message : 'Não foi possível enviar o pedido.';
 			setServerError(msg);
 		} finally {
 			setLoading(false);
@@ -127,7 +124,10 @@ export function ProposalForm() {
 							<form onSubmit={onSubmit} noValidate className="space-y-6">
 								<div className="grid gap-6 sm:grid-cols-2">
 									<div>
-										<label htmlFor="sln-name" className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70">
+										<label
+											htmlFor="sln-name"
+											className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70"
+										>
 											{t('solutionsLanding.proposal.name')}
 										</label>
 										<input
@@ -143,7 +143,10 @@ export function ProposalForm() {
 										)}
 									</div>
 									<div>
-										<label htmlFor="sln-company" className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70">
+										<label
+											htmlFor="sln-company"
+											className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70"
+										>
 											{t('solutionsLanding.proposal.company')}
 										</label>
 										<input
@@ -159,7 +162,10 @@ export function ProposalForm() {
 
 								<div className="grid gap-6 sm:grid-cols-2">
 									<div>
-										<label htmlFor="sln-email" className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70">
+										<label
+											htmlFor="sln-email"
+											className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70"
+										>
 											{t('solutionsLanding.proposal.email')}
 										</label>
 										<input
@@ -175,7 +181,10 @@ export function ProposalForm() {
 										)}
 									</div>
 									<div>
-										<label htmlFor="sln-phone" className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70">
+										<label
+											htmlFor="sln-phone"
+											className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70"
+										>
 											{t('solutionsLanding.proposal.phone')}
 										</label>
 										<input
@@ -191,7 +200,10 @@ export function ProposalForm() {
 
 								<div className="grid gap-6 sm:grid-cols-2">
 									<div>
-										<label htmlFor="sln-service" className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70">
+										<label
+											htmlFor="sln-service"
+											className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70"
+										>
 											{t('solutionsLanding.proposal.service')}
 										</label>
 										<select
@@ -204,14 +216,21 @@ export function ProposalForm() {
 												{t('solutionsLanding.proposal.servicePlaceholder')}
 											</option>
 											{services.map((service) => (
-												<option key={service} value={service} className="bg-panel">
+												<option
+													key={service}
+													value={service}
+													className="bg-panel"
+												>
 													{service}
 												</option>
 											))}
 										</select>
 									</div>
 									<div>
-										<label htmlFor="sln-deadline" className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70">
+										<label
+											htmlFor="sln-deadline"
+											className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70"
+										>
 											{t('solutionsLanding.proposal.deadline')}
 										</label>
 										<input
@@ -219,14 +238,19 @@ export function ProposalForm() {
 											type="text"
 											value={values.deadline}
 											onChange={update('deadline')}
-											placeholder={t('solutionsLanding.proposal.deadlinePlaceholder')}
+											placeholder={t(
+												'solutionsLanding.proposal.deadlinePlaceholder',
+											)}
 											className={`mt-2 ${field}`}
 										/>
 									</div>
 								</div>
 
 								<div>
-									<label htmlFor="sln-message" className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70">
+									<label
+										htmlFor="sln-message"
+										className="font-mono text-xs uppercase tracking-[0.2em] text-inklit/70"
+									>
 										{t('solutionsLanding.proposal.message')}
 									</label>
 									<textarea
@@ -234,7 +258,9 @@ export function ProposalForm() {
 										value={values.message}
 										onChange={update('message')}
 										rows={5}
-										placeholder={t('solutionsLanding.proposal.messagePlaceholder')}
+										placeholder={t(
+											'solutionsLanding.proposal.messagePlaceholder',
+										)}
 										className={`mt-2 ${field} resize-y`}
 									/>
 									{errors.message && (

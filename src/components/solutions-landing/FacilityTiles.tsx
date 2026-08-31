@@ -43,7 +43,9 @@ export function FacilityTiles() {
 									</h3>
 									<span className="voltage-node h-2 w-2 rounded-full bg-volt" />
 								</div>
-								<div className="font-display-alt mt-4 text-4xl text-glow">{unit.area}</div>
+								<div className="font-display-alt mt-4 text-4xl text-glow">
+									{unit.area}
+								</div>
 								<div className="mt-1 font-mono text-xs uppercase tracking-[0.15em] text-muted">
 									{unit.sub}
 								</div>

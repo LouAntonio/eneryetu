@@ -204,7 +204,7 @@ export function Footer() {
 			<div className="border-t border-paper/15">
 				<div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-6 py-5 font-mono text-xs text-paper/50 sm:flex-row">
 					<p>
-						{t('brand')} © {year}. {t('footer.rights')}
+						{t('brand')} © 2025 - {year}. {t('footer.rights')}
 					</p>
 					<p className="flex items-center gap-1">
 						{t('footer.developedBy')}{' '}
