@@ -318,6 +318,90 @@
 			{ "name": "WEPROQURE", "logo": "/images/parceiros/WEPROQURE.png" }
 		]
 	},
+	"solutions": {
+		"sheet": "SHEET",
+		"of": "/",
+		"rev": "REV",
+		"tag": "SVC",
+		"project": "PROJECT",
+		"projectValue": "ENERYETU SOLUTIONS — BUSINESS UNIT",
+		"scale": "SCALE",
+		"scaleValue": "1:1",
+		"requestProposal": "Request a proposal",
+		"getInTouch": "Get in touch",
+		"backToServices": "All services",
+		"hero": {
+			"title": "SOLUTIONS",
+			"headline": "Specialised industrial services, delivered as a business unit.",
+			"lede": "ENERYETU Solutions deploys dedicated engineering crews and field services — manpower, cleaning, maintenance, HVAC, scaffolding, fabrication and EPC structures for the Oil & Gas, Mining and heavy industry sectors.",
+			"note": "Drawing register · Industrial services · Angola"
+		},
+		"services": {
+			"eyebrow": "Drawing register",
+			"title": "Services",
+			"lead": "Thirteen service lines delivered by a single business unit."
+		},
+		"metal": {
+			"eyebrow": "Sheet 03 · Metal treatment",
+			"title": "Metal structure treatment, repair & painting",
+			"points": [
+				"Corrosion control, surface preparation, structural repairs and industrial painting of structures — Structures, Decks and Pipework.",
+				"Abrasive blasting and surface preparation methods, including equipment rental.",
+				"Supply of industrial coatings and industrial painting services.",
+				"Internal and external pipe coating services."
+			]
+		},
+		"facilities": {
+			"eyebrow": "Sheet 04 · Facilities",
+			"title": "Storage & facilities capability",
+			"lead": "Covered, ventilated and secure storage with CCTV, on the Cacuaco site.",
+			"nav1": {
+				"title": "Nave 1",
+				"stat": "50 000",
+				"unit": "m²",
+				"note": "24% covered · ventilated · security · CCTV"
+			},
+			"nav2": {
+				"title": "Nave 2",
+				"stat": "2 000",
+				"unit": "m²",
+				"note": "Covered · ventilated · security · CCTV · reinforced concrete floor"
+			},
+			"silos": {
+				"title": "Silos",
+				"stat": "40 000",
+				"unit": "L",
+				"note": "24% covered · ventilation · security · CCTV"
+			},
+			"site": "The storage installation is located at the Cacuaco site, with sufficient infrastructure to support a wide range of services and their respective systems."
+		},
+		"fabrication": {
+			"eyebrow": "Sheet 05 · Fabrication",
+			"title": "Equipment & component fabrication",
+			"lead": "EPC equipment, valves and materials for Oil & Gas and mining plants."
+		},
+		"materialsIntro": "Fabrication and supply of metal sheets, pipework and angle bars.",
+		"maintenance": {
+			"eyebrow": "Sheet 06 · Maintenance",
+			"title": "Maintenance services"
+		},
+		"partners": {
+			"eyebrow": "Sheet 07 · Partners",
+			"title": "Business unit partners"
+		},
+		"cta": {
+			"title": "Bring your next scope to ENERYETU Solutions.",
+			"body": "Tell us the service, the site and the deadline — we handle the crew, the equipment and the execution.",
+			"action": "Request a proposal"
+		},
+		"footer": {
+			"unit": "ENERYETU SOLUTIONS — BUSINESS UNIT",
+			"contactTitle": "Contact the unit",
+			"phone": "+244 923 734 199 · +244 945 459 270",
+			"email": "geral@eneryetu.com",
+			"rights": "ENERYETU Solutions. All rights reserved."
+		}
+	},
 	"home": {
 		"businessUnit": {
 			"eyebrow": "Business Unit",
