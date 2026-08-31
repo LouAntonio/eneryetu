@@ -334,7 +334,11 @@
 			"title": "SOLUTIONS",
 			"headline": "Serviços industriais especializados, entregues como unidade de negócio.",
 			"lede": "A ENERYETU Solutions mobiliza equipas de engenharia e serviços de campo dedicados — mão de obra, limpeza, manutenção, HVAC, andaimes, fabricação e estruturas EPC para os sectores de Petróleo & Gás, Mineração e indústria pesada.",
-			"note": "Registo de desenhos · Serviços industriais · Angola"
+			"note": "Registo de desenhos · Serviços industriais · Angola",
+			"stat1Label": "Serviços",
+			"stat2Label": "Armazenamento (m²)",
+			"stat3Label": "Parceiros",
+			"stat4Label": "EPC Pronto"
 		},
 		"services": {
 			"eyebrow": "Registo de desenhos",

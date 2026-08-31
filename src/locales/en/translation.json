@@ -334,7 +334,11 @@
 			"title": "SOLUTIONS",
 			"headline": "Specialised industrial services, delivered as a business unit.",
 			"lede": "ENERYETU Solutions deploys dedicated engineering crews and field services — manpower, cleaning, maintenance, HVAC, scaffolding, fabrication and EPC structures for the Oil & Gas, Mining and heavy industry sectors.",
-			"note": "Drawing register · Industrial services · Angola"
+			"note": "Drawing register · Industrial services · Angola",
+			"stat1Label": "Services",
+			"stat2Label": "Storage (m²)",
+			"stat3Label": "Partners",
+			"stat4Label": "EPC Ready"
 		},
 		"services": {
 			"eyebrow": "Drawing register",

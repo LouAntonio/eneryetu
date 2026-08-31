@@ -111,65 +111,98 @@ body {
 }
 
 /* ------------------------------------------------------------- *
- * ENERYETU SOLUTIONS — standalone landing "drawing register"
- * Light engineering-sheet system: hairline drafting grid, sheet
- * frames with notched metal corners and blue ink lines, using the
- * same ENERYETU tokens on a light field.
+ * ENERYETU SOLUTIONS — "Industrial Pulse" redesign
+ * Modern, flowing design with Volt accent line as signature element.
  * ------------------------------------------------------------- */
-@utility grid-draft {
-	background-image:
-		linear-gradient(to right, rgba(72, 202, 228, 0.14) 1px, transparent 1px),
-		linear-gradient(to bottom, rgba(72, 202, 228, 0.14) 1px, transparent 1px);
-	background-size: 48px 48px;
+
+/* Surface utilities */
+@utility surface {
+	@apply bg-white/80 backdrop-blur-sm border border-line/30 rounded-2xl;
 }
 
-@utility grid-draft-fine {
-	background-image:
-		linear-gradient(to right, rgba(33, 153, 184, 0.12) 1px, transparent 1px),
-		linear-gradient(to bottom, rgba(33, 153, 184, 0.12) 1px, transparent 1px);
-	background-size: 16px 16px;
+@utility surface-elevated {
+	@apply bg-white shadow-lg rounded-2xl hover:shadow-xl transition-shadow duration-300;
 }
 
-/* Sheet frame — a technical drawing border with corner registration ticks */
-@utility drawing-frame {
-	position: relative;
-	border: 1px solid var(--color-blue-dark);
+/* Volt Line — signature animated path */
+@keyframes volt-draw {
+	from {
+		stroke-dashoffset: 1000;
+		opacity: 0;
+	}
+	to {
+		stroke-dashoffset: 0;
+		opacity: 1;
+	}
 }
 
-.drawing-frame::before {
-	content: '';
-	position: absolute;
-	inset: 6px;
-	border: 1px solid var(--color-blue);
-	pointer-events: none;
-	opacity: 0.45;
+@keyframes volt-pulse {
+	0%,
+	100% {
+		stroke-width: 2;
+		opacity: 0.8;
+	}
+	50% {
+		stroke-width: 3;
+		opacity: 1;
+	}
 }
 
-/* Notched corners — cut sheet-metal corners */
-@utility notch {
-	clip-path: polygon(
-		0 12px,
-		12px 0,
-		calc(100% - 12px) 0,
-		100% 12px,
-		100% calc(100% - 12px),
-		calc(100% - 12px) 100%,
-		12px 100%,
-		0 calc(100% - 12px)
-	);
+@keyframes volt-glow {
+	0%,
+	100% {
+		filter: drop-shadow(0 0 4px #fff110) drop-shadow(0 0 8px #ffb43a);
+	}
+	50% {
+		filter: drop-shadow(0 0 8px #fff110) drop-shadow(0 0 16px #ffb43a);
+	}
 }
 
-/* Drawing revision chip */
-@utility rev-chip {
-	font-family: var(--font-mono);
-	font-size: 0.62rem;
-	font-weight: 600;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
+.volt-line {
+	stroke: #fff110;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+	animation:
+		volt-draw 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+		volt-pulse 3s ease-in-out infinite 1.2s;
 }
 
-/* Draw / reveal line accent for the light sheets */
-@keyframes draft-reveal {
+.volt-line--glow {
+	animation:
+		volt-draw 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+		volt-glow 2.5s ease-in-out infinite 1.2s;
+}
+
+.volt-line--static {
+	animation: none;
+	stroke-dashoffset: 0;
+	opacity: 1;
+}
+
+/* Reveal animations */
+@keyframes reveal-up {
+	from {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes reveal-fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes counter-up {
 	from {
 		opacity: 0;
 		transform: translateY(8px);
@@ -180,8 +213,73 @@ body {
 	}
 }
 
-.draft-reveal {
-	animation: draft-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+.reveal-up {
+	animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal-fade {
+	animation: reveal-fade 0.5s ease-out both;
+}
+
+.counter-up {
+	animation: counter-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Stagger delays */
+.delay-1 {
+	animation-delay: 80ms;
+}
+.delay-2 {
+	animation-delay: 160ms;
+}
+.delay-3 {
+	animation-delay: 240ms;
+}
+.delay-4 {
+	animation-delay: 320ms;
+}
+.delay-5 {
+	animation-delay: 400ms;
+}
+.delay-6 {
+	animation-delay: 480ms;
+}
+
+/* Text gradient utilities */
+@utility text-gradient-volt {
+	background: linear-gradient(90deg, var(--color-volt), var(--color-sun));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+@utility text-gradient-blue {
+	background: linear-gradient(90deg, var(--color-blue), var(--color-blue-deep));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+/* Glass surface */
+@utility glass {
+	@apply bg-white/60 backdrop-blur-md border border-line/20;
+}
+
+/* Focus visible for interactive elements */
+.focus-ring {
+	@apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-volt focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.volt-line,
+	.reveal-up,
+	.reveal-fade,
+	.counter-up {
+		animation: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
 }
 
 /* ------------------------------------------------------------------ *
@@ -204,6 +302,56 @@ body {
 
 	.btn-paper {
 		@apply border-paper/40 bg-transparent text-paper hover:border-volt hover:text-volt;
+	}
+
+	.btn-volt {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		border: 2px solid var(--color-ink);
+		background-color: var(--color-volt);
+		color: var(--color-ink);
+		font-family: var(--font-display);
+		font-size: 0.875rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		transition: all 0.2s;
+		border-radius: 9999px;
+		padding: 0.5rem 1.25rem;
+	}
+
+	.btn-volt:hover {
+		background-color: var(--color-ink);
+		color: var(--color-volt);
+		border-color: var(--color-ink);
+	}
+
+	.btn-volt-lg {
+		padding: 1rem 2rem;
+		font-size: 1.125rem;
+	}
+
+	.btn-outline {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		border: 2px solid var(--color-ink);
+		background-color: transparent;
+		color: var(--color-ink);
+		font-family: var(--font-display);
+		font-size: 0.875rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		transition: all 0.2s;
+		border-radius: 9999px;
+		padding: 0.5rem 1.25rem;
+	}
+
+	.btn-outline:hover {
+		background-color: var(--color-ink);
+		color: var(--color-paper);
 	}
 
 	.nameplate {
