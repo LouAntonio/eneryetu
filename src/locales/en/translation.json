@@ -224,7 +224,12 @@
 		"title": "Skills that stay on site.",
 		"body": "Professional training for national and international teams — so the people who run and maintain your facility truly master it.",
 		"heroImage": "/images/others/Prancheta 6.jpg",
-		"features": ["Project Management", "Primavera P6", "Welding", "NDT Inspection"],
+		"features": [
+			"Project Management",
+			"Primavera P6",
+			"Welding",
+			"NDT Inspection"
+		],
 		"cta": "See our training",
 		"all": "All",
 		"presencial": "In-person",
@@ -233,7 +238,6 @@
 		"days": "day(s)",
 		"segmentsTitle": "Days & delivery modes",
 		"inPerson": "In-person",
-		"online": "Online",
 		"selfStudy": "Self-study",
 		"viewDetails": "View details",
 		"emptyTitle": "No trainings available yet.",
@@ -305,164 +309,51 @@
 		"title": "A network of strategic partners",
 		"body": "We work with local and international partners to deliver complete solutions to our clients.",
 		"items": [
-			{ "name": "ENERYETU Solutions", "logo": "/images/parceiros/eneryetusolutions.png" },
-			{ "name": "Elite Project Engineering", "logo": "/images/parceiros/elite.png" },
-			{ "name": "Rico Organizações", "logo": "/images/parceiros/rico.png" },
-			{ "name": "Synergy Projects Consulting", "logo": "/images/parceiros/synergy.png" },
-			{ "name": "Risaku Energy Services Company", "logo": "/images/parceiros/risaku.png" },
-			{ "name": "Kwame", "logo": "/images/parceiros/kwame.jpg" },
-			{ "name": "DallOil", "logo": "/images/parceiros/dalloil.png" },
-			{ "name": "Fudao", "logo": "/images/parceiros/fudao.png" },
-			{ "name": "OAT", "logo": "/images/parceiros/OAT.png" },
-			{ "name": "Trident", "logo": "/images/parceiros/trident.png" },
-			{ "name": "WEPROQURE", "logo": "/images/parceiros/WEPROQURE.png" }
+			{
+				"name": "ENERYETU Solutions",
+				"logo": "/images/parceiros/eneryetusolutions.png"
+			},
+			{
+				"name": "Elite Project Engineering",
+				"logo": "/images/parceiros/elite.png"
+			},
+			{
+				"name": "Rico Organizações",
+				"logo": "/images/parceiros/rico.png"
+			},
+			{
+				"name": "Synergy Projects Consulting",
+				"logo": "/images/parceiros/synergy.png"
+			},
+			{
+				"name": "Risaku Energy Services Company",
+				"logo": "/images/parceiros/risaku.png"
+			},
+			{
+				"name": "Kwame",
+				"logo": "/images/parceiros/kwame.jpg"
+			},
+			{
+				"name": "DallOil",
+				"logo": "/images/parceiros/dalloil.png"
+			},
+			{
+				"name": "Fudao",
+				"logo": "/images/parceiros/fudao.png"
+			},
+			{
+				"name": "OAT",
+				"logo": "/images/parceiros/OAT.png"
+			},
+			{
+				"name": "Trident",
+				"logo": "/images/parceiros/trident.png"
+			},
+			{
+				"name": "WEPROQURE",
+				"logo": "/images/parceiros/WEPROQURE.png"
+			}
 		]
-	},
-	"solutions": {
-		"requestProposal": "Request a proposal",
-		"getInTouch": "Get in touch",
-		"nav": [
-			"Services",
-			"Field",
-			"Facilities",
-			"Fabrication",
-			"Maintenance",
-			"Partners",
-			"Proposal"
-		],
-		"hero": {
-			"title": "Industrial services in Angola",
-			"headline": "Specialised crews and equipment, deployed where the work is.",
-			"lede": "ENERYETU Solutions mobilises dedicated engineering teams and field services — manpower, tank cleaning, maintenance, HVAC, scaffolding, fabrication and EPC structures for Oil & Gas, Mining and heavy industry.",
-			"ticker": [
-				"Manpower",
-				"Tank cleaning",
-				"Maintenance",
-				"HVAC",
-				"Scaffolding",
-				"Fabrication",
-				"EPC structures",
-				"Generators",
-				"Logistics"
-			],
-			"telemetry": {
-				"area": "Covered facility area",
-				"workshops": "Workshop area",
-				"capacity": "Storage capacity"
-			},
-			"meta": {
-				"location": "Location",
-				"locationValue": "Cacuaco, Luanda · Angola",
-				"founded": "Founded",
-				"foundedValue": "Operating since 2018",
-				"scope": "Scope",
-				"scopeValue": "Onshore · Offshore",
-				"sectors": "Sectors",
-				"sectorsValue": "Oil & Gas · Mining · Heavy industry"
-			}
-		},
-		"bento": {
-			"eyebrow": "Live capacity",
-			"title": "What ENERYETU Solutions operates.",
-			"lead": "Facilities, teams and catalog — a quick read on what is live at the Cacuaco site.",
-			"servicesTag": "Service lines",
-			"servicesLabel": "Thirteen service lines",
-			"servicesNote": "All under one contract.",
-			"epcLabel": "EPC, brownfield, fabrication",
-			"epcNote": "Mid and large scale · Oil & Gas · Mining",
-			"partnersTag": "Partners",
-			"partnersLabel": "Delivery network",
-			"partnersNote": "Logistics, equipment, EPC."
-		},
-		"services": {
-			"eyebrow": "What we do",
-			"title": "Thirteen service lines, one accountable unit",
-			"lead": "Everything under a single contract: from a trained crew on site to fully fabricated EPC structures."
-		},
-		"metal": {
-			"eyebrow": "Capability",
-			"title": "Metal structure treatment, repair & painting",
-			"points": [
-				"Corrosion control, surface preparation, structural repairs and industrial painting of structures — Structures, Decks and Pipework.",
-				"Abrasive blasting and surface preparation methods, including equipment rental.",
-				"Supply of industrial coatings and industrial painting services.",
-				"Internal and external pipe coating services."
-			]
-		},
-		"tankCleaning": {
-			"eyebrow": "Field services"
-		},
-		"facilities": {
-			"eyebrow": "Facilities",
-			"title": "Storage & facilities capability",
-			"lead": "Covered, ventilated and secure storage with CCTV, on the Cacuaco site.",
-			"nav1": {
-				"title": "Nave 1",
-				"stat": "50 000",
-				"unit": "m²",
-				"note": "24% covered · ventilated · security · CCTV"
-			},
-			"nav2": {
-				"title": "Nave 2",
-				"stat": "2 000",
-				"unit": "m²",
-				"note": "Covered · ventilated · security · CCTV · reinforced concrete floor"
-			},
-			"silos": {
-				"title": "Silos",
-				"stat": "40 000",
-				"unit": "L",
-				"note": "24% covered · ventilation · security · CCTV"
-			},
-			"site": "The storage installation is located at the Cacuaco site, with sufficient infrastructure to support a wide range of services and their respective systems."
-		},
-		"fabrication": {
-			"eyebrow": "Fabrication",
-			"title": "Equipment & component fabrication",
-			"lead": "EPC equipment, valves and materials for Oil & Gas and mining plants."
-		},
-		"materialsIntro": "Fabrication and supply of metal sheets, pipework and angle bars.",
-		"maintenance": {
-			"eyebrow": "Maintenance",
-			"title": "Maintenance services"
-		},
-		"partners": {
-			"eyebrow": "Partners",
-			"title": "Who we work with"
-		},
-		"cta": {
-			"title": "Bring your next scope to ENERYETU Solutions.",
-			"body": "Tell us the service, the site and the deadline — we handle the crew, the equipment and the execution.",
-			"action": "Request a proposal"
-		},
-		"form": {
-			"title": "Request a proposal",
-			"subtitle": "Tell us the service, the site and the deadline — we respond within one business day.",
-			"name": "Name",
-			"company": "Company",
-			"email": "Work email",
-			"phone": "Phone",
-			"service": "Service required",
-			"servicePlaceholder": "Select a service",
-			"deadline": "Site & deadline",
-			"message": "Tell us about the scope",
-			"submit": "Send proposal request",
-			"sending": "Sending...",
-			"successTitle": "Request received",
-			"successBody": "Our team will come back to you within one business day. Thanks for trusting ENERYETU Solutions.",
-			"errors": {
-				"name": "Please enter your name.",
-				"email": "Enter a valid email address.",
-				"message": "Tell us a little about the scope."
-			}
-		},
-		"footer": {
-			"unit": "ENERYETU SOLUTIONS",
-			"contactTitle": "Contact the unit",
-			"phone": "+244 923 734 199 · +244 945 459 270",
-			"email": "geral@eneryetu.com",
-			"rights": "ENERYETU Solutions. All rights reserved."
-		}
 	},
 	"home": {
 		"businessUnit": {
@@ -472,120 +363,234 @@
 			"cta": "Explore ENERYETU Solutions"
 		}
 	},
-	"eneryetuSolutions": {
-		"eyebrow": "Business Unit",
-		"title": "ENERYETU Solutions",
-		"subtitle": "ENERYETU Business Unit (ENERYETU SOLUTIONS)",
-		"heroImage": "/images/parceiros/eneryetusolutions.png",
-		"specificTitle": "Business unit specific services",
-		"specificServiceTitle": "Our services",
-		"specificItems": [
-			{ "title": "Manpower (Provision & Training)" },
-			{ "title": "Tank and Pipework Cleaning Services" },
-			{ "title": "General Maintenance & Technical Support" },
-			{ "title": "Generator Maintenance" },
-			{ "title": "HVAC (Heating, Ventilation & Air Conditioning)" },
-			{ "title": "General Logistics & Material Supply" },
-			{
-				"title": "Supply of Consumables, Paints, WDs, Moy Cotes, Grease, Fittings & Connectors"
-			},
-			{ "title": "Scaffolding Erection" },
-			{ "title": "Structural Repair & Painting" },
-			{ "title": "Instrumentation & Calibration" },
-			{ "title": "Equipment Fabrication & Installation" },
-			{ "title": "Oil & Gas Structure Construction (Medium & Large-Scale) – EPC Projects" },
-			{ "title": "Brownfield EPC: Modification & Maintenance" }
-		],
-		"metalTreatment": {
-			"title": "Metal Structure Treatment, Repair & Painting",
-			"body": "Corrosion control, surface preparation, structural repairs and industrial painting of structures (Structures, Decks and Pipework). Using various methods for abrasive blasting and surface preparation, including equipment rental. Supply of industrial coatings and industrial painting services. Internal and external pipe coating services."
+	"solutionsLanding": {
+		"nav": {
+			"services": "Services",
+			"facilities": "Facilities",
+			"manufacturing": "Manufacturing & EPC",
+			"partners": "Partners",
+			"proposal": "Request a proposal"
 		},
-		"tankCleaning": {
-			"title": "Tank Cleaning",
-			"body": "Specialised cleaning services for tanks, storage vessels and industrial piping."
+		"hero": {
+			"eyebrow": "Business unit · Industrial services",
+			"headline1": "Industrial capacity",
+			"headline2": "on the ground, in Angola.",
+			"lede": "ENERYETU Solutions delivers specialised industrial services to the oil & gas and mining sectors — skilled manpower, maintenance, EPC fabrication, logistics and materials supply — from our facilities in Cacuaco.",
+			"ctaProposal": "Request a proposal",
+			"ctaServices": "See services",
+			"location": "Cacuaco · Luanda · Angola",
+			"readoutServices": "Service lines",
+			"readoutArea": "Covered warehouse area",
+			"readoutPartners": "Partners"
 		},
-		"warehouse": {
-			"title": "Warehouse Space and Storage Solutions",
-			"body": "Two operational warehouses offering covered, ventilated and secure storage with CCTV monitoring.",
-			"nave1": {
-				"title": "Nave 1",
-				"items": [
-					"50 000 m² total",
-					"12 000 m² (24%) covered",
-					"Ventilated",
-					"Security",
-					"CCTV"
-				]
-			},
-			"nave2": {
-				"title": "Nave 2",
-				"items": [
-					"2 000 m² covered",
-					"Ventilated",
-					"Security",
-					"CCTV",
-					"Reinforced concrete flooring"
-				]
-			}
-		},
-		"storageSilos": {
-			"title": "Storage Installation and Silos",
-			"items": [
-				"40 000 litres",
-				"12 000 m² (24%) covered",
-				"Ventilation",
-				"Security",
-				"CCTV"
-			],
-			"description": "The storage installation is located at the Cacuaco site, with sufficient infrastructure to support a wide range of services and their respective systems."
-		},
-		"partners": {
-			"title": "Business Unit Partners",
-			"items": [
-				{ "name": "ENERYETU", "logo": "/images/parceiros/eneryetusolutions.png" },
-				{ "name": "RICO ORGANIZAÇÕES", "logo": "/images/parceiros/rico.png" },
-				{ "name": "DallOIL", "logo": "/images/parceiros/dalloil.png" },
-				{ "name": "OCEAN ATLANTIC PETROLEUM", "logo": "/images/parceiros/OAT.png" },
-				{ "name": "ELITE FLOW CONTROL", "logo": "/images/parceiros/elite.png" },
-				{ "name": "Elite PROJECT ENGINEERING", "logo": "/images/parceiros/elite.png" }
+		"ticker": "SERVICE LINES",
+		"services": {
+			"eyebrow": "01 · Service lines",
+			"title": "Industrial services",
+			"lead": "Thirteen service lines, one execution team dedicated to the field.",
+			"groups": [
+				{
+					"name": "Manpower & Maintenance",
+					"items": [
+						{
+							"en": "MANPOWER PROVISION & TRAINING",
+							"pt": "Manpower (provision & training)"
+						},
+						{
+							"en": "GENERAL MAINTENANCE & TECHNICAL SUPPORT",
+							"pt": "General maintenance & technical support"
+						},
+						{
+							"en": "GENERATOR MAINTENANCE",
+							"pt": "Generator maintenance"
+						},
+						{
+							"en": "HVAC",
+							"pt": "HVAC services — heating, ventilation & air conditioning"
+						}
+					]
+				},
+				{
+					"name": "Cleaning & Treatment",
+					"items": [
+					{
+						"en": "TANK AND PIPEWORK CLEANING",
+						"pt": "Tank & pipework cleaning"
+					},
+					{
+						"en": "STRUCTURAL REPAIR & INDUSTRIAL PAINTING",
+						"pt": "Structural repair & industrial painting"
+					}
+					]
+				},
+				{
+					"name": "EPC & Fabrication",
+					"items": [
+						{
+							"en": "EQUIPMENT FABRICATION & INSTALLATION",
+							"pt": "Equipment fabrication & installation"
+						},
+						{
+							"en": "OIL & GAS STRUCTURE CONSTRUCTION — MEDIUM & LARGE SCALE EPC",
+							"pt": "Oil & gas structure construction — medium & large scale EPC"
+						},
+						{
+							"en": "BROWNFIELD EPC MODIFICATION & MAINTENANCE",
+							"pt": "Brownfield EPC modification & maintenance"
+						},
+						{
+							"en": "INSTRUMENTATION & CALIBRATION",
+							"pt": "Instrumentation & calibration"
+						}
+					]
+				},
+				{
+					"name": "Logistics & Supply",
+					"items": [
+						{
+							"en": "GENERAL LOGISTICS & MATERIAL SUPPLY",
+							"pt": "General logistics & material supply"
+						},
+						{
+							"en": "SUPPLY OF CONSUMABLES, PAINTS, WDs, GREASE, FITTINGS & CONNECTORS",
+							"pt": "Supply of consumables, paints, WDs, grease, fittings & connectors"
+						},
+						{
+							"en": "SCAFFOLDING ERECTION",
+							"pt": "Scaffolding erection"
+						}
+					]
+				}
 			]
 		},
-		"construction": {
-			"title": "Construction of Equipment and Structures for the Oil & Gas Industry (EPC Contracts)",
-			"body": "Different types of equipment:",
-			"items": [
+		"capabilities": {
+			"eyebrow": "Support capabilities",
+			"metal": {
+				"title": "Metal structure treatment",
+				"body": "Corrosion control, surface preparation, structural repair and industrial painting of structures, decks and pipework. Abrasive blasting and surface preparation methods, equipment rental, industrial coatings supply and painting, and internal/external pipe coating."
+			},
+			"tank": {
+				"title": "Tank cleaning",
+				"body": "Specialised cleaning of tanks, storage vessels and industrial pipework."
+			},
+			"pump": {
+				"title": "Pump refurbishment",
+				"body": "Refurbishment and maintenance of industrial pumps."
+			},
+			"maintenance": {
+				"title": "Maintenance & repair",
+				"body": "Maintenance and repair work on equipment and installations."
+			},
+			"materials": {
+				"title": "Metal supply",
+				"body": "Fabrication and supply of metal sheets, pipework and angle bars."
+			}
+		},
+		"facilities": {
+			"eyebrow": "02 · Facilities",
+			"title": "Cacuaco base",
+			"lead": "Covered, ventilated and secure storage with CCTV surveillance — infrastructure enough to sustain the full services portfolio.",
+			"units": {
+				"nave1": {
+					"name": "Nave 1",
+					"area": "50,000 m²",
+					"sub": "12,000 m² covered (24%)",
+					"features": [
+						"Ventilated",
+						"Security",
+						"CCTV"
+					]
+				},
+				"nave2": {
+					"name": "Nave 2",
+					"area": "2,000 m²",
+					"sub": "Fully covered",
+					"features": [
+						"Ventilated",
+						"Security",
+						"CCTV",
+						"Reinforced concrete floor"
+					]
+				},
+				"silos": {
+					"name": "Silos",
+					"area": "40,000 L",
+					"sub": "12,000 m² covered (24%)",
+					"features": [
+						"Ventilation",
+						"Security",
+						"CCTV"
+					]
+				}
+			},
+			"site": "The storage facility is located at the Cacuaco site, with infrastructure enough to support a wide range of services and their respective systems."
+		},
+		"manufacturing": {
+			"eyebrow": "03 · Fabrication & EPC",
+			"title": "Equipment & valves",
+			"lead": "Construction of equipment and structures for the oil & gas industry under EPC contracts.",
+			"equipmentTitle": "Equipment (EPC)",
+			"equipment": [
 				"Bulk oil storage tanks",
-				"Spherical LPG tanks",
-				"LPG bullets (Cylinders)",
+				"LPG spherical tanks",
+				"LPG bullets",
 				"Pressure vessels",
-				"Pig Launchers / Receivers Traps",
-				"Heat Exchangers",
+				"Pig launchers / receivers (traps)",
+				"Heat exchangers",
 				"Customised process skids",
 				"Gas metering skids",
 				"CFB & HRSG boilers",
-				"Coal, oil or gas boilers",
-				"Columns and towers"
+				"Coal, oil or gas-fired boilers",
+				"Columns & towers"
+			],
+			"valvesTitle": "Valve manufacturing",
+			"valves": [
+				"Ball valves",
+				"Gate valves",
+				"Globe valves",
+				"Check valves",
+				"Plug valves",
+				"Butterfly valves"
 			]
 		},
-		"valves": {
-			"title": "Manufacture of Valves and Equipment for Hydraulic and Pneumatic Systems",
-			"body": "Different types of valves:",
-			"items": [
-				"Ball Valves",
-				"Gate Valves",
-				"Globe Valves",
-				"Check Valves",
-				"Plug Valves",
-				"Butterfly Valves"
-			]
+		"partners": {
+			"eyebrow": "04 · Execution network",
+			"title": "Unit partners",
+			"lead": "Six partners collaborate on project execution and engineering.",
+			"note": "The network extends capacity: EPC equipment (tanks, LPG spheres, bullets, pressure vessels, pig launchers, heat exchangers, skids, boilers, columns and towers), valve manufacturing (ball, gate, globe, check, plug, butterfly), supply of metal sheets, pipework and angle bars, pump refurbishment and maintenance & repair services."
 		},
-		"materials": {
-			"title": "Materials",
-			"body": "Fabrication and supply of metal sheets, pipework and angle bars. (Fabrication & Metal Sheets, Pipework & Angle Bars Supply)."
+		"proposal": {
+			"eyebrow": "05 · Proposal",
+			"title": "Request a proposal",
+			"lead": "Describe the project scope and our team will reply with a proposal and a timeline.",
+			"name": "Name",
+			"company": "Company",
+			"email": "Email",
+			"phone": "Phone",
+			"service": "Service",
+			"servicePlaceholder": "Select a service",
+			"deadline": "Location / Deadline",
+			"deadlinePlaceholder": "Luanda · 30 days",
+			"message": "Message",
+			"messagePlaceholder": "Describe the scope, location and timeline...",
+			"submit": "Send proposal request",
+			"sending": "Sending...",
+			"successTitle": "Request received",
+			"successBody": "We have received your request and our team will get in touch shortly.",
+			"errors": {
+				"name": "Please enter your name",
+				"email": "Please enter a valid email",
+				"message": "Please describe your request"
+			},
+			"privacy": "Your data is used only to respond to this request."
 		},
-		"maintenance": {
-			"title": "Maintenance",
-			"items": ["Pump Refurbishment", "Maintenance & Repair Work"]
+		"footer": {
+			"brand": "ENERYETU SOLUTIONS",
+			"tagline": "ENERYETU industrial services business unit, based in Cacuaco, Luanda.",
+			"contact": "Contact",
+			"phone": "+244 923 734 199",
+			"backHome": "Back to main website",
+			"rights": "© {year} ENERYETU. All rights reserved."
 		}
 	},
 	"cta": {
@@ -751,9 +756,18 @@
 		"addressLabel": "Address",
 		"hoursTitle": "Working hours",
 		"hours": {
-			"week": { "day": "Monday – Friday", "time": "08:00 – 17:00" },
-			"saturday": { "day": "Saturday", "time": "08:00 – 12:00" },
-			"sunday": { "day": "Sunday", "time": "Closed" }
+			"week": {
+				"day": "Monday – Friday",
+				"time": "08:00 – 17:00"
+			},
+			"saturday": {
+				"day": "Saturday",
+				"time": "08:00 – 12:00"
+			},
+			"sunday": {
+				"day": "Sunday",
+				"time": "Closed"
+			}
 		},
 		"form": {
 			"title": "Send an enquiry",
