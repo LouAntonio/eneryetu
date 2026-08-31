@@ -438,6 +438,8 @@
 			"spec": {
 				"title": "Ficha técnica",
 				"date": "Data",
+				"startDate": "Data de início",
+				"endDate": "Data de fim",
 				"type": "Tipo",
 				"country": "País",
 				"city": "Cidade",

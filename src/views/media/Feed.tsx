@@ -8,15 +8,7 @@ import { assetUrl } from '../../lib/assets';
 import { api } from '../../services/api';
 import type { Paginated, Post, PostType } from '../../types';
 import { formatDate } from './format';
-import {
-	Byline,
-	CategoryTag,
-	CtaPill,
-	EmptyBoard,
-	LoadingBoard,
-	Postmark,
-	SunGlyph,
-} from './shared';
+import { Byline, CategoryTag, CtaPill, EmptyBoard, LoadingBoard } from './shared';
 
 function authorName(post: Post): string | null {
 	if (!post.author || (!post.author.name && !post.author.surname)) return null;
@@ -73,12 +65,7 @@ function CoverStory({ post }: { post: Post }) {
 						className="absolute inset-0 h-full w-full object-cover"
 						// eslint-disable-next-line @next/next/no-img-element
 					/>
-				) : (
-					<div className="absolute inset-0 grid place-items-center">
-						<SunGlyph className="h-48 w-48 opacity-90" />
-					</div>
-				)}
-				<Postmark className="absolute right-5 top-5 [&_svg]:h-16 [&_svg]:w-16" />
+				) : null}
 				{!cover ? (
 					<div className="absolute inset-x-0 bottom-0 p-6">
 						<p className="font-editorial text-lg italic text-bone/80">{label}</p>

@@ -4,37 +4,6 @@ import { Fragment, type ReactNode } from 'react';
 import { Link } from '../../lib/routing';
 import { useTranslation } from 'react-i18next';
 
-export function Postmark({ place, className = '' }: { place?: string; className?: string }) {
-	return (
-		<span className={`inline-flex flex-col items-center ${className}`} aria-hidden>
-			<svg viewBox="0 0 96 96" className="h-20 w-20" fill="none">
-				<circle
-					cx="48"
-					cy="48"
-					r="42"
-					stroke="#d9822b"
-					strokeWidth="1.5"
-					strokeDasharray="2 5"
-				/>
-				<circle cx="48" cy="48" r="26" fill="#ffb43a" />
-				<g stroke="#d9822b" strokeWidth="3" strokeLinecap="round">
-					<path d="M48 12v6" />
-					<path d="M48 12v6" transform="rotate(45 48 48)" />
-					<path d="M48 12v6" transform="rotate(90 48 48)" />
-					<path d="M48 12v6" transform="rotate(135 48 48)" />
-					<path d="M48 12v6" transform="rotate(180 48 48)" />
-					<path d="M48 12v6" transform="rotate(225 48 48)" />
-					<path d="M48 12v6" transform="rotate(270 48 48)" />
-					<path d="M48 12v6" transform="rotate(315 48 48)" />
-				</g>
-			</svg>
-			{place ? (
-				<span className="mt-1 font-editorial text-sm italic text-sand">{place}</span>
-			) : null}
-		</span>
-	);
-}
-
 export function SunGlyph({ className = '' }: { className?: string }) {
 	return (
 		<svg viewBox="0 0 160 160" className={className} fill="none" aria-hidden>
@@ -132,7 +101,6 @@ export function EmptyBoard({ titleKey, cta }: EmptyBoardProps) {
 		<section className="min-h-[40vh] bg-bone">
 			<div className="mx-auto w-full max-w-6xl px-6 py-16 lg:py-20">
 				<div className="relative overflow-hidden rounded-2xl border border-line-warm bg-card p-8 sm:p-12">
-					<SunGlyph className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 opacity-40" />
 					<div className="relative max-w-2xl">
 						<CategoryTag>{section.title}</CategoryTag>
 						<h1 className="mt-5 font-editorial text-4xl font-semibold leading-[1.05] text-warm-ink sm:text-5xl">

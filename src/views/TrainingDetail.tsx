@@ -8,15 +8,20 @@ import { api } from '../services/api';
 import type { Training } from '../types';
 import { BackLink, LoadingBoard, SpecRow } from './media/shared';
 
-function parseJsonArray(value: string | null | undefined): string[] {
+function toLines(value: string | null | undefined): string[] {
 	if (!value) return [];
+	const trimmed = value.trim();
+	if (!trimmed) return [];
 	try {
-		const parsed = JSON.parse(value);
-		if (Array.isArray(parsed)) return parsed;
-		return [];
+		const parsed = JSON.parse(trimmed);
+		if (Array.isArray(parsed)) return parsed.map((item) => String(item));
 	} catch {
-		return [];
+		/* não é JSON — tratado como texto com quebras de linha */
 	}
+	return trimmed
+		.split('\n')
+		.map((line) => line.trim())
+		.filter(Boolean);
 }
 
 function formatCurrency(price: number | null, currency: string): string {
@@ -77,9 +82,9 @@ export function TrainingDetail() {
 		);
 	}
 
-	const outcomes = parseJsonArray(training.learningOutcomes);
-	const modules = parseJsonArray(training.modules);
-	const prerequisites = training.prerequisites;
+	const outcomes = toLines(training.learningOutcomes);
+	const modules = toLines(training.modules);
+	const prerequisites = toLines(training.prerequisites);
 
 	return (
 		<article className="min-h-[40vh] bg-bone">
@@ -230,12 +235,19 @@ export function TrainingDetail() {
 							</div>
 						)}
 
-						{prerequisites && (
+						{prerequisites.length > 0 && (
 							<div className="mt-10">
 								<h2 className="font-editorial text-2xl font-semibold text-warm-ink">
 									{t('training.detail.prerequisites')}
 								</h2>
-								<p className="mt-4 leading-relaxed text-sand">{prerequisites}</p>
+								<p className="mt-4 leading-relaxed text-sand">
+									{prerequisites.map((line, i) => (
+										<span key={i}>
+											{i > 0 ? <br /> : null}
+											{line}
+										</span>
+									))}
+								</p>
 							</div>
 						)}
 					</div>

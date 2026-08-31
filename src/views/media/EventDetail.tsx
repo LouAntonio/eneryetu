@@ -7,7 +7,8 @@ import { useQuery } from '@tanstack/react-query';
 import { assetUrl } from '../../lib/assets';
 import { api } from '../../services/api';
 import type { Event } from '../../types';
-import { BackLink, CategoryTag, EmptyBoard, LoadingBoard, Postmark, SpecRow } from './shared';
+import { BackLink, CategoryTag, EmptyBoard, LoadingBoard, SpecRow } from './shared';
+import { formatDate } from './format';
 
 export function MediaEventDetail() {
 	const { t, i18n } = useTranslation();
@@ -38,7 +39,6 @@ export function MediaEventDetail() {
 				<BackLink to="/media/events" label={t('media.events.title')} />
 
 				<div className="relative mt-8 overflow-hidden rounded-2xl bg-warm-ink p-8 text-bone sm:p-10">
-					<Postmark className="absolute right-6 top-6 [&_svg]:h-16 [&_svg]:w-16" />
 					<div className="flex flex-wrap items-center gap-4">
 						<span className="inline-flex flex-col items-center rounded-full bg-sun px-5 py-2.5 text-warm-ink">
 							<span className="font-editorial text-2xl font-bold leading-none">
@@ -98,6 +98,16 @@ export function MediaEventDetail() {
 									label={t('media.events.spec.date')}
 									value={event.displayDate}
 								/>
+								<SpecRow
+									label={t('media.events.spec.startDate')}
+									value={formatDate(event.startDate, locale)}
+								/>
+								{event.endDate ? (
+									<SpecRow
+										label={t('media.events.spec.endDate')}
+										value={formatDate(event.endDate, locale)}
+									/>
+								) : null}
 								<SpecRow
 									label={t('media.events.spec.type')}
 									value={event.eventType?.name}

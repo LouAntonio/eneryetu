@@ -9,16 +9,7 @@ import { assetUrl } from '../../lib/assets';
 import { api } from '../../services/api';
 import type { Paginated, Post } from '../../types';
 import { formatDate } from './format';
-import {
-	BackLink,
-	Byline,
-	CategoryTag,
-	EmptyBoard,
-	LoadingBoard,
-	Postmark,
-	SpecRow,
-	SunGlyph,
-} from './shared';
+import { BackLink, Byline, CategoryTag, EmptyBoard, LoadingBoard, SpecRow } from './shared';
 
 function estimateReadTime(content: string): number {
 	const words = content.trim().split(/\s+/).filter(Boolean).length;
@@ -97,12 +88,7 @@ export function MediaPostDetail() {
 									className="absolute inset-0 h-full w-full object-cover"
 									// eslint-disable-next-line @next/next/no-img-element
 								/>
-							) : (
-								<div className="absolute inset-0 grid place-items-center">
-									<SunGlyph className="h-44 w-44 opacity-90" />
-								</div>
-							)}
-							<Postmark className="absolute right-5 top-5 [&_svg]:h-14 [&_svg]:w-14" />
+							) : null}
 						</div>
 						<div
 							className="rich-content"
