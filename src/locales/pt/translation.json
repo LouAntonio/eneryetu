@@ -231,6 +231,10 @@
 		"online": "Online",
 		"autoformacao": "Autoformação",
 		"days": "dia(s)",
+		"segmentsTitle": "Dias e modos de formação",
+		"inPerson": "Presencial",
+		"online": "Online",
+		"selfStudy": "Autoformação",
 		"viewDetails": "Ver detalhes",
 		"emptyTitle": "Ainda não há formações disponíveis.",
 		"emptyBody": "Estamos a preparar o nosso catálogo de formações.",
@@ -252,7 +256,8 @@
 			"specSheet": "Ficha",
 			"modality": "Modalidade",
 			"duration": "Duração",
-			"price": "Preço"
+			"price": "Preço",
+			"segments": "Dias e modos de formação"
 		}
 	},
 	"products": {
@@ -570,11 +575,15 @@
 			"eyebrow": "Acesso",
 			"title": "Utilizadores",
 			"add": "Adicionar utilizador",
+			"edit": "Editar utilizador",
 			"name": "Nome",
 			"surname": "Apelido",
 			"email": "Email",
 			"password": "Senha",
 			"role": "Função",
+			"superadmin": "Superadmin",
+			"admin": "Admin",
+			"modulesHint": "Apenas para admins — escolha os módulos que podem gerir",
 			"deleteConfirm": "Eliminar este utilizador?"
 		},
 		"categories": {
@@ -704,7 +713,15 @@
 			"featured": "Destaque",
 			"sortOrder": "Ordem",
 			"metaTitle": "Meta título",
-			"metaDescription": "Meta descrição"
+			"metaDescription": "Meta descrição",
+			"segments": "Dias e modos de formação",
+			"segmentDaysLabel": "Rótulo dos dias",
+			"segmentDaysCount": "Dias",
+			"segmentMode": "Modo",
+			"segmentLocation": "Local",
+			"addSegment": "Adicionar segmento",
+			"removeSegment": "Remover segmento",
+			"segmentsHint": "Exemplo: 5 dias presenciais, depois 3 dias online"
 		},
 		"products": {
 			"eyebrow": "Conteúdo",
@@ -744,6 +761,34 @@
 			"featured": "Destaque",
 			"metaTitle": "Meta título",
 			"metaDescription": "Meta descrição"
+		},
+		"password": {
+			"title": "Alterar senha",
+			"current": "Senha atual",
+			"new": "Nova senha",
+			"confirm": "Confirmar nova senha",
+			"mismatch": "As senhas não coincidem",
+			"success": "Senha alterada com sucesso",
+			"error": "Não foi possível alterar a senha",
+			"empty": "Todos os campos são obrigatórios",
+			"minLength": "A nova senha deve ter pelo menos 6 caracteres"
+		},
+		"modules": {
+			"label": "Módulos",
+			"module": "Módulo",
+			"hint": "Escolha quais módulos este admin pode gerir",
+			"POSTS": "Posts e notícias",
+			"EVENTS": "Eventos",
+			"TRAININGS": "Formações",
+			"PRODUCTS": "Produtos",
+			"JOBS": "Vagas",
+			"GALLERY": "Galeria",
+			"TAXONOMY": "Categorias e taxonomia"
+		},
+		"roles": {
+			"SUPERADMIN": "Superadmin",
+			"ADMIN": "Admin",
+			"role": "Papel"
 		}
 	},
 	"faq": {

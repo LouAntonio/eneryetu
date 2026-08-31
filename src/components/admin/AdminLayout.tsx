@@ -3,6 +3,7 @@
 import { Navigate, useLocation } from '../../lib/routing';
 import { useAuth } from '../../hooks/useAuth';
 import { Sidebar } from './Sidebar';
+import { moduleForPath } from '../../lib/permissions';
 import type { ReactNode } from 'react';
 
 export function AdminLayout({ children }: { children: ReactNode }) {
@@ -22,6 +23,24 @@ export function AdminLayout({ children }: { children: ReactNode }) {
 
 	if (!user) {
 		return <Navigate to="/eneryetu/login" replace state={{ from: location }} />;
+	}
+
+	const pathname = location.pathname;
+	if (
+		pathname !== '/eneryetu' &&
+		moduleForPath(pathname) === 'ACCESS' &&
+		user.role !== 'SUPERADMIN'
+	) {
+		return <Navigate to="/eneryetu" replace />;
+	}
+	const mod = moduleForPath(pathname);
+	if (
+		mod &&
+		mod !== 'ACCESS' &&
+		user.role !== 'SUPERADMIN' &&
+		!user.modules?.some((m) => m.module === mod)
+	) {
+		return <Navigate to="/eneryetu" replace />;
 	}
 
 	return (

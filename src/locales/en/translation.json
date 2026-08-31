@@ -231,6 +231,10 @@
 		"online": "Online",
 		"autoformacao": "Self-study",
 		"days": "day(s)",
+		"segmentsTitle": "Days & delivery modes",
+		"inPerson": "In-person",
+		"online": "Online",
+		"selfStudy": "Self-study",
 		"viewDetails": "View details",
 		"emptyTitle": "No trainings available yet.",
 		"emptyBody": "We are preparing our training catalogue.",
@@ -252,7 +256,8 @@
 			"specSheet": "Spec sheet",
 			"modality": "Modality",
 			"duration": "Duration",
-			"price": "Price"
+			"price": "Price",
+			"segments": "Days & delivery modes"
 		}
 	},
 	"products": {
@@ -570,11 +575,15 @@
 			"eyebrow": "Access",
 			"title": "Users",
 			"add": "Add user",
+			"edit": "Edit user",
 			"name": "Name",
 			"surname": "Surname",
 			"email": "Email",
 			"password": "Password",
 			"role": "Role",
+			"superadmin": "Superadmin",
+			"admin": "Admin",
+			"modulesHint": "Only for admins — choose the modules they can manage",
 			"deleteConfirm": "Delete this user?"
 		},
 		"categories": {
@@ -704,7 +713,15 @@
 			"featured": "Featured",
 			"sortOrder": "Sort order",
 			"metaTitle": "Meta title",
-			"metaDescription": "Meta description"
+			"metaDescription": "Meta description",
+			"segments": "Days & delivery modes",
+			"segmentDaysLabel": "Days label",
+			"segmentDaysCount": "Days",
+			"segmentMode": "Mode",
+			"segmentLocation": "Location",
+			"addSegment": "Add segment",
+			"removeSegment": "Remove segment",
+			"segmentsHint": "Example: 5 days in-person, then 3 days online"
 		},
 		"products": {
 			"eyebrow": "Content",
@@ -744,6 +761,34 @@
 			"featured": "Featured",
 			"metaTitle": "Meta title",
 			"metaDescription": "Meta description"
+		},
+		"password": {
+			"title": "Change password",
+			"current": "Current password",
+			"new": "New password",
+			"confirm": "Confirm new password",
+			"mismatch": "Passwords do not match",
+			"success": "Password changed successfully",
+			"error": "Unable to change password",
+			"empty": "All fields are required",
+			"minLength": "The new password must have at least 6 characters"
+		},
+		"modules": {
+			"label": "Modules",
+			"module": "Module",
+			"hint": "Choose which modules this admin can manage",
+			"POSTS": "Posts & news",
+			"EVENTS": "Events",
+			"TRAININGS": "Trainings",
+			"PRODUCTS": "Products",
+			"JOBS": "Jobs",
+			"GALLERY": "Gallery",
+			"TAXONOMY": "Categories & taxonomy"
+		},
+		"roles": {
+			"SUPERADMIN": "Superadmin",
+			"ADMIN": "Admin",
+			"role": "Role"
 		}
 	},
 	"faq": {

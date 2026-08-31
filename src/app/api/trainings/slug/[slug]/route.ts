@@ -8,6 +8,7 @@ export async function GET(_req: NextRequest, ctx: { params: Promise<{ slug: stri
 
 		const training = await prisma.training.findUnique({
 			where: { slug },
+			include: { segments: { orderBy: { sortOrder: 'asc' } } },
 		});
 		if (!training) {
 			return fail(404, 'Formação não encontrada');

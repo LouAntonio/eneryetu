@@ -2,8 +2,39 @@
 
 import { NavLink } from '../../lib/routing';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '../../hooks/useAuth';
+import { canManage } from '../../lib/permissions';
+import type { ModuleKey } from '../../types';
 
-const NAV_GROUPS = [
+type GroupLabel =
+	| 'admin.sidebar.overview'
+	| 'admin.sidebar.content'
+	| 'admin.sidebar.media'
+	| 'admin.sidebar.taxonomy'
+	| 'admin.sidebar.access';
+
+type ItemLabel =
+	| 'admin.nav.dashboard'
+	| 'admin.nav.posts'
+	| 'admin.nav.events'
+	| 'admin.nav.trainings'
+	| 'admin.nav.products'
+	| 'admin.nav.jobs'
+	| 'admin.nav.gallery'
+	| 'admin.galleryCategories.title'
+	| 'admin.nav.categories'
+	| 'admin.nav.eventTypes'
+	| 'admin.nav.users';
+
+interface SidebarItem {
+	to: string;
+	labelKey: ItemLabel;
+	end?: boolean;
+	module?: ModuleKey;
+	superOnly?: boolean;
+}
+
+const NAV_GROUPS: { labelKey: GroupLabel; items: SidebarItem[] }[] = [
 	{
 		labelKey: 'admin.sidebar.overview',
 		items: [{ to: '/eneryetu', labelKey: 'admin.nav.dashboard', end: true }],
@@ -11,39 +42,49 @@ const NAV_GROUPS = [
 	{
 		labelKey: 'admin.sidebar.content',
 		items: [
-			{ to: '/eneryetu/posts', labelKey: 'admin.nav.posts', end: false },
-			{ to: '/eneryetu/events', labelKey: 'admin.nav.events', end: false },
-			{ to: '/eneryetu/trainings', labelKey: 'admin.nav.trainings', end: false },
-			{ to: '/eneryetu/products', labelKey: 'admin.nav.products', end: false },
-			{ to: '/eneryetu/jobs', labelKey: 'admin.nav.jobs', end: false },
+			{ to: '/eneryetu/posts', labelKey: 'admin.nav.posts', module: 'POSTS' },
+			{ to: '/eneryetu/events', labelKey: 'admin.nav.events', module: 'EVENTS' },
+			{ to: '/eneryetu/trainings', labelKey: 'admin.nav.trainings', module: 'TRAININGS' },
+			{ to: '/eneryetu/products', labelKey: 'admin.nav.products', module: 'PRODUCTS' },
+			{ to: '/eneryetu/jobs', labelKey: 'admin.nav.jobs', module: 'JOBS' },
 		],
 	},
 	{
 		labelKey: 'admin.sidebar.media',
 		items: [
-			{ to: '/eneryetu/gallery', labelKey: 'admin.nav.gallery', end: false },
+			{ to: '/eneryetu/gallery', labelKey: 'admin.nav.gallery', module: 'GALLERY' },
 			{
 				to: '/eneryetu/gallery/categories',
 				labelKey: 'admin.galleryCategories.title',
-				end: false,
+				module: 'GALLERY',
 			},
 		],
 	},
 	{
 		labelKey: 'admin.sidebar.taxonomy',
 		items: [
-			{ to: '/eneryetu/categories', labelKey: 'admin.nav.categories', end: false },
-			{ to: '/eneryetu/event-types', labelKey: 'admin.nav.eventTypes', end: false },
+			{ to: '/eneryetu/categories', labelKey: 'admin.nav.categories', module: 'TAXONOMY' },
+			{ to: '/eneryetu/event-types', labelKey: 'admin.nav.eventTypes', module: 'TAXONOMY' },
 		],
 	},
 	{
 		labelKey: 'admin.sidebar.access',
-		items: [{ to: '/eneryetu/users', labelKey: 'admin.nav.users', end: false }],
+		items: [{ to: '/eneryetu/users', labelKey: 'admin.nav.users', superOnly: true }],
 	},
-] as const;
+];
 
 export function Sidebar() {
 	const { t } = useTranslation();
+	const { user } = useAuth();
+
+	const groups = NAV_GROUPS.map((group) => ({
+		...group,
+		items: group.items.filter((item) => {
+			if (item.superOnly) return user?.role === 'SUPERADMIN';
+			if (item.module) return canManage(user, item.module);
+			return true;
+		}),
+	})).filter((group) => group.items.length > 0);
 
 	return (
 		<aside className="fixed inset-y-0 left-0 z-30 flex w-60 flex-col bg-ink-deep text-paper">
@@ -61,7 +102,7 @@ export function Sidebar() {
 				</div>
 			</div>
 			<nav className="relative flex-1 space-y-5 overflow-y-auto px-3 py-6" aria-label="Admin">
-				{NAV_GROUPS.map((group) => (
+				{groups.map((group) => (
 					<div key={group.labelKey}>
 						<p className="mb-2 px-3 font-mono text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-paper/35">
 							{t(group.labelKey)}

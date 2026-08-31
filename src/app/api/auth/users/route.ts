@@ -14,6 +14,7 @@ export async function GET(req: NextRequest) {
 				surname: true,
 				email: true,
 				role: true,
+				modules: { select: { module: true } },
 				lastLogin: true,
 				createdAt: true,
 			},

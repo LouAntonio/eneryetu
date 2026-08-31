@@ -11,9 +11,10 @@ import type {
 	Product,
 	Training,
 	JobListing,
-	User,
 } from '../../types';
 import { AdminPage } from '../../components/admin/AdminPage';
+import { useAuth } from '../../hooks/useAuth';
+import { canManage } from '../../lib/permissions';
 
 function useCount<T>(key: string, url: string) {
 	return useQuery({
@@ -27,11 +28,8 @@ function useCount<T>(key: string, url: string) {
 
 export function Dashboard() {
 	const { t } = useTranslation();
+	const { user } = useAuth();
 
-	const users = useQuery({
-		queryKey: ['users'],
-		queryFn: async () => (await api.get<{ data: User[] }>('/auth/users')).data,
-	});
 	const posts = useCount<Post>('posts', '/posts');
 	const events = useCount<Event>('events', '/events');
 	const trainings = useCount<Training>('trainings', '/trainings');
@@ -40,38 +38,13 @@ export function Dashboard() {
 	const galleryPhotos = useCount<GalleryPhoto>('galleryPhotos', '/gallery/photos');
 
 	const stats = [
-		{
-			label: t('admin.dashboard.users'),
-			value: users.data?.length ?? '—',
-			loading: users.isLoading,
-		},
-		{ label: t('admin.dashboard.posts'), value: posts.data ?? '—', loading: posts.isLoading },
-		{
-			label: t('admin.dashboard.events'),
-			value: events.data ?? '—',
-			loading: events.isLoading,
-		},
-		{
-			label: t('admin.dashboard.trainings'),
-			value: trainings.data ?? '—',
-			loading: trainings.isLoading,
-		},
-		{
-			label: t('admin.dashboard.products'),
-			value: products.data ?? '—',
-			loading: products.isLoading,
-		},
-		{
-			label: t('admin.dashboard.jobs'),
-			value: jobs.data ?? '—',
-			loading: jobs.isLoading,
-		},
-		{
-			label: t('admin.dashboard.galleryPhotos'),
-			value: galleryPhotos.data ?? '—',
-			loading: galleryPhotos.isLoading,
-		},
-	];
+		{ label: t('admin.dashboard.posts'), value: posts.data ?? '—', loading: posts.isLoading, show: canManage(user, 'POSTS') },
+		{ label: t('admin.dashboard.events'), value: events.data ?? '—', loading: events.isLoading, show: canManage(user, 'EVENTS') },
+		{ label: t('admin.dashboard.trainings'), value: trainings.data ?? '—', loading: trainings.isLoading, show: canManage(user, 'TRAININGS') },
+		{ label: t('admin.dashboard.products'), value: products.data ?? '—', loading: products.isLoading, show: canManage(user, 'PRODUCTS') },
+		{ label: t('admin.dashboard.jobs'), value: jobs.data ?? '—', loading: jobs.isLoading, show: canManage(user, 'JOBS') },
+		{ label: t('admin.dashboard.galleryPhotos'), value: galleryPhotos.data ?? '—', loading: galleryPhotos.isLoading, show: canManage(user, 'GALLERY') },
+	].filter((stat) => stat.show);
 
 	return (
 		<AdminPage eyebrow={t('admin.dashboard.eyebrow')} title={t('admin.dashboard.title')}>

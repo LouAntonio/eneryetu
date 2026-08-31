@@ -1,8 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { Link } from '../../lib/routing';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../hooks/useAuth';
+import { ChangePasswordDialog } from './ChangePasswordDialog';
+import { roleLabelKey } from '../../lib/permissions';
 
 interface TopbarProps {
 	title: string;
@@ -12,6 +15,7 @@ interface TopbarProps {
 export function Topbar({ title, eyebrow }: TopbarProps) {
 	const { t } = useTranslation();
 	const { user, logout } = useAuth();
+	const [showPassword, setShowPassword] = useState(false);
 
 	return (
 		<header className="sticky top-0 z-20 border-b border-line bg-white/95 backdrop-blur">
@@ -28,10 +32,17 @@ export function Topbar({ title, eyebrow }: TopbarProps) {
 							<p className="font-mono text-xs font-semibold text-ink">
 								{user.name} {user.surname}
 							</p>
-							<p className="ui-label text-slate">{user.role}</p>
+							<p className="ui-label text-slate">{t(roleLabelKey(user.role))}</p>
 						</div>
 					) : null}
 					<div aria-hidden className="hidden h-8 w-px bg-line sm:block" />
+					<button
+						type="button"
+						onClick={() => setShowPassword(true)}
+						className="btn btn-mono px-4 py-2 text-xs"
+					>
+						{t('admin.password.title')}
+					</button>
 					<Link to="/" className="btn btn-mono px-4 py-2 text-xs">
 						↗ {t('admin.backToSite')}
 					</Link>
@@ -44,6 +55,7 @@ export function Topbar({ title, eyebrow }: TopbarProps) {
 					</button>
 				</div>
 			</div>
+			{showPassword ? <ChangePasswordDialog onClose={() => setShowPassword(false)} /> : null}
 		</header>
 	);
 }

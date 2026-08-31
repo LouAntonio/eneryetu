@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { Prisma } from '@prisma/client';
 import { prisma } from '@/server/prisma';
-import { getAuthUser, requireAdmin } from '@/server/auth';
+import { getAuthUser, requireModule, canManageModule } from '@/server/auth';
 import { ok, readJson, handleError } from '@/server/http';
 import { uuidv7 } from 'uuidv7';
 
@@ -17,7 +17,10 @@ export async function GET(req: NextRequest) {
 		);
 		const skip = (page - 1) * limit;
 
-		const isAdminAll = url.searchParams.get('all') === 'true' && user?.role === 'ADMIN';
+		const isAdminAll =
+			url.searchParams.get('all') === 'true' &&
+			(user?.role === 'SUPERADMIN' ||
+				(user ? await canManageModule(user, 'TRAININGS') : false));
 		const where = isAdminAll ? {} : { status: 'PUBLICADO' as const };
 
 		const [trainings, total] = await Promise.all([
@@ -26,6 +29,7 @@ export async function GET(req: NextRequest) {
 				skip,
 				take: limit,
 				orderBy: [{ sortOrder: 'asc' }, { createdAt: 'desc' }],
+				include: { segments: { orderBy: { sortOrder: 'asc' } } },
 			}),
 			prisma.training.count({ where }),
 		]);
@@ -47,12 +51,30 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
 	try {
-		await requireAdmin(req);
+		await requireModule(req, 'TRAININGS');
 		const body = await readJson(req);
 
-		const data = { id: uuidv7(), ...body } as Prisma.TrainingUncheckedCreateInput;
+		const { segments, ...rest } = body;
+		const data = { id: uuidv7(), ...rest } as Prisma.TrainingUncheckedCreateInput;
 
-		const training = await prisma.training.create({ data });
+		const training = await prisma.training.create({
+			data: {
+				...data,
+				segments: Array.isArray(segments)
+					? {
+							create: segments.map((s, index) => ({
+								id: uuidv7(),
+								dayLabel: String(s.dayLabel ?? ''),
+								daysCount: s.daysCount != null ? Number(s.daysCount) : null,
+								mode: String(s.mode ?? 'presencial'),
+								location: s.location || null,
+								sortOrder: s.sortOrder != null ? Number(s.sortOrder) : index,
+							})),
+						}
+					: undefined,
+			},
+			include: { segments: { orderBy: { sortOrder: 'asc' } } },
+		});
 
 		return ok(training, 201);
 	} catch (error) {

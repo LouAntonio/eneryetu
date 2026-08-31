@@ -9,8 +9,18 @@ datasource db {
 // --- ENUMS ---
 
 enum Role {
+	SUPERADMIN
 	ADMIN
-	EDITOR
+}
+
+enum ModuleKey {
+	POSTS
+	EVENTS
+	TRAININGS
+	PRODUCTS
+	JOBS
+	GALLERY
+	TAXONOMY
 }
 
 enum Status {
@@ -41,6 +51,18 @@ model User {
 	events        Event[]
 	posts         Post[]
 	refreshTokens RefreshToken[]
+	modules       UserModule[]
+}
+
+model UserModule {
+	id        String    @id @default(uuid()) @db.VarChar(36)
+	userId    String    @db.VarChar(36)
+	module    ModuleKey
+	user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+	createdAt DateTime  @default(now())
+
+	@@unique([userId, module])
+	@@index([userId])
 }
 
 model RefreshToken {
@@ -204,8 +226,25 @@ model Training {
 	updatedAt        DateTime @updatedAt
 	publishedAt      DateTime?
 
+	segments TrainingSegment[]
+
 	@@index([slug])
 	@@index([status])
+}
+
+model TrainingSegment {
+	id         String   @id @default(uuid()) @db.VarChar(36)
+	trainingId String   @db.VarChar(36)
+	training   Training @relation(fields: [trainingId], references: [id], onDelete: Cascade)
+	dayLabel   String   @db.VarChar(64)
+	daysCount  Int?
+	mode       String   @default("presencial") @db.VarChar(32)
+	location   String?  @db.VarChar(128)
+	sortOrder  Int      @default(0)
+	createdAt  DateTime @default(now())
+	updatedAt  DateTime @updatedAt
+
+	@@index([trainingId])
 }
 
 // --- CONTEÚDO: VAGAS ---

@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server';
 import { Prisma } from '@prisma/client';
 import { prisma } from '@/server/prisma';
-import { requireAdmin } from '@/server/auth';
+import { requireModule } from '@/server/auth';
 import { ok, readJson, handleError } from '@/server/http';
 import { uuidv7 } from 'uuidv7';
 
@@ -54,7 +54,7 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
 	try {
-		await requireAdmin(req);
+		await requireModule(req, 'GALLERY');
 		const body = await readJson(req);
 
 		const data = {

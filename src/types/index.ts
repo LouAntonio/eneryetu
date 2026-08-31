@@ -1,6 +1,26 @@
-export type Role = 'ADMIN' | 'EDITOR';
+export type Role = 'SUPERADMIN' | 'ADMIN';
+export type ModuleKey =
+	| 'POSTS'
+	| 'EVENTS'
+	| 'TRAININGS'
+	| 'PRODUCTS'
+	| 'JOBS'
+	| 'GALLERY'
+	| 'TAXONOMY';
 export type Status = 'RASCUNHO' | 'PUBLICADO' | 'ARQUIVADO';
 export type PostType = 'NOTICIA' | 'BLOG';
+
+export interface TrainingSegment {
+	id: string;
+	trainingId: string;
+	dayLabel: string;
+	daysCount?: number | null;
+	mode: string;
+	location?: string | null;
+	sortOrder: number;
+	createdAt?: string;
+	updatedAt?: string;
+}
 
 export interface User {
 	id: string;
@@ -8,6 +28,7 @@ export interface User {
 	surname: string;
 	email: string;
 	role: Role;
+	modules?: { module: ModuleKey }[];
 	lastLogin?: string;
 	createdAt?: string;
 }
@@ -147,6 +168,7 @@ export interface Training {
 	createdAt?: string;
 	updatedAt?: string;
 	publishedAt?: string | null;
+	segments?: TrainingSegment[];
 }
 
 export interface JobListing {

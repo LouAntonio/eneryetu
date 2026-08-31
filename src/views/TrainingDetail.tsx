@@ -29,6 +29,19 @@ function formatCurrency(price: number | null, currency: string): string {
 	}).format(price);
 }
 
+function modeKey(
+	mode: string,
+): 'training.presencial' | 'training.online' | 'training.autoformacao' {
+	switch (mode) {
+		case 'online':
+			return 'training.online';
+		case 'autoformacao':
+			return 'training.autoformacao';
+		default:
+			return 'training.presencial';
+	}
+}
+
 export function TrainingDetail() {
 	const { t } = useTranslation();
 	const { slug } = useParams<{ slug: string }>();
@@ -86,14 +99,31 @@ export function TrainingDetail() {
 
 				<div className="mt-8">
 					<div className="flex flex-wrap items-center gap-3">
-						<span className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink">
-							{training.deliveryMode}
-						</span>
-						{training.durationDays ? (
-							<span className="text-sm text-sand">
-								{training.durationDays} {t('training.days')}
-							</span>
-						) : null}
+						{training.segments && training.segments.length > 0 ? (
+							training.segments.map((segment) => (
+								<span
+									key={segment.id}
+									className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink"
+								>
+									{t(modeKey(segment.mode))}
+									{segment.daysCount
+										? ` · ${segment.daysCount} ${t('training.days')}`
+										: ''}
+									{segment.dayLabel ? ` · ${segment.dayLabel}` : ''}
+								</span>
+							))
+						) : (
+							<>
+								<span className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink">
+									{training.deliveryMode}
+								</span>
+								{training.durationDays ? (
+									<span className="text-sm text-sand">
+										{training.durationDays} {t('training.days')}
+									</span>
+								) : null}
+							</>
+						)}
 					</div>
 
 					<h1 className="mt-5 max-w-3xl font-editorial text-4xl font-semibold leading-[1.05] text-warm-ink sm:text-5xl">
@@ -165,6 +195,41 @@ export function TrainingDetail() {
 							</div>
 						)}
 
+						{training.segments && training.segments.length > 0 && (
+							<div className="mt-10">
+								<h2 className="font-editorial text-2xl font-semibold text-warm-ink">
+									{t('training.detail.segments')}
+								</h2>
+								<div className="mt-4 space-y-3">
+									{training.segments.map((segment) => (
+										<div
+											key={segment.id}
+											className="flex flex-wrap items-center gap-3 rounded-xl border border-line-warm bg-card px-4 py-3"
+										>
+											<span className="inline-flex items-center rounded-full bg-blue px-3 py-1 text-xs font-semibold text-ink">
+												{t(modeKey(segment.mode))}
+											</span>
+											{segment.daysCount ? (
+												<span className="font-mono text-sm font-semibold text-warm-ink">
+													{segment.daysCount} {t('training.days')}
+												</span>
+											) : null}
+											{segment.dayLabel ? (
+												<span className="text-sm text-sand">
+													{segment.dayLabel}
+												</span>
+											) : null}
+											{segment.location ? (
+												<span className="ml-auto text-sm text-sand">
+													{segment.location}
+												</span>
+											) : null}
+										</div>
+									))}
+								</div>
+							</div>
+						)}
+
 						{prerequisites && (
 							<div className="mt-10">
 								<h2 className="font-editorial text-2xl font-semibold text-warm-ink">
@@ -193,6 +258,21 @@ export function TrainingDetail() {
 											: null
 									}
 								/>
+								{training.segments && training.segments.length > 0 ? (
+									<SpecRow
+										label={t('training.detail.segments')}
+										value={training.segments
+											.map(
+												(segment) =>
+													`${t(modeKey(segment.mode))}${
+														segment.daysCount ? ` (${segment.daysCount})` : ''
+													}${
+														segment.dayLabel ? ` · ${segment.dayLabel}` : ''
+													}`,
+											)
+											.join(' / ')}
+									/>
+								) : null}
 								{training.price ? (
 									<SpecRow
 										label={t('training.detail.price')}

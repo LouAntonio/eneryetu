@@ -16,6 +16,14 @@ const inputClass =
 
 const labelClass = 'ui-label text-slate';
 
+interface SegmentDraft {
+	id?: string;
+	dayLabel: string;
+	daysCount: string;
+	mode: string;
+	location: string;
+}
+
 const emptyForm = {
 	title: '',
 	slug: '',
@@ -40,6 +48,7 @@ const emptyForm = {
 	sortOrder: 0,
 	metaTitle: '',
 	metaDescription: '',
+	segments: [] as SegmentDraft[],
 };
 
 function toForm(training: Training): typeof emptyForm {
@@ -67,6 +76,13 @@ function toForm(training: Training): typeof emptyForm {
 		sortOrder: training.sortOrder,
 		metaTitle: training.metaTitle ?? '',
 		metaDescription: training.metaDescription ?? '',
+		segments: (training.segments ?? []).map((segment) => ({
+			id: segment.id,
+			dayLabel: segment.dayLabel,
+			daysCount: segment.daysCount != null ? String(segment.daysCount) : '',
+			mode: segment.mode,
+			location: segment.location ?? '',
+		})),
 	};
 }
 
@@ -104,6 +120,12 @@ function TrainingFormInner({ training, editing, id }: TrainingFormInnerProps) {
 				metaTitle: form.metaTitle || null,
 				metaDescription: form.metaDescription || null,
 				coverImage: training?.coverImage ?? null,
+				segments: form.segments.map((segment, index) => ({
+					...segment,
+					daysCount: segment.daysCount ? Number(segment.daysCount) : null,
+					location: segment.location || null,
+					sortOrder: index,
+				})),
 			};
 			if (editing) {
 				return api.put(`/trainings/${id}`, body);
@@ -303,6 +325,139 @@ function TrainingFormInner({ training, editing, id }: TrainingFormInnerProps) {
 						className={inputClass}
 					/>
 				</div>
+			</div>
+
+			<div className="border border-line bg-white p-5">
+				<div className="flex items-center justify-between gap-4">
+					<div>
+						<span className={labelClass}>{t('admin.trainings.segments')}</span>
+						<p className="mt-1 font-mono text-xs text-slate">
+							{t('admin.trainings.segmentsHint')}
+						</p>
+					</div>
+					<button
+						type="button"
+						onClick={() =>
+							setForm((prev) => ({
+								...prev,
+								segments: [
+									...prev.segments,
+									{
+										dayLabel: '',
+										daysCount: '',
+										mode: 'presencial',
+										location: '',
+									},
+								],
+							}))
+						}
+						className="btn btn-mono px-4 py-2 text-xs"
+					>
+						+ {t('admin.trainings.addSegment')}
+					</button>
+				</div>
+
+				{form.segments.length === 0 ? (
+					<p className="mt-4 border border-dashed border-line px-3 py-6 text-center font-mono text-xs text-slate">
+						{t('admin.trainings.segmentsHint')}
+					</p>
+				) : (
+					<div className="mt-4 space-y-4">
+						{form.segments.map((segment, index) => (
+							<div
+								key={segment.id ?? index}
+								className="grid gap-4 border border-line bg-paper p-4 sm:grid-cols-2 lg:grid-cols-5"
+							>
+								<div className="lg:col-span-2">
+									<label className={labelClass}>
+										{t('admin.trainings.segmentDaysLabel')}
+									</label>
+									<input
+										type="text"
+										placeholder="Dia 1–5"
+										value={segment.dayLabel}
+										onChange={(event) => {
+											const segments = [...form.segments];
+											segments[index].dayLabel = event.target.value;
+											set('segments')(segments);
+										}}
+										className={inputClass}
+									/>
+								</div>
+								<div>
+									<label className={labelClass}>
+										{t('admin.trainings.segmentDaysCount')}
+									</label>
+									<input
+										type="number"
+										min={1}
+										value={segment.daysCount}
+										onChange={(event) => {
+											const segments = [...form.segments];
+											segments[index].daysCount = event.target.value;
+											set('segments')(segments);
+										}}
+										className={inputClass}
+									/>
+								</div>
+								<div>
+									<label className={labelClass}>
+										{t('admin.trainings.segmentMode')}
+									</label>
+									<select
+										value={segment.mode}
+										onChange={(event) => {
+											const segments = [...form.segments];
+											segments[index].mode = event.target.value;
+											set('segments')(segments);
+										}}
+										className={inputClass}
+									>
+										<option value="presencial">
+											{t('training.inPerson')}
+										</option>
+										<option value="online">{t('training.online')}</option>
+										<option value="autoformacao">
+											{t('training.selfStudy')}
+										</option>
+									</select>
+								</div>
+								<div>
+									<label className={labelClass}>
+										{t('admin.trainings.segmentLocation')}
+									</label>
+									<div className="flex gap-2">
+										<input
+											type="text"
+											value={segment.location}
+											onChange={(event) => {
+												const segments = [...form.segments];
+												segments[index].location = event.target.value;
+												set('segments')(segments);
+											}}
+											className={inputClass}
+										/>
+										<button
+											type="button"
+											onClick={() =>
+												setForm((prev) => ({
+													...prev,
+													segments: prev.segments.filter(
+														(_, i) => i !== index,
+													),
+												}))
+											}
+											className="btn btn-mono px-3 text-xs"
+											title={t('admin.trainings.removeSegment')}
+										>
+											×
+										</button>
+									</div>
+								</div>
+							</div>
+						))}
+					</div>
+				)}
 			</div>
 
 			<div className="grid gap-6 lg:grid-cols-3">

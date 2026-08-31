@@ -1,5 +1,5 @@
 import { prisma } from '@/server/prisma';
-import { requireAdmin } from '@/server/auth';
+import { requireModule } from '@/server/auth';
 import { ok, readJson, handleError } from '@/server/http';
 import { uuidv7 } from 'uuidv7';
 import { Prisma } from '@prisma/client';
@@ -18,7 +18,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
 	try {
-		await requireAdmin(req as never);
+		await requireModule(req as never, 'TAXONOMY');
 		const body = await readJson(req as never);
 
 		const category = await prisma.category.create({

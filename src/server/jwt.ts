@@ -3,7 +3,7 @@ import jwt, { type JwtPayload } from 'jsonwebtoken';
 export interface AuthUser {
 	id: string;
 	email: string;
-	role: 'ADMIN' | 'EDITOR';
+	role: 'SUPERADMIN' | 'ADMIN';
 }
 
 interface AccessPayload extends JwtPayload {

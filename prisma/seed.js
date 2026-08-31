@@ -301,7 +301,7 @@ async function main() {
 				surname: 'ENERYETU',
 				email: adminEmail,
 				password: await bcrypt.hash('qwerty123!', 10),
-				role: 'ADMIN',
+				role: 'SUPERADMIN',
 			},
 		});
 		console.log('Admin criado: admin@eneryetu.com / qwerty123!');
