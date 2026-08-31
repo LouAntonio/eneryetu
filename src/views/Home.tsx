@@ -77,6 +77,24 @@ export function Home() {
 				<div aria-hidden className="relative z-10 h-1 w-full bg-volt" />
 			</section>
 
+			{/* BUSINESS UNIT — ENERYETU SOLUTIONS */}
+			<section className="border-b border-line bg-ink-deep text-paper">
+				<div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-8 px-6 py-16 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+					<div>
+						<p className="ui-label text-volt">{t('home.businessUnit.eyebrow')}</p>
+						<h2 className="mt-4 font-display text-4xl font-black uppercase leading-[0.95] tracking-tight text-paper sm:text-5xl">
+							{t('home.businessUnit.title')}
+						</h2>
+						<p className="mt-4 max-w-2xl text-paper/70">
+							{t('home.businessUnit.body')}
+						</p>
+					</div>
+					<Link to="/eneryetu-solutions" className="btn btn-sun shrink-0 px-6 py-3">
+						{t('home.businessUnit.cta')}
+					</Link>
+				</div>
+			</section>
+
 			{/* WHO WE ARE */}
 			<section className="border-b border-line">
 				<div className="mx-auto grid w-full max-w-6xl gap-12 px-6 py-16 lg:grid-cols-2 lg:py-20">

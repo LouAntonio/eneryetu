@@ -58,7 +58,7 @@
 	},
 	"services": {
 		"eyebrow": "Serviços",
-		"title": "Doze linhas de serviço, um único parceiro.",
+		"title": "Dezasseis linhas de serviço, um único parceiro.",
 		"body": "Soluções integradas de acesso ao mercado e desenvolvimento de negócios — do sourcing à manutenção, num só contrato.",
 		"heroImage": "/images/others/Prancheta 1.jpg",
 		"items": [
@@ -70,7 +70,7 @@
 			},
 			{
 				"title": "Consultoria e intermediação",
-				"blurb": "Representação comercial de empresas internacionais em Angola e apoio em processos regulatórios e de licenciamento.",
+				"blurb": "Representação comercial de empresas internacionais em Angola e apoio em processos regulatórios e de licenciamento e administração de empresas.",
 				"spec": "Representação · licenciamento",
 				"image": "/images/others/Prancheta 2.jpg"
 			},
@@ -87,7 +87,7 @@
 				"image": "/images/others/logistica e suply chain.jpeg"
 			},
 			{
-				"title": "Fornecimento de materiais",
+				"title": "Fornecimento de material e consumíveis",
 				"blurb": "Sobressalentes, equipamentos certificados, produtos químicos, lubrificantes e consumíveis industriais.",
 				"spec": "Equipamento certificado",
 				"image": "/images/others/Materials supply.png"
@@ -106,7 +106,7 @@
 			},
 			{
 				"title": "Engenharia e construção",
-				"blurb": "Apoio a contratos EPC: engenharia, construção e reparação de plataformas, tanques e tubagens.",
+				"blurb": "Apoio a contratos EPC, engenharia e construção de edifícios e diferentes estruturas metálicas (Armazéns, fábricas).",
 				"spec": "EPC",
 				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
 			},
@@ -142,7 +142,7 @@
 			},
 			{
 				"title": "Fabrico e construção de estruturas",
-				"blurb": "Projeto, fabrico e construção no local de estruturas de aço, skids e módulos industriais.",
+				"blurb": "Projeto, fabrico, reparação de construção no local de estruturas de aço (Tanques, Vasos, Skids, Tubagens, Trocadores de Calor) e módulos industriais - Projetos EPC.",
 				"spec": "Aço · construção no local",
 				"image": "/images/others/Fabrication & construction of structures.jpeg"
 			},
@@ -174,7 +174,7 @@
 				},
 				{
 					"title": "Parcerias estratégicas",
-					"blurb": "Alianças nacionais e internacionais que geram valor partilhado e desenvolvimento local."
+					"blurb": "Alianças locais e internacionais que geram valor partilhado e desenvolvimento local."
 				}
 			]
 		}
@@ -305,6 +305,7 @@
 		"title": "Uma rede de parceiros estratégicos",
 		"body": "Trabalhamos com parceiros nacionais e internacionais para entregar soluções completas aos nossos clientes.",
 		"items": [
+			{ "name": "ENERYETU Solutions", "logo": "/images/parceiros/eneryetusolutions.png" },
 			{ "name": "Elite Project Engineering", "logo": "/images/parceiros/elite.png" },
 			{ "name": "Rico Organizações", "logo": "/images/parceiros/rico.png" },
 			{ "name": "Synergy Projects Consulting", "logo": "/images/parceiros/synergy.png" },
@@ -316,6 +317,135 @@
 			{ "name": "Trident", "logo": "/images/parceiros/trident.png" },
 			{ "name": "WEPROQURE", "logo": "/images/parceiros/WEPROQURE.png" }
 		]
+	},
+	"home": {
+		"businessUnit": {
+			"eyebrow": "Unidade de Negócio",
+			"title": "ENERYETU Solutions",
+			"body": "Uma unidade de negócio dedicada à prestação de serviços industriais especializados — mão de obra, limpeza de tanques e tubagens, HVAC, andaimes, reparação estrutural e pintura, e muito mais.",
+			"cta": "Explorar ENERYETU Solutions"
+		}
+	},
+	"eneryetuSolutions": {
+		"eyebrow": "Unidade de Negócio",
+		"title": "ENERYETU Solutions",
+		"subtitle": "ENERYETU Business Unit (ENERYETU SOLUTIONS)",
+		"heroImage": "/images/parceiros/eneryetusolutions.png",
+		"specificTitle": "Serviços específicos da unidade de negócio",
+		"specificServiceTitle": "Nossos serviços",
+		"specificItems": [
+			{ "title": "Mão de obra (Provisão e Treinamento)" },
+			{ "title": "Serviços de limpeza de tanques e tubagens" },
+			{ "title": "Manutenção geral e suporte técnico" },
+			{ "title": "Manutenção de geradores" },
+			{ "title": "HVAC (Aquecimento, Ventilação e Ar Condicionado)" },
+			{ "title": "Logística geral e fornecimento de materiais" },
+			{
+				"title": "Fornecimento de consumíveis, tintas, WDs, Moy Cotes, graxa, conexões e conectores"
+			},
+			{ "title": "Montagem de andaimes" },
+			{ "title": "Reparação estrutural e pintura" },
+			{ "title": "Instrumentação e calibração" },
+			{ "title": "Fabricação e instalação de equipamentos" },
+			{
+				"title": "Construção de estruturas de óleo e gás (médio e grande porte) – Projetos EPC"
+			},
+			{ "title": "EPC Brownfield: Modificação e Manutenção" }
+		],
+		"metalTreatment": {
+			"title": "Tratamento de Estruturas Metálicas, Reparação e Pintura",
+			"body": "Controle de corrosão, preparação de superfície, reparos estruturais e pintura industrial de estruturas (Estruturas, Decks e Tubagens). Utilização de diversos métodos para jateamento abrasivo e preparação de superfície, incluindo aluguer de equipamentos. Fornecimento de revestimentos industriais e serviços de pintura industrial. Serviços de revestimento interno e externo de tubos."
+		},
+		"tankCleaning": {
+			"title": "Limpeza de Tanques",
+			"body": "Serviços especializados de limpeza de tanques, vasos de armazenamento e tubagens industriais."
+		},
+		"warehouse": {
+			"title": "Espaço de Armazém e Soluções de Armazenamento",
+			"body": "Dois armazéns operacionais que oferecem armazenamento coberto, ventilado e seguro com monitorização CCTV.",
+			"nave1": {
+				"title": "Nave 1",
+				"items": [
+					"50 000 m² no total",
+					"12 000 m² (24%) cobertos",
+					"Ventilado",
+					"Segurança",
+					"CCTV"
+				]
+			},
+			"nave2": {
+				"title": "Nave 2",
+				"items": [
+					"2 000 m² cobertos",
+					"Ventilado",
+					"Segurança",
+					"CCTV",
+					"Pavimento em betão reforçado"
+				]
+			}
+		},
+		"storageSilos": {
+			"title": "Instalação de Armazenamento e Silos",
+			"items": [
+				"40 000 litros",
+				"12 000 m² (24%) coberto",
+				"Ventilação",
+				"Segurança",
+				"CCTV"
+			],
+			"description": "A instalação de armazenamento está localizada no site de Cacuaco, com infraestrutura suficiente para suportar uma ampla gama de serviços e os seus respetivos sistemas."
+		},
+		"partners": {
+			"title": "Parceiros da Unidade de Negócio",
+			"items": [
+				"ENERYETU",
+				"RICO ORGANIZAÇÕES",
+				"DallOIL",
+				"OCEAN ATLANTIC PETROLEUM",
+				"ELITE FLOW CONTROL",
+				"Elite PROJECT ENGINEERING"
+			]
+		},
+		"construction": {
+			"title": "Construção de Equipamentos e Estruturas para a Indústria de Óleo e Gás (Contratos EPC)",
+			"body": "Diferentes tipos de equipamentos:",
+			"items": [
+				"Tanques de armazenamento de óleo a granel",
+				"Tanques esféricos de GLP",
+				"Cilindros (Bullets) de GLP",
+				"Vasos de pressão",
+				"Lançadores e receptores de PIG (Pig Launchers / Receivers Traps)",
+				"Trocadores de calor (Heat Exchangers)",
+				"Skids de processo customizados",
+				"Skids de medição de gás",
+				"Caldeiras CFB & HRSG",
+				"Caldeiras a carvão, óleo ou gás",
+				"Colunas e torres"
+			]
+		},
+		"valves": {
+			"title": "Fabricação de Válvulas e Equipamentos para Sistemas Hidráulicos e Pneumáticos",
+			"body": "Diferentes tipos de válvulas:",
+			"items": [
+				"Válvula de Esfera (Ball Valves)",
+				"Válvula de Gaveta (Gate Valves)",
+				"Válvula de Globo (Globe Valves)",
+				"Válvula de Retenção (Check Valves)",
+				"Válvula Macho (Plug Valves)",
+				"Válvula Borboleta (Butterfly Valves)"
+			]
+		},
+		"materials": {
+			"title": "Materiais",
+			"body": "Fabricação e fornecimento de chapas metálicas, tubagens e cantoneiras (Fabrication & Metal Sheets, Pipework & Angle Bars Supply)."
+		},
+		"maintenance": {
+			"title": "Manutenção",
+			"items": [
+				"Recondicionamento de bombas (Pump Refurbishment)",
+				"Trabalhos de manutenção e reparação (Maintenance & Repair Work)"
+			]
+		}
 	},
 	"cta": {
 		"title": "Precisa de fornecimento, serviços ou parceiros em Angola?",

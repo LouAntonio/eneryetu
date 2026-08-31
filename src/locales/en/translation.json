@@ -58,7 +58,7 @@
 	},
 	"services": {
 		"eyebrow": "Services",
-		"title": "Twelve service lines, one partner.",
+		"title": "Sixteen service lines, one partner.",
 		"body": "Integrated market-access and business-development solutions — from sourcing to maintenance, under a single contract.",
 		"heroImage": "/images/others/Prancheta 1.jpg",
 		"items": [
@@ -70,13 +70,13 @@
 			},
 			{
 				"title": "Consulting & intermediation",
-				"blurb": "Commercial representation of international companies in Angola and support with regulatory and licensing processes.",
+				"blurb": "Commercial representation of international companies in Angola and support with regulatory and licensing processes and companies administration.",
 				"spec": "Representation · licensing",
 				"image": "/images/others/Prancheta 2.jpg"
 			},
 			{
 				"title": "Manpower",
-				"blurb": "Skilled manpower supply and professional training in Project Management, Primavera P6, Welding and NDT Inspection.",
+				"blurb": "Skilled manpower provision and professional training in Project Management, Primavera P6, Welding and NDT Inspection.",
 				"spec": "Manpower · training",
 				"image": "/images/others/FPSO2.png"
 			},
@@ -87,7 +87,7 @@
 				"image": "/images/others/logistica e suply chain.jpeg"
 			},
 			{
-				"title": "Materials supply",
+				"title": "Material & consumables supply",
 				"blurb": "Spare parts, certified equipment, chemical products, lubricants and industrial consumables.",
 				"spec": "Certified equipment",
 				"image": "/images/others/Materials supply.png"
@@ -106,7 +106,7 @@
 			},
 			{
 				"title": "Engineering & construction",
-				"blurb": "Support for EPC contracts: engineering, construction and repair of platforms, tanks and pipelines.",
+				"blurb": "Support for EPC contracts, engineering and construction of buildings and different metal structures (Warehouses, plants).",
 				"spec": "EPC",
 				"image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
 			},
@@ -142,7 +142,7 @@
 			},
 			{
 				"title": "Fabrication & construction of structures",
-				"blurb": "Design, fabrication and on-site construction of steel structures, skids and industrial modules.",
+				"blurb": "Design, fabrication, repair of on-site construction of steel structures (Tanks, Vessels, Skids, Pipelines, Heat Exchangers) and industrial modules - EPC Projects.",
 				"spec": "Steel · on-site",
 				"image": "/images/others/Fabrication & construction of structures.jpeg"
 			},
@@ -174,7 +174,7 @@
 				},
 				{
 					"title": "Strategic partnerships",
-					"blurb": "Domestic and international alliances that generate shared value and local development."
+					"blurb": "Local and international alliances that generate shared value and local development."
 				}
 			]
 		}
@@ -305,6 +305,7 @@
 		"title": "A network of strategic partners",
 		"body": "We work with local and international partners to deliver complete solutions to our clients.",
 		"items": [
+			{ "name": "ENERYETU Solutions", "logo": "/images/parceiros/eneryetusolutions.png" },
 			{ "name": "Elite Project Engineering", "logo": "/images/parceiros/elite.png" },
 			{ "name": "Rico Organizações", "logo": "/images/parceiros/rico.png" },
 			{ "name": "Synergy Projects Consulting", "logo": "/images/parceiros/synergy.png" },
@@ -316,6 +317,130 @@
 			{ "name": "Trident", "logo": "/images/parceiros/trident.png" },
 			{ "name": "WEPROQURE", "logo": "/images/parceiros/WEPROQURE.png" }
 		]
+	},
+	"home": {
+		"businessUnit": {
+			"eyebrow": "Business Unit",
+			"title": "ENERYETU Solutions",
+			"body": "A dedicated business unit delivering specialised industrial services — manpower, tank and pipework cleaning, HVAC, scaffolding, structural repair and painting, and much more.",
+			"cta": "Explore ENERYETU Solutions"
+		}
+	},
+	"eneryetuSolutions": {
+		"eyebrow": "Business Unit",
+		"title": "ENERYETU Solutions",
+		"subtitle": "ENERYETU Business Unit (ENERYETU SOLUTIONS)",
+		"heroImage": "/images/parceiros/eneryetusolutions.png",
+		"specificTitle": "Business unit specific services",
+		"specificServiceTitle": "Our services",
+		"specificItems": [
+			{ "title": "Manpower (Provision & Training)" },
+			{ "title": "Tank and Pipework Cleaning Services" },
+			{ "title": "General Maintenance & Technical Support" },
+			{ "title": "Generator Maintenance" },
+			{ "title": "HVAC (Heating, Ventilation & Air Conditioning)" },
+			{ "title": "General Logistics & Material Supply" },
+			{
+				"title": "Supply of Consumables, Paints, WDs, Moy Cotes, Grease, Fittings & Connectors"
+			},
+			{ "title": "Scaffolding Erection" },
+			{ "title": "Structural Repair & Painting" },
+			{ "title": "Instrumentation & Calibration" },
+			{ "title": "Equipment Fabrication & Installation" },
+			{ "title": "Oil & Gas Structure Construction (Medium & Large-Scale) – EPC Projects" },
+			{ "title": "Brownfield EPC: Modification & Maintenance" }
+		],
+		"metalTreatment": {
+			"title": "Metal Structure Treatment, Repair & Painting",
+			"body": "Corrosion control, surface preparation, structural repairs and industrial painting of structures (Structures, Decks and Pipework). Using various methods for abrasive blasting and surface preparation, including equipment rental. Supply of industrial coatings and industrial painting services. Internal and external pipe coating services."
+		},
+		"tankCleaning": {
+			"title": "Tank Cleaning",
+			"body": "Specialised cleaning services for tanks, storage vessels and industrial piping."
+		},
+		"warehouse": {
+			"title": "Warehouse Space and Storage Solutions",
+			"body": "Two operational warehouses offering covered, ventilated and secure storage with CCTV monitoring.",
+			"nave1": {
+				"title": "Nave 1",
+				"items": [
+					"50 000 m² total",
+					"12 000 m² (24%) covered",
+					"Ventilated",
+					"Security",
+					"CCTV"
+				]
+			},
+			"nave2": {
+				"title": "Nave 2",
+				"items": [
+					"2 000 m² covered",
+					"Ventilated",
+					"Security",
+					"CCTV",
+					"Reinforced concrete flooring"
+				]
+			}
+		},
+		"storageSilos": {
+			"title": "Storage Installation and Silos",
+			"items": [
+				"40 000 litres",
+				"12 000 m² (24%) covered",
+				"Ventilation",
+				"Security",
+				"CCTV"
+			],
+			"description": "The storage installation is located at the Cacuaco site, with sufficient infrastructure to support a wide range of services and their respective systems."
+		},
+		"partners": {
+			"title": "Business Unit Partners",
+			"items": [
+				"ENERYETU",
+				"RICO ORGANIZAÇÕES",
+				"DallOIL",
+				"OCEAN ATLANTIC PETROLEUM",
+				"ELITE FLOW CONTROL",
+				"Elite PROJECT ENGINEERING"
+			]
+		},
+		"construction": {
+			"title": "Construction of Equipment and Structures for the Oil & Gas Industry (EPC Contracts)",
+			"body": "Different types of equipment:",
+			"items": [
+				"Bulk oil storage tanks",
+				"Spherical LPG tanks",
+				"LPG bullets (Cylinders)",
+				"Pressure vessels",
+				"Pig Launchers / Receivers Traps",
+				"Heat Exchangers",
+				"Customised process skids",
+				"Gas metering skids",
+				"CFB & HRSG boilers",
+				"Coal, oil or gas boilers",
+				"Columns and towers"
+			]
+		},
+		"valves": {
+			"title": "Manufacture of Valves and Equipment for Hydraulic and Pneumatic Systems",
+			"body": "Different types of valves:",
+			"items": [
+				"Ball Valves",
+				"Gate Valves",
+				"Globe Valves",
+				"Check Valves",
+				"Plug Valves",
+				"Butterfly Valves"
+			]
+		},
+		"materials": {
+			"title": "Materials",
+			"body": "Fabrication and supply of metal sheets, pipework and angle bars. (Fabrication & Metal Sheets, Pipework & Angle Bars Supply)."
+		},
+		"maintenance": {
+			"title": "Maintenance",
+			"items": ["Pump Refurbishment", "Maintenance & Repair Work"]
+		}
 	},
 	"cta": {
 		"title": "Need sourcing, services or partners in Angola?",
