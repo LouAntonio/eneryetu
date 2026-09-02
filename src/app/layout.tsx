@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 import '../globals.css';
 import { Providers } from '@/components/Providers';
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
 			</head>
 			<body>
 				<Providers>{children}</Providers>
+				<Analytics />
 			</body>
 		</html>
 	);
